@@ -26,7 +26,7 @@ The futil.py is not part of scipy.stats anymore and is not in wafo.stats.
 
 1. Get fortran file e.g. https://github.com/scipy/scipy-svn/blob/master/scipy/stats/futil.f
 2. Compile, e.g. for windows 10 ```f2py -c futil.f -m futil --compiler=mingw32```. Note that if you are using a 64 bit Anaconda on Windows you will need to use a mingw64 build of the binaries e.g. https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/7.2.0/threads-posix/seh/x86_64-7.2.0-release-posix-seh-rt_v5-rev1.7z
-3. Copy resulting pyd file to ```wafo.stats```
+3. Copy resulting pyd file to ```wafo/stats/```
 
 ## ModuleNotFoundError: No module named 'numdifftools'
 
