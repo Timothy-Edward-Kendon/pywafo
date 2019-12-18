@@ -87,7 +87,7 @@ if __name__=='__main__':
     compile_all()
 ```
 
-3. Copy resulting pyd to ```wafo/```
+3. ```python compile_cov2mod.py``` and copy resulting pyd to ```wafo/```
 
 # TODO
 
