@@ -36,7 +36,56 @@ The futil.py is not part of scipy.stats anymore and is not in wafo.stats.
 
 ```grep -rli 'numpy.lib.function_base' * | xargs -i@ sed -i 's/numpy.lib.function_base/numpy/g' @```
 
-* Only occurs in interpolate.py.
-
 ## ImportError: cannot import name 'PiecewisePolynomial' from 'scipy.interpolate'
+
+```grep -rli 'PiecewisePolynomial' * | xargs -i@ sed -i 's/PiecewisePolynomial/PPoly/g' @```
+
+## from scipy.misc.common import pade
+
+```grep -rli 'scipy.misc.common' * | xargs -i@ sed -i 's/scipy.misc.common/scipy.interpolate/g' @```
+
+# Final steps
+
+By this point you should be able to import wafo, but with 2 user warnings
+
+* C:\Appl\Anaconda3\lib\site-packages\wafo\spectrum\core.py:35: UserWarning: Compile the c_library.pyd again!
+  warnings.warn('Compile the c_library.pyd again!')
+* C:\Appl\Anaconda3\lib\site-packages\wafo\spectrum\core.py:40: UserWarning: Compile the cov2mod.pyd again!
+  warnings.warn('Compile the cov2mod.pyd again!')
+
+## Recompilation of c_library.pyd
+
+1. Navigate to ```wafo/source/c_codes```. 
+2. ```python setup.py build_src build_ext --inplace --compiler=mingw32```
+3. Copy resulting pyd to ```wafo/```
+
+## Recompilation of cov2mod.pyd 
+
+1. Navigate to ```wafo/source/mreg```
+2. Create file compile_cov2mod.py
+
+``` # Based on compile_all
+import os
+
+def compile_all():   
+    print('='*75)
+    print('compiling cov2mod')
+    print('='*75)
+    
+ 
+    files = ['dsvdc','mregmodule', 'intfcmod']
+    compile1_format = 'gfortran -fPIC -c %s.f'
+    format1 = '%s.o ' * len(files)
+    for file in files:
+        os.system(compile1_format % file)
+    file_objects = format1  % tuple(files)
+        
+    os.system('f2py -m cov2mod  -c %s cov2mmpdfreg_intfc.f --compiler=mingw32' % file_objects)
+     
+    
+if __name__=='__main__':
+    compile_all()
+```
+
+3. Copy resulting pyd to ```wafo/```
 
