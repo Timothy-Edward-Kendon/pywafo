@@ -20,6 +20,8 @@ Change ```scipy.lib``` to ```scipy._lib```
 
 ```grep -rli 'scipy.lib' * | xargs -i@ sed -i 's/scipy.lib/scipy._lib/g' @```
 
+If using Windows 10, open a git-bash shell to run the above command. 
+
 ## Cannot import name 'futil' from 'wafo.stats'
 
 The futil.py is not part of scipy.stats anymore and is not in wafo.stats.
