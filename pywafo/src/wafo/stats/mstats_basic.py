@@ -8,7 +8,7 @@ An extension of scipy.stats.stats to support masked arrays
 # TODO : ttest_rel looks botched:  what are x1,x2,v1,v2 for ?
 # TODO : reimplement ksonesamp
 
-from __future__ import division, print_function, absolute_import
+
 
 
 __all__ = ['argstoarray',
@@ -40,7 +40,7 @@ from numpy import ndarray
 import numpy.ma as ma
 from numpy.ma import masked, nomask
 
-from scipy.lib.six import iteritems
+from scipy._lib.six import iteritems
 
 import itertools
 import warnings
@@ -196,8 +196,8 @@ def count_tied_groups(x, use_missing=False):
     (ties, counts) = find_repeats(data)
     nties = {}
     if len(ties):
-        nties = dict(zip(np.unique(counts), itertools.repeat(1)))
-        nties.update(dict(zip(*find_repeats(counts))))
+        nties = dict(list(zip(np.unique(counts), itertools.repeat(1))))
+        nties.update(dict(list(zip(*find_repeats(counts)))))
 
     if nmasked and use_missing:
         try:

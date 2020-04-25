@@ -166,18 +166,18 @@ References
 
 """
 
-from __future__ import division, print_function, absolute_import
+
 
 import warnings
 import math
 
-from scipy.lib.six import xrange
+from scipy._lib.six import xrange
 
 # friedmanchisquare patch uses python sum
 pysum = sum  # save it before it gets overwritten
 
 # Scipy imports.
-from scipy.lib.six import callable, string_types
+from scipy._lib.six import callable, string_types
 from numpy import array, asarray, ma, zeros, sum
 import scipy.special as special
 import scipy.linalg as linalg
@@ -2058,7 +2058,7 @@ def zmap(scores, compare, axis=0, ddof=0):
     >>> zmap(a, b)
     array([-1.06066017,  0.        ,  0.35355339,  0.70710678])
     """
-    scores, compare = map(np.asanyarray, [scores, compare])
+    scores, compare = list(map(np.asanyarray, [scores, compare]))
     mns = compare.mean(axis=axis)
     sstd = compare.std(axis=axis, ddof=ddof)
     if axis and mns.ndim < compare.ndim:
@@ -2924,7 +2924,7 @@ def kendalltau(x, y, initial_lexsort=True):
     # compute joint ties
     first = 0
     t = 0
-    for i in xrange(1, n):
+    for i in range(1, n):
         if x[perm[first]] != x[perm[i]] or y[perm[first]] != y[perm[i]]:
             t += ((i - first) * (i - first - 1)) // 2
             first = i
@@ -2933,7 +2933,7 @@ def kendalltau(x, y, initial_lexsort=True):
     # compute ties in x
     first = 0
     u = 0
-    for i in xrange(1,n):
+    for i in range(1,n):
         if x[perm[first]] != x[perm[i]]:
             u += ((i - first) * (i - first - 1)) // 2
             first = i
@@ -2944,7 +2944,7 @@ def kendalltau(x, y, initial_lexsort=True):
     # compute ties in y after mergesort with counting
     first = 0
     v = 0
-    for i in xrange(1,n):
+    for i in range(1,n):
         if y[perm[first]] != y[perm[i]]:
             v += ((i - first) * (i - first - 1)) // 2
             first = i
@@ -4007,7 +4007,7 @@ def ks_2samp(data1, data2):
     (0.07999999999999996, 0.41126949729859719)
 
     """
-    data1, data2 = map(asarray, (data1, data2))
+    data1, data2 = list(map(asarray, (data1, data2)))
     n1 = data1.shape[0]
     n2 = data2.shape[0]
     n1 = len(data1)
@@ -4113,7 +4113,7 @@ def ranksums(x, y):
     .. [1] http://en.wikipedia.org/wiki/Wilcoxon_rank-sum_test
 
     """
-    x,y = map(np.asarray, (x, y))
+    x,y = list(map(np.asarray, (x, y)))
     n1 = len(x)
     n2 = len(y)
     alldata = np.concatenate((x,y))

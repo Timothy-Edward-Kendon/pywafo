@@ -1,2 +1,2 @@
-from core import *
-import dispersion_relation
+from .core import *
+from . import dispersion_relation

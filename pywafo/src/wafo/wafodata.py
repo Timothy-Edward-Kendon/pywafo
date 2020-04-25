@@ -1,6 +1,6 @@
 import warnings
-from graphutil import cltext
-from plotbackend import plotbackend
+from .graphutil import cltext
+from .plotbackend import plotbackend
 from time import gmtime, strftime
 import numpy as np
 from scipy.integrate.quadrature import cumtrapz  # @UnresolvedImport
@@ -533,7 +533,7 @@ def test_eval_points():
 def test_integrate():
     x = np.linspace(0, 5, 60)
     d = PlotData(np.sin(x), x)
-    print(d.integrate(0, np.pi / 2, method='simps'))
+    print((d.integrate(0, np.pi / 2, method='simps')))
 
 
 def test_docstrings():

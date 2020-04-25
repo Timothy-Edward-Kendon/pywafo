@@ -5,7 +5,7 @@ Created on 20. jan. 2011
 
 license BSD
 '''
-from __future__ import division
+
 import warnings
 import numpy as np
 from wafo.plotbackend import plotbackend
@@ -260,7 +260,7 @@ def _find_mid_points(x):
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 if __name__ == '__main__':

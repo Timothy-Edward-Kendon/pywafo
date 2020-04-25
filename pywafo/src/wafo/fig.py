@@ -34,7 +34,7 @@ Example
 '''
 
 #/usr/bin/env python
-from __future__ import division
+
 #import win32api
 import win32gui
 import win32con
@@ -527,7 +527,7 @@ def stack(*figs):
         maxfigs = numpy.fix(screenpos[3] / 20)
 
         if (numfigs > maxfigs):            # figure limit check
-            print(' More than %d requested ' % maxfigs)
+            print((' More than %d requested ' % maxfigs))
             return
         BringWindowToTop = win32gui.BringWindowToTop
         MoveWindow = win32gui.MoveWindow
@@ -538,7 +538,7 @@ def stack(*figs):
 #% Location (1,1) is at bottom left corner
 #
         #print('Screensz = ',screenpos)
-        for iy in xrange(numfigs):
+        for iy in range(numfigs):
             pos = list(GetWindowRect(wnds[iy]))
             pos[3] -= pos[1]
             pos[2] -= pos[0]
@@ -639,9 +639,9 @@ def tile(*figs, **kwds):
 #% Put the figures where they belong.
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         idx = 0
-        for unused_ix in xrange(nlayers):
-            for row in xrange(nv):
-                for col in xrange(nh):
+        for unused_ix in range(nlayers):
+            for row in range(nv):
+                for col in range(nh):
                     if  (row) * nh + col < nfigspertile :      
                         if idx < nfigs:
                             figlft = int(screenpos[0] + (col + 1) * hspc + col * figwid)

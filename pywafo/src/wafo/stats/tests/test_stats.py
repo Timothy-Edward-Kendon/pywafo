@@ -6,7 +6,7 @@
 
     Additional tests by a host of SciPy developers.
 """
-from __future__ import division, print_function, absolute_import
+
 
 import sys
 import warnings
@@ -2332,7 +2332,7 @@ def test_obrientransform():
 
     # Example from "O'Brien Test for Homogeneity of Variance"
     # by Herve Abdi.
-    values = range(5, 11)
+    values = list(range(5, 11))
     reps = np.array([5, 11, 9, 3, 2, 2])
     data = np.repeat(values, reps)
     transformed_values = np.array([3.1828, 0.5591, 0.0344,

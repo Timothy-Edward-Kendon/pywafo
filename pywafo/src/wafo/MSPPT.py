@@ -887,7 +887,7 @@ class ActionSettings(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{9149348D-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{9149348D-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -909,7 +909,7 @@ class ActionSettings(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -932,7 +932,7 @@ class ActionSettings(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class AddIn(DispatchBaseClass):
@@ -968,7 +968,7 @@ class AddIns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((8, 1),),FileName
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{91493461-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{91493461-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type AddIn
@@ -976,7 +976,7 @@ class AddIns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((16396, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493461-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493461-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Remove(self, Index=defaultNamedNotOptArg):
@@ -1002,7 +1002,7 @@ class AddIns(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1025,7 +1025,7 @@ class AddIns(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Adjustments(DispatchBaseClass):
@@ -1058,7 +1058,7 @@ class Adjustments(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1069,7 +1069,7 @@ class Adjustments(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class AnimationBehavior(DispatchBaseClass):
@@ -1120,7 +1120,7 @@ class AnimationBehaviors(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((3, 1), (3, 49)),Type
 			, Index)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934E4-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934E4-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type AnimationBehavior
@@ -1128,7 +1128,7 @@ class AnimationBehaviors(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934E4-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934E4-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -1150,7 +1150,7 @@ class AnimationBehaviors(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1173,7 +1173,7 @@ class AnimationBehaviors(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class AnimationPoint(DispatchBaseClass):
@@ -1202,7 +1202,7 @@ class AnimationPoint(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1219,7 +1219,7 @@ class AnimationPoints(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((3, 49),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934EB-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934EB-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type AnimationPoint
@@ -1227,7 +1227,7 @@ class AnimationPoints(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934EB-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934EB-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -1251,7 +1251,7 @@ class AnimationPoints(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1274,7 +1274,7 @@ class AnimationPoints(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class AnimationSettings(DispatchBaseClass):
@@ -1339,7 +1339,7 @@ class Borders(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),BorderType
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{9149347F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{9149347F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -1361,7 +1361,7 @@ class Borders(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1384,7 +1384,7 @@ class Borders(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class BulletFormat(DispatchBaseClass):
@@ -1427,7 +1427,7 @@ class BulletFormat(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1488,7 +1488,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCallout', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddCallout', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1497,7 +1497,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(11, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, BeginX, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddConnector', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddConnector', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1505,7 +1505,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(12, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCurve', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddCurve', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1514,7 +1514,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(13, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLabel', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddLabel', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1522,7 +1522,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(14, LCID, 1, (9, 0), ((4, 1), (4, 1), (4, 1), (4, 1)),BeginX
 			, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLine', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddLine', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1532,7 +1532,7 @@ class CanvasShapes(DispatchBaseClass):
 			, LinkToFile, SaveWithDocument, Left, Top, Width
 			, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPicture', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddPicture', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1540,7 +1540,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(16, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPolyline', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddPolyline', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1549,7 +1549,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(17, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddShape', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddShape', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1559,7 +1559,7 @@ class CanvasShapes(DispatchBaseClass):
 			, Text, FontName, FontSize, FontBold, FontItalic
 			, Left, Top)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextEffect', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTextEffect', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1568,7 +1568,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(19, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextbox', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTextbox', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type FreeformBuilder
@@ -1576,7 +1576,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(20, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1)),EditingType
 			, X1, Y1)
 		if ret is not None:
-			ret = Dispatch(ret, u'BuildFreeform', '{91493478-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'BuildFreeform', '{91493478-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -1584,7 +1584,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type ShapeRange
@@ -1592,7 +1592,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(21, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Range', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def SelectAll(self):
@@ -1619,7 +1619,7 @@ class CanvasShapes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1642,7 +1642,7 @@ class CanvasShapes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Cell(DispatchBaseClass):
@@ -1682,7 +1682,7 @@ class CellRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934C9-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934C9-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -1706,7 +1706,7 @@ class CellRange(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1729,7 +1729,7 @@ class CellRange(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Collection(DispatchBaseClass):
@@ -1757,7 +1757,7 @@ class Collection(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ColorEffect(DispatchBaseClass):
@@ -1802,7 +1802,7 @@ class ColorFormat(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1819,7 +1819,7 @@ class ColorScheme(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),SchemeColor
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Colors', '{91493470-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Colors', '{91493470-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Delete(self):
@@ -1844,7 +1844,7 @@ class ColorScheme(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1867,7 +1867,7 @@ class ColorScheme(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ColorSchemes(DispatchBaseClass):
@@ -1879,7 +1879,7 @@ class ColorSchemes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((9, 49),),Scheme
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{9149346F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{9149346F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type ColorScheme
@@ -1887,7 +1887,7 @@ class ColorSchemes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{9149346F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{9149346F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -1909,7 +1909,7 @@ class ColorSchemes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1932,7 +1932,7 @@ class ColorSchemes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Column(DispatchBaseClass):
@@ -1966,7 +1966,7 @@ class Columns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((3, 49),),BeforeColumn
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934C5-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934C5-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Column
@@ -1974,7 +1974,7 @@ class Columns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934C5-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934C5-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -1996,7 +1996,7 @@ class Columns(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2019,7 +2019,7 @@ class Columns(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class CommandEffect(DispatchBaseClass):
@@ -2070,7 +2070,7 @@ class Comments(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((4, 1), (4, 1), (8, 1), (8, 1), (8, 1)),Left
 			, Top, Author, AuthorInitials, Text)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934D5-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934D5-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Comment
@@ -2078,7 +2078,7 @@ class Comments(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934D5-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934D5-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -2100,7 +2100,7 @@ class Comments(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2123,7 +2123,7 @@ class Comments(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ConnectorFormat(DispatchBaseClass):
@@ -2214,7 +2214,7 @@ class Design(DispatchBaseClass):
 	def AddTitleMaster(self):
 		ret = self._oleobj_.InvokeTypes(2006, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTitleMaster', '{9149346C-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTitleMaster', '{9149346C-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Delete(self):
@@ -2251,7 +2251,7 @@ class Designs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((8, 1), (3, 49)),designName
 			, Index)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934D7-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934D7-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Design
@@ -2259,7 +2259,7 @@ class Designs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2005, LCID, 1, (9, 0), ((9, 1), (3, 49)),pOriginal
 			, Index)
 		if ret is not None:
-			ret = Dispatch(ret, u'Clone', '{914934D7-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Clone', '{914934D7-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Design
@@ -2267,7 +2267,7 @@ class Designs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934D7-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934D7-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Design
@@ -2275,7 +2275,7 @@ class Designs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2004, LCID, 1, (9, 0), ((8, 1), (3, 49)),TemplateName
 			, Index)
 		if ret is not None:
-			ret = Dispatch(ret, u'Load', '{914934D7-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Load', '{914934D7-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -2297,7 +2297,7 @@ class Designs(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2320,7 +2320,7 @@ class Designs(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Diagram(DispatchBaseClass):
@@ -2360,7 +2360,7 @@ class DiagramNode(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((3, 49), (3, 49)),Pos
 			, NodeType)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type DiagramNode
@@ -2368,7 +2368,7 @@ class DiagramNode(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(15, LCID, 1, (9, 0), ((11, 1), (9, 1), (3, 49)),CopyChildren
 			, TargetNode, Pos)
 		if ret is not None:
-			ret = Dispatch(ret, u'CloneNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'CloneNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Delete(self):
@@ -2382,14 +2382,14 @@ class DiagramNode(DispatchBaseClass):
 	def NextNode(self):
 		ret = self._oleobj_.InvokeTypes(17, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'NextNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'NextNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type DiagramNode
 	def PrevNode(self):
 		ret = self._oleobj_.InvokeTypes(18, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'PrevNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'PrevNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def ReplaceNode(self, TargetNode=defaultNamedNotOptArg):
@@ -2433,7 +2433,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((12, 49), (3, 49)),Index
 			, NodeType)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddNode', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type DiagramNode
@@ -2441,7 +2441,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def SelectAll(self):
@@ -2470,7 +2470,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2493,7 +2493,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(101, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class DiagramNodes(DispatchBaseClass):
@@ -2505,7 +2505,7 @@ class DiagramNodes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934D8-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934D8-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def SelectAll(self):
@@ -2530,7 +2530,7 @@ class DiagramNodes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2553,7 +2553,7 @@ class DiagramNodes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(101, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class DocumentWindow(DispatchBaseClass):
@@ -2577,7 +2577,7 @@ class DocumentWindow(DispatchBaseClass):
 	def NewWindow(self):
 		ret = self._oleobj_.InvokeTypes(2018, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'NewWindow', '{91493457-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'NewWindow', '{91493457-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def PointsToScreenPixelsX(self, Points=defaultNamedNotOptArg):
@@ -2592,7 +2592,7 @@ class DocumentWindow(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2025, LCID, 1, (9, 0), ((3, 1), (3, 1)),X
 			, Y)
 		if ret is not None:
-			ret = Dispatch(ret, u'RangeFromPoint', None)
+			ret = Dispatch(ret, 'RangeFromPoint', None)
 		return ret
 
 	def ScrollIntoView(self, Left=defaultNamedNotOptArg, Top=defaultNamedNotOptArg, Width=defaultNamedNotOptArg, Height=defaultNamedNotOptArg
@@ -2648,7 +2648,7 @@ class DocumentWindow(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2669,7 +2669,7 @@ class DocumentWindows(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493457-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493457-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -2691,7 +2691,7 @@ class DocumentWindows(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2714,7 +2714,7 @@ class DocumentWindows(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class EApplication:
@@ -2918,7 +2918,7 @@ class ExtraColors(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2941,7 +2941,7 @@ class ExtraColors(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class FillFormat(DispatchBaseClass):
@@ -3083,7 +3083,7 @@ class Fonts(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493495-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493495-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Replace(self, Original=defaultNamedNotOptArg, Replacement=defaultNamedNotOptArg):
@@ -3109,7 +3109,7 @@ class Fonts(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3132,7 +3132,7 @@ class Fonts(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class FreeformBuilder(DispatchBaseClass):
@@ -3149,7 +3149,7 @@ class FreeformBuilder(DispatchBaseClass):
 	def ConvertToShape(self):
 		ret = self._oleobj_.InvokeTypes(11, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToShape', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'ConvertToShape', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3169,7 +3169,7 @@ class GroupShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type ShapeRange
@@ -3177,7 +3177,7 @@ class GroupShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Range', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3199,7 +3199,7 @@ class GroupShapes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3222,7 +3222,7 @@ class GroupShapes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class HeaderFooter(DispatchBaseClass):
@@ -3317,7 +3317,7 @@ class Hyperlinks(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493465-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493465-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3339,7 +3339,7 @@ class Hyperlinks(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3362,7 +3362,7 @@ class Hyperlinks(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class LineFormat(DispatchBaseClass):
@@ -3475,7 +3475,7 @@ class NamedSlideShow(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2006, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class NamedSlideShows(DispatchBaseClass):
@@ -3487,7 +3487,7 @@ class NamedSlideShows(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((8, 1), (12, 1)),Name
 			, safeArrayOfSlideIDs)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{9149345C-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{9149345C-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type NamedSlideShow
@@ -3495,7 +3495,7 @@ class NamedSlideShows(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{9149345C-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{9149345C-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3517,7 +3517,7 @@ class NamedSlideShows(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3540,7 +3540,7 @@ class NamedSlideShows(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class OCXExtender(DispatchBaseClass):
@@ -3656,7 +3656,7 @@ class ObjectVerbs(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3679,7 +3679,7 @@ class ObjectVerbs(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Options(DispatchBaseClass):
@@ -3743,7 +3743,7 @@ class Panes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934CC-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934CC-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3765,7 +3765,7 @@ class Panes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3788,7 +3788,7 @@ class Panes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ParagraphFormat(DispatchBaseClass):
@@ -3889,7 +3889,7 @@ class Placeholders(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3911,7 +3911,7 @@ class Placeholders(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3934,7 +3934,7 @@ class Placeholders(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class PlaySettings(DispatchBaseClass):
@@ -3977,7 +3977,7 @@ class Presentations(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'Add', '{91493444-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{91493444-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def CanCheckOut(self, FileName=defaultNamedNotOptArg):
@@ -3998,7 +3998,7 @@ class Presentations(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'Item', '{91493444-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493444-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Presentation
@@ -4011,7 +4011,7 @@ class Presentations(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'Open', '{91493444-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Open', '{91493444-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Presentation
@@ -4024,7 +4024,7 @@ class Presentations(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'OpenOld', '{91493444-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'OpenOld', '{91493444-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4051,7 +4051,7 @@ class Presentations(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4074,7 +4074,7 @@ class Presentations(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class PrintOptions(DispatchBaseClass):
@@ -4145,7 +4145,7 @@ class PrintRanges(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2001, LCID, 1, (9, 0), ((3, 1), (3, 1)),Start
 			, End)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{9149345F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{9149345F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def ClearAll(self):
@@ -4156,7 +4156,7 @@ class PrintRanges(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{9149345F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{9149345F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4178,7 +4178,7 @@ class PrintRanges(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4201,7 +4201,7 @@ class PrintRanges(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class PropertyEffect(DispatchBaseClass):
@@ -4262,7 +4262,7 @@ class PublishObjects(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934D0-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934D0-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4284,7 +4284,7 @@ class PublishObjects(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4307,7 +4307,7 @@ class PublishObjects(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class RGBColor(DispatchBaseClass):
@@ -4329,7 +4329,7 @@ class RGBColor(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4386,7 +4386,7 @@ class Rows(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((3, 49),),BeforeRow
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934C7-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934C7-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Row
@@ -4394,7 +4394,7 @@ class Rows(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934C7-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934C7-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4416,7 +4416,7 @@ class Rows(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4439,7 +4439,7 @@ class Rows(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Ruler(DispatchBaseClass):
@@ -4483,7 +4483,7 @@ class RulerLevels(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493492-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493492-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4505,7 +4505,7 @@ class RulerLevels(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4528,7 +4528,7 @@ class RulerLevels(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ScaleEffect(DispatchBaseClass):
@@ -4599,7 +4599,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((9, 1), (3, 1), (3, 49), (3, 49), (3, 49)),Shape
 			, effectId, Level, trigger, Index)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddEffect', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddEffect', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4607,7 +4607,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2004, LCID, 1, (9, 0), ((9, 1), (3, 49)),Effect
 			, Index)
 		if ret is not None:
-			ret = Dispatch(ret, u'Clone', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Clone', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4615,7 +4615,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2008, LCID, 1, (9, 0), ((9, 1), (3, 1), (3, 49), (3, 49)),Effect
 			, After, DimColor, DimSchemeColor)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToAfterEffect', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'ConvertToAfterEffect', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4623,7 +4623,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2009, LCID, 1, (9, 0), ((9, 1), (3, 1)),Effect
 			, AnimateBackground)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToAnimateBackground', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'ConvertToAnimateBackground', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4631,7 +4631,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2010, LCID, 1, (9, 0), ((9, 1), (3, 1)),Effect
 			, animateInReverse)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToAnimateInReverse', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'ConvertToAnimateInReverse', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4639,7 +4639,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2007, LCID, 1, (9, 0), ((9, 1), (3, 1)),Effect
 			, Level)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToBuildLevel', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'ConvertToBuildLevel', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4647,7 +4647,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2011, LCID, 1, (9, 0), ((9, 1), (3, 1)),Effect
 			, unitEffect)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToTextUnitEffect', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'ConvertToTextUnitEffect', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4655,7 +4655,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2005, LCID, 1, (9, 0), ((9, 1),),Shape
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'FindFirstAnimationFor', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'FindFirstAnimationFor', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4663,7 +4663,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2006, LCID, 1, (9, 0), ((3, 1),),click
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'FindFirstAnimationForClick', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'FindFirstAnimationForClick', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Effect
@@ -4671,7 +4671,7 @@ class Sequence(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934DF-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934DF-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4693,7 +4693,7 @@ class Sequence(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4716,7 +4716,7 @@ class Sequence(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Sequences(DispatchBaseClass):
@@ -4728,7 +4728,7 @@ class Sequences(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((3, 49),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{914934DE-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{914934DE-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Sequence
@@ -4736,7 +4736,7 @@ class Sequences(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{914934DE-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{914934DE-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4758,7 +4758,7 @@ class Sequences(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4781,7 +4781,7 @@ class Sequences(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SetEffect(DispatchBaseClass):
@@ -4871,7 +4871,7 @@ class Shape(DispatchBaseClass):
 	def Duplicate(self):
 		ret = self._oleobj_.InvokeTypes(2012, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Duplicate', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Duplicate', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Export(self, PathName=defaultNamedNotOptArg, Filter=defaultNamedNotOptArg, ScaleWidth=0, ScaleHeight=0
@@ -4920,7 +4920,7 @@ class Shape(DispatchBaseClass):
 	def Ungroup(self):
 		ret = self._oleobj_.InvokeTypes(23, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Ungroup', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Ungroup', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def ZOrder(self, ZOrderCmd=defaultNamedNotOptArg):
@@ -5056,7 +5056,7 @@ class ShapeNodes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493487-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493487-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def SetEditingType(self, Index=defaultNamedNotOptArg, EditingType=defaultNamedNotOptArg):
@@ -5090,7 +5090,7 @@ class ShapeNodes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5113,7 +5113,7 @@ class ShapeNodes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ShapeRange(DispatchBaseClass):
@@ -5160,7 +5160,7 @@ class ShapeRange(DispatchBaseClass):
 	def Duplicate(self):
 		ret = self._oleobj_.InvokeTypes(2012, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Duplicate', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Duplicate', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Export(self, PathName=defaultNamedNotOptArg, Filter=defaultNamedNotOptArg, ScaleWidth=0, ScaleHeight=0
@@ -5176,7 +5176,7 @@ class ShapeRange(DispatchBaseClass):
 	def Group(self):
 		ret = self._oleobj_.InvokeTypes(2016, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Group', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Group', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def IncrementLeft(self, Increment=defaultNamedNotOptArg):
@@ -5196,7 +5196,7 @@ class ShapeRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def PickUp(self):
@@ -5206,7 +5206,7 @@ class ShapeRange(DispatchBaseClass):
 	def Regroup(self):
 		ret = self._oleobj_.InvokeTypes(2017, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Regroup', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Regroup', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def RerouteConnections(self):
@@ -5231,7 +5231,7 @@ class ShapeRange(DispatchBaseClass):
 	def Ungroup(self):
 		ret = self._oleobj_.InvokeTypes(23, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Ungroup', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Ungroup', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def ZOrder(self, ZOrderCmd=defaultNamedNotOptArg):
@@ -5344,7 +5344,7 @@ class ShapeRange(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5367,7 +5367,7 @@ class ShapeRange(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(9, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Shapes(DispatchBaseClass):
@@ -5380,7 +5380,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCallout', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddCallout', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5388,7 +5388,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(25, LCID, 1, (9, 0), ((4, 1), (4, 1), (4, 1), (4, 1)),Left
 			, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCanvas', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddCanvas', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5396,7 +5396,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2009, LCID, 1, (9, 0), ((4, 49), (4, 49), (4, 49), (4, 49)),Left
 			, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddComment', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddComment', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5405,7 +5405,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(11, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, BeginX, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddConnector', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddConnector', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5413,7 +5413,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(12, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCurve', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddCurve', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5422,7 +5422,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(23, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddDiagram', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddDiagram', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5431,7 +5431,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(13, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLabel', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddLabel', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5439,7 +5439,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(14, LCID, 1, (9, 0), ((4, 1), (4, 1), (4, 1), (4, 1)),BeginX
 			, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLine', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddLine', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5448,14 +5448,14 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2011, LCID, 1, (9, 0), ((8, 1), (4, 49), (4, 49), (4, 49), (4, 49)),FileName
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddMediaObject', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddMediaObject', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
 	def AddOLEObject(self, Left=0.0, Top=0.0, Width=-1.0, Height=-1.0
-			, ClassName=u'', FileName=u'', DisplayAsIcon=0, IconFileName=u'', IconIndex=0
-			, IconLabel=u'', Link=0):
-		return self._ApplyTypes_(2008, 1, (9, 32), ((4, 49), (4, 49), (4, 49), (4, 49), (8, 49), (8, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), u'AddOLEObject', '{91493479-5A91-11CF-8700-00AA0060263B}',Left
+			, ClassName='', FileName='', DisplayAsIcon=0, IconFileName='', IconIndex=0
+			, IconLabel='', Link=0):
+		return self._ApplyTypes_(2008, 1, (9, 32), ((4, 49), (4, 49), (4, 49), (4, 49), (8, 49), (8, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), 'AddOLEObject', '{91493479-5A91-11CF-8700-00AA0060263B}',Left
 			, Top, Width, Height, ClassName, FileName
 			, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Link
 			)
@@ -5467,7 +5467,7 @@ class Shapes(DispatchBaseClass):
 			, LinkToFile, SaveWithDocument, Left, Top, Width
 			, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPicture', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddPicture', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5476,7 +5476,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2010, LCID, 1, (9, 0), ((3, 1), (4, 49), (4, 49), (4, 49), (4, 49)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPlaceholder', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddPlaceholder', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5484,7 +5484,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(16, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPolyline', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddPolyline', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5493,7 +5493,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(17, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddShape', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddShape', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5503,7 +5503,7 @@ class Shapes(DispatchBaseClass):
 			, NumColumns, Left, Top, Width, Height
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTable', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTable', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5513,7 +5513,7 @@ class Shapes(DispatchBaseClass):
 			, Text, FontName, FontSize, FontBold, FontItalic
 			, Left, Top)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextEffect', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTextEffect', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5522,14 +5522,14 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(19, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextbox', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTextbox', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
 	def AddTitle(self):
 		ret = self._oleobj_.InvokeTypes(2005, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTitle', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTitle', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type FreeformBuilder
@@ -5537,7 +5537,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(20, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1)),EditingType
 			, X1, Y1)
 		if ret is not None:
-			ret = Dispatch(ret, u'BuildFreeform', '{91493478-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'BuildFreeform', '{91493478-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Shape
@@ -5545,20 +5545,20 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493479-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type ShapeRange
 	def Paste(self):
 		ret = self._oleobj_.InvokeTypes(2012, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Paste', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Paste', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type ShapeRange
-	def PasteSpecial(self, DataType=0, DisplayAsIcon=0, IconFileName=u'', IconIndex=0
-			, IconLabel=u'', Link=0):
-		return self._ApplyTypes_(2014, 1, (9, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), u'PasteSpecial', '{9149347A-5A91-11CF-8700-00AA0060263B}',DataType
+	def PasteSpecial(self, DataType=0, DisplayAsIcon=0, IconFileName='', IconIndex=0
+			, IconLabel='', Link=0):
+		return self._ApplyTypes_(2014, 1, (9, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), 'PasteSpecial', '{9149347A-5A91-11CF-8700-00AA0060263B}',DataType
 			, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Link
 			)
 
@@ -5567,7 +5567,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2003, LCID, 1, (9, 0), ((12, 17),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{9149347A-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Range', '{9149347A-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def SelectAll(self):
@@ -5597,7 +5597,7 @@ class Shapes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5620,7 +5620,7 @@ class Shapes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SlideRange(DispatchBaseClass):
@@ -5644,7 +5644,7 @@ class SlideRange(DispatchBaseClass):
 	def Duplicate(self):
 		ret = self._oleobj_.InvokeTypes(2015, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Duplicate', '{9149346B-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Duplicate', '{9149346B-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Export(self, FileName=defaultNamedNotOptArg, FilterName=defaultNamedNotOptArg, ScaleWidth=0, ScaleHeight=0):
@@ -5661,7 +5661,7 @@ class SlideRange(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'Item', '{91493445-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493445-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def MoveTo(self, toPos=defaultNamedNotOptArg):
@@ -5735,7 +5735,7 @@ class SlideRange(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5758,7 +5758,7 @@ class SlideRange(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SlideShowSettings(DispatchBaseClass):
@@ -5769,7 +5769,7 @@ class SlideShowSettings(DispatchBaseClass):
 	def Run(self):
 		ret = self._oleobj_.InvokeTypes(2008, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Run', '{91493453-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Run', '{91493453-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -5943,7 +5943,7 @@ class SlideShowWindows(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493453-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493453-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -5965,7 +5965,7 @@ class SlideShowWindows(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5988,7 +5988,7 @@ class SlideShowWindows(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Slides(DispatchBaseClass):
@@ -6005,7 +6005,7 @@ class Slides(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'Add', '{91493445-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{91493445-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type Slide
@@ -6018,7 +6018,7 @@ class Slides(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'FindBySlideID', '{91493445-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'FindBySlideID', '{91493445-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def InsertFromFile(self, FileName=defaultNamedNotOptArg, Index=defaultNamedNotOptArg, SlideStart=1, SlideEnd=-1):
@@ -6035,7 +6035,7 @@ class Slides(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'Item', '{91493445-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493445-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type SlideRange
@@ -6043,7 +6043,7 @@ class Slides(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2007, LCID, 1, (9, 0), ((3, 49),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Paste', '{9149346B-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Paste', '{9149346B-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type SlideRange
@@ -6051,7 +6051,7 @@ class Slides(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2006, LCID, 1, (9, 0), ((12, 17),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{9149346B-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Range', '{9149346B-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6078,7 +6078,7 @@ class Slides(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6101,7 +6101,7 @@ class Slides(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SoundEffect(DispatchBaseClass):
@@ -6177,7 +6177,7 @@ class TabStops(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2004, LCID, 1, (9, 0), ((3, 1), (4, 1)),Type
 			, Position)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{91493494-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Add', '{91493494-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TabStop
@@ -6185,7 +6185,7 @@ class TabStops(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493494-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493494-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6209,7 +6209,7 @@ class TabStops(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6232,7 +6232,7 @@ class TabStops(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Table(DispatchBaseClass):
@@ -6244,7 +6244,7 @@ class Table(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2005, LCID, 1, (9, 0), ((3, 1), (3, 1)),Row
 			, Column)
 		if ret is not None:
-			ret = Dispatch(ret, u'Cell', '{914934C9-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Cell', '{914934C9-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def MergeBorders(self):
@@ -6316,7 +6316,7 @@ class Tags(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6339,7 +6339,7 @@ class Tags(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class TextEffectFormat(DispatchBaseClass):
@@ -6435,7 +6435,7 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2013, LCID, 1, (9, 0), ((3, 49), (3, 49)),Start
 			, Length)
 		if ret is not None:
-			ret = Dispatch(ret, u'Characters', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Characters', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Copy(self):
@@ -6452,17 +6452,17 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2033, LCID, 1, (9, 0), ((8, 1), (3, 49), (3, 49), (3, 49)),FindWhat
 			, After, MatchCase, WholeWords)
 		if ret is not None:
-			ret = Dispatch(ret, u'Find', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Find', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
-	def InsertAfter(self, NewText=u''):
-		return self._ApplyTypes_(2017, 1, (9, 32), ((8, 49),), u'InsertAfter', '{9149348F-5A91-11CF-8700-00AA0060263B}',NewText
+	def InsertAfter(self, NewText=''):
+		return self._ApplyTypes_(2017, 1, (9, 32), ((8, 49),), 'InsertAfter', '{9149348F-5A91-11CF-8700-00AA0060263B}',NewText
 			)
 
 	# Result is of type TextRange
-	def InsertBefore(self, NewText=u''):
-		return self._ApplyTypes_(2018, 1, (9, 32), ((8, 49),), u'InsertBefore', '{9149348F-5A91-11CF-8700-00AA0060263B}',NewText
+	def InsertBefore(self, NewText=''):
+		return self._ApplyTypes_(2018, 1, (9, 32), ((8, 49),), 'InsertBefore', '{9149348F-5A91-11CF-8700-00AA0060263B}',NewText
 			)
 
 	# Result is of type TextRange
@@ -6470,14 +6470,14 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2019, LCID, 1, (9, 0), ((3, 1), (3, 49)),DateTimeFormat
 			, InsertAsField)
 		if ret is not None:
-			ret = Dispatch(ret, u'InsertDateTime', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'InsertDateTime', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
 	def InsertSlideNumber(self):
 		ret = self._oleobj_.InvokeTypes(2020, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'InsertSlideNumber', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'InsertSlideNumber', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
@@ -6485,7 +6485,7 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2021, LCID, 1, (9, 0), ((8, 1), (3, 1), (3, 49)),FontName
 			, CharNumber, Unicode)
 		if ret is not None:
-			ret = Dispatch(ret, u'InsertSymbol', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'InsertSymbol', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
@@ -6493,7 +6493,7 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2014, LCID, 1, (9, 0), ((3, 49), (3, 49)),Start
 			, Length)
 		if ret is not None:
-			ret = Dispatch(ret, u'Lines', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Lines', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def LtrRun(self):
@@ -6504,20 +6504,20 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2010, LCID, 1, (9, 0), ((3, 49), (3, 49)),Start
 			, Length)
 		if ret is not None:
-			ret = Dispatch(ret, u'Paragraphs', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Paragraphs', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
 	def Paste(self):
 		ret = self._oleobj_.InvokeTypes(2029, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Paste', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Paste', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
-	def PasteSpecial(self, DataType=0, DisplayAsIcon=0, IconFileName=u'', IconIndex=0
-			, IconLabel=u'', Link=0):
-		return self._ApplyTypes_(2039, 1, (9, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), u'PasteSpecial', '{9149348F-5A91-11CF-8700-00AA0060263B}',DataType
+	def PasteSpecial(self, DataType=0, DisplayAsIcon=0, IconFileName='', IconIndex=0
+			, IconLabel='', Link=0):
+		return self._ApplyTypes_(2039, 1, (9, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), 'PasteSpecial', '{9149348F-5A91-11CF-8700-00AA0060263B}',DataType
 			, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Link
 			)
 
@@ -6530,12 +6530,12 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2034, LCID, 1, (9, 0), ((8, 1), (8, 1), (3, 49), (3, 49), (3, 49)),FindWhat
 			, ReplaceWhat, After, MatchCase, WholeWords)
 		if ret is not None:
-			ret = Dispatch(ret, u'Replace', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Replace', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def RotatedBounds(self, X1=global_Missing, Y1=global_Missing, X2=global_Missing, Y2=global_Missing
 			, X3=global_Missing, Y3=global_Missing, x4=global_Missing, y4=global_Missing):
-		return self._ApplyTypes_(2035, 1, (24, 0), ((16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2)), u'RotatedBounds', None,X1
+		return self._ApplyTypes_(2035, 1, (24, 0), ((16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2), (16388, 2)), 'RotatedBounds', None,X1
 			, Y1, X2, Y2, X3, Y3
 			, x4, y4)
 
@@ -6547,7 +6547,7 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2015, LCID, 1, (9, 0), ((3, 49), (3, 49)),Start
 			, Length)
 		if ret is not None:
-			ret = Dispatch(ret, u'Runs', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Runs', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Select(self):
@@ -6558,14 +6558,14 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2011, LCID, 1, (9, 0), ((3, 49), (3, 49)),Start
 			, Length)
 		if ret is not None:
-			ret = Dispatch(ret, u'Sentences', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Sentences', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
 	def TrimText(self):
 		ret = self._oleobj_.InvokeTypes(2016, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'TrimText', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'TrimText', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	# Result is of type TextRange
@@ -6573,7 +6573,7 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2012, LCID, 1, (9, 0), ((3, 49), (3, 49)),Start
 			, Length)
 		if ret is not None:
-			ret = Dispatch(ret, u'Words', '{9149348F-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Words', '{9149348F-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6608,7 +6608,7 @@ class TextRange(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6631,7 +6631,7 @@ class TextRange(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class TextStyle(DispatchBaseClass):
@@ -6677,7 +6677,7 @@ class TextStyleLevels(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Level
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{9149349B-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{9149349B-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6699,7 +6699,7 @@ class TextStyleLevels(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6722,7 +6722,7 @@ class TextStyleLevels(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class TextStyles(DispatchBaseClass):
@@ -6734,7 +6734,7 @@ class TextStyles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Type
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{91493499-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Item', '{91493499-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6756,7 +6756,7 @@ class TextStyles(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6779,7 +6779,7 @@ class TextStyles(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(11, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ThreeDFormat(DispatchBaseClass):
@@ -6903,15 +6903,15 @@ class View(DispatchBaseClass):
 	def Paste(self):
 		return self._oleobj_.InvokeTypes(2005, LCID, 1, (24, 0), (),)
 
-	def PasteSpecial(self, DataType=0, DisplayAsIcon=0, IconFileName=u'', IconIndex=0
-			, IconLabel=u'', Link=0):
-		return self._ApplyTypes_(2010, 1, (24, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), u'PasteSpecial', None,DataType
+	def PasteSpecial(self, DataType=0, DisplayAsIcon=0, IconFileName='', IconIndex=0
+			, IconLabel='', Link=0):
+		return self._ApplyTypes_(2010, 1, (24, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (8, 49), (3, 49)), 'PasteSpecial', None,DataType
 			, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Link
 			)
 
-	def PrintOut(self, From=-1, To=-1, PrintToFile=u'', Copies=0
+	def PrintOut(self, From=-1, To=-1, PrintToFile='', Copies=0
 			, Collate=-99):
-		return self._ApplyTypes_(2012, 1, (24, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (3, 49)), u'PrintOut', None,From
+		return self._ApplyTypes_(2012, 1, (24, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (3, 49)), 'PrintOut', None,From
 			, To, PrintToFile, Copies, Collate)
 
 	_prop_map_get_ = {
@@ -6983,15 +6983,15 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2045, LCID, 2, (9, 0), ((3, 1),),Type
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'FileDialog', '{000C0362-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'FileDialog', '{000C0362-0000-0000-C000-000000000046}')
 		return ret
 
 	def GetOptionFlag(self, Option=defaultNamedNotOptArg, Persist=False):
 		return self._oleobj_.InvokeTypes(2043, LCID, 1, (11, 0), ((3, 1), (11, 49)),Option
 			, Persist)
 
-	def Help(self, HelpFile=u'vbapp10.chm', ContextID=0):
-		return self._ApplyTypes_(2020, 1, (24, 32), ((8, 49), (3, 49)), u'Help', None,HelpFile
+	def Help(self, HelpFile='vbapp10.chm', ContextID=0):
+		return self._ApplyTypes_(2020, 1, (24, 32), ((8, 49), (3, 49)), 'Help', None,HelpFile
 			, ContextID)
 
 	def PPFileDialog(self, Type=defaultNamedNotOptArg):
@@ -7003,7 +7003,7 @@ class _Application(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'PPFileDialog', None)
+			ret = Dispatch(ret, 'PPFileDialog', None)
 		return ret
 
 	def Quit(self):
@@ -7106,7 +7106,7 @@ class _Application(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -7201,15 +7201,15 @@ class _Presentation(DispatchBaseClass):
 	CLSID = IID('{9149349D-5A91-11CF-8700-00AA0060263B}')
 	coclass_clsid = IID('{91493444-5A91-11CF-8700-00AA0060263B}')
 
-	def AddBaseline(self, FileName=u''):
-		return self._ApplyTypes_(2073, 1, (24, 32), ((8, 49),), u'AddBaseline', None,FileName
+	def AddBaseline(self, FileName=''):
+		return self._ApplyTypes_(2073, 1, (24, 32), ((8, 49),), 'AddBaseline', None,FileName
 			)
 
 	# Result is of type _Master
 	def AddTitleMaster(self):
 		ret = self._oleobj_.InvokeTypes(2006, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTitleMaster', '{9149346C-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'AddTitleMaster', '{9149346C-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def AddToFavorites(self):
@@ -7236,9 +7236,9 @@ class _Presentation(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(2038, LCID, 1, (24, 0), ((8, 1), (8, 1), (3, 49), (3, 49)),Path
 			, FilterName, ScaleWidth, ScaleHeight)
 
-	def FollowHyperlink(self, Address=defaultNamedNotOptArg, SubAddress=u'', NewWindow=False, AddHistory=True
-			, ExtraInfo=u'', Method=0, HeaderInfo=u''):
-		return self._ApplyTypes_(2030, 1, (24, 32), ((8, 1), (8, 49), (11, 49), (11, 49), (8, 49), (3, 49), (8, 49)), u'FollowHyperlink', None,Address
+	def FollowHyperlink(self, Address=defaultNamedNotOptArg, SubAddress='', NewWindow=False, AddHistory=True
+			, ExtraInfo='', Method=0, HeaderInfo=''):
+		return self._ApplyTypes_(2030, 1, (24, 32), ((8, 1), (8, 49), (11, 49), (11, 49), (8, 49), (3, 49), (8, 49)), 'FollowHyperlink', None,Address
 			, SubAddress, NewWindow, AddHistory, ExtraInfo, Method
 			, HeaderInfo)
 
@@ -7254,12 +7254,12 @@ class _Presentation(DispatchBaseClass):
 	def NewWindow(self):
 		ret = self._oleobj_.InvokeTypes(2029, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'NewWindow', '{91493457-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'NewWindow', '{91493457-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
-	def PrintOut(self, From=-1, To=-1, PrintToFile=u'', Copies=0
+	def PrintOut(self, From=-1, To=-1, PrintToFile='', Copies=0
 			, Collate=-99):
-		return self._ApplyTypes_(2034, 1, (24, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (3, 49)), u'PrintOut', None,From
+		return self._ApplyTypes_(2034, 1, (24, 32), ((3, 49), (3, 49), (8, 49), (3, 49), (3, 49)), 'PrintOut', None,From
 			, To, PrintToFile, Copies, Collate)
 
 	def ReloadAs(self, cp=defaultNamedNotOptArg):
@@ -7284,12 +7284,12 @@ class _Presentation(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(2037, LCID, 1, (24, 0), ((8, 1), (3, 49), (3, 49)),FileName
 			, FileFormat, EmbedTrueTypeFonts)
 
-	def SendFaxOverInternet(self, Recipients=u'', Subject=u'', ShowMessage=False):
-		return self._ApplyTypes_(2085, 1, (24, 32), ((8, 49), (8, 49), (11, 49)), u'SendFaxOverInternet', None,Recipients
+	def SendFaxOverInternet(self, Recipients='', Subject='', ShowMessage=False):
+		return self._ApplyTypes_(2085, 1, (24, 32), ((8, 49), (8, 49), (11, 49)), 'SendFaxOverInternet', None,Recipients
 			, Subject, ShowMessage)
 
-	def SendForReview(self, Recipients=u'', Subject=u'', ShowMessage=True, IncludeAttachment=defaultNamedOptArg):
-		return self._ApplyTypes_(2069, 1, (24, 32), ((8, 49), (8, 49), (11, 49), (12, 17)), u'SendForReview', None,Recipients
+	def SendForReview(self, Recipients='', Subject='', ShowMessage=True, IncludeAttachment=defaultNamedOptArg):
+		return self._ApplyTypes_(2069, 1, (24, 32), ((8, 49), (8, 49), (11, 49), (12, 17)), 'SendForReview', None,Recipients
 			, Subject, ShowMessage, IncludeAttachment)
 
 	def SetPasswordEncryptionOptions(self, PasswordEncryptionProvider=defaultNamedNotOptArg, PasswordEncryptionAlgorithm=defaultNamedNotOptArg, PasswordEncryptionKeyLength=defaultNamedNotOptArg, PasswordEncryptionFileProperties=defaultNamedNotOptArg):
@@ -7434,7 +7434,7 @@ class _Slide(DispatchBaseClass):
 	def Duplicate(self):
 		ret = self._oleobj_.InvokeTypes(2015, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Duplicate', '{9149346B-5A91-11CF-8700-00AA0060263B}')
+			ret = Dispatch(ret, 'Duplicate', '{9149346B-5A91-11CF-8700-00AA0060263B}')
 		return ret
 
 	def Export(self, FileName=defaultNamedNotOptArg, FilterName=defaultNamedNotOptArg, ScaleWidth=0, ScaleHeight=0):
@@ -7567,918 +7567,918 @@ class Slide(CoClassBaseClass): # A CoClass
 
 ActionSetting_vtables_dispatch_ = 1
 ActionSetting_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Action' , u'Action' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Action' , u'Action' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ActionVerb' , u'ActionVerb' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ActionVerb' , u'ActionVerb' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateAction' , u'AnimateAction' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateAction' , u'AnimateAction' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Run' , u'Run' , ), 2006, (2006, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Run' , u'Run' , ), 2006, (2006, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Hyperlink' , u'Hyperlink' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{91493465-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SoundEffect' , u'SoundEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'ShowAndReturn' , u'ShowAndReturn' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ShowAndReturn' , u'ShowAndReturn' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Action' , 'Action' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Action' , 'Action' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ActionVerb' , 'ActionVerb' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ActionVerb' , 'ActionVerb' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateAction' , 'AnimateAction' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateAction' , 'AnimateAction' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Run' , 'Run' , ), 2006, (2006, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Run' , 'Run' , ), 2006, (2006, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Hyperlink' , 'Hyperlink' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{91493465-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'SoundEffect' , 'SoundEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'ShowAndReturn' , 'ShowAndReturn' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ShowAndReturn' , 'ShowAndReturn' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
 ]
 
 ActionSettings_vtables_dispatch_ = 1
 ActionSettings_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{9149348D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 AddIn_vtables_dispatch_ = 1
 AddIn_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'FullName' , u'FullName' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Path' , u'Path' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Registered' , u'Registered' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Registered' , u'Registered' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLoad' , u'AutoLoad' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLoad' , u'AutoLoad' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Loaded' , u'Loaded' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Loaded' , u'Loaded' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayAlerts' , u'DisplayAlerts' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 64 , )),
-	(( u'DisplayAlerts' , u'DisplayAlerts' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 64 , )),
-	(( u'RegisteredInHKLM' , u'RegisteredInHKLM' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 64 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'FullName' , 'FullName' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Path' , 'Path' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Registered' , 'Registered' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Registered' , 'Registered' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLoad' , 'AutoLoad' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLoad' , 'AutoLoad' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Loaded' , 'Loaded' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Loaded' , 'Loaded' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAlerts' , 'DisplayAlerts' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 64 , )),
+	(( 'DisplayAlerts' , 'DisplayAlerts' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 64 , )),
+	(( 'RegisteredInHKLM' , 'RegisteredInHKLM' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 64 , )),
 ]
 
 AddIns_vtables_dispatch_ = 1
 AddIns_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (16396, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (16396, 1, None, None) , 
 			(16393, 10, None, "IID('{91493461-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'FileName' , u'Add' , ), 2003, (2003, (), [ (8, 1, None, None) , 
+	(( 'Add' , 'FileName' , 'Add' , ), 2003, (2003, (), [ (8, 1, None, None) , 
 			(16393, 10, None, "IID('{91493461-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Remove' , u'Index' , ), 2004, (2004, (), [ (16396, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Remove' , 'Index' , ), 2004, (2004, (), [ (16396, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 Adjustments_vtables_dispatch_ = 1
 Adjustments_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 AnimationBehavior_vtables_dispatch_ = 1
 AnimationBehavior_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Additive' , u'Additive' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Additive' , u'Additive' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Accumulate' , u'Accumulate' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Accumulate' , u'Accumulate' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'MotionEffect' , u'MotionEffect' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{914934E5-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'ColorEffect' , u'ColorEffect' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{914934E6-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleEffect' , u'ScaleEffect' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{914934E7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'RotationEffect' , u'RotationEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{914934E8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'PropertyEffect' , u'PropertyEffect' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{914934E9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Timing' , u'Timing' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{914934E0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'CommandEffect' , u'CommandEffect' , ), 2013, (2013, (), [ (16393, 10, None, "IID('{914934EF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'FilterEffect' , u'FilterEffect' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{914934F0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'SetEffect' , u'SetEffect' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{914934F1-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Additive' , 'Additive' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Additive' , 'Additive' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Accumulate' , 'Accumulate' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Accumulate' , 'Accumulate' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'MotionEffect' , 'MotionEffect' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{914934E5-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'ColorEffect' , 'ColorEffect' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{914934E6-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ScaleEffect' , 'ScaleEffect' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{914934E7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'RotationEffect' , 'RotationEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{914934E8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'PropertyEffect' , 'PropertyEffect' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{914934E9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Timing' , 'Timing' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{914934E0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'CommandEffect' , 'CommandEffect' , ), 2013, (2013, (), [ (16393, 10, None, "IID('{914934EF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'FilterEffect' , 'FilterEffect' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{914934F0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'SetEffect' , 'SetEffect' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{914934F1-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
 ]
 
 AnimationBehaviors_vtables_dispatch_ = 1
 AnimationBehaviors_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934E4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Type' , u'Index' , u'Add' , ), 2003, (2003, (), [ 
+	(( 'Add' , 'Type' , 'Index' , 'Add' , ), 2003, (2003, (), [ 
 			(3, 1, None, None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{914934E4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 AnimationPoint_vtables_dispatch_ = 1
 AnimationPoint_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Time' , u'Time' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Time' , u'Time' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Value' , u'Value' , ), 2005, (2005, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Value' , u'Value' , ), 2005, (2005, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Formula' , u'Formula' , ), 2006, (2006, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Formula' , u'Formula' , ), 2006, (2006, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Time' , 'Time' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Time' , 'Time' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Value' , 'Value' , ), 2005, (2005, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Value' , 'Value' , ), 2005, (2005, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Formula' , 'Formula' , ), 2006, (2006, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Formula' , 'Formula' , ), 2006, (2006, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 AnimationPoints_vtables_dispatch_ = 1
 AnimationPoints_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934EB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Index' , u'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
+	(( 'Add' , 'Index' , 'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
 			(16393, 10, None, "IID('{914934EB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Smooth' , u'Smooth' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Smooth' , u'Smooth' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Smooth' , 'Smooth' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Smooth' , 'Smooth' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 AnimationSettings_vtables_dispatch_ = 1
 AnimationSettings_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'DimColor' , u'DimColor' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'SoundEffect' , u'SoundEffect' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'EntryEffect' , u'EntryEffect' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'EntryEffect' , u'EntryEffect' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AfterEffect' , u'AfterEffect' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AfterEffect' , u'AfterEffect' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AnimationOrder' , u'AnimationOrder' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AnimationOrder' , u'AnimationOrder' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceMode' , u'AdvanceMode' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceMode' , u'AdvanceMode' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceTime' , u'AdvanceTime' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceTime' , u'AdvanceTime' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'PlaySettings' , u'PlaySettings' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{9149348E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'TextLevelEffect' , u'TextLevelEffect' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'TextLevelEffect' , u'TextLevelEffect' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'TextUnitEffect' , u'TextUnitEffect' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'TextUnitEffect' , u'TextUnitEffect' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Animate' , u'Animate' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Animate' , u'Animate' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateBackground' , u'AnimateBackground' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateBackground' , u'AnimateBackground' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateTextInReverse' , u'AnimateTextInReverse' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateTextInReverse' , u'AnimateTextInReverse' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'ChartUnitEffect' , u'ChartUnitEffect' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'ChartUnitEffect' , u'ChartUnitEffect' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'DimColor' , 'DimColor' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'SoundEffect' , 'SoundEffect' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'EntryEffect' , 'EntryEffect' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'EntryEffect' , 'EntryEffect' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AfterEffect' , 'AfterEffect' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'AfterEffect' , 'AfterEffect' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'AnimationOrder' , 'AnimationOrder' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'AnimationOrder' , 'AnimationOrder' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceMode' , 'AdvanceMode' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceMode' , 'AdvanceMode' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceTime' , 'AdvanceTime' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceTime' , 'AdvanceTime' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'PlaySettings' , 'PlaySettings' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{9149348E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'TextLevelEffect' , 'TextLevelEffect' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'TextLevelEffect' , 'TextLevelEffect' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'TextUnitEffect' , 'TextUnitEffect' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'TextUnitEffect' , 'TextUnitEffect' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Animate' , 'Animate' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Animate' , 'Animate' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateBackground' , 'AnimateBackground' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateBackground' , 'AnimateBackground' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateTextInReverse' , 'AnimateTextInReverse' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateTextInReverse' , 'AnimateTextInReverse' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'ChartUnitEffect' , 'ChartUnitEffect' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'ChartUnitEffect' , 'ChartUnitEffect' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
 ]
 
 AutoCorrect_vtables_dispatch_ = 1
 AutoCorrect_vtables_ = [
-	(( u'DisplayAutoCorrectOptions' , u'DisplayAutoCorrectOptions' , ), 2001, (2001, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayAutoCorrectOptions' , u'DisplayAutoCorrectOptions' , ), 2001, (2001, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayAutoLayoutOptions' , u'DisplayAutoLayoutOptions' , ), 2002, (2002, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayAutoLayoutOptions' , u'DisplayAutoLayoutOptions' , ), 2002, (2002, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAutoCorrectOptions' , 'DisplayAutoCorrectOptions' , ), 2001, (2001, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAutoCorrectOptions' , 'DisplayAutoCorrectOptions' , ), 2001, (2001, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAutoLayoutOptions' , 'DisplayAutoLayoutOptions' , ), 2002, (2002, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAutoLayoutOptions' , 'DisplayAutoLayoutOptions' , ), 2002, (2002, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 Borders_vtables_dispatch_ = 1
 Borders_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'BorderType' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'BorderType' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{9149347F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 BulletFormat_vtables_dispatch_ = 1
 BulletFormat_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 64 , )),
-	(( u'Visible' , u'Visible' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 64 , )),
-	(( u'Character' , u'Character' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Character' , u'Character' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'RelativeSize' , u'RelativeSize' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'RelativeSize' , u'RelativeSize' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'UseTextColor' , u'UseTextColor' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'UseTextColor' , u'UseTextColor' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'UseTextFont' , u'UseTextFont' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'UseTextFont' , u'UseTextFont' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Font' , u'Font' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'Style' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'Style' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'StartValue' , u'StartValue' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'StartValue' , u'StartValue' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Picture' , u'Picture' , ), 2011, (2011, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Number' , u'Number' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 64 , )),
+	(( 'Visible' , 'Visible' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 64 , )),
+	(( 'Character' , 'Character' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Character' , 'Character' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'RelativeSize' , 'RelativeSize' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'RelativeSize' , 'RelativeSize' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'UseTextColor' , 'UseTextColor' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'UseTextColor' , 'UseTextColor' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'UseTextFont' , 'UseTextFont' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'UseTextFont' , 'UseTextFont' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Font' , 'Font' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'Style' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'Style' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'StartValue' , 'StartValue' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'StartValue' , 'StartValue' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Picture' , 'Picture' , ), 2011, (2011, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Number' , 'Number' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
 ]
 
 CalloutFormat_vtables_dispatch_ = 1
 CalloutFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AutomaticLength' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'CustomDrop' , u'Drop' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'CustomLength' , u'Length' , ), 12, (12, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'PresetDrop' , u'DropType' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Accent' , u'Accent' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Accent' , u'Accent' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Angle' , u'Angle' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Angle' , u'Angle' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AutoAttach' , u'AutoAttach' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AutoAttach' , u'AutoAttach' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLength' , u'AutoLength' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Border' , u'Border' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Border' , u'Border' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Drop' , u'Drop' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'DropType' , u'DropType' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Gap' , u'Gap' , ), 107, (107, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Gap' , u'Gap' , ), 107, (107, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Length' , u'Length' , ), 108, (108, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AutomaticLength' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'CustomDrop' , 'Drop' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'CustomLength' , 'Length' , ), 12, (12, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'PresetDrop' , 'DropType' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Accent' , 'Accent' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Accent' , 'Accent' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Angle' , 'Angle' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Angle' , 'Angle' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'AutoAttach' , 'AutoAttach' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'AutoAttach' , 'AutoAttach' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLength' , 'AutoLength' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Border' , 'Border' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Border' , 'Border' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Drop' , 'Drop' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'DropType' , 'DropType' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Gap' , 'Gap' , ), 107, (107, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Gap' , 'Gap' , ), 107, (107, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Length' , 'Length' , ), 108, (108, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
 ]
 
 CanvasShapes_vtables_dispatch_ = 1
 CanvasShapes_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'AddCallout' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'AddCallout' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AddConnector' , u'Type' , u'BeginX' , u'BeginY' , u'EndX' , 
-			u'EndY' , u'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddConnector' , 'Type' , 'BeginX' , 'BeginY' , 'EndX' , 
+			'EndY' , 'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AddCurve' , u'SafeArrayOfPoints' , u'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
+	(( 'AddCurve' , 'SafeArrayOfPoints' , 'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AddLabel' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLabel' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AddLine' , u'BeginX' , u'BeginY' , u'EndX' , u'EndY' , 
-			u'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLine' , 'BeginX' , 'BeginY' , 'EndX' , 'EndY' , 
+			'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AddPicture' , u'FileName' , u'LinkToFile' , u'SaveWithDocument' , u'Left' , 
-			u'Top' , u'Width' , u'Height' , u'Picture' , ), 15, (15, (), [ 
+	(( 'AddPicture' , 'FileName' , 'LinkToFile' , 'SaveWithDocument' , 'Left' , 
+			'Top' , 'Width' , 'Height' , 'Picture' , ), 15, (15, (), [ 
 			(8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AddPolyline' , u'SafeArrayOfPoints' , u'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
+	(( 'AddPolyline' , 'SafeArrayOfPoints' , 'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AddShape' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddShape' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextEffect' , u'PresetTextEffect' , u'Text' , u'FontName' , u'FontSize' , 
-			u'FontBold' , u'FontItalic' , u'Left' , u'Top' , u'TextEffect' , 
+	(( 'AddTextEffect' , 'PresetTextEffect' , 'Text' , 'FontName' , 'FontSize' , 
+			'FontBold' , 'FontItalic' , 'Left' , 'Top' , 'TextEffect' , 
 			), 18, (18, (), [ (3, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , (4, 1, None, None) , 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextbox' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddTextbox' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'BuildFreeform' , u'EditingType' , u'X1' , u'Y1' , u'FreeformBuilder' , 
+	(( 'BuildFreeform' , 'EditingType' , 'X1' , 'Y1' , 'FreeformBuilder' , 
 			), 20, (20, (), [ (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493478-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 21, (21, (), [ (12, 1, None, None) , 
+	(( 'Range' , 'Index' , 'Range' , ), 21, (21, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , u'Background' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , 'Background' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
 ]
 
 Cell_vtables_dispatch_ = 1
 Cell_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Shape' , u'Shape' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Borders' , u'Borders' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934CA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Merge' , u'MergeTo' , ), 2005, (2005, (), [ (9, 1, None, "IID('{914934C9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Split' , u'NumRows' , u'NumColumns' , ), 2006, (2006, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'Shape' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Borders' , 'Borders' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934CA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Merge' , 'MergeTo' , ), 2005, (2005, (), [ (9, 1, None, "IID('{914934C9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Split' , 'NumRows' , 'NumColumns' , ), 2006, (2006, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , ), 2007, (2007, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Selected' , u'Selected' , ), 2008, (2008, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , ), 2007, (2007, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Selected' , 'Selected' , ), 2008, (2008, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 CellRange_vtables_dispatch_ = 1
 CellRange_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934C9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Borders' , u'Borders' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934CA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Borders' , 'Borders' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934CA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Collection_vtables_dispatch_ = 1
 Collection_vtables_ = [
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 1 , )),
-	(( u'_Index' , u'Index' , u'_Index' , ), 10, (10, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 1 , )),
+	(( '_Index' , 'Index' , '_Index' , ), 10, (10, (), [ (3, 1, None, None) , 
 			(16396, 10, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 1 , )),
-	(( u'Count' , u'Count' , ), 11, (11, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 11, (11, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
 ]
 
 ColorEffect_vtables_dispatch_ = 1
 ColorEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'By' , u'By' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'From' , u'From' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'By' , 'By' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'From' , 'From' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 ColorFormat_vtables_dispatch_ = 1
 ColorFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'RGB' , u'RGB' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'RGB' , u'RGB' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SchemeColor' , u'SchemeColor' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SchemeColor' , u'SchemeColor' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'TintAndShade' , u'pValue' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TintAndShade' , u'pValue' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'RGB' , 'RGB' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'RGB' , 'RGB' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SchemeColor' , 'SchemeColor' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SchemeColor' , 'SchemeColor' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'TintAndShade' , 'pValue' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TintAndShade' , 'pValue' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 ColorScheme_vtables_dispatch_ = 1
 ColorScheme_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Colors' , u'SchemeColor' , u'Colors' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Colors' , 'SchemeColor' , 'Colors' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493470-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 ColorSchemes_vtables_dispatch_ = 1
 ColorSchemes_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Scheme' , u'Add' , ), 2003, (2003, (), [ (9, 49, '0', "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'Add' , 'Scheme' , 'Add' , ), 2003, (2003, (), [ (9, 49, '0', "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , 
 			(16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Column_vtables_dispatch_ = 1
 Column_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Cells' , u'Cells' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934C8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Cells' , 'Cells' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934C8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Columns_vtables_dispatch_ = 1
 Columns_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934C5-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'BeforeColumn' , u'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
+	(( 'Add' , 'BeforeColumn' , 'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
 			(16393, 10, None, "IID('{914934C5-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 CommandEffect_vtables_dispatch_ = 1
 CommandEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Command' , u'Command' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Command' , u'Command' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Command' , 'Command' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Command' , 'Command' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 Comment_vtables_dispatch_ = 1
 Comment_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Author' , u'Author' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AuthorInitials' , u'AuthorInitials' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'DateTime' , u'DateTime' , ), 2006, (2006, (), [ (16391, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AuthorIndex' , u'AuthorIndex' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Author' , 'Author' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AuthorInitials' , 'AuthorInitials' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'DateTime' , 'DateTime' , ), 2006, (2006, (), [ (16391, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AuthorIndex' , 'AuthorIndex' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 Comments_vtables_dispatch_ = 1
 Comments_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934D5-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Left' , u'Top' , u'Author' , u'AuthorInitials' , 
-			u'Text' , u'Add' , ), 2003, (2003, (), [ (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'Add' , 'Left' , 'Top' , 'Author' , 'AuthorInitials' , 
+			'Text' , 'Add' , ), 2003, (2003, (), [ (4, 1, None, None) , (4, 1, None, None) , 
 			(8, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , (16393, 10, None, "IID('{914934D5-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 ConnectorFormat_vtables_dispatch_ = 1
 ConnectorFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnect' , u'ConnectedShape' , u'ConnectionSite' , ), 10, (10, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnect' , 'ConnectedShape' , 'ConnectionSite' , ), 10, (10, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'BeginDisconnect' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnect' , u'ConnectedShape' , u'ConnectionSite' , ), 12, (12, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'BeginDisconnect' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnect' , 'ConnectedShape' , 'ConnectionSite' , ), 12, (12, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'EndDisconnect' , ), 13, (13, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnected' , u'BeginConnected' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnectedShape' , u'BeginConnectedShape' , ), 101, (101, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnectionSite' , u'BeginConnectionSite' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnected' , u'EndConnected' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnectedShape' , u'EndConnectedShape' , ), 104, (104, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnectionSite' , u'EndConnectionSite' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'EndDisconnect' , ), 13, (13, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnected' , 'BeginConnected' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnectedShape' , 'BeginConnectedShape' , ), 101, (101, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnectionSite' , 'BeginConnectionSite' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnected' , 'EndConnected' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnectedShape' , 'EndConnectedShape' , ), 104, (104, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnectionSite' , 'EndConnectionSite' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
 ]
 
 DefaultWebOptions_vtables_dispatch_ = 1
 DefaultWebOptions_vtables_ = [
-	(( u'IncludeNavigation' , u'IncludeNavigation' , ), 2001, (2001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'IncludeNavigation' , u'IncludeNavigation' , ), 2001, (2001, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'FrameColors' , u'FrameColors' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'FrameColors' , u'FrameColors' , ), 2002, (2002, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ResizeGraphics' , u'ResizeGraphics' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ResizeGraphics' , u'ResizeGraphics' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ShowSlideAnimation' , u'ShowSlideAnimation' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ShowSlideAnimation' , u'ShowSlideAnimation' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'OrganizeInFolder' , u'OrganizeInFolder' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'OrganizeInFolder' , u'OrganizeInFolder' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'UseLongFileNames' , u'UseLongFileNames' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'UseLongFileNames' , u'UseLongFileNames' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'RelyOnVML' , u'RelyOnVML' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'RelyOnVML' , u'RelyOnVML' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AllowPNG' , u'AllowPNG' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'AllowPNG' , u'AllowPNG' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'ScreenSize' , u'ScreenSize' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'ScreenSize' , u'ScreenSize' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Encoding' , u'Encoding' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Encoding' , u'Encoding' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'UpdateLinksOnSave' , u'UpdateLinksOnSave' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'UpdateLinksOnSave' , u'UpdateLinksOnSave' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'CheckIfOfficeIsHTMLEditor' , u'CheckIfOfficeIsHTMLEditor' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'CheckIfOfficeIsHTMLEditor' , u'CheckIfOfficeIsHTMLEditor' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'AlwaysSaveInDefaultEncoding' , u'AlwaysSaveInDefaultEncoding' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'AlwaysSaveInDefaultEncoding' , u'AlwaysSaveInDefaultEncoding' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Fonts' , u'Fonts' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{000C0914-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'FolderSuffix' , u'FolderSuffix' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'TargetBrowser' , u'TargetBrowser' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'TargetBrowser' , u'TargetBrowser' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'SaveNewWebPagesAsWebArchives' , u'SaveNewWebPagesAsWebArchives' , ), 2017, (2017, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'SaveNewWebPagesAsWebArchives' , u'SaveNewWebPagesAsWebArchives' , ), 2017, (2017, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLVersion' , u'HTMLVersion' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLVersion' , u'HTMLVersion' , ), 2018, (2018, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'IncludeNavigation' , 'IncludeNavigation' , ), 2001, (2001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'IncludeNavigation' , 'IncludeNavigation' , ), 2001, (2001, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'FrameColors' , 'FrameColors' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'FrameColors' , 'FrameColors' , ), 2002, (2002, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ResizeGraphics' , 'ResizeGraphics' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ResizeGraphics' , 'ResizeGraphics' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ShowSlideAnimation' , 'ShowSlideAnimation' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ShowSlideAnimation' , 'ShowSlideAnimation' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'OrganizeInFolder' , 'OrganizeInFolder' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'OrganizeInFolder' , 'OrganizeInFolder' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'UseLongFileNames' , 'UseLongFileNames' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'UseLongFileNames' , 'UseLongFileNames' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'RelyOnVML' , 'RelyOnVML' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'RelyOnVML' , 'RelyOnVML' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'AllowPNG' , 'AllowPNG' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'AllowPNG' , 'AllowPNG' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'ScreenSize' , 'ScreenSize' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'ScreenSize' , 'ScreenSize' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Encoding' , 'Encoding' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Encoding' , 'Encoding' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'UpdateLinksOnSave' , 'UpdateLinksOnSave' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'UpdateLinksOnSave' , 'UpdateLinksOnSave' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'CheckIfOfficeIsHTMLEditor' , 'CheckIfOfficeIsHTMLEditor' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'CheckIfOfficeIsHTMLEditor' , 'CheckIfOfficeIsHTMLEditor' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'AlwaysSaveInDefaultEncoding' , 'AlwaysSaveInDefaultEncoding' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'AlwaysSaveInDefaultEncoding' , 'AlwaysSaveInDefaultEncoding' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Fonts' , 'Fonts' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{000C0914-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'FolderSuffix' , 'FolderSuffix' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'TargetBrowser' , 'TargetBrowser' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'TargetBrowser' , 'TargetBrowser' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'SaveNewWebPagesAsWebArchives' , 'SaveNewWebPagesAsWebArchives' , ), 2017, (2017, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'SaveNewWebPagesAsWebArchives' , 'SaveNewWebPagesAsWebArchives' , ), 2017, (2017, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLVersion' , 'HTMLVersion' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLVersion' , 'HTMLVersion' , ), 2018, (2018, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
 ]
 
 Design_vtables_dispatch_ = 1
 Design_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'SlideMaster' , u'SlideMaster' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'TitleMaster' , u'TitleMaster' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'HasTitleMaster' , u'HasTitleMaster' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AddTitleMaster' , u'TitleMaster' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Index' , u'Index' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Preserved' , u'Preserved' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Preserved' , u'Preserved' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'MoveTo' , u'toPos' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'SlideMaster' , 'SlideMaster' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'TitleMaster' , 'TitleMaster' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'HasTitleMaster' , 'HasTitleMaster' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AddTitleMaster' , 'TitleMaster' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'Index' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Preserved' , 'Preserved' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Preserved' , 'Preserved' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'MoveTo' , 'toPos' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 Designs_vtables_dispatch_ = 1
 Designs_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'designName' , u'Index' , u'Add' , ), 2003, (2003, (), [ 
+	(( 'Add' , 'designName' , 'Index' , 'Add' , ), 2003, (2003, (), [ 
 			(8, 1, None, None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Load' , u'TemplateName' , u'Index' , u'Load' , ), 2004, (2004, (), [ 
+	(( 'Load' , 'TemplateName' , 'Index' , 'Load' , ), 2004, (2004, (), [ 
 			(8, 1, None, None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Clone' , u'pOriginal' , u'Index' , u'Clone' , ), 2005, (2005, (), [ 
+	(( 'Clone' , 'pOriginal' , 'Index' , 'Clone' , ), 2005, (2005, (), [ 
 			(9, 1, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , (3, 49, '-1', None) , (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 Diagram_vtables_dispatch_ = 1
 Diagram_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Nodes' , u'Nodes' , ), 101, (101, (), [ (16393, 10, None, "IID('{914934DA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLayout' , u'AutoLayout' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLayout' , u'AutoLayout' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Reverse' , u'Reverse' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Reverse' , u'Reverse' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AutoFormat' , u'AutoFormat' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AutoFormat' , u'AutoFormat' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Convert' , u'Type' , ), 10, (10, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'FitText' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Nodes' , 'Nodes' , ), 101, (101, (), [ (16393, 10, None, "IID('{914934DA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLayout' , 'AutoLayout' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLayout' , 'AutoLayout' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Reverse' , 'Reverse' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Reverse' , 'Reverse' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'AutoFormat' , 'AutoFormat' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'AutoFormat' , 'AutoFormat' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Convert' , 'Type' , ), 10, (10, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'FitText' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 DiagramNode_vtables_dispatch_ = 1
 DiagramNode_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'AddNode' , u'Pos' , u'NodeType' , u'NewNode' , ), 10, (10, (), [ 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'AddNode' , 'Pos' , 'NodeType' , 'NewNode' , ), 10, (10, (), [ 
 			(3, 49, '2', None) , (3, 49, '1', None) , (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'MoveNode' , u'TargetNode' , u'Pos' , ), 12, (12, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'MoveNode' , 'TargetNode' , 'Pos' , ), 12, (12, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ReplaceNode' , u'TargetNode' , ), 13, (13, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SwapNode' , u'TargetNode' , u'SwapChildren' , ), 14, (14, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'ReplaceNode' , 'TargetNode' , ), 13, (13, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SwapNode' , 'TargetNode' , 'SwapChildren' , ), 14, (14, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , 
 			(11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'CloneNode' , u'CopyChildren' , u'TargetNode' , u'Pos' , u'Node' , 
+	(( 'CloneNode' , 'CopyChildren' , 'TargetNode' , 'Pos' , 'Node' , 
 			), 15, (15, (), [ (11, 1, None, None) , (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , (3, 49, '2', None) , (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'TransferChildren' , u'ReceivingNode' , ), 16, (16, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'NextNode' , u'NextNode' , ), 17, (17, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'PrevNode' , u'PrevNode' , ), 18, (18, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Children' , u'Children' , ), 101, (101, (), [ (16393, 10, None, "IID('{914934D9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Shape' , u'Shape' , ), 102, (102, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Root' , u'Root' , ), 103, (103, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Diagram' , u'Diagram' , ), 104, (104, (), [ (16393, 10, None, "IID('{914934DB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'TextShape' , u'Shape' , ), 106, (106, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'TransferChildren' , 'ReceivingNode' , ), 16, (16, (), [ (9, 1, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'NextNode' , 'NextNode' , ), 17, (17, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'PrevNode' , 'PrevNode' , ), 18, (18, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Children' , 'Children' , ), 101, (101, (), [ (16393, 10, None, "IID('{914934D9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'Shape' , ), 102, (102, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Root' , 'Root' , ), 103, (103, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Diagram' , 'Diagram' , ), 104, (104, (), [ (16393, 10, None, "IID('{914934DB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'TextShape' , 'Shape' , ), 106, (106, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
 ]
 
 DiagramNodeChildren_vtables_dispatch_ = 1
 DiagramNodeChildren_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'Node' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'Node' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'AddNode' , u'Index' , u'NodeType' , u'NewNode' , ), 10, (10, (), [ 
+	(( 'AddNode' , 'Index' , 'NodeType' , 'NewNode' , ), 10, (10, (), [ 
 			(12, 49, '-1', None) , (3, 49, '1', None) , (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FirstChild' , u'First' , ), 103, (103, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'LastChild' , u'Last' , ), 104, (104, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SelectAll' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FirstChild' , 'First' , ), 103, (103, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'LastChild' , 'Last' , ), 104, (104, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 DiagramNodes_vtables_dispatch_ = 1
 DiagramNodes_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'ppdn' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'ppdn' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SelectAll' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 DocumentWindow_vtables_dispatch_ = 1
 DocumentWindow_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Selection' , u'Selection' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493454-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'View' , u'View' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493458-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Presentation' , u'Presentation' , ), 2005, (2005, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ViewType' , u'ViewType' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ViewType' , u'ViewType' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'BlackAndWhite' , u'BlackAndWhite' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'BlackAndWhite' , u'BlackAndWhite' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Active' , u'Active' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'WindowState' , u'WindowState' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'WindowState' , u'WindowState' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Caption' , u'Caption' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 2010, (2010, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2011, (2011, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2011, (2011, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2012, (2012, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2012, (2012, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2013, (2013, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2013, (2013, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'FitToPage' , ), 2014, (2014, (), [ ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Activate' , ), 2015, (2015, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'LargeScroll' , u'Down' , u'Up' , u'ToRight' , u'ToLeft' , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Selection' , 'Selection' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493454-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'View' , 'View' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493458-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Presentation' , 'Presentation' , ), 2005, (2005, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ViewType' , 'ViewType' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ViewType' , 'ViewType' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'BlackAndWhite' , 'BlackAndWhite' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'BlackAndWhite' , 'BlackAndWhite' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Active' , 'Active' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'WindowState' , 'WindowState' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'WindowState' , 'WindowState' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Caption' , 'Caption' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 2010, (2010, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2011, (2011, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2011, (2011, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2012, (2012, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2012, (2012, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2013, (2013, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2013, (2013, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'FitToPage' , ), 2014, (2014, (), [ ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Activate' , ), 2015, (2015, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'LargeScroll' , 'Down' , 'Up' , 'ToRight' , 'ToLeft' , 
 			), 2016, (2016, (), [ (3, 49, '1', None) , (3, 49, '0', None) , (3, 49, '0', None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'SmallScroll' , u'Down' , u'Up' , u'ToRight' , u'ToLeft' , 
+	(( 'SmallScroll' , 'Down' , 'Up' , 'ToRight' , 'ToLeft' , 
 			), 2017, (2017, (), [ (3, 49, '1', None) , (3, 49, '0', None) , (3, 49, '0', None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'NewWindow' , u'NewWindow' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Close' , ), 2019, (2019, (), [ ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'HWND' , u'HWND' , ), 2020, (2020, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 1 , )),
-	(( u'ActivePane' , u'ActivePane' , ), 2021, (2021, (), [ (16393, 10, None, "IID('{914934CC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Panes' , u'Panes' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{914934CB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'SplitVertical' , u'SplitVertical' , ), 2023, (2023, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'SplitVertical' , u'SplitVertical' , ), 2023, (2023, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'SplitHorizontal' , u'SplitHorizontal' , ), 2024, (2024, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'SplitHorizontal' , u'SplitHorizontal' , ), 2024, (2024, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'RangeFromPoint' , u'X' , u'Y' , u'RangeFromPoint' , ), 2025, (2025, (), [ 
+	(( 'NewWindow' , 'NewWindow' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Close' , ), 2019, (2019, (), [ ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'HWND' , 'HWND' , ), 2020, (2020, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 1 , )),
+	(( 'ActivePane' , 'ActivePane' , ), 2021, (2021, (), [ (16393, 10, None, "IID('{914934CC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Panes' , 'Panes' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{914934CB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'SplitVertical' , 'SplitVertical' , ), 2023, (2023, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'SplitVertical' , 'SplitVertical' , ), 2023, (2023, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'SplitHorizontal' , 'SplitHorizontal' , ), 2024, (2024, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'SplitHorizontal' , 'SplitHorizontal' , ), 2024, (2024, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'RangeFromPoint' , 'X' , 'Y' , 'RangeFromPoint' , ), 2025, (2025, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'PointsToScreenPixelsX' , u'Points' , u'PointsToScreenPixelsX' , ), 2026, (2026, (), [ (4, 1, None, None) , 
+	(( 'PointsToScreenPixelsX' , 'Points' , 'PointsToScreenPixelsX' , ), 2026, (2026, (), [ (4, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'PointsToScreenPixelsY' , u'Points' , u'PointsToScreenPixelsY' , ), 2027, (2027, (), [ (4, 1, None, None) , 
+	(( 'PointsToScreenPixelsY' , 'Points' , 'PointsToScreenPixelsY' , ), 2027, (2027, (), [ (4, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'ScrollIntoView' , u'Left' , u'Top' , u'Width' , u'Height' , 
-			u'Start' , ), 2028, (2028, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'ScrollIntoView' , 'Left' , 'Top' , 'Width' , 'Height' , 
+			'Start' , ), 2028, (2028, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (3, 49, '-1', None) , ], 1 , 1 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
 ]
 
 DocumentWindows_vtables_dispatch_ = 1
 DocumentWindows_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Arrange' , u'arrangeStyle' , ), 2003, (2003, (), [ (3, 49, '1', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Arrange' , 'arrangeStyle' , ), 2003, (2003, (), [ (3, 49, '1', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Effect_vtables_dispatch_ = 1
 Effect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Shape' , u'Shape' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Shape' , u'Shape' , ), 2003, (2003, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'MoveTo' , u'toPos' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'MoveBefore' , u'Effect' , ), 2005, (2005, (), [ (9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'MoveAfter' , u'Effect' , ), 2006, (2006, (), [ (9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2007, (2007, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Index' , u'Index' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Timing' , u'Timing' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{914934E0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'EffectType' , u'EffectType' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'EffectType' , u'EffectType' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'EffectParameters' , u'EffectParameters' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{914934E1-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'TextRangeStart' , u'TextRangeStart' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'TextRangeLength' , u'TextRangeLength' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Paragraph' , u'Paragraph' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Paragraph' , u'Paragraph' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayName' , u'DisplayName' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Exit' , u'Exit' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Exit' , u'Exit' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Behaviors' , u'Behaviors' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934E3-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'EffectInformation' , u'EffectInformation' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{914934E2-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'Shape' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'Shape' , ), 2003, (2003, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'MoveTo' , 'toPos' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'MoveBefore' , 'Effect' , ), 2005, (2005, (), [ (9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'MoveAfter' , 'Effect' , ), 2006, (2006, (), [ (9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2007, (2007, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'Index' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Timing' , 'Timing' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{914934E0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'EffectType' , 'EffectType' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'EffectType' , 'EffectType' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'EffectParameters' , 'EffectParameters' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{914934E1-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'TextRangeStart' , 'TextRangeStart' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'TextRangeLength' , 'TextRangeLength' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Paragraph' , 'Paragraph' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Paragraph' , 'Paragraph' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayName' , 'DisplayName' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Exit' , 'Exit' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Exit' , 'Exit' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Behaviors' , 'Behaviors' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934E3-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'EffectInformation' , 'EffectInformation' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{914934E2-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
 ]
 
 EffectInformation_vtables_dispatch_ = 1
 EffectInformation_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'AfterEffect' , u'AfterEffect' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateBackground' , u'AnimateBackground' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'AnimateTextInReverse' , u'AnimateTextInReverse' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'BuildByLevelEffect' , u'BuildByLevelEffect' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Dim' , u'Dim' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'PlaySettings' , u'PlaySettings' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{9149348E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'SoundEffect' , u'SoundEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TextUnitEffect' , u'TextUnitEffect' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'AfterEffect' , 'AfterEffect' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateBackground' , 'AnimateBackground' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'AnimateTextInReverse' , 'AnimateTextInReverse' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'BuildByLevelEffect' , 'BuildByLevelEffect' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Dim' , 'Dim' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'PlaySettings' , 'PlaySettings' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{9149348E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'SoundEffect' , 'SoundEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TextUnitEffect' , 'TextUnitEffect' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 EffectParameters_vtables_dispatch_ = 1
 EffectParameters_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Direction' , u'Direction' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Direction' , u'Direction' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Amount' , u'Amount' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Amount' , u'Amount' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Size' , u'Size' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Size' , u'Size' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Color2' , u'Color2' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Relative' , u'Relative' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Relative' , u'Relative' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'FontName' , u'FontName' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'FontName' , u'FontName' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Direction' , 'Direction' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Direction' , 'Direction' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Amount' , 'Amount' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Amount' , 'Amount' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Size' , 'Size' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Size' , 'Size' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Color2' , 'Color2' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Relative' , 'Relative' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Relative' , 'Relative' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'FontName' , 'FontName' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'FontName' , 'FontName' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 ExtraColors_vtables_dispatch_ = 1
 ExtraColors_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 FillFormat_vtables_dispatch_ = 1
 FillFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'OneColorGradient' , u'Style' , u'Variant' , u'Degree' , ), 11, (11, (), [ 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'OneColorGradient' , 'Style' , 'Variant' , 'Degree' , ), 11, (11, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Patterned' , u'Pattern' , ), 12, (12, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'PresetGradient' , u'Style' , u'Variant' , u'PresetGradientType' , ), 13, (13, (), [ 
+	(( 'Patterned' , 'Pattern' , ), 12, (12, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'PresetGradient' , 'Style' , 'Variant' , 'PresetGradientType' , ), 13, (13, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTextured' , u'PresetTexture' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Solid' , ), 15, (15, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TwoColorGradient' , u'Style' , u'Variant' , ), 16, (16, (), [ (3, 1, None, None) , 
+	(( 'PresetTextured' , 'PresetTexture' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Solid' , ), 15, (15, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TwoColorGradient' , 'Style' , 'Variant' , ), 16, (16, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'UserPicture' , u'PictureFile' , ), 17, (17, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'UserTextured' , u'TextureFile' , ), 18, (18, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 101, (101, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'GradientColorType' , u'GradientColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'GradientDegree' , u'GradientDegree' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'GradientStyle' , u'GradientStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'GradientVariant' , u'GradientVariant' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Pattern' , u'Pattern' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PresetGradientType' , u'PresetGradientType' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTexture' , u'PresetTexture' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'TextureName' , u'TextureName' , ), 109, (109, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'TextureType' , u'TextureType' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'UserPicture' , 'PictureFile' , ), 17, (17, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'UserTextured' , 'TextureFile' , ), 18, (18, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 101, (101, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'GradientColorType' , 'GradientColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'GradientDegree' , 'GradientDegree' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'GradientStyle' , 'GradientStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'GradientVariant' , 'GradientVariant' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Pattern' , 'Pattern' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PresetGradientType' , 'PresetGradientType' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'PresetTexture' , 'PresetTexture' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'TextureName' , 'TextureName' , ), 109, (109, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'TextureType' , 'TextureType' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
 ]
 
 FilterEffect_vtables_dispatch_ = 1
 FilterEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Subtype' , u'Subtype' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Subtype' , u'Subtype' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Reveal' , u'Reveal' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Reveal' , u'Reveal' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Subtype' , 'Subtype' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Subtype' , 'Subtype' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Reveal' , 'Reveal' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Reveal' , 'Reveal' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 Font_vtables_dispatch_ = 1
 Font_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Color' , u'Color' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Bold' , u'Bold' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Bold' , u'Bold' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Italic' , u'Italic' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Italic' , u'Italic' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Shadow' , u'Shadow' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Shadow' , u'Shadow' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Emboss' , u'Emboss' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Emboss' , u'Emboss' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Underline' , u'Underline' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Underline' , u'Underline' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Subscript' , u'Subscript' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Subscript' , u'Subscript' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Superscript' , u'Superscript' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Superscript' , u'Superscript' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'BaselineOffset' , u'BaselineOffset' , ), 2011, (2011, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'BaselineOffset' , u'BaselineOffset' , ), 2011, (2011, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Embedded' , u'Embedded' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Embeddable' , u'Embeddable' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Size' , u'Size' , ), 2014, (2014, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Size' , u'Size' , ), 2014, (2014, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2015, (2015, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'NameFarEast' , u'NameFarEast' , ), 2016, (2016, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'NameFarEast' , u'NameFarEast' , ), 2016, (2016, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'NameAscii' , u'NameAscii' , ), 2017, (2017, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'NameAscii' , u'NameAscii' , ), 2017, (2017, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'AutoRotateNumbers' , u'AutoRotateNumbers' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'AutoRotateNumbers' , u'AutoRotateNumbers' , ), 2018, (2018, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'NameOther' , u'NameOther' , ), 2019, (2019, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'NameOther' , u'NameOther' , ), 2019, (2019, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'NameComplexScript' , u'NameComplexScript' , ), 2020, (2020, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'NameComplexScript' , u'NameComplexScript' , ), 2020, (2020, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Color' , 'Color' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Bold' , 'Bold' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Bold' , 'Bold' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Italic' , 'Italic' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Italic' , 'Italic' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Shadow' , 'Shadow' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Shadow' , 'Shadow' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Emboss' , 'Emboss' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Emboss' , 'Emboss' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Underline' , 'Underline' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Underline' , 'Underline' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Subscript' , 'Subscript' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Subscript' , 'Subscript' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Superscript' , 'Superscript' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Superscript' , 'Superscript' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'BaselineOffset' , 'BaselineOffset' , ), 2011, (2011, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'BaselineOffset' , 'BaselineOffset' , ), 2011, (2011, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Embedded' , 'Embedded' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Embeddable' , 'Embeddable' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Size' , 'Size' , ), 2014, (2014, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Size' , 'Size' , ), 2014, (2014, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2015, (2015, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'NameFarEast' , 'NameFarEast' , ), 2016, (2016, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'NameFarEast' , 'NameFarEast' , ), 2016, (2016, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'NameAscii' , 'NameAscii' , ), 2017, (2017, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'NameAscii' , 'NameAscii' , ), 2017, (2017, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'AutoRotateNumbers' , 'AutoRotateNumbers' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'AutoRotateNumbers' , 'AutoRotateNumbers' , ), 2018, (2018, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'NameOther' , 'NameOther' , ), 2019, (2019, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'NameOther' , 'NameOther' , ), 2019, (2019, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'NameComplexScript' , 'NameComplexScript' , ), 2020, (2020, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'NameComplexScript' , 'NameComplexScript' , ), 2020, (2020, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
 ]
 
 Fonts_vtables_dispatch_ = 1
 Fonts_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Replace' , u'Original' , u'Replacement' , ), 2003, (2003, (), [ (8, 1, None, None) , 
+	(( 'Replace' , 'Original' , 'Replacement' , ), 2003, (2003, (), [ (8, 1, None, None) , 
 			(8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 FreeformBuilder_vtables_dispatch_ = 1
 FreeformBuilder_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AddNodes' , u'SegmentType' , u'EditingType' , u'X1' , u'Y1' , 
-			u'X2' , u'Y2' , u'X3' , u'Y3' , ), 10, (10, (), [ 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AddNodes' , 'SegmentType' , 'EditingType' , 'X1' , 'Y1' , 
+			'X2' , 'Y2' , 'X3' , 'Y3' , ), 10, (10, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (4, 49, '0.0', None) , 
 			(4, 49, '0.0', None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToShape' , u'Freeform' , ), 11, (11, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ConvertToShape' , 'Freeform' , ), 11, (11, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 GroupShapes_vtables_dispatch_ = 1
 GroupShapes_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pnShapes' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'pnShapes' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 10, (10, (), [ (12, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'Range' , 'Index' , 'Range' , ), 10, (10, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 HeaderFooter_vtables_dispatch_ = 1
 HeaderFooter_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'UseFormat' , u'UseFormat' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'UseFormat' , u'UseFormat' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Format' , u'Format' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Format' , u'Format' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'UseFormat' , 'UseFormat' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'UseFormat' , 'UseFormat' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Format' , 'Format' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Format' , 'Format' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 HeadersFooters_vtables_dispatch_ = 1
 HeadersFooters_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'DateAndTime' , u'DateAndTime' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'SlideNumber' , u'SlideNumber' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Header' , u'Header' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Footer' , u'Footer' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayOnTitleSlide' , u'DisplayOnTitleSlide' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayOnTitleSlide' , u'DisplayOnTitleSlide' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Clear' , ), 2008, (2008, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'DateAndTime' , 'DateAndTime' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'SlideNumber' , 'SlideNumber' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Header' , 'Header' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Footer' , 'Footer' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149349C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayOnTitleSlide' , 'DisplayOnTitleSlide' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayOnTitleSlide' , 'DisplayOnTitleSlide' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Clear' , ), 2008, (2008, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 Hyperlink_vtables_dispatch_ = 1
 Hyperlink_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Address' , u'Address' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Address' , u'Address' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SubAddress' , u'SubAddress' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SubAddress' , u'SubAddress' , ), 2005, (2005, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AddToFavorites' , ), 2006, (2006, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'EmailSubject' , u'EmailSubject' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'EmailSubject' , u'EmailSubject' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ScreenTip' , u'ScreenTip' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ScreenTip' , u'ScreenTip' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'TextToDisplay' , u'TextToDisplay' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'TextToDisplay' , u'TextToDisplay' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'ShowAndReturn' , u'ShowAndReturn' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ShowAndReturn' , u'ShowAndReturn' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Follow' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'CreateNewDocument' , u'FileName' , u'EditNow' , u'Overwrite' , ), 2012, (2012, (), [ 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Address' , 'Address' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Address' , 'Address' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SubAddress' , 'SubAddress' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SubAddress' , 'SubAddress' , ), 2005, (2005, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'AddToFavorites' , ), 2006, (2006, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'EmailSubject' , 'EmailSubject' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'EmailSubject' , 'EmailSubject' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ScreenTip' , 'ScreenTip' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ScreenTip' , 'ScreenTip' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'TextToDisplay' , 'TextToDisplay' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'TextToDisplay' , 'TextToDisplay' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'ShowAndReturn' , 'ShowAndReturn' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ShowAndReturn' , 'ShowAndReturn' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Follow' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'CreateNewDocument' , 'FileName' , 'EditNow' , 'Overwrite' , ), 2012, (2012, (), [ 
 			(8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2013, (2013, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2013, (2013, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
 ]
 
 Hyperlinks_vtables_dispatch_ = 1
 Hyperlinks_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493465-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 LineFormat_vtables_dispatch_ = 1
 LineFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadLength' , u'BeginArrowheadLength' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadLength' , u'BeginArrowheadLength' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadStyle' , u'BeginArrowheadStyle' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadStyle' , u'BeginArrowheadStyle' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadWidth' , u'BeginArrowheadWidth' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadWidth' , u'BeginArrowheadWidth' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'DashStyle' , u'DashStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'DashStyle' , u'DashStyle' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadLength' , u'EndArrowheadLength' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadLength' , u'EndArrowheadLength' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadStyle' , u'EndArrowheadStyle' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadStyle' , u'EndArrowheadStyle' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadWidth' , u'EndArrowheadWidth' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadWidth' , u'EndArrowheadWidth' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 108, (108, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 108, (108, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Pattern' , u'Pattern' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Pattern' , u'Pattern' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'Style' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'Style' , ), 110, (110, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 112, (112, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Weight' , u'Weight' , ), 113, (113, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Weight' , u'Weight' , ), 113, (113, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'InsetPen' , u'InsetPen' , ), 114, (114, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'InsetPen' , u'InsetPen' , ), 114, (114, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadLength' , 'BeginArrowheadLength' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadLength' , 'BeginArrowheadLength' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadStyle' , 'BeginArrowheadStyle' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadStyle' , 'BeginArrowheadStyle' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadWidth' , 'BeginArrowheadWidth' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadWidth' , 'BeginArrowheadWidth' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'DashStyle' , 'DashStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'DashStyle' , 'DashStyle' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadLength' , 'EndArrowheadLength' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadLength' , 'EndArrowheadLength' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadStyle' , 'EndArrowheadStyle' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadStyle' , 'EndArrowheadStyle' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadWidth' , 'EndArrowheadWidth' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadWidth' , 'EndArrowheadWidth' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 108, (108, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 108, (108, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Pattern' , 'Pattern' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Pattern' , 'Pattern' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'Style' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'Style' , ), 110, (110, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 112, (112, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Weight' , 'Weight' , ), 113, (113, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Weight' , 'Weight' , ), 113, (113, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'InsetPen' , 'InsetPen' , ), 114, (114, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'InsetPen' , 'InsetPen' , ), 114, (114, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
 ]
 
 LinkFormat_vtables_dispatch_ = 1
 LinkFormat_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'SourceFullName' , u'SourceFullName' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'SourceFullName' , u'SourceFullName' , ), 2003, (2003, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'AutoUpdate' , u'AutoUpdate' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AutoUpdate' , u'AutoUpdate' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Update' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'SourceFullName' , 'SourceFullName' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'SourceFullName' , 'SourceFullName' , ), 2003, (2003, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'AutoUpdate' , 'AutoUpdate' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AutoUpdate' , 'AutoUpdate' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Update' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 MasterEvents_vtables_dispatch_ = 0
@@ -8487,229 +8487,229 @@ MasterEvents_vtables_ = [
 
 MotionEffect_vtables_dispatch_ = 1
 MotionEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ByX' , u'ByX' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ByX' , u'ByX' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ByY' , u'ByY' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ByY' , u'ByY' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FromX' , u'FromX' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'FromX' , u'FromX' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FromY' , u'FromY' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FromY' , u'FromY' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ToX' , u'ToX' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ToX' , u'ToX' , ), 2007, (2007, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ToY' , u'ToY' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ToY' , u'ToY' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Path' , u'Path' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Path' , u'Path' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ByX' , 'ByX' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ByX' , 'ByX' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ByY' , 'ByY' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ByY' , 'ByY' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FromX' , 'FromX' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'FromX' , 'FromX' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FromY' , 'FromY' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'FromY' , 'FromY' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ToX' , 'ToX' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ToX' , 'ToX' , ), 2007, (2007, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ToY' , 'ToY' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'ToY' , 'ToY' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Path' , 'Path' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Path' , 'Path' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
 ]
 
 MouseDownHandler_vtables_dispatch_ = 0
 MouseDownHandler_vtables_ = [
-	(( u'OnMouseDown' , u'activeWin' , ), 2001, (2001, (), [ (13, 1, None, None) , ], 1 , 1 , 4 , 0 , 12 , (3, 0, None, None) , 0 , )),
+	(( 'OnMouseDown' , 'activeWin' , ), 2001, (2001, (), [ (13, 1, None, None) , ], 1 , 1 , 4 , 0 , 12 , (3, 0, None, None) , 0 , )),
 ]
 
 MouseTracker_vtables_dispatch_ = 0
 MouseTracker_vtables_ = [
-	(( u'OnTrack' , u'X' , u'Y' , ), 2001, (2001, (), [ (4, 1, None, None) , 
+	(( 'OnTrack' , 'X' , 'Y' , ), 2001, (2001, (), [ (4, 1, None, None) , 
 			(4, 1, None, None) , ], 1 , 1 , 4 , 0 , 12 , (3, 0, None, None) , 0 , )),
-	(( u'EndTrack' , u'X' , u'Y' , ), 2002, (2002, (), [ (4, 1, None, None) , 
+	(( 'EndTrack' , 'X' , 'Y' , ), 2002, (2002, (), [ (4, 1, None, None) , 
 			(4, 1, None, None) , ], 1 , 1 , 4 , 0 , 16 , (3, 0, None, None) , 0 , )),
 ]
 
 NamedSlideShow_vtables_dispatch_ = 1
 NamedSlideShow_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SlideIDs' , u'SlideIDs' , ), 2005, (2005, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SlideIDs' , 'SlideIDs' , ), 2005, (2005, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 NamedSlideShows_vtables_dispatch_ = 1
 NamedSlideShows_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{9149345C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Name' , u'safeArrayOfSlideIDs' , u'Add' , ), 2003, (2003, (), [ 
+	(( 'Add' , 'Name' , 'safeArrayOfSlideIDs' , 'Add' , ), 2003, (2003, (), [ 
 			(8, 1, None, None) , (12, 1, None, None) , (16393, 10, None, "IID('{9149345C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 OCXExtender_vtables_dispatch_ = 1
 OCXExtender_vtables_ = [
-	(( u'Visible' , u'Visible' , ), -2147418105, (-2147418105, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), -2147418105, (-2147418105, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), -2147418109, (-2147418109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), -2147418109, (-2147418109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), -2147418108, (-2147418108, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), -2147418108, (-2147418108, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), -2147418107, (-2147418107, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), -2147418107, (-2147418107, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), -2147418106, (-2147418106, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), -2147418106, (-2147418106, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrderPosition' , u'ZOrderPosition' , ), -2147417882, (-2147417882, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), -2147418112, (-2147418112, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), -2147418112, (-2147418112, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AltHTML' , u'AltHTML' , ), -2147417881, (-2147417881, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 64 , )),
-	(( u'AltHTML' , u'AltHTML' , ), -2147417881, (-2147417881, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 64 , )),
+	(( 'Visible' , 'Visible' , ), -2147418105, (-2147418105, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), -2147418105, (-2147418105, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), -2147418109, (-2147418109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), -2147418109, (-2147418109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), -2147418108, (-2147418108, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), -2147418108, (-2147418108, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), -2147418107, (-2147418107, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), -2147418107, (-2147418107, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), -2147418106, (-2147418106, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), -2147418106, (-2147418106, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrderPosition' , 'ZOrderPosition' , ), -2147417882, (-2147417882, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), -2147418112, (-2147418112, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), -2147418112, (-2147418112, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'AltHTML' , 'AltHTML' , ), -2147417881, (-2147417881, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 64 , )),
+	(( 'AltHTML' , 'AltHTML' , ), -2147417881, (-2147417881, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 64 , )),
 ]
 
 OLEFormat_vtables_dispatch_ = 1
 OLEFormat_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ObjectVerbs' , u'ObjectVerbs' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149348A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Object' , u'Object' , ), 2004, (2004, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ProgID' , u'ProgID' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'FollowColors' , u'FollowColors' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FollowColors' , u'FollowColors' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'DoVerb' , u'Index' , ), 2007, (2007, (), [ (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Activate' , ), 2008, (2008, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ObjectVerbs' , 'ObjectVerbs' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149348A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Object' , 'Object' , ), 2004, (2004, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ProgID' , 'ProgID' , ), 2005, (2005, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'FollowColors' , 'FollowColors' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FollowColors' , 'FollowColors' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'DoVerb' , 'Index' , ), 2007, (2007, (), [ (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Activate' , ), 2008, (2008, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 ObjectVerbs_vtables_dispatch_ = 1
 ObjectVerbs_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 Options_vtables_dispatch_ = 1
 Options_vtables_ = [
-	(( u'DisplayPasteOptions' , u'DisplayPasteOptions' , ), 2001, (2001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayPasteOptions' , u'DisplayPasteOptions' , ), 2001, (2001, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayPasteOptions' , 'DisplayPasteOptions' , ), 2001, (2001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayPasteOptions' , 'DisplayPasteOptions' , ), 2001, (2001, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
 ]
 
 PageSetup_vtables_dispatch_ = 1
 PageSetup_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'FirstSlideNumber' , u'FirstSlideNumber' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'FirstSlideNumber' , u'FirstSlideNumber' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SlideHeight' , u'SlideHeight' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SlideHeight' , u'SlideHeight' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SlideWidth' , u'SlideWidth' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SlideWidth' , u'SlideWidth' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'SlideSize' , u'SlideSize' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'SlideSize' , u'SlideSize' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'NotesOrientation' , u'NotesOrientation' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'NotesOrientation' , u'NotesOrientation' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'SlideOrientation' , u'SlideOrientation' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SlideOrientation' , u'SlideOrientation' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'FirstSlideNumber' , 'FirstSlideNumber' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'FirstSlideNumber' , 'FirstSlideNumber' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SlideHeight' , 'SlideHeight' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SlideHeight' , 'SlideHeight' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SlideWidth' , 'SlideWidth' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SlideWidth' , 'SlideWidth' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'SlideSize' , 'SlideSize' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'SlideSize' , 'SlideSize' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'NotesOrientation' , 'NotesOrientation' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'NotesOrientation' , 'NotesOrientation' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'SlideOrientation' , 'SlideOrientation' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'SlideOrientation' , 'SlideOrientation' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
 ]
 
 Pane_vtables_dispatch_ = 1
 Pane_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 2000, (2000, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Activate' , ), 2001, (2001, (), [ ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Active' , u'Active' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Application' , u'Application' , ), 2003, (2003, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ViewType' , u'ViewType' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2000, (2000, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Activate' , ), 2001, (2001, (), [ ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Active' , 'Active' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2003, (2003, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ViewType' , 'ViewType' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 Panes_vtables_dispatch_ = 1
 Panes_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934CC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ParagraphFormat_vtables_dispatch_ = 1
 ParagraphFormat_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Alignment' , u'Alignment' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Alignment' , u'Alignment' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Bullet' , u'Bullet' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493497-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'LineRuleBefore' , u'LineRuleBefore' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'LineRuleBefore' , u'LineRuleBefore' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'LineRuleAfter' , u'LineRuleAfter' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'LineRuleAfter' , u'LineRuleAfter' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'LineRuleWithin' , u'LineRuleWithin' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'LineRuleWithin' , u'LineRuleWithin' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'SpaceBefore' , u'SpaceBefore' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'SpaceBefore' , u'SpaceBefore' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SpaceAfter' , u'SpaceAfter' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'SpaceAfter' , u'SpaceAfter' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'SpaceWithin' , u'SpaceWithin' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'SpaceWithin' , u'SpaceWithin' , ), 2010, (2010, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'BaseLineAlignment' , u'BaseLineAlignment' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'BaseLineAlignment' , u'BaseLineAlignment' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'FarEastLineBreakControl' , u'FarEastLineBreakControl' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'FarEastLineBreakControl' , u'FarEastLineBreakControl' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'WordWrap' , u'WordWrap' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'WordWrap' , u'WordWrap' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'HangingPunctuation' , u'HangingPunctuation' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'HangingPunctuation' , u'HangingPunctuation' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'TextDirection' , u'TextDirection' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'TextDirection' , u'TextDirection' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Alignment' , 'Alignment' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Alignment' , 'Alignment' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Bullet' , 'Bullet' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493497-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'LineRuleBefore' , 'LineRuleBefore' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'LineRuleBefore' , 'LineRuleBefore' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'LineRuleAfter' , 'LineRuleAfter' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'LineRuleAfter' , 'LineRuleAfter' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'LineRuleWithin' , 'LineRuleWithin' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'LineRuleWithin' , 'LineRuleWithin' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'SpaceBefore' , 'SpaceBefore' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'SpaceBefore' , 'SpaceBefore' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'SpaceAfter' , 'SpaceAfter' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'SpaceAfter' , 'SpaceAfter' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'SpaceWithin' , 'SpaceWithin' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'SpaceWithin' , 'SpaceWithin' , ), 2010, (2010, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'BaseLineAlignment' , 'BaseLineAlignment' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'BaseLineAlignment' , 'BaseLineAlignment' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'FarEastLineBreakControl' , 'FarEastLineBreakControl' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'FarEastLineBreakControl' , 'FarEastLineBreakControl' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'WordWrap' , 'WordWrap' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'WordWrap' , 'WordWrap' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'HangingPunctuation' , 'HangingPunctuation' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'HangingPunctuation' , 'HangingPunctuation' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'TextDirection' , 'TextDirection' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'TextDirection' , 'TextDirection' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
 ]
 
 PictureFormat_vtables_dispatch_ = 1
 PictureFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementBrightness' , u'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementContrast' , u'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Brightness' , u'Brightness' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Brightness' , u'Brightness' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ColorType' , u'ColorType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'ColorType' , u'ColorType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Contrast' , u'Contrast' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Contrast' , u'Contrast' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'CropBottom' , u'CropBottom' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'CropBottom' , u'CropBottom' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'CropLeft' , u'CropLeft' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'CropLeft' , u'CropLeft' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'CropRight' , u'CropRight' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'CropRight' , u'CropRight' , ), 105, (105, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'CropTop' , u'CropTop' , ), 106, (106, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'CropTop' , u'CropTop' , ), 106, (106, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'TransparencyColor' , u'TransparencyColor' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'TransparencyColor' , u'TransparencyColor' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'TransparentBackground' , u'TransparentBackground' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'TransparentBackground' , u'TransparentBackground' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementBrightness' , 'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementContrast' , 'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Brightness' , 'Brightness' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Brightness' , 'Brightness' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ColorType' , 'ColorType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'ColorType' , 'ColorType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Contrast' , 'Contrast' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Contrast' , 'Contrast' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'CropBottom' , 'CropBottom' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'CropBottom' , 'CropBottom' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'CropLeft' , 'CropLeft' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'CropLeft' , 'CropLeft' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'CropRight' , 'CropRight' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'CropRight' , 'CropRight' , ), 105, (105, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'CropTop' , 'CropTop' , ), 106, (106, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'CropTop' , 'CropTop' , ), 106, (106, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'TransparencyColor' , 'TransparencyColor' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'TransparencyColor' , 'TransparencyColor' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'TransparentBackground' , 'TransparentBackground' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'TransparentBackground' , 'TransparentBackground' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
 ]
 
 PlaceholderFormat_vtables_dispatch_ = 1
 PlaceholderFormat_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
 ]
 
 Placeholders_vtables_dispatch_ = 1
 Placeholders_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 PlaySettings_vtables_dispatch_ = 1
 PlaySettings_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ActionVerb' , u'ActionVerb' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ActionVerb' , u'ActionVerb' , ), 2003, (2003, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'HideWhileNotPlaying' , u'HideWhileNotPlaying' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'HideWhileNotPlaying' , u'HideWhileNotPlaying' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'LoopUntilStopped' , u'LoopUntilStopped' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'LoopUntilStopped' , u'LoopUntilStopped' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'PlayOnEntry' , u'PlayOnEntry' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'PlayOnEntry' , u'PlayOnEntry' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'RewindMovie' , u'RewindMovie' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'RewindMovie' , u'RewindMovie' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'PauseAnimation' , u'PauseAnimation' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'PauseAnimation' , u'PauseAnimation' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'StopAfterSlides' , u'StopAfterSlides' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'StopAfterSlides' , u'StopAfterSlides' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ActionVerb' , 'ActionVerb' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ActionVerb' , 'ActionVerb' , ), 2003, (2003, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'HideWhileNotPlaying' , 'HideWhileNotPlaying' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'HideWhileNotPlaying' , 'HideWhileNotPlaying' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'LoopUntilStopped' , 'LoopUntilStopped' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'LoopUntilStopped' , 'LoopUntilStopped' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'PlayOnEntry' , 'PlayOnEntry' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'PlayOnEntry' , 'PlayOnEntry' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'RewindMovie' , 'RewindMovie' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'RewindMovie' , 'RewindMovie' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'PauseAnimation' , 'PauseAnimation' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'PauseAnimation' , 'PauseAnimation' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'StopAfterSlides' , 'StopAfterSlides' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'StopAfterSlides' , 'StopAfterSlides' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
 ]
 
 PresEvents_vtables_dispatch_ = 0
@@ -8718,605 +8718,605 @@ PresEvents_vtables_ = [
 
 Presentations_vtables_dispatch_ = 1
 Presentations_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'WithWindow' , u'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
+	(( 'Add' , 'WithWindow' , 'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
 			(16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'OpenOld' , u'FileName' , u'ReadOnly' , u'Untitled' , u'WithWindow' , 
-			u'OpenOld' , ), 2004, (2004, (), [ (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , 
+	(( 'OpenOld' , 'FileName' , 'ReadOnly' , 'Untitled' , 'WithWindow' , 
+			'OpenOld' , ), 2004, (2004, (), [ (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , 
 			(3, 49, '-1', None) , (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 64 , )),
-	(( u'Open' , u'FileName' , u'ReadOnly' , u'Untitled' , u'WithWindow' , 
-			u'Open' , ), 2005, (2005, (), [ (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , 
+	(( 'Open' , 'FileName' , 'ReadOnly' , 'Untitled' , 'WithWindow' , 
+			'Open' , ), 2005, (2005, (), [ (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , 
 			(3, 49, '-1', None) , (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'CheckOut' , u'FileName' , ), 2006, (2006, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'CanCheckOut' , u'FileName' , u'CanCheckOut' , ), 2007, (2007, (), [ (8, 1, None, None) , 
+	(( 'CheckOut' , 'FileName' , ), 2006, (2006, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'CanCheckOut' , 'FileName' , 'CanCheckOut' , ), 2007, (2007, (), [ (8, 1, None, None) , 
 			(16395, 10, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
 ]
 
 PrintOptions_vtables_dispatch_ = 1
 PrintOptions_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'PrintColorType' , u'PrintColorType' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'PrintColorType' , u'PrintColorType' , ), 2002, (2002, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Collate' , u'Collate' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Collate' , u'Collate' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'FitToPage' , u'FitToPage' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FitToPage' , u'FitToPage' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'FrameSlides' , u'FrameSlides' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FrameSlides' , u'FrameSlides' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'NumberOfCopies' , u'NumberOfCopies' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'NumberOfCopies' , u'NumberOfCopies' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'OutputType' , u'OutputType' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'OutputType' , u'OutputType' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2008, (2008, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'PrintHiddenSlides' , u'PrintHiddenSlides' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'PrintHiddenSlides' , u'PrintHiddenSlides' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'PrintInBackground' , u'PrintInBackground' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'PrintInBackground' , u'PrintInBackground' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'RangeType' , u'RangeType' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'RangeType' , u'RangeType' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Ranges' , u'Ranges' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149345E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PrintFontsAsGraphics' , u'PrintFontsAsGraphics' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'PrintFontsAsGraphics' , u'PrintFontsAsGraphics' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2014, (2014, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2014, (2014, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'ActivePrinter' , u'ActivePrinter' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'ActivePrinter' , u'ActivePrinter' , ), 2015, (2015, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'HandoutOrder' , u'HandoutOrder' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'HandoutOrder' , u'HandoutOrder' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'PrintComments' , u'PrintComments' , ), 2017, (2017, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'PrintComments' , u'PrintComments' , ), 2017, (2017, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'PrintColorType' , 'PrintColorType' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'PrintColorType' , 'PrintColorType' , ), 2002, (2002, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Collate' , 'Collate' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Collate' , 'Collate' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'FitToPage' , 'FitToPage' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FitToPage' , 'FitToPage' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'FrameSlides' , 'FrameSlides' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FrameSlides' , 'FrameSlides' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'NumberOfCopies' , 'NumberOfCopies' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'NumberOfCopies' , 'NumberOfCopies' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'OutputType' , 'OutputType' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'OutputType' , 'OutputType' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2008, (2008, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'PrintHiddenSlides' , 'PrintHiddenSlides' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'PrintHiddenSlides' , 'PrintHiddenSlides' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'PrintInBackground' , 'PrintInBackground' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'PrintInBackground' , 'PrintInBackground' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'RangeType' , 'RangeType' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'RangeType' , 'RangeType' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Ranges' , 'Ranges' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149345E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PrintFontsAsGraphics' , 'PrintFontsAsGraphics' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'PrintFontsAsGraphics' , 'PrintFontsAsGraphics' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2014, (2014, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2014, (2014, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'ActivePrinter' , 'ActivePrinter' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'ActivePrinter' , 'ActivePrinter' , ), 2015, (2015, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'HandoutOrder' , 'HandoutOrder' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'HandoutOrder' , 'HandoutOrder' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'PrintComments' , 'PrintComments' , ), 2017, (2017, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'PrintComments' , 'PrintComments' , ), 2017, (2017, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
 ]
 
 PrintRange_vtables_dispatch_ = 1
 PrintRange_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Start' , u'Start' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'End' , u'End' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Start' , 'Start' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'End' , 'End' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 PrintRanges_vtables_dispatch_ = 1
 PrintRanges_vtables_ = [
-	(( u'Add' , u'Start' , u'End' , u'Add' , ), 2001, (2001, (), [ 
+	(( 'Add' , 'Start' , 'End' , 'Add' , ), 2001, (2001, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (16393, 10, None, "IID('{9149345F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Application' , u'Application' , ), 2002, (2002, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ClearAll' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2002, (2002, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ClearAll' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{9149345F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2004, (2004, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2004, (2004, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 PropertyEffect_vtables_dispatch_ = 1
 PropertyEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Property' , u'Property' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Property' , u'Property' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Points' , u'Points' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934EA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'From' , u'From' , ), 2005, (2005, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'From' , u'From' , ), 2005, (2005, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2006, (2006, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2006, (2006, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Property' , 'Property' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Property' , 'Property' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Points' , 'Points' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934EA-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'From' , 'From' , ), 2005, (2005, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'From' , 'From' , ), 2005, (2005, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2006, (2006, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2006, (2006, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 PublishObject_vtables_dispatch_ = 1
 PublishObject_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLVersion' , u'HTMLVersion' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLVersion' , u'HTMLVersion' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SourceType' , u'SourceType' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SourceType' , u'SourceType' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'RangeStart' , u'RangeStart' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'RangeStart' , u'RangeStart' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'RangeEnd' , u'RangeEnd' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'RangeEnd' , u'RangeEnd' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'SpeakerNotes' , u'SpeakerNotes' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SpeakerNotes' , u'SpeakerNotes' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'FileName' , u'FileName' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'FileName' , u'FileName' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Publish' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLVersion' , 'HTMLVersion' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLVersion' , 'HTMLVersion' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SourceType' , 'SourceType' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SourceType' , 'SourceType' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'RangeStart' , 'RangeStart' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'RangeStart' , 'RangeStart' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'RangeEnd' , 'RangeEnd' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'RangeEnd' , 'RangeEnd' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'SpeakerNotes' , 'SpeakerNotes' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'SpeakerNotes' , 'SpeakerNotes' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'FileName' , 'FileName' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'FileName' , 'FileName' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Publish' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
 ]
 
 PublishObjects_vtables_dispatch_ = 1
 PublishObjects_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934D0-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 RGBColor_vtables_dispatch_ = 1
 RGBColor_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'RGB' , u'RGB' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'RGB' , u'RGB' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'RGB' , 'RGB' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'RGB' , 'RGB' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 RotationEffect_vtables_dispatch_ = 1
 RotationEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'By' , u'By' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'By' , u'By' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'From' , u'From' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'From' , u'From' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'By' , 'By' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'By' , 'By' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'From' , 'From' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'From' , 'From' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 Row_vtables_dispatch_ = 1
 Row_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Cells' , u'Cells' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934C8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Cells' , 'Cells' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934C8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Rows_vtables_dispatch_ = 1
 Rows_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934C7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'BeforeRow' , u'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
+	(( 'Add' , 'BeforeRow' , 'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
 			(16393, 10, None, "IID('{914934C7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Ruler_vtables_dispatch_ = 1
 Ruler_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'TabStops' , u'TabStops' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493493-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Levels' , u'Levels' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493491-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'TabStops' , 'TabStops' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493493-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Levels' , 'Levels' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493491-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 RulerLevel_vtables_dispatch_ = 1
 RulerLevel_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'FirstMargin' , u'FirstMargin' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'FirstMargin' , u'FirstMargin' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'LeftMargin' , u'LeftMargin' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'LeftMargin' , u'LeftMargin' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'FirstMargin' , 'FirstMargin' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'FirstMargin' , 'FirstMargin' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'LeftMargin' , 'LeftMargin' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'LeftMargin' , 'LeftMargin' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 RulerLevels_vtables_dispatch_ = 1
 RulerLevels_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493492-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ScaleEffect_vtables_dispatch_ = 1
 ScaleEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ByX' , u'ByX' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ByX' , u'ByX' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ByY' , u'ByY' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ByY' , u'ByY' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FromX' , u'FromX' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'FromX' , u'FromX' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FromY' , u'FromY' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FromY' , u'FromY' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ToX' , u'ToX' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ToX' , u'ToX' , ), 2007, (2007, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ToY' , u'ToY' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ToY' , u'ToY' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ByX' , 'ByX' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ByX' , 'ByX' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ByY' , 'ByY' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ByY' , 'ByY' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FromX' , 'FromX' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'FromX' , 'FromX' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FromY' , 'FromY' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'FromY' , 'FromY' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ToX' , 'ToX' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ToX' , 'ToX' , ), 2007, (2007, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ToY' , 'ToY' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'ToY' , 'ToY' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
 ]
 
 Selection_vtables_dispatch_ = 1
 Selection_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Cut' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Copy' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Unselect' , ), 2006, (2006, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SlideRange' , u'SlideRange' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'ShapeRange' , u'ShapeRange' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TextRange' , u'TextRange' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ChildShapeRange' , u'ChildShapeRange' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'HasChildShapeRange' , u'HasChildShapeRange' , ), 2012, (2012, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Cut' , ), 2003, (2003, (), [ ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Copy' , ), 2004, (2004, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Unselect' , ), 2006, (2006, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SlideRange' , 'SlideRange' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'ShapeRange' , 'ShapeRange' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TextRange' , 'TextRange' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ChildShapeRange' , 'ChildShapeRange' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'HasChildShapeRange' , 'HasChildShapeRange' , ), 2012, (2012, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
 ]
 
 Sequence_vtables_dispatch_ = 1
 Sequence_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AddEffect' , u'Shape' , u'effectId' , u'Level' , u'trigger' , 
-			u'Index' , u'Effect' , ), 2003, (2003, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , 
+	(( 'AddEffect' , 'Shape' , 'effectId' , 'Level' , 'trigger' , 
+			'Index' , 'Effect' , ), 2003, (2003, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , 
 			(3, 49, '0', None) , (3, 49, '1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Clone' , u'Effect' , u'Index' , u'Clone' , ), 2004, (2004, (), [ 
+	(( 'Clone' , 'Effect' , 'Index' , 'Clone' , ), 2004, (2004, (), [ 
 			(9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 49, '-1', None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FindFirstAnimationFor' , u'Shape' , u'FindFirstAnimationFor' , ), 2005, (2005, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'FindFirstAnimationFor' , 'Shape' , 'FindFirstAnimationFor' , ), 2005, (2005, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , 
 			(16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FindFirstAnimationForClick' , u'click' , u'FindFirstAnimationForClick' , ), 2006, (2006, (), [ (3, 1, None, None) , 
+	(( 'FindFirstAnimationForClick' , 'click' , 'FindFirstAnimationForClick' , ), 2006, (2006, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToBuildLevel' , u'Effect' , u'Level' , u'ConvertToBuildLevel' , ), 2007, (2007, (), [ 
+	(( 'ConvertToBuildLevel' , 'Effect' , 'Level' , 'ConvertToBuildLevel' , ), 2007, (2007, (), [ 
 			(9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToAfterEffect' , u'Effect' , u'After' , u'DimColor' , u'DimSchemeColor' , 
-			u'ConvertToAfterEffect' , ), 2008, (2008, (), [ (9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , (3, 49, '0', None) , 
+	(( 'ConvertToAfterEffect' , 'Effect' , 'After' , 'DimColor' , 'DimSchemeColor' , 
+			'ConvertToAfterEffect' , ), 2008, (2008, (), [ (9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , (3, 49, '0', None) , 
 			(3, 49, '0', None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToAnimateBackground' , u'Effect' , u'AnimateBackground' , u'ConvertToAnimateBackground' , ), 2009, (2009, (), [ 
+	(( 'ConvertToAnimateBackground' , 'Effect' , 'AnimateBackground' , 'ConvertToAnimateBackground' , ), 2009, (2009, (), [ 
 			(9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToAnimateInReverse' , u'Effect' , u'animateInReverse' , u'ConvertToAnimateInReverse' , ), 2010, (2010, (), [ 
+	(( 'ConvertToAnimateInReverse' , 'Effect' , 'animateInReverse' , 'ConvertToAnimateInReverse' , ), 2010, (2010, (), [ 
 			(9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToTextUnitEffect' , u'Effect' , u'unitEffect' , u'ConvertToTextUnitEffect' , ), 2011, (2011, (), [ 
+	(( 'ConvertToTextUnitEffect' , 'Effect' , 'unitEffect' , 'ConvertToTextUnitEffect' , ), 2011, (2011, (), [ 
 			(9, 1, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , (3, 1, None, None) , (16393, 10, None, "IID('{914934DF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
 ]
 
 Sequences_vtables_dispatch_ = 1
 Sequences_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{914934DE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Index' , u'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
+	(( 'Add' , 'Index' , 'Add' , ), 2003, (2003, (), [ (3, 49, '-1', None) , 
 			(16393, 10, None, "IID('{914934DE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 SetEffect_vtables_dispatch_ = 1
 SetEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Property' , u'Property' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Property' , u'Property' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2004, (2004, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'To' , u'To' , ), 2004, (2004, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Property' , 'Property' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Property' , 'Property' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2004, (2004, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'To' , 'To' , ), 2004, (2004, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ShadowFormat_vtables_dispatch_ = 1
 ShadowFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementOffsetX' , u'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementOffsetY' , u'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 100, (100, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Obscured' , u'Obscured' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Obscured' , u'Obscured' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetX' , u'OffsetX' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetX' , u'OffsetX' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetY' , u'OffsetY' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetY' , u'OffsetY' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementOffsetX' , 'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementOffsetY' , 'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 100, (100, (), [ (9, 1, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Obscured' , 'Obscured' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Obscured' , 'Obscured' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetX' , 'OffsetX' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetX' , 'OffsetX' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetY' , 'OffsetY' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetY' , 'OffsetY' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
 ]
 
 Shape_vtables_dispatch_ = 1
 Shape_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Apply' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Flip' , u'FlipCmd' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementLeft' , u'Increment' , ), 14, (14, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotation' , u'Increment' , ), 15, (15, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementTop' , u'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'PickUp' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'RerouteConnections' , ), 18, (18, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleHeight' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 19, (19, (), [ 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Apply' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Flip' , 'FlipCmd' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementLeft' , 'Increment' , ), 14, (14, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotation' , 'Increment' , ), 15, (15, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementTop' , 'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'PickUp' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'RerouteConnections' , ), 18, (18, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ScaleHeight' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 19, (19, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleWidth' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 20, (20, (), [ 
+	(( 'ScaleWidth' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 20, (20, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SetShapesDefaultProperties' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Ungroup' , u'Ungroup' , ), 23, (23, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrder' , u'ZOrderCmd' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Adjustments' , u'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{9149347C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Callout' , u'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{91493485-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectionSiteCount' , u'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Connector' , u'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectorFormat' , u'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{91493481-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Fill' , u'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{9149347E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'GroupItems' , u'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{9149347B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'HorizontalFlip' , u'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Line' , u'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{9149347F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Nodes' , u'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{91493486-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'PictureFormat' , u'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{9149347D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'Shadow' , u'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{91493480-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'TextEffect' , u'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{91493482-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'TextFrame' , u'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{91493484-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'ThreeD' , u'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{91493483-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'VerticalFlip' , u'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'Vertices' , u'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrderPosition' , u'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'OLEFormat' , u'OLEFormat' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493488-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'LinkFormat' , u'LinkFormat' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493489-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'PlaceholderFormat' , u'PlaceholderFormat' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493477-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'AnimationSettings' , u'AnimationSettings' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149348B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'ActionSettings' , u'ActionSettings' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149348C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'Tags' , u'Tags' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'Cut' , ), 2009, (2009, (), [ ], 1 , 1 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'Copy' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , u'Replace' , ), 2011, (2011, (), [ (3, 49, '-1', None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'Duplicate' , u'Duplicate' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'MediaType' , u'MediaType' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'HasTextFrame' , u'HasTextFrame' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
-	(( u'SoundFormat' , u'SoundFormat' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{91493473-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 64 , )),
-	(( u'Script' , u'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
-	(( u'HasTable' , u'HasTable' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
-	(( u'Table' , u'Table' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934C3-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
-	(( u'Export' , u'PathName' , u'Filter' , u'ScaleWidth' , u'ScaleHeight' , 
-			u'ExportMode' , ), 2018, (2018, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , 
+	(( 'SetShapesDefaultProperties' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Ungroup' , 'Ungroup' , ), 23, (23, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrder' , 'ZOrderCmd' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Adjustments' , 'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{9149347C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Callout' , 'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{91493485-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectionSiteCount' , 'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Connector' , 'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectorFormat' , 'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{91493481-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Fill' , 'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{9149347E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'GroupItems' , 'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{9149347B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'HorizontalFlip' , 'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Line' , 'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{9149347F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Nodes' , 'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{91493486-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'PictureFormat' , 'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{9149347D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'Shadow' , 'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{91493480-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'TextEffect' , 'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{91493482-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'TextFrame' , 'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{91493484-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'ThreeD' , 'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{91493483-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'VerticalFlip' , 'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'Vertices' , 'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrderPosition' , 'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'OLEFormat' , 'OLEFormat' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493488-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'LinkFormat' , 'LinkFormat' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493489-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'PlaceholderFormat' , 'PlaceholderFormat' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493477-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'AnimationSettings' , 'AnimationSettings' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149348B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'ActionSettings' , 'ActionSettings' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149348C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'Tags' , 'Tags' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'Cut' , ), 2009, (2009, (), [ ], 1 , 1 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'Copy' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , 'Replace' , ), 2011, (2011, (), [ (3, 49, '-1', None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'Duplicate' , 'Duplicate' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
+	(( 'MediaType' , 'MediaType' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'HasTextFrame' , 'HasTextFrame' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
+	(( 'SoundFormat' , 'SoundFormat' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{91493473-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 64 , )),
+	(( 'Script' , 'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
+	(( 'HasTable' , 'HasTable' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
+	(( 'Table' , 'Table' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934C3-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
+	(( 'Export' , 'PathName' , 'Filter' , 'ScaleWidth' , 'ScaleHeight' , 
+			'ExportMode' , ), 2018, (2018, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , 
 			(3, 49, '0', None) , (3, 49, '1', None) , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 64 , )),
-	(( u'HasDiagram' , u'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
-	(( u'Diagram' , u'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{914934DB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
-	(( u'HasDiagramNode' , u'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'DiagramNode' , u'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'Child' , u'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'ParentGroup' , u'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasItems' , u'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{914934EC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 348 , (3, 0, None, None) , 64 , )),
-	(( u'Id' , u'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasCropLeft' , u'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 356 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropTop' , u'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 360 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropRight' , u'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 364 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropBottom' , u'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 368 , (3, 0, None, None) , 64 , )),
-	(( u'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 372 , (3, 0, None, None) , 64 , )),
+	(( 'HasDiagram' , 'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
+	(( 'Diagram' , 'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{914934DB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
+	(( 'HasDiagramNode' , 'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
+	(( 'DiagramNode' , 'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'Child' , 'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'ParentGroup' , 'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasItems' , 'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{914934EC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 348 , (3, 0, None, None) , 64 , )),
+	(( 'Id' , 'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasCropLeft' , 'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 356 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropTop' , 'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 360 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropRight' , 'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 364 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropBottom' , 'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 368 , (3, 0, None, None) , 64 , )),
+	(( 'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 372 , (3, 0, None, None) , 64 , )),
 ]
 
 ShapeNode_vtables_dispatch_ = 1
 ShapeNode_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'EditingType' , u'EditingType' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Points' , u'Points' , ), 101, (101, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SegmentType' , u'SegmentType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'EditingType' , 'EditingType' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Points' , 'Points' , ), 101, (101, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SegmentType' , 'SegmentType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ShapeNodes_vtables_dispatch_ = 1
 ShapeNodes_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493487-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'Delete' , u'Index' , ), 11, (11, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Insert' , u'Index' , u'SegmentType' , u'EditingType' , u'X1' , 
-			u'Y1' , u'X2' , u'Y2' , u'X3' , u'Y3' , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'Delete' , 'Index' , ), 11, (11, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Insert' , 'Index' , 'SegmentType' , 'EditingType' , 'X1' , 
+			'Y1' , 'X2' , 'Y2' , 'X3' , 'Y3' , 
 			), 12, (12, (), [ (3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'SetEditingType' , u'Index' , u'EditingType' , ), 13, (13, (), [ (3, 1, None, None) , 
+	(( 'SetEditingType' , 'Index' , 'EditingType' , ), 13, (13, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'SetPosition' , u'Index' , u'X1' , u'Y1' , ), 14, (14, (), [ 
+	(( 'SetPosition' , 'Index' , 'X1' , 'Y1' , ), 14, (14, (), [ 
 			(3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SetSegmentType' , u'Index' , u'SegmentType' , ), 15, (15, (), [ (3, 1, None, None) , 
+	(( 'SetSegmentType' , 'Index' , 'SegmentType' , ), 15, (15, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
 ]
 
 ShapeRange_vtables_dispatch_ = 1
 ShapeRange_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Apply' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Flip' , u'FlipCmd' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementLeft' , u'Increment' , ), 14, (14, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotation' , u'Increment' , ), 15, (15, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementTop' , u'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'PickUp' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'RerouteConnections' , ), 18, (18, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleHeight' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 19, (19, (), [ 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Apply' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Flip' , 'FlipCmd' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementLeft' , 'Increment' , ), 14, (14, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotation' , 'Increment' , ), 15, (15, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementTop' , 'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'PickUp' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'RerouteConnections' , ), 18, (18, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ScaleHeight' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 19, (19, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleWidth' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 20, (20, (), [ 
+	(( 'ScaleWidth' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 20, (20, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SetShapesDefaultProperties' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Ungroup' , u'Ungroup' , ), 23, (23, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrder' , u'ZOrderCmd' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Adjustments' , u'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{9149347C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Callout' , u'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{91493485-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectionSiteCount' , u'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Connector' , u'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectorFormat' , u'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{91493481-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Fill' , u'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{9149347E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'GroupItems' , u'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{9149347B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'HorizontalFlip' , u'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Line' , u'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{9149347F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Nodes' , u'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{91493486-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'PictureFormat' , u'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{9149347D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'Shadow' , u'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{91493480-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'TextEffect' , u'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{91493482-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'TextFrame' , u'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{91493484-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'ThreeD' , u'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{91493483-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'VerticalFlip' , u'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'Vertices' , u'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrderPosition' , u'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'OLEFormat' , u'OLEFormat' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493488-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'LinkFormat' , u'LinkFormat' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493489-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'PlaceholderFormat' , u'PlaceholderFormat' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493477-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'AnimationSettings' , u'AnimationSettings' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149348B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'ActionSettings' , u'ActionSettings' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149348C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'Tags' , u'Tags' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'Cut' , ), 2009, (2009, (), [ ], 1 , 1 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'Copy' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , u'Replace' , ), 2011, (2011, (), [ (3, 49, '-1', None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'Duplicate' , u'Duplicate' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'MediaType' , u'MediaType' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'HasTextFrame' , u'HasTextFrame' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
-	(( u'SoundFormat' , u'SoundFormat' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{91493473-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 64 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'SetShapesDefaultProperties' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Ungroup' , 'Ungroup' , ), 23, (23, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrder' , 'ZOrderCmd' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Adjustments' , 'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{9149347C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Callout' , 'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{91493485-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectionSiteCount' , 'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Connector' , 'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectorFormat' , 'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{91493481-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Fill' , 'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{9149347E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'GroupItems' , 'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{9149347B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'HorizontalFlip' , 'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Line' , 'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{9149347F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Nodes' , 'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{91493486-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'PictureFormat' , 'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{9149347D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'Shadow' , 'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{91493480-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'TextEffect' , 'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{91493482-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'TextFrame' , 'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{91493484-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'ThreeD' , 'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{91493483-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'VerticalFlip' , 'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'Vertices' , 'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrderPosition' , 'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'OLEFormat' , 'OLEFormat' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493488-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'LinkFormat' , 'LinkFormat' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493489-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'PlaceholderFormat' , 'PlaceholderFormat' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493477-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'AnimationSettings' , 'AnimationSettings' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149348B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'ActionSettings' , 'ActionSettings' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149348C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'Tags' , 'Tags' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'Cut' , ), 2009, (2009, (), [ ], 1 , 1 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'Copy' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , 'Replace' , ), 2011, (2011, (), [ (3, 49, '-1', None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'Duplicate' , 'Duplicate' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
+	(( 'MediaType' , 'MediaType' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'HasTextFrame' , 'HasTextFrame' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
+	(( 'SoundFormat' , 'SoundFormat' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{91493473-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 64 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 304 , (3, 0, None, None) , 1 , )),
-	(( u'_Index' , u'Index' , u'_Index' , ), 8, (8, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 304 , (3, 0, None, None) , 1 , )),
+	(( '_Index' , 'Index' , '_Index' , ), 8, (8, (), [ (3, 1, None, None) , 
 			(16396, 10, None, None) , ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 1 , )),
-	(( u'Count' , u'Count' , ), 9, (9, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
-	(( u'Group' , u'Group' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
-	(( u'Regroup' , u'Regroup' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 0 , )),
-	(( u'Align' , u'AlignCmd' , u'RelativeTo' , ), 2018, (2018, (), [ (3, 1, None, None) , 
+	(( 'Count' , 'Count' , ), 9, (9, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
+	(( 'Group' , 'Group' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
+	(( 'Regroup' , 'Regroup' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 0 , )),
+	(( 'Align' , 'AlignCmd' , 'RelativeTo' , ), 2018, (2018, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
-	(( u'Distribute' , u'DistributeCmd' , u'RelativeTo' , ), 2019, (2019, (), [ (3, 1, None, None) , 
+	(( 'Distribute' , 'DistributeCmd' , 'RelativeTo' , ), 2019, (2019, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
-	(( u'GetPolygonalRepresentation' , u'maxPointsInBuffer' , u'pPoints' , u'numPointsInPolygon' , u'IsOpen' , 
+	(( 'GetPolygonalRepresentation' , 'maxPointsInBuffer' , 'pPoints' , 'numPointsInPolygon' , 'IsOpen' , 
 			), 2020, (2020, (), [ (19, 1, None, None) , (16388, 1, None, None) , (16403, 2, None, None) , (16387, 2, None, None) , ], 1 , 1 , 4 , 0 , 332 , (3, 0, None, None) , 1 , )),
-	(( u'Script' , u'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
-	(( u'HasTable' , u'HasTable' , ), 2021, (2021, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
-	(( u'Table' , u'Table' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{914934C3-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
-	(( u'Export' , u'PathName' , u'Filter' , u'ScaleWidth' , u'ScaleHeight' , 
-			u'ExportMode' , ), 2023, (2023, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , 
+	(( 'Script' , 'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'HasTable' , 'HasTable' , ), 2021, (2021, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
+	(( 'Table' , 'Table' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{914934C3-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'Export' , 'PathName' , 'Filter' , 'ScaleWidth' , 'ScaleHeight' , 
+			'ExportMode' , ), 2023, (2023, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , 
 			(3, 49, '0', None) , (3, 49, '1', None) , ], 1 , 1 , 4 , 0 , 356 , (3, 0, None, None) , 64 , )),
-	(( u'HasDiagram' , u'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
-	(( u'Diagram' , u'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{914934DB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
-	(( u'HasDiagramNode' , u'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
-	(( u'DiagramNode' , u'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
-	(( u'Child' , u'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
-	(( u'ParentGroup' , u'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasItems' , u'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{914934EC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 384 , (3, 0, None, None) , 64 , )),
-	(( u'Id' , u'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasCropLeft' , u'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 392 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropTop' , u'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 396 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropRight' , u'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 400 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropBottom' , u'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 404 , (3, 0, None, None) , 64 , )),
-	(( u'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 408 , (3, 0, None, None) , 64 , )),
+	(( 'HasDiagram' , 'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
+	(( 'Diagram' , 'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{914934DB-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
+	(( 'HasDiagramNode' , 'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
+	(( 'DiagramNode' , 'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{914934D8-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
+	(( 'Child' , 'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
+	(( 'ParentGroup' , 'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasItems' , 'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{914934EC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 384 , (3, 0, None, None) , 64 , )),
+	(( 'Id' , 'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasCropLeft' , 'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 392 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropTop' , 'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 396 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropRight' , 'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 400 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropBottom' , 'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 404 , (3, 0, None, None) , 64 , )),
+	(( 'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 408 , (3, 0, None, None) , 64 , )),
 ]
 
 Shapes_vtables_dispatch_ = 1
 Shapes_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'AddCallout' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'AddCallout' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AddConnector' , u'Type' , u'BeginX' , u'BeginY' , u'EndX' , 
-			u'EndY' , u'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddConnector' , 'Type' , 'BeginX' , 'BeginY' , 'EndX' , 
+			'EndY' , 'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AddCurve' , u'SafeArrayOfPoints' , u'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
+	(( 'AddCurve' , 'SafeArrayOfPoints' , 'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AddLabel' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLabel' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AddLine' , u'BeginX' , u'BeginY' , u'EndX' , u'EndY' , 
-			u'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLine' , 'BeginX' , 'BeginY' , 'EndX' , 'EndY' , 
+			'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AddPicture' , u'FileName' , u'LinkToFile' , u'SaveWithDocument' , u'Left' , 
-			u'Top' , u'Width' , u'Height' , u'Picture' , ), 15, (15, (), [ 
+	(( 'AddPicture' , 'FileName' , 'LinkToFile' , 'SaveWithDocument' , 'Left' , 
+			'Top' , 'Width' , 'Height' , 'Picture' , ), 15, (15, (), [ 
 			(8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AddPolyline' , u'SafeArrayOfPoints' , u'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
+	(( 'AddPolyline' , 'SafeArrayOfPoints' , 'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AddShape' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddShape' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextEffect' , u'PresetTextEffect' , u'Text' , u'FontName' , u'FontSize' , 
-			u'FontBold' , u'FontItalic' , u'Left' , u'Top' , u'TextEffect' , 
+	(( 'AddTextEffect' , 'PresetTextEffect' , 'Text' , 'FontName' , 'FontSize' , 
+			'FontBold' , 'FontItalic' , 'Left' , 'Top' , 'TextEffect' , 
 			), 18, (18, (), [ (3, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , (4, 1, None, None) , 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextbox' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddTextbox' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'BuildFreeform' , u'EditingType' , u'X1' , u'Y1' , u'FreeformBuilder' , 
+	(( 'BuildFreeform' , 'EditingType' , 'X1' , 'Y1' , 'FreeformBuilder' , 
 			), 20, (20, (), [ (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493478-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 2003, (2003, (), [ (12, 17, None, None) , 
+	(( 'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Range' , 'Index' , 'Range' , ), 2003, (2003, (), [ (12, 17, None, None) , 
 			(16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 1 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'HasTitle' , u'HasTitle' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'AddTitle' , u'Title' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Title' , u'Title' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Placeholders' , u'Placeholders' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493476-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'AddOLEObject' , u'Left' , u'Top' , u'Width' , u'Height' , 
-			u'ClassName' , u'FileName' , u'DisplayAsIcon' , u'IconFileName' , u'IconIndex' , 
-			u'IconLabel' , u'Link' , u'OLEObject' , ), 2008, (2008, (), [ (4, 49, '0.0', None) , 
+	(( 'HasTitle' , 'HasTitle' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'AddTitle' , 'Title' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'Title' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Placeholders' , 'Placeholders' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493476-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'AddOLEObject' , 'Left' , 'Top' , 'Width' , 'Height' , 
+			'ClassName' , 'FileName' , 'DisplayAsIcon' , 'IconFileName' , 'IconIndex' , 
+			'IconLabel' , 'Link' , 'OLEObject' , ), 2008, (2008, (), [ (4, 49, '0.0', None) , 
 			(4, 49, '0.0', None) , (4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (8, 49, "u''", None) , (8, 49, "u''", None) , 
 			(3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 120 , (3, 32, None, None) , 0 , )),
-	(( u'AddComment' , u'Left' , u'Top' , u'Width' , u'Height' , 
-			u'Comment' , ), 2009, (2009, (), [ (4, 49, '1.25', None) , (4, 49, '1.25', None) , (4, 49, '145.25', None) , 
+	(( 'AddComment' , 'Left' , 'Top' , 'Width' , 'Height' , 
+			'Comment' , ), 2009, (2009, (), [ (4, 49, '1.25', None) , (4, 49, '1.25', None) , (4, 49, '145.25', None) , 
 			(4, 49, '145.25', None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'AddPlaceholder' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Placeholder' , ), 2010, (2010, (), [ (3, 1, None, None) , (4, 49, '-1.0', None) , 
+	(( 'AddPlaceholder' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Placeholder' , ), 2010, (2010, (), [ (3, 1, None, None) , (4, 49, '-1.0', None) , 
 			(4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'AddMediaObject' , u'FileName' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'MediaObject' , ), 2011, (2011, (), [ (8, 1, None, None) , (4, 49, '0.0', None) , 
+	(( 'AddMediaObject' , 'FileName' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'MediaObject' , ), 2011, (2011, (), [ (8, 1, None, None) , (4, 49, '0.0', None) , 
 			(4, 49, '0.0', None) , (4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Paste' , u'Paste' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'AddTable' , u'NumRows' , u'NumColumns' , u'Left' , u'Top' , 
-			u'Width' , u'Height' , u'Table' , ), 2013, (2013, (), [ (3, 1, None, None) , 
+	(( 'Paste' , 'Paste' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'AddTable' , 'NumRows' , 'NumColumns' , 'Left' , 'Top' , 
+			'Width' , 'Height' , 'Table' , ), 2013, (2013, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , (4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (4, 49, '-1.0', None) , 
 			(16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'PasteSpecial' , u'DataType' , u'DisplayAsIcon' , u'IconFileName' , u'IconIndex' , 
-			u'IconLabel' , u'Link' , u'PasteSpecial' , ), 2014, (2014, (), [ (3, 49, '0', None) , 
+	(( 'PasteSpecial' , 'DataType' , 'DisplayAsIcon' , 'IconFileName' , 'IconIndex' , 
+			'IconLabel' , 'Link' , 'PasteSpecial' , ), 2014, (2014, (), [ (3, 49, '0', None) , 
 			(3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , 
 			(16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 144 , (3, 32, None, None) , 0 , )),
-	(( u'AddDiagram' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Diagram' , ), 23, (23, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddDiagram' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Diagram' , ), 23, (23, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'AddCanvas' , u'Left' , u'Top' , u'Width' , u'Height' , 
-			u'Shape' , ), 25, (25, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddCanvas' , 'Left' , 'Top' , 'Width' , 'Height' , 
+			'Shape' , ), 25, (25, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 152 , (3, 0, None, None) , 64 , )),
 ]
 
@@ -9326,829 +9326,829 @@ SldEvents_vtables_ = [
 
 SlideRange_vtables_dispatch_ = 1
 SlideRange_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Shapes' , u'Shapes' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493475-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'HeadersFooters' , u'HeadersFooters' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493474-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowTransition' , u'SlideShowTransition' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493471-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ColorScheme' , u'ColorScheme' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ColorScheme' , u'ColorScheme' , ), 2006, (2006, (), [ (9, 1, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , u'Background' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SlideID' , u'SlideID' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'PrintSteps' , u'PrintSteps' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Cut' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Copy' , ), 2013, (2013, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Layout' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Layout' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Duplicate' , u'Duplicate' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2016, (2016, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Tags' , u'Tags' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'SlideIndex' , u'SlideIndex' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'SlideNumber' , u'SlideNumber' , ), 2019, (2019, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayMasterShapes' , u'DisplayMasterShapes' , ), 2020, (2020, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayMasterShapes' , u'DisplayMasterShapes' , ), 2020, (2020, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'FollowMasterBackground' , u'FollowMasterBackground' , ), 2021, (2021, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'FollowMasterBackground' , u'FollowMasterBackground' , ), 2021, (2021, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'NotesPage' , u'NotesPage' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Master' , u'Master' , ), 2023, (2023, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Hyperlinks' , u'Hyperlinks' , ), 2024, (2024, (), [ (16393, 10, None, "IID('{91493464-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Export' , u'FileName' , u'FilterName' , u'ScaleWidth' , u'ScaleHeight' , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Shapes' , 'Shapes' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493475-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'HeadersFooters' , 'HeadersFooters' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493474-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowTransition' , 'SlideShowTransition' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493471-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ColorScheme' , 'ColorScheme' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ColorScheme' , 'ColorScheme' , ), 2006, (2006, (), [ (9, 1, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , 'Background' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SlideID' , 'SlideID' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'PrintSteps' , 'PrintSteps' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Cut' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Copy' , ), 2013, (2013, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Layout' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Layout' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Duplicate' , 'Duplicate' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2016, (2016, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Tags' , 'Tags' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'SlideIndex' , 'SlideIndex' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'SlideNumber' , 'SlideNumber' , ), 2019, (2019, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayMasterShapes' , 'DisplayMasterShapes' , ), 2020, (2020, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayMasterShapes' , 'DisplayMasterShapes' , ), 2020, (2020, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'FollowMasterBackground' , 'FollowMasterBackground' , ), 2021, (2021, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'FollowMasterBackground' , 'FollowMasterBackground' , ), 2021, (2021, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'NotesPage' , 'NotesPage' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Master' , 'Master' , ), 2023, (2023, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Hyperlinks' , 'Hyperlinks' , ), 2024, (2024, (), [ (16393, 10, None, "IID('{91493464-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Export' , 'FileName' , 'FilterName' , 'ScaleWidth' , 'ScaleHeight' , 
 			), 2025, (2025, (), [ (8, 1, None, None) , (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 1 , )),
-	(( u'_Index' , u'Index' , u'_Index' , ), 10, (10, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 1 , )),
+	(( '_Index' , 'Index' , '_Index' , ), 10, (10, (), [ (3, 1, None, None) , 
 			(16396, 10, None, None) , ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 1 , )),
-	(( u'Count' , u'Count' , ), 11, (11, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'Scripts' , u'Scripts' , ), 2026, (2026, (), [ (16393, 10, None, "IID('{000C0340-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'Comments' , u'Comments' , ), 2028, (2028, (), [ (16393, 10, None, "IID('{914934D4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Design' , u'Design' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Design' , u'Design' , ), 2029, (2029, (), [ (9, 1, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'MoveTo' , u'toPos' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'TimeLine' , u'TimeLine' , ), 2031, (2031, (), [ (16393, 10, None, "IID('{914934DC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'ApplyTemplate' , u'FileName' , ), 2032, (2032, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 11, (11, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'Scripts' , 'Scripts' , ), 2026, (2026, (), [ (16393, 10, None, "IID('{000C0340-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'Comments' , 'Comments' , ), 2028, (2028, (), [ (16393, 10, None, "IID('{914934D4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Design' , 'Design' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Design' , 'Design' , ), 2029, (2029, (), [ (9, 1, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'MoveTo' , 'toPos' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'TimeLine' , 'TimeLine' , ), 2031, (2031, (), [ (16393, 10, None, "IID('{914934DC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'ApplyTemplate' , 'FileName' , ), 2032, (2032, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
 ]
 
 SlideShowSettings_vtables_dispatch_ = 1
 SlideShowSettings_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'PointerColor' , u'PointerColor' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'NamedSlideShows' , u'NamedSlideShows' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149345B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'StartingSlide' , u'StartingSlide' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'StartingSlide' , u'StartingSlide' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'EndingSlide' , u'EndingSlide' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'EndingSlide' , u'EndingSlide' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceMode' , u'AdvanceMode' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceMode' , u'AdvanceMode' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Run' , u'Run' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{91493453-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'LoopUntilStopped' , u'LoopUntilStopped' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'LoopUntilStopped' , u'LoopUntilStopped' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ShowType' , u'ShowType' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'ShowType' , u'ShowType' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ShowWithNarration' , u'ShowWithNarration' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'ShowWithNarration' , u'ShowWithNarration' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'ShowWithAnimation' , u'ShowWithAnimation' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'ShowWithAnimation' , u'ShowWithAnimation' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2013, (2013, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2013, (2013, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'RangeType' , u'RangeType' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'RangeType' , u'RangeType' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'ShowScrollbar' , u'ShowScrollbar' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'ShowScrollbar' , u'ShowScrollbar' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'PointerColor' , 'PointerColor' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'NamedSlideShows' , 'NamedSlideShows' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149345B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'StartingSlide' , 'StartingSlide' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'StartingSlide' , 'StartingSlide' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'EndingSlide' , 'EndingSlide' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'EndingSlide' , 'EndingSlide' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceMode' , 'AdvanceMode' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceMode' , 'AdvanceMode' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Run' , 'Run' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{91493453-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'LoopUntilStopped' , 'LoopUntilStopped' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'LoopUntilStopped' , 'LoopUntilStopped' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'ShowType' , 'ShowType' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'ShowType' , 'ShowType' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ShowWithNarration' , 'ShowWithNarration' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'ShowWithNarration' , 'ShowWithNarration' , ), 2011, (2011, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'ShowWithAnimation' , 'ShowWithAnimation' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'ShowWithAnimation' , 'ShowWithAnimation' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2013, (2013, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2013, (2013, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'RangeType' , 'RangeType' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'RangeType' , 'RangeType' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'ShowScrollbar' , 'ShowScrollbar' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'ShowScrollbar' , 'ShowScrollbar' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
 ]
 
 SlideShowTransition_vtables_dispatch_ = 1
 SlideShowTransition_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceOnClick' , u'AdvanceOnClick' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceOnClick' , u'AdvanceOnClick' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceOnTime' , u'AdvanceOnTime' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceOnTime' , u'AdvanceOnTime' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceTime' , u'AdvanceTime' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceTime' , u'AdvanceTime' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'EntryEffect' , u'EntryEffect' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'EntryEffect' , u'EntryEffect' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Hidden' , u'Hidden' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Hidden' , u'Hidden' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'LoopSoundUntilNext' , u'LoopSoundUntilNext' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'LoopSoundUntilNext' , u'LoopSoundUntilNext' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'SoundEffect' , u'SoundEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Speed' , u'Speed' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Speed' , u'Speed' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceOnClick' , 'AdvanceOnClick' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceOnClick' , 'AdvanceOnClick' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceOnTime' , 'AdvanceOnTime' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceOnTime' , 'AdvanceOnTime' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceTime' , 'AdvanceTime' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceTime' , 'AdvanceTime' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'EntryEffect' , 'EntryEffect' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'EntryEffect' , 'EntryEffect' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Hidden' , 'Hidden' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Hidden' , 'Hidden' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'LoopSoundUntilNext' , 'LoopSoundUntilNext' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'LoopSoundUntilNext' , 'LoopSoundUntilNext' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'SoundEffect' , 'SoundEffect' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493472-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Speed' , 'Speed' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Speed' , 'Speed' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
 ]
 
 SlideShowView_vtables_dispatch_ = 1
 SlideShowView_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Zoom' , u'Zoom' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Slide' , u'Slide' , ), 2004, (2004, (), [ (16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'PointerType' , u'PointerType' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'PointerType' , u'PointerType' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'State' , u'State' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'State' , u'State' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AcceleratorsEnabled' , u'AcceleratorsEnabled' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AcceleratorsEnabled' , u'AcceleratorsEnabled' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'PresentationElapsedTime' , u'PresentationElapsedTime' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'SlideElapsedTime' , u'SlideElapsedTime' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'SlideElapsedTime' , u'SlideElapsedTime' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'LastSlideViewed' , u'LastSlideViewed' , ), 2010, (2010, (), [ (16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AdvanceMode' , u'AdvanceMode' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'PointerColor' , u'PointerColor' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'IsNamedShow' , u'IsNamedShow' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowName' , u'SlideShowName' , ), 2014, (2014, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'DrawLine' , u'BeginX' , u'BeginY' , u'EndX' , u'EndY' , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Zoom' , 'Zoom' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Slide' , 'Slide' , ), 2004, (2004, (), [ (16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'PointerType' , 'PointerType' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'PointerType' , 'PointerType' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'State' , 'State' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'State' , 'State' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'AcceleratorsEnabled' , 'AcceleratorsEnabled' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'AcceleratorsEnabled' , 'AcceleratorsEnabled' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'PresentationElapsedTime' , 'PresentationElapsedTime' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'SlideElapsedTime' , 'SlideElapsedTime' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'SlideElapsedTime' , 'SlideElapsedTime' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'LastSlideViewed' , 'LastSlideViewed' , ), 2010, (2010, (), [ (16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'AdvanceMode' , 'AdvanceMode' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'PointerColor' , 'PointerColor' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'IsNamedShow' , 'IsNamedShow' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowName' , 'SlideShowName' , ), 2014, (2014, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'DrawLine' , 'BeginX' , 'BeginY' , 'EndX' , 'EndY' , 
 			), 2015, (2015, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'EraseDrawing' , ), 2016, (2016, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'First' , ), 2017, (2017, (), [ ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Last' , ), 2018, (2018, (), [ ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Next' , ), 2019, (2019, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Previous' , ), 2020, (2020, (), [ ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'GotoSlide' , u'Index' , u'ResetSlide' , ), 2021, (2021, (), [ (3, 1, None, None) , 
+	(( 'EraseDrawing' , ), 2016, (2016, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'First' , ), 2017, (2017, (), [ ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Last' , ), 2018, (2018, (), [ ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Next' , ), 2019, (2019, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Previous' , ), 2020, (2020, (), [ ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'GotoSlide' , 'Index' , 'ResetSlide' , ), 2021, (2021, (), [ (3, 1, None, None) , 
 			(3, 49, '-1', None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'GotoNamedShow' , u'SlideShowName' , ), 2022, (2022, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'EndNamedShow' , ), 2023, (2023, (), [ ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'ResetSlideTime' , ), 2024, (2024, (), [ ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Exit' , ), 2025, (2025, (), [ ], 1 , 1 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'InstallTracker' , u'pTracker' , u'Presenter' , ), 2026, (2026, (), [ (13, 1, None, "IID('{914934BE-5A91-11CF-8700-00AA0060263B}')") , 
+	(( 'GotoNamedShow' , 'SlideShowName' , ), 2022, (2022, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'EndNamedShow' , ), 2023, (2023, (), [ ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'ResetSlideTime' , ), 2024, (2024, (), [ ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Exit' , ), 2025, (2025, (), [ ], 1 , 1 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'InstallTracker' , 'pTracker' , 'Presenter' , ), 2026, (2026, (), [ (13, 1, None, "IID('{914934BE-5A91-11CF-8700-00AA0060263B}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 144 , (3, 0, None, None) , 64 , )),
-	(( u'CurrentShowPosition' , u'CurrentShowPosition' , ), 2027, (2027, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'CurrentShowPosition' , 'CurrentShowPosition' , ), 2027, (2027, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
 ]
 
 SlideShowWindow_vtables_dispatch_ = 1
 SlideShowWindow_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'View' , u'View' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493459-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Presentation' , u'Presentation' , ), 2004, (2004, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IsFullScreen' , u'IsFullScreen' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2007, (2007, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'HWND' , u'HWND' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 1 , )),
-	(( u'Active' , u'Active' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Activate' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'View' , 'View' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493459-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Presentation' , 'Presentation' , ), 2004, (2004, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IsFullScreen' , 'IsFullScreen' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 2006, (2006, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2007, (2007, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'HWND' , 'HWND' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 1 , )),
+	(( 'Active' , 'Active' , ), 2011, (2011, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Activate' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
 ]
 
 SlideShowWindows_vtables_dispatch_ = 1
 SlideShowWindows_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493453-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 Slides_vtables_dispatch_ = 1
 Slides_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FindBySlideID' , u'SlideID' , u'FindBySlideID' , ), 2003, (2003, (), [ (3, 1, None, None) , 
+	(( 'FindBySlideID' , 'SlideID' , 'FindBySlideID' , ), 2003, (2003, (), [ (3, 1, None, None) , 
 			(16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Index' , u'Layout' , u'Add' , ), 2004, (2004, (), [ 
+	(( 'Add' , 'Index' , 'Layout' , 'Add' , ), 2004, (2004, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (16397, 10, None, "IID('{91493445-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'InsertFromFile' , u'FileName' , u'Index' , u'SlideStart' , u'SlideEnd' , 
-			u'FromFile' , ), 2005, (2005, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '1', None) , 
+	(( 'InsertFromFile' , 'FileName' , 'Index' , 'SlideStart' , 'SlideEnd' , 
+			'FromFile' , ), 2005, (2005, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '1', None) , 
 			(3, 49, '-1', None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 2006, (2006, (), [ (12, 17, None, None) , 
+	(( 'Range' , 'Index' , 'Range' , ), 2006, (2006, (), [ (12, 17, None, None) , 
 			(16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 1 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Paste' , u'Index' , u'Paste' , ), 2007, (2007, (), [ (3, 49, '-1', None) , 
+	(( 'Paste' , 'Index' , 'Paste' , ), 2007, (2007, (), [ (3, 49, '-1', None) , 
 			(16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
 ]
 
 SoundEffect_vtables_dispatch_ = 1
 SoundEffect_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2003, (2003, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ImportFromFile' , u'FileName' , ), 2005, (2005, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Play' , ), 2006, (2006, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2003, (2003, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2003, (2003, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ImportFromFile' , 'FileName' , ), 2005, (2005, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Play' , ), 2006, (2006, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SoundFormat_vtables_dispatch_ = 1
 SoundFormat_vtables_ = [
-	(( u'Play' , ), 2000, (2000, (), [ ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Import' , u'FileName' , ), 2001, (2001, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Export' , u'FileName' , u'Export' , ), 2002, (2002, (), [ (8, 1, None, None) , 
+	(( 'Play' , ), 2000, (2000, (), [ ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Import' , 'FileName' , ), 2001, (2001, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Export' , 'FileName' , 'Export' , ), 2002, (2002, (), [ (8, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SourceFullName' , u'SourceFullName' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SourceFullName' , 'SourceFullName' , ), 2004, (2004, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 TabStop_vtables_dispatch_ = 1
 TabStop_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Position' , u'Position' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Position' , u'Position' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Clear' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Position' , 'Position' , ), 2004, (2004, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Position' , 'Position' , ), 2004, (2004, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Clear' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 TabStops_vtables_dispatch_ = 1
 TabStops_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493494-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'DefaultSpacing' , u'DefaultSpacing' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'DefaultSpacing' , u'DefaultSpacing' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Type' , u'Position' , u'Add' , ), 2004, (2004, (), [ 
+	(( 'DefaultSpacing' , 'DefaultSpacing' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'DefaultSpacing' , 'DefaultSpacing' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Type' , 'Position' , 'Add' , ), 2004, (2004, (), [ 
 			(3, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{91493494-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 Table_vtables_dispatch_ = 1
 Table_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Columns' , u'Columns' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934C4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Rows' , u'Rows' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934C6-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Cell' , u'Row' , u'Column' , u'Cell' , ), 2005, (2005, (), [ 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Columns' , 'Columns' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934C4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Rows' , 'Rows' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934C6-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Cell' , 'Row' , 'Column' , 'Cell' , ), 2005, (2005, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (16393, 10, None, "IID('{914934C9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'TableDirection' , u'TableDirection' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'TableDirection' , u'TableDirection' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'MergeBorders' , ), 2007, (2007, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 64 , )),
+	(( 'TableDirection' , 'TableDirection' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'TableDirection' , 'TableDirection' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'MergeBorders' , ), 2007, (2007, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 64 , )),
 ]
 
 Tags_vtables_dispatch_ = 1
 Tags_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Name' , u'Item' , ), 0, (0, (), [ (8, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Name' , 'Item' , ), 0, (0, (), [ (8, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Name' , u'Value' , ), 2003, (2003, (), [ (8, 1, None, None) , 
+	(( 'Add' , 'Name' , 'Value' , ), 2003, (2003, (), [ (8, 1, None, None) , 
 			(8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , u'Name' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AddBinary' , u'Name' , u'FilePath' , ), 2005, (2005, (), [ (8, 1, None, None) , 
+	(( 'Delete' , 'Name' , ), 2004, (2004, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'AddBinary' , 'Name' , 'FilePath' , ), 2005, (2005, (), [ (8, 1, None, None) , 
 			(8, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 64 , )),
-	(( u'BinaryValue' , u'Name' , u'BinaryValue' , ), 2006, (2006, (), [ (8, 1, None, None) , 
+	(( 'BinaryValue' , 'Name' , 'BinaryValue' , ), 2006, (2006, (), [ (8, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 64 , )),
-	(( u'Name' , u'Index' , u'Name' , ), 2007, (2007, (), [ (3, 1, None, None) , 
+	(( 'Name' , 'Index' , 'Name' , ), 2007, (2007, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Value' , u'Index' , u'Value' , ), 2008, (2008, (), [ (3, 1, None, None) , 
+	(( 'Value' , 'Index' , 'Value' , ), 2008, (2008, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
 ]
 
 TextEffectFormat_vtables_dispatch_ = 1
 TextEffectFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ToggleVerticalText' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Alignment' , u'Alignment' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Alignment' , u'Alignment' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FontBold' , u'FontBold' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'FontBold' , u'FontBold' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FontItalic' , u'FontItalic' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FontItalic' , u'FontItalic' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'FontName' , u'FontName' , ), 103, (103, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'FontName' , u'FontName' , ), 103, (103, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'FontSize' , u'FontSize' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'FontSize' , u'FontSize' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'KernedPairs' , u'KernedPairs' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'KernedPairs' , u'KernedPairs' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'NormalizedHeight' , u'NormalizedHeight' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'NormalizedHeight' , u'NormalizedHeight' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'PresetShape' , u'PresetShape' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'PresetShape' , u'PresetShape' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTextEffect' , u'Preset' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTextEffect' , u'Preset' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'RotatedChars' , u'RotatedChars' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'RotatedChars' , u'RotatedChars' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 110, (110, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 110, (110, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Tracking' , u'Tracking' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Tracking' , u'Tracking' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ToggleVerticalText' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Alignment' , 'Alignment' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Alignment' , 'Alignment' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FontBold' , 'FontBold' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'FontBold' , 'FontBold' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FontItalic' , 'FontItalic' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'FontItalic' , 'FontItalic' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'FontName' , 'FontName' , ), 103, (103, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'FontName' , 'FontName' , ), 103, (103, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'FontSize' , 'FontSize' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'FontSize' , 'FontSize' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'KernedPairs' , 'KernedPairs' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'KernedPairs' , 'KernedPairs' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'NormalizedHeight' , 'NormalizedHeight' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'NormalizedHeight' , 'NormalizedHeight' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'PresetShape' , 'PresetShape' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'PresetShape' , 'PresetShape' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'PresetTextEffect' , 'Preset' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PresetTextEffect' , 'Preset' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'RotatedChars' , 'RotatedChars' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'RotatedChars' , 'RotatedChars' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 110, (110, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 110, (110, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Tracking' , 'Tracking' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Tracking' , 'Tracking' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
 ]
 
 TextFrame_vtables_dispatch_ = 1
 TextFrame_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'MarginBottom' , u'MarginBottom' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'MarginBottom' , u'MarginBottom' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'MarginLeft' , u'MarginLeft' , ), 101, (101, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'MarginLeft' , u'MarginLeft' , ), 101, (101, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'MarginRight' , u'MarginRight' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'MarginRight' , u'MarginRight' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'MarginTop' , u'MarginTop' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'MarginTop' , u'MarginTop' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Orientation' , u'Orientation' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Orientation' , u'Orientation' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'HasText' , u'HasText' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'TextRange' , u'TextRange' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Ruler' , u'Ruler' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493490-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'HorizontalAnchor' , u'HorizontalAnchor' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'HorizontalAnchor' , u'HorizontalAnchor' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'VerticalAnchor' , u'VerticalAnchor' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'VerticalAnchor' , u'VerticalAnchor' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'AutoSize' , u'AutoSize' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'AutoSize' , u'AutoSize' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'WordWrap' , u'WordWrap' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'WordWrap' , u'WordWrap' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'DeleteText' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'MarginBottom' , 'MarginBottom' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'MarginBottom' , 'MarginBottom' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'MarginLeft' , 'MarginLeft' , ), 101, (101, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'MarginLeft' , 'MarginLeft' , ), 101, (101, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'MarginRight' , 'MarginRight' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'MarginRight' , 'MarginRight' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'MarginTop' , 'MarginTop' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'MarginTop' , 'MarginTop' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Orientation' , 'Orientation' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Orientation' , 'Orientation' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'HasText' , 'HasText' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'TextRange' , 'TextRange' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Ruler' , 'Ruler' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493490-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'HorizontalAnchor' , 'HorizontalAnchor' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'HorizontalAnchor' , 'HorizontalAnchor' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'VerticalAnchor' , 'VerticalAnchor' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'VerticalAnchor' , 'VerticalAnchor' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'AutoSize' , 'AutoSize' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'AutoSize' , 'AutoSize' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'WordWrap' , 'WordWrap' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'WordWrap' , 'WordWrap' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'DeleteText' , ), 2010, (2010, (), [ ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
 ]
 
 TextRange_vtables_dispatch_ = 1
 TextRange_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ActionSettings' , u'ActionSettings' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149348C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Start' , u'Start' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Length' , u'Length' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'BoundLeft' , u'BoundLeft' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'BoundTop' , u'BoundTop' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'BoundWidth' , u'BoundWidth' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'BoundHeight' , u'BoundHeight' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Paragraphs' , u'Start' , u'Length' , u'Paragraphs' , ), 2010, (2010, (), [ 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ActionSettings' , 'ActionSettings' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149348C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Start' , 'Start' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Length' , 'Length' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'BoundLeft' , 'BoundLeft' , ), 2006, (2006, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'BoundTop' , 'BoundTop' , ), 2007, (2007, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'BoundWidth' , 'BoundWidth' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'BoundHeight' , 'BoundHeight' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Paragraphs' , 'Start' , 'Length' , 'Paragraphs' , ), 2010, (2010, (), [ 
 			(3, 49, '-1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Sentences' , u'Start' , u'Length' , u'Sentences' , ), 2011, (2011, (), [ 
+	(( 'Sentences' , 'Start' , 'Length' , 'Sentences' , ), 2011, (2011, (), [ 
 			(3, 49, '-1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Words' , u'Start' , u'Length' , u'Words' , ), 2012, (2012, (), [ 
+	(( 'Words' , 'Start' , 'Length' , 'Words' , ), 2012, (2012, (), [ 
 			(3, 49, '-1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Characters' , u'Start' , u'Length' , u'Characters' , ), 2013, (2013, (), [ 
+	(( 'Characters' , 'Start' , 'Length' , 'Characters' , ), 2013, (2013, (), [ 
 			(3, 49, '-1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Lines' , u'Start' , u'Length' , u'Lines' , ), 2014, (2014, (), [ 
+	(( 'Lines' , 'Start' , 'Length' , 'Lines' , ), 2014, (2014, (), [ 
 			(3, 49, '-1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Runs' , u'Start' , u'Length' , u'Runs' , ), 2015, (2015, (), [ 
+	(( 'Runs' , 'Start' , 'Length' , 'Runs' , ), 2015, (2015, (), [ 
 			(3, 49, '-1', None) , (3, 49, '-1', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'TrimText' , u'TrimText' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'InsertAfter' , u'NewText' , u'After' , ), 2017, (2017, (), [ (8, 49, "u''", None) , 
+	(( 'TrimText' , 'TrimText' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'InsertAfter' , 'NewText' , 'After' , ), 2017, (2017, (), [ (8, 49, "u''", None) , 
 			(16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 112 , (3, 32, None, None) , 0 , )),
-	(( u'InsertBefore' , u'NewText' , u'Before' , ), 2018, (2018, (), [ (8, 49, "u''", None) , 
+	(( 'InsertBefore' , 'NewText' , 'Before' , ), 2018, (2018, (), [ (8, 49, "u''", None) , 
 			(16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 116 , (3, 32, None, None) , 0 , )),
-	(( u'InsertDateTime' , u'DateTimeFormat' , u'InsertAsField' , u'DateTime' , ), 2019, (2019, (), [ 
+	(( 'InsertDateTime' , 'DateTimeFormat' , 'InsertAsField' , 'DateTime' , ), 2019, (2019, (), [ 
 			(3, 1, None, None) , (3, 49, '0', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'InsertSlideNumber' , u'SlideNumber' , ), 2020, (2020, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'InsertSymbol' , u'FontName' , u'CharNumber' , u'Unicode' , u'Symbol' , 
+	(( 'InsertSlideNumber' , 'SlideNumber' , ), 2020, (2020, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'InsertSymbol' , 'FontName' , 'CharNumber' , 'Unicode' , 'Symbol' , 
 			), 2021, (2021, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Font' , u'Font' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'ParagraphFormat' , u'ParagraphFormat' , ), 2023, (2023, (), [ (16393, 10, None, "IID('{91493496-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'IndentLevel' , u'IndentLevel' , ), 2024, (2024, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'IndentLevel' , u'IndentLevel' , ), 2024, (2024, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , ), 2025, (2025, (), [ ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Cut' , ), 2026, (2026, (), [ ], 1 , 1 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Copy' , ), 2027, (2027, (), [ ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2028, (2028, (), [ ], 1 , 1 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'Paste' , u'Paste' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'ChangeCase' , u'Type' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'AddPeriods' , ), 2031, (2031, (), [ ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'RemovePeriods' , ), 2032, (2032, (), [ ], 1 , 1 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'Find' , u'FindWhat' , u'After' , u'MatchCase' , u'WholeWords' , 
-			u'Find' , ), 2033, (2033, (), [ (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , 
+	(( 'Font' , 'Font' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'ParagraphFormat' , 'ParagraphFormat' , ), 2023, (2023, (), [ (16393, 10, None, "IID('{91493496-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'IndentLevel' , 'IndentLevel' , ), 2024, (2024, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'IndentLevel' , 'IndentLevel' , ), 2024, (2024, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , ), 2025, (2025, (), [ ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Cut' , ), 2026, (2026, (), [ ], 1 , 1 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Copy' , ), 2027, (2027, (), [ ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2028, (2028, (), [ ], 1 , 1 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'Paste' , 'Paste' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'ChangeCase' , 'Type' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'AddPeriods' , ), 2031, (2031, (), [ ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'RemovePeriods' , ), 2032, (2032, (), [ ], 1 , 1 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'Find' , 'FindWhat' , 'After' , 'MatchCase' , 'WholeWords' , 
+			'Find' , ), 2033, (2033, (), [ (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , 
 			(3, 49, '0', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'Replace' , u'FindWhat' , u'ReplaceWhat' , u'After' , u'MatchCase' , 
-			u'WholeWords' , u'Replace' , ), 2034, (2034, (), [ (8, 1, None, None) , (8, 1, None, None) , 
+	(( 'Replace' , 'FindWhat' , 'ReplaceWhat' , 'After' , 'MatchCase' , 
+			'WholeWords' , 'Replace' , ), 2034, (2034, (), [ (8, 1, None, None) , (8, 1, None, None) , 
 			(3, 49, '0', None) , (3, 49, '0', None) , (3, 49, '0', None) , (16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'RotatedBounds' , u'X1' , u'Y1' , u'X2' , u'Y2' , 
-			u'X3' , u'Y3' , u'x4' , u'y4' , ), 2035, (2035, (), [ 
+	(( 'RotatedBounds' , 'X1' , 'Y1' , 'X2' , 'Y2' , 
+			'X3' , 'Y3' , 'x4' , 'y4' , ), 2035, (2035, (), [ 
 			(16388, 2, None, None) , (16388, 2, None, None) , (16388, 2, None, None) , (16388, 2, None, None) , (16388, 2, None, None) , 
 			(16388, 2, None, None) , (16388, 2, None, None) , (16388, 2, None, None) , ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'LanguageID' , u'LanguageID' , ), 2036, (2036, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'LanguageID' , u'LanguageID' , ), 2036, (2036, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'RtlRun' , ), 2037, (2037, (), [ ], 1 , 1 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'LtrRun' , ), 2038, (2038, (), [ ], 1 , 1 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'PasteSpecial' , u'DataType' , u'DisplayAsIcon' , u'IconFileName' , u'IconIndex' , 
-			u'IconLabel' , u'Link' , u'PasteSpecial' , ), 2039, (2039, (), [ (3, 49, '0', None) , 
+	(( 'LanguageID' , 'LanguageID' , ), 2036, (2036, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'LanguageID' , 'LanguageID' , ), 2036, (2036, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'RtlRun' , ), 2037, (2037, (), [ ], 1 , 1 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'LtrRun' , ), 2038, (2038, (), [ ], 1 , 1 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'PasteSpecial' , 'DataType' , 'DisplayAsIcon' , 'IconFileName' , 'IconIndex' , 
+			'IconLabel' , 'Link' , 'PasteSpecial' , ), 2039, (2039, (), [ (3, 49, '0', None) , 
 			(3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , 
 			(16393, 10, None, "IID('{9149348F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 208 , (3, 32, None, None) , 0 , )),
 ]
 
 TextStyle_vtables_dispatch_ = 1
 TextStyle_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Ruler' , u'Ruler' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493490-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'TextFrame' , u'TextFrame' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493484-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Levels' , u'Levels' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{9149349A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Ruler' , 'Ruler' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493490-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'TextFrame' , 'TextFrame' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493484-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Levels' , 'Levels' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{9149349A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 TextStyleLevel_vtables_dispatch_ = 1
 TextStyleLevel_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ParagraphFormat' , u'ParagraphFormat' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493496-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Font' , u'Font' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ParagraphFormat' , 'ParagraphFormat' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493496-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Font' , 'Font' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493495-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 TextStyleLevels_vtables_dispatch_ = 1
 TextStyleLevels_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Level' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Level' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{9149349B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 TextStyles_vtables_dispatch_ = 1
 TextStyles_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Type' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Type' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{91493499-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ThreeDFormat_vtables_dispatch_ = 1
 ThreeDFormat_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotationX' , u'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotationY' , u'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ResetRotation' , ), 12, (12, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SetThreeDFormat' , u'PresetThreeDFormat' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SetExtrusionDirection' , u'PresetExtrusionDirection' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Depth' , u'Depth' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Depth' , u'Depth' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ExtrusionColor' , u'ExtrusionColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ExtrusionColorType' , u'ExtrusionColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ExtrusionColorType' , u'ExtrusionColorType' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Perspective' , u'Perspective' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Perspective' , u'Perspective' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'PresetExtrusionDirection' , u'PresetExtrusionDirection' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingDirection' , u'PresetLightingDirection' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingDirection' , u'PresetLightingDirection' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingSoftness' , u'PresetLightingSoftness' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingSoftness' , u'PresetLightingSoftness' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'PresetMaterial' , u'PresetMaterial' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PresetMaterial' , u'PresetMaterial' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'PresetThreeDFormat' , u'PresetThreeDFormat' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'RotationX' , u'RotationX' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'RotationX' , u'RotationX' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'RotationY' , u'RotationY' , ), 110, (110, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'RotationY' , u'RotationY' , ), 110, (110, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 111, (111, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 111, (111, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 2001, (2001, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotationX' , 'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotationY' , 'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ResetRotation' , ), 12, (12, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SetThreeDFormat' , 'PresetThreeDFormat' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SetExtrusionDirection' , 'PresetExtrusionDirection' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Depth' , 'Depth' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Depth' , 'Depth' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ExtrusionColor' , 'ExtrusionColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{91493452-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ExtrusionColorType' , 'ExtrusionColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ExtrusionColorType' , 'ExtrusionColorType' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Perspective' , 'Perspective' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Perspective' , 'Perspective' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'PresetExtrusionDirection' , 'PresetExtrusionDirection' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingDirection' , 'PresetLightingDirection' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingDirection' , 'PresetLightingDirection' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingSoftness' , 'PresetLightingSoftness' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingSoftness' , 'PresetLightingSoftness' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'PresetMaterial' , 'PresetMaterial' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PresetMaterial' , 'PresetMaterial' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'PresetThreeDFormat' , 'PresetThreeDFormat' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'RotationX' , 'RotationX' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'RotationX' , 'RotationX' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'RotationY' , 'RotationY' , ), 110, (110, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'RotationY' , 'RotationY' , ), 110, (110, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 111, (111, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 111, (111, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
 ]
 
 TimeLine_vtables_dispatch_ = 1
 TimeLine_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'MainSequence' , u'MainSequence' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934DE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'InteractiveSequences' , u'InteractiveSequences' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934DD-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'MainSequence' , 'MainSequence' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{914934DE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'InteractiveSequences' , 'InteractiveSequences' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{914934DD-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 Timing_vtables_dispatch_ = 1
 Timing_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Duration' , u'Duration' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Duration' , u'Duration' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'TriggerType' , u'TriggerType' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'TriggerType' , u'TriggerType' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'TriggerDelayTime' , u'TriggerDelayTime' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'TriggerDelayTime' , u'TriggerDelayTime' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'TriggerShape' , u'TriggerShape' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TriggerShape' , u'TriggerShape' , ), 2006, (2006, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'RepeatCount' , u'RepeatCount' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'RepeatCount' , u'RepeatCount' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'RepeatDuration' , u'RepeatDuration' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'RepeatDuration' , u'RepeatDuration' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Speed' , u'Speed' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Speed' , u'Speed' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Accelerate' , u'Accelerate' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Accelerate' , u'Accelerate' , ), 2010, (2010, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Decelerate' , u'Decelerate' , ), 2011, (2011, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Decelerate' , u'Decelerate' , ), 2011, (2011, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'AutoReverse' , u'AutoReverse' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'AutoReverse' , u'AutoReverse' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'SmoothStart' , u'SmoothStart' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'SmoothStart' , u'SmoothStart' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'SmoothEnd' , u'SmoothEnd' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'SmoothEnd' , u'SmoothEnd' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'RewindAtEnd' , u'RewindAtEnd' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'RewindAtEnd' , u'RewindAtEnd' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Restart' , u'Restart' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Restart' , u'Restart' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Duration' , 'Duration' , ), 2003, (2003, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Duration' , 'Duration' , ), 2003, (2003, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'TriggerType' , 'TriggerType' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'TriggerType' , 'TriggerType' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'TriggerDelayTime' , 'TriggerDelayTime' , ), 2005, (2005, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'TriggerDelayTime' , 'TriggerDelayTime' , ), 2005, (2005, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'TriggerShape' , 'TriggerShape' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TriggerShape' , 'TriggerShape' , ), 2006, (2006, (), [ (9, 1, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'RepeatCount' , 'RepeatCount' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'RepeatCount' , 'RepeatCount' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'RepeatDuration' , 'RepeatDuration' , ), 2008, (2008, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'RepeatDuration' , 'RepeatDuration' , ), 2008, (2008, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Speed' , 'Speed' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Speed' , 'Speed' , ), 2009, (2009, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Accelerate' , 'Accelerate' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Accelerate' , 'Accelerate' , ), 2010, (2010, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Decelerate' , 'Decelerate' , ), 2011, (2011, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Decelerate' , 'Decelerate' , ), 2011, (2011, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'AutoReverse' , 'AutoReverse' , ), 2012, (2012, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'AutoReverse' , 'AutoReverse' , ), 2012, (2012, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'SmoothStart' , 'SmoothStart' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'SmoothStart' , 'SmoothStart' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'SmoothEnd' , 'SmoothEnd' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'SmoothEnd' , 'SmoothEnd' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'RewindAtEnd' , 'RewindAtEnd' , ), 2015, (2015, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'RewindAtEnd' , 'RewindAtEnd' , ), 2015, (2015, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Restart' , 'Restart' , ), 2016, (2016, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Restart' , 'Restart' , ), 2016, (2016, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
 ]
 
 View_vtables_dispatch_ = 1
 View_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Zoom' , u'Zoom' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Zoom' , u'Zoom' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Paste' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Slide' , u'Slide' , ), 2006, (2006, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Slide' , u'Slide' , ), 2006, (2006, (), [ (9, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'GotoSlide' , u'Index' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'DisplaySlideMiniature' , u'DisplaySlideMiniature' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'DisplaySlideMiniature' , u'DisplaySlideMiniature' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ZoomToFit' , u'ZoomToFit' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ZoomToFit' , u'ZoomToFit' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'PasteSpecial' , u'DataType' , u'DisplayAsIcon' , u'IconFileName' , u'IconIndex' , 
-			u'IconLabel' , u'Link' , ), 2010, (2010, (), [ (3, 49, '0', None) , (3, 49, '0', None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Zoom' , 'Zoom' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Zoom' , 'Zoom' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Paste' , ), 2005, (2005, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Slide' , 'Slide' , ), 2006, (2006, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Slide' , 'Slide' , ), 2006, (2006, (), [ (9, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'GotoSlide' , 'Index' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'DisplaySlideMiniature' , 'DisplaySlideMiniature' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'DisplaySlideMiniature' , 'DisplaySlideMiniature' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ZoomToFit' , 'ZoomToFit' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ZoomToFit' , 'ZoomToFit' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'PasteSpecial' , 'DataType' , 'DisplayAsIcon' , 'IconFileName' , 'IconIndex' , 
+			'IconLabel' , 'Link' , ), 2010, (2010, (), [ (3, 49, '0', None) , (3, 49, '0', None) , 
 			(8, 49, "u''", None) , (3, 49, '0', None) , (8, 49, "u''", None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 80 , (3, 32, None, None) , 0 , )),
-	(( u'PrintOptions' , u'PrintOptions' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{9149345D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'PrintOut' , u'From' , u'To' , u'PrintToFile' , u'Copies' , 
-			u'Collate' , ), 2012, (2012, (), [ (3, 49, '-1', None) , (3, 49, '-1', None) , (8, 49, "u''", None) , 
+	(( 'PrintOptions' , 'PrintOptions' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{9149345D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'PrintOut' , 'From' , 'To' , 'PrintToFile' , 'Copies' , 
+			'Collate' , ), 2012, (2012, (), [ (3, 49, '-1', None) , (3, 49, '-1', None) , (8, 49, "u''", None) , 
 			(3, 49, '0', None) , (3, 49, '-99', None) , ], 1 , 1 , 4 , 0 , 88 , (3, 32, None, None) , 0 , )),
 ]
 
 WebOptions_vtables_dispatch_ = 1
 WebOptions_vtables_ = [
-	(( u'IncludeNavigation' , u'IncludeNavigation' , ), 2001, (2001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'IncludeNavigation' , u'IncludeNavigation' , ), 2001, (2001, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'FrameColors' , u'FrameColors' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'FrameColors' , u'FrameColors' , ), 2002, (2002, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ResizeGraphics' , u'ResizeGraphics' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ResizeGraphics' , u'ResizeGraphics' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ShowSlideAnimation' , u'ShowSlideAnimation' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ShowSlideAnimation' , u'ShowSlideAnimation' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'OrganizeInFolder' , u'OrganizeInFolder' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'OrganizeInFolder' , u'OrganizeInFolder' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'UseLongFileNames' , u'UseLongFileNames' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'UseLongFileNames' , u'UseLongFileNames' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'RelyOnVML' , u'RelyOnVML' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'RelyOnVML' , u'RelyOnVML' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AllowPNG' , u'AllowPNG' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'AllowPNG' , u'AllowPNG' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'ScreenSize' , u'ScreenSize' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'ScreenSize' , u'ScreenSize' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Encoding' , u'Encoding' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Encoding' , u'Encoding' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'FolderSuffix' , u'FolderSuffix' , ), 2011, (2011, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'UseDefaultFolderSuffix' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'TargetBrowser' , u'TargetBrowser' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'TargetBrowser' , u'TargetBrowser' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLVersion' , u'HTMLVersion' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLVersion' , u'HTMLVersion' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'IncludeNavigation' , 'IncludeNavigation' , ), 2001, (2001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'IncludeNavigation' , 'IncludeNavigation' , ), 2001, (2001, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'FrameColors' , 'FrameColors' , ), 2002, (2002, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'FrameColors' , 'FrameColors' , ), 2002, (2002, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ResizeGraphics' , 'ResizeGraphics' , ), 2003, (2003, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ResizeGraphics' , 'ResizeGraphics' , ), 2003, (2003, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ShowSlideAnimation' , 'ShowSlideAnimation' , ), 2004, (2004, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ShowSlideAnimation' , 'ShowSlideAnimation' , ), 2004, (2004, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'OrganizeInFolder' , 'OrganizeInFolder' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'OrganizeInFolder' , 'OrganizeInFolder' , ), 2005, (2005, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'UseLongFileNames' , 'UseLongFileNames' , ), 2006, (2006, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'UseLongFileNames' , 'UseLongFileNames' , ), 2006, (2006, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'RelyOnVML' , 'RelyOnVML' , ), 2007, (2007, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'RelyOnVML' , 'RelyOnVML' , ), 2007, (2007, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'AllowPNG' , 'AllowPNG' , ), 2008, (2008, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'AllowPNG' , 'AllowPNG' , ), 2008, (2008, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'ScreenSize' , 'ScreenSize' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'ScreenSize' , 'ScreenSize' , ), 2009, (2009, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Encoding' , 'Encoding' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Encoding' , 'Encoding' , ), 2010, (2010, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'FolderSuffix' , 'FolderSuffix' , ), 2011, (2011, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'UseDefaultFolderSuffix' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'TargetBrowser' , 'TargetBrowser' , ), 2013, (2013, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'TargetBrowser' , 'TargetBrowser' , ), 2013, (2013, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLVersion' , 'HTMLVersion' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLVersion' , 'HTMLVersion' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
 ]
 
 _Application_vtables_dispatch_ = 1
 _Application_vtables_ = [
-	(( u'Presentations' , u'Presentations' , ), 2001, (2001, (), [ (16393, 10, None, "IID('{91493462-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Windows' , u'Windows' , ), 2002, (2002, (), [ (16393, 10, None, "IID('{91493455-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Dialogs' , u'Dialogs' , ), 2003, (2003, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 64 , )),
-	(( u'ActiveWindow' , u'ActiveWindow' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ActivePresentation' , u'ActivePresentation' , ), 2005, (2005, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowWindows' , u'SlideShowWindows' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493456-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'CommandBars' , u'CommandBars' , ), 2007, (2007, (), [ (16397, 10, None, "IID('{55F88893-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Path' , u'Path' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Caption' , u'Caption' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Caption' , u'Caption' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Assistant' , u'Assistant' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{000C0322-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'FileSearch' , u'FileSearch' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{000C0332-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'FileFind' , u'FileFind' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{000C0337-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Build' , u'Build' , ), 2013, (2013, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Version' , u'Version' , ), 2014, (2014, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'OperatingSystem' , u'OperatingSystem' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'ActivePrinter' , u'ActivePrinter' , ), 2016, (2016, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'Creator' , ), 2017, (2017, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'AddIns' , u'AddIns' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{91493460-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'VBE' , u'VBE' , ), 2019, (2019, (), [ (16393, 10, None, "IID('{0002E166-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Help' , u'HelpFile' , u'ContextID' , ), 2020, (2020, (), [ (8, 49, "u'vbapp10.chm'", None) , 
+	(( 'Presentations' , 'Presentations' , ), 2001, (2001, (), [ (16393, 10, None, "IID('{91493462-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Windows' , 'Windows' , ), 2002, (2002, (), [ (16393, 10, None, "IID('{91493455-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Dialogs' , 'Dialogs' , ), 2003, (2003, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 64 , )),
+	(( 'ActiveWindow' , 'ActiveWindow' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ActivePresentation' , 'ActivePresentation' , ), 2005, (2005, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowWindows' , 'SlideShowWindows' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{91493456-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'CommandBars' , 'CommandBars' , ), 2007, (2007, (), [ (16397, 10, None, "IID('{55F88893-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Path' , 'Path' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Caption' , 'Caption' , ), 2009, (2009, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Caption' , 'Caption' , ), 2009, (2009, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Assistant' , 'Assistant' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{000C0322-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'FileSearch' , 'FileSearch' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{000C0332-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'FileFind' , 'FileFind' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{000C0337-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Build' , 'Build' , ), 2013, (2013, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Version' , 'Version' , ), 2014, (2014, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'OperatingSystem' , 'OperatingSystem' , ), 2015, (2015, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'ActivePrinter' , 'ActivePrinter' , ), 2016, (2016, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'Creator' , ), 2017, (2017, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'AddIns' , 'AddIns' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{91493460-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'VBE' , 'VBE' , ), 2019, (2019, (), [ (16393, 10, None, "IID('{0002E166-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Help' , 'HelpFile' , 'ContextID' , ), 2020, (2020, (), [ (8, 49, "u'vbapp10.chm'", None) , 
 			(3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 112 , (3, 32, None, None) , 0 , )),
-	(( u'Quit' , ), 2021, (2021, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Run' , u'MacroName' , u'safeArrayOfParams' , u'Run' , ), 2022, (2022, (), [ 
+	(( 'Quit' , ), 2021, (2021, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Run' , 'MacroName' , 'safeArrayOfParams' , 'Run' , ), 2022, (2022, (), [ 
 			(8, 1, None, None) , (24588, 1, None, None) , (16396, 10, None, None) , ], 1 , 1 , 4 , -1 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'PPFileDialog' , u'Type' , u'PPFileDialog' , ), 2023, (2023, (), [ (3, 1, None, None) , 
+	(( 'PPFileDialog' , 'Type' , 'PPFileDialog' , ), 2023, (2023, (), [ (3, 1, None, None) , 
 			(16397, 10, None, None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 64 , )),
-	(( u'LaunchSpelling' , u'pWindow' , ), 2024, (2024, (), [ (9, 1, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 1 , )),
-	(( u'Left' , u'Left' , ), 2025, (2025, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 2025, (2025, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2026, (2026, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 2026, (2026, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2027, (2027, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2027, (2027, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2028, (2028, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2028, (2028, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'WindowState' , u'WindowState' , ), 2029, (2029, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'WindowState' , u'WindowState' , ), 2029, (2029, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 2030, (2030, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'HWND' , u'HWND' , ), 2031, (2031, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 1 , )),
-	(( u'Active' , u'Active' , ), 2032, (2032, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'Activate' , ), 2033, (2033, (), [ ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'AnswerWizard' , u'AnswerWizard' , ), 2034, (2034, (), [ (16393, 10, None, "IID('{000C0360-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'COMAddIns' , u'COMAddIns' , ), 2035, (2035, (), [ (16393, 10, None, "IID('{000C0339-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'ProductCode' , u'ProductCode' , ), 2036, (2036, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'DefaultWebOptions' , u'DefaultWebOptions' , ), 2037, (2037, (), [ (16393, 10, None, "IID('{914934CD-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'LanguageSettings' , u'LanguageSettings' , ), 2038, (2038, (), [ (16393, 10, None, "IID('{000C0353-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'MsoDebugOptions' , u'MsoDebugOptions' , ), 2039, (2039, (), [ (16393, 10, None, "IID('{000C035A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 64 , )),
-	(( u'ShowWindowsInTaskbar' , u'ShowWindowsInTaskbar' , ), 2040, (2040, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'ShowWindowsInTaskbar' , u'ShowWindowsInTaskbar' , ), 2040, (2040, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'Marker' , u'Marker' , ), 2041, (2041, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 64 , )),
-	(( u'FeatureInstall' , u'FeatureInstall' , ), 2042, (2042, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'FeatureInstall' , u'FeatureInstall' , ), 2042, (2042, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'GetOptionFlag' , u'Option' , u'Persist' , u'GetOptionFlag' , ), 2043, (2043, (), [ 
+	(( 'LaunchSpelling' , 'pWindow' , ), 2024, (2024, (), [ (9, 1, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 1 , )),
+	(( 'Left' , 'Left' , ), 2025, (2025, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 2025, (2025, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2026, (2026, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 2026, (2026, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2027, (2027, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2027, (2027, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2028, (2028, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2028, (2028, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'WindowState' , 'WindowState' , ), 2029, (2029, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'WindowState' , 'WindowState' , ), 2029, (2029, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 2030, (2030, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'HWND' , 'HWND' , ), 2031, (2031, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 1 , )),
+	(( 'Active' , 'Active' , ), 2032, (2032, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'Activate' , ), 2033, (2033, (), [ ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'AnswerWizard' , 'AnswerWizard' , ), 2034, (2034, (), [ (16393, 10, None, "IID('{000C0360-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'COMAddIns' , 'COMAddIns' , ), 2035, (2035, (), [ (16393, 10, None, "IID('{000C0339-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'ProductCode' , 'ProductCode' , ), 2036, (2036, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'DefaultWebOptions' , 'DefaultWebOptions' , ), 2037, (2037, (), [ (16393, 10, None, "IID('{914934CD-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'LanguageSettings' , 'LanguageSettings' , ), 2038, (2038, (), [ (16393, 10, None, "IID('{000C0353-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'MsoDebugOptions' , 'MsoDebugOptions' , ), 2039, (2039, (), [ (16393, 10, None, "IID('{000C035A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 64 , )),
+	(( 'ShowWindowsInTaskbar' , 'ShowWindowsInTaskbar' , ), 2040, (2040, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'ShowWindowsInTaskbar' , 'ShowWindowsInTaskbar' , ), 2040, (2040, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'Marker' , 'Marker' , ), 2041, (2041, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 64 , )),
+	(( 'FeatureInstall' , 'FeatureInstall' , ), 2042, (2042, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'FeatureInstall' , 'FeatureInstall' , ), 2042, (2042, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'GetOptionFlag' , 'Option' , 'Persist' , 'GetOptionFlag' , ), 2043, (2043, (), [ 
 			(3, 1, None, None) , (11, 49, 'False', None) , (16395, 10, None, None) , ], 1 , 1 , 4 , 0 , 236 , (3, 0, None, None) , 64 , )),
-	(( u'SetOptionFlag' , u'Option' , u'State' , u'Persist' , ), 2044, (2044, (), [ 
+	(( 'SetOptionFlag' , 'Option' , 'State' , 'Persist' , ), 2044, (2044, (), [ 
 			(3, 1, None, None) , (11, 1, None, None) , (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 240 , (3, 0, None, None) , 64 , )),
-	(( u'FileDialog' , u'Type' , u'FileDialog' , ), 2045, (2045, (), [ (3, 1, None, None) , 
+	(( 'FileDialog' , 'Type' , 'FileDialog' , ), 2045, (2045, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0362-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayGridLines' , u'DisplayGridLines' , ), 2046, (2046, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayGridLines' , u'DisplayGridLines' , ), 2046, (2046, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'AutomationSecurity' , u'AutomationSecurity' , ), 2047, (2047, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'AutomationSecurity' , u'AutomationSecurity' , ), 2047, (2047, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'NewPresentation' , u'NewPresentation' , ), 2048, (2048, (), [ (16393, 10, None, "IID('{000C0936-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayAlerts' , u'DisplayAlerts' , ), 2049, (2049, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayAlerts' , u'DisplayAlerts' , ), 2049, (2049, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'ShowStartupDialog' , u'ShowStartupDialog' , ), 2050, (2050, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'ShowStartupDialog' , u'ShowStartupDialog' , ), 2050, (2050, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'SetPerfMarker' , u'Marker' , ), 2051, (2051, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 64 , )),
-	(( u'AutoCorrect' , u'AutoCorrect' , ), 2052, (2052, (), [ (16393, 10, None, "IID('{914934ED-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'Options' , u'Options' , ), 2053, (2053, (), [ (16393, 10, None, "IID('{914934EE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayGridLines' , 'DisplayGridLines' , ), 2046, (2046, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayGridLines' , 'DisplayGridLines' , ), 2046, (2046, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'AutomationSecurity' , 'AutomationSecurity' , ), 2047, (2047, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'AutomationSecurity' , 'AutomationSecurity' , ), 2047, (2047, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'NewPresentation' , 'NewPresentation' , ), 2048, (2048, (), [ (16393, 10, None, "IID('{000C0936-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAlerts' , 'DisplayAlerts' , ), 2049, (2049, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayAlerts' , 'DisplayAlerts' , ), 2049, (2049, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'ShowStartupDialog' , 'ShowStartupDialog' , ), 2050, (2050, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'ShowStartupDialog' , 'ShowStartupDialog' , ), 2050, (2050, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'SetPerfMarker' , 'Marker' , ), 2051, (2051, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 64 , )),
+	(( 'AutoCorrect' , 'AutoCorrect' , ), 2052, (2052, (), [ (16393, 10, None, "IID('{914934ED-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'Options' , 'Options' , ), 2053, (2053, (), [ (16393, 10, None, "IID('{914934EE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
 ]
 
 _Global_vtables_dispatch_ = 1
 _Global_vtables_ = [
-	(( u'ActivePresentation' , u'ActivePresentation' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'ActiveWindow' , u'ActiveWindow' , ), 2002, (2002, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'AddIns' , u'AddIns' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493460-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Application' , u'Application' , ), 2004, (2004, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Assistant' , u'Assistant' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{000C0322-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Dialogs' , u'Dialogs' , ), 2006, (2006, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 64 , )),
-	(( u'Presentations' , u'Presentations' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493462-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowWindows' , u'SlideShowWindows' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{91493456-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Windows' , u'Windows' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493455-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'CommandBars' , u'CommandBars' , ), 2010, (2010, (), [ (16397, 10, None, "IID('{55F88893-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AnswerWizard' , u'AnswerWizard' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{000C0360-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ActivePresentation' , 'ActivePresentation' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493444-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'ActiveWindow' , 'ActiveWindow' , ), 2002, (2002, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'AddIns' , 'AddIns' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493460-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2004, (2004, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Assistant' , 'Assistant' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{000C0322-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Dialogs' , 'Dialogs' , ), 2006, (2006, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 64 , )),
+	(( 'Presentations' , 'Presentations' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{91493462-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowWindows' , 'SlideShowWindows' , ), 2008, (2008, (), [ (16393, 10, None, "IID('{91493456-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Windows' , 'Windows' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{91493455-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'CommandBars' , 'CommandBars' , ), 2010, (2010, (), [ (16397, 10, None, "IID('{55F88893-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'AnswerWizard' , 'AnswerWizard' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{000C0360-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
 ]
 
 _Master_vtables_dispatch_ = 1
 _Master_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Shapes' , u'Shapes' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493475-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'HeadersFooters' , u'HeadersFooters' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493474-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ColorScheme' , u'ColorScheme' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ColorScheme' , u'ColorScheme' , ), 2005, (2005, (), [ (9, 1, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , u'Background' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2008, (2008, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'TextStyles' , u'TextStyles' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{91493498-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Hyperlinks' , u'Hyperlinks' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{91493464-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Scripts' , u'Scripts' , ), 2013, (2013, (), [ (16393, 10, None, "IID('{000C0340-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Design' , u'Design' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'TimeLine' , u'TimeLine' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{914934DC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowTransition' , u'SlideShowTransition' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{91493471-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Shapes' , 'Shapes' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493475-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'HeadersFooters' , 'HeadersFooters' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493474-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ColorScheme' , 'ColorScheme' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ColorScheme' , 'ColorScheme' , ), 2005, (2005, (), [ (9, 1, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , 'Background' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2007, (2007, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2008, (2008, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 2009, (2009, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 2010, (2010, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'TextStyles' , 'TextStyles' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{91493498-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Hyperlinks' , 'Hyperlinks' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{91493464-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Scripts' , 'Scripts' , ), 2013, (2013, (), [ (16393, 10, None, "IID('{000C0340-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Design' , 'Design' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'TimeLine' , 'TimeLine' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{914934DC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowTransition' , 'SlideShowTransition' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{91493471-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
 ]
 
 _PowerRex_vtables_dispatch_ = 1
 _PowerRex_vtables_ = [
-	(( u'OnAsfEncoderEvent' , u'erorCode' , u'bstrErrorDesc' , ), 2001, (2001, (), [ (12, 1, None, None) , 
+	(( 'OnAsfEncoderEvent' , 'erorCode' , 'bstrErrorDesc' , ), 2001, (2001, (), [ (12, 1, None, None) , 
 			(12, 1, None, None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 64 , )),
 ]
 
 _Presentation_vtables_dispatch_ = 1
 _Presentation_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'SlideMaster' , u'SlideMaster' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'TitleMaster' , u'TitleMaster' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'HasTitleMaster' , u'HasTitleMaster' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AddTitleMaster' , u'TitleMaster' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ApplyTemplate' , u'FileName' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'TemplateName' , u'TemplateName' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'NotesMaster' , u'NotesMaster' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'HandoutMaster' , u'HandoutMaster' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Slides' , u'Slides' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{91493469-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'PageSetup' , u'PageSetup' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{91493466-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ColorSchemes' , u'ColorSchemes' , ), 2013, (2013, (), [ (16393, 10, None, "IID('{9149346E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ExtraColors' , u'ExtraColors' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{91493468-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowSettings' , u'SlideShowSettings' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{9149345A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Fonts' , u'Fonts' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{91493467-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Windows' , u'Windows' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{91493455-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Tags' , u'Tags' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'DefaultShape' , u'DefaultShape' , ), 2019, (2019, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'BuiltInDocumentProperties' , u'BuiltInDocumentProperties' , ), 2020, (2020, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'CustomDocumentProperties' , u'CustomDocumentProperties' , ), 2021, (2021, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'VBProject' , u'VBProject' , ), 2022, (2022, (), [ (16397, 10, None, "IID('{0002E169-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'ReadOnly' , u'ReadOnly' , ), 2023, (2023, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'FullName' , u'FullName' , ), 2024, (2024, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2025, (2025, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Path' , u'Path' , ), 2026, (2026, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Saved' , u'Saved' , ), 2027, (2027, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Saved' , u'Saved' , ), 2027, (2027, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'LayoutDirection' , u'LayoutDirection' , ), 2028, (2028, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'LayoutDirection' , u'LayoutDirection' , ), 2028, (2028, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'NewWindow' , u'NewWindow' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'FollowHyperlink' , u'Address' , u'SubAddress' , u'NewWindow' , u'AddHistory' , 
-			u'ExtraInfo' , u'Method' , u'HeaderInfo' , ), 2030, (2030, (), [ (8, 1, None, None) , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'SlideMaster' , 'SlideMaster' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'TitleMaster' , 'TitleMaster' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'HasTitleMaster' , 'HasTitleMaster' , ), 2005, (2005, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AddTitleMaster' , 'TitleMaster' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ApplyTemplate' , 'FileName' , ), 2007, (2007, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'TemplateName' , 'TemplateName' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'NotesMaster' , 'NotesMaster' , ), 2009, (2009, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'HandoutMaster' , 'HandoutMaster' , ), 2010, (2010, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Slides' , 'Slides' , ), 2011, (2011, (), [ (16393, 10, None, "IID('{91493469-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'PageSetup' , 'PageSetup' , ), 2012, (2012, (), [ (16393, 10, None, "IID('{91493466-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ColorSchemes' , 'ColorSchemes' , ), 2013, (2013, (), [ (16393, 10, None, "IID('{9149346E-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'ExtraColors' , 'ExtraColors' , ), 2014, (2014, (), [ (16393, 10, None, "IID('{91493468-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowSettings' , 'SlideShowSettings' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{9149345A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Fonts' , 'Fonts' , ), 2016, (2016, (), [ (16393, 10, None, "IID('{91493467-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Windows' , 'Windows' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{91493455-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Tags' , 'Tags' , ), 2018, (2018, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'DefaultShape' , 'DefaultShape' , ), 2019, (2019, (), [ (16393, 10, None, "IID('{91493479-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'BuiltInDocumentProperties' , 'BuiltInDocumentProperties' , ), 2020, (2020, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'CustomDocumentProperties' , 'CustomDocumentProperties' , ), 2021, (2021, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'VBProject' , 'VBProject' , ), 2022, (2022, (), [ (16397, 10, None, "IID('{0002E169-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'ReadOnly' , 'ReadOnly' , ), 2023, (2023, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'FullName' , 'FullName' , ), 2024, (2024, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2025, (2025, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Path' , 'Path' , ), 2026, (2026, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Saved' , 'Saved' , ), 2027, (2027, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Saved' , 'Saved' , ), 2027, (2027, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'LayoutDirection' , 'LayoutDirection' , ), 2028, (2028, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'LayoutDirection' , 'LayoutDirection' , ), 2028, (2028, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'NewWindow' , 'NewWindow' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{91493457-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'FollowHyperlink' , 'Address' , 'SubAddress' , 'NewWindow' , 'AddHistory' , 
+			'ExtraInfo' , 'Method' , 'HeaderInfo' , ), 2030, (2030, (), [ (8, 1, None, None) , 
 			(8, 49, "u''", None) , (11, 49, 'False', None) , (11, 49, 'True', None) , (8, 49, "u''", None) , (3, 49, '0', None) , 
 			(8, 49, "u''", None) , ], 1 , 1 , 4 , 0 , 152 , (3, 32, None, None) , 0 , )),
-	(( u'AddToFavorites' , ), 2031, (2031, (), [ ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Unused' , ), 2032, (2032, (), [ ], 1 , 1 , 4 , 0 , 160 , (3, 0, None, None) , 1 , )),
-	(( u'PrintOptions' , u'PrintOptions' , ), 2033, (2033, (), [ (16393, 10, None, "IID('{9149345D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'PrintOut' , u'From' , u'To' , u'PrintToFile' , u'Copies' , 
-			u'Collate' , ), 2034, (2034, (), [ (3, 49, '-1', None) , (3, 49, '-1', None) , (8, 49, "u''", None) , 
+	(( 'AddToFavorites' , ), 2031, (2031, (), [ ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Unused' , ), 2032, (2032, (), [ ], 1 , 1 , 4 , 0 , 160 , (3, 0, None, None) , 1 , )),
+	(( 'PrintOptions' , 'PrintOptions' , ), 2033, (2033, (), [ (16393, 10, None, "IID('{9149345D-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'PrintOut' , 'From' , 'To' , 'PrintToFile' , 'Copies' , 
+			'Collate' , ), 2034, (2034, (), [ (3, 49, '-1', None) , (3, 49, '-1', None) , (8, 49, "u''", None) , 
 			(3, 49, '0', None) , (3, 49, '-99', None) , ], 1 , 1 , 4 , 0 , 168 , (3, 32, None, None) , 0 , )),
-	(( u'Save' , ), 2035, (2035, (), [ ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'SaveAs' , u'FileName' , u'FileFormat' , u'EmbedTrueTypeFonts' , ), 2036, (2036, (), [ 
+	(( 'Save' , ), 2035, (2035, (), [ ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'SaveAs' , 'FileName' , 'FileFormat' , 'EmbedTrueTypeFonts' , ), 2036, (2036, (), [ 
 			(8, 1, None, None) , (3, 49, '1', None) , (3, 49, '-2', None) , ], 1 , 1 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'SaveCopyAs' , u'FileName' , u'FileFormat' , u'EmbedTrueTypeFonts' , ), 2037, (2037, (), [ 
+	(( 'SaveCopyAs' , 'FileName' , 'FileFormat' , 'EmbedTrueTypeFonts' , ), 2037, (2037, (), [ 
 			(8, 1, None, None) , (3, 49, '11', None) , (3, 49, '-2', None) , ], 1 , 1 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'Export' , u'Path' , u'FilterName' , u'ScaleWidth' , u'ScaleHeight' , 
+	(( 'Export' , 'Path' , 'FilterName' , 'ScaleWidth' , 'ScaleHeight' , 
 			), 2038, (2038, (), [ (8, 1, None, None) , (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'Close' , ), 2039, (2039, (), [ ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'SetUndoText' , u'Text' , ), 2040, (2040, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 192 , (3, 0, None, None) , 64 , )),
-	(( u'Container' , u'Container' , ), 2041, (2041, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayComments' , u'DisplayComments' , ), 2042, (2042, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayComments' , u'DisplayComments' , ), 2042, (2042, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'FarEastLineBreakLevel' , u'FarEastLineBreakLevel' , ), 2043, (2043, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'FarEastLineBreakLevel' , u'FarEastLineBreakLevel' , ), 2043, (2043, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'NoLineBreakBefore' , u'NoLineBreakBefore' , ), 2044, (2044, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'NoLineBreakBefore' , u'NoLineBreakBefore' , ), 2044, (2044, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'NoLineBreakAfter' , u'NoLineBreakAfter' , ), 2045, (2045, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'NoLineBreakAfter' , u'NoLineBreakAfter' , ), 2045, (2045, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'UpdateLinks' , ), 2046, (2046, (), [ ], 1 , 1 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowWindow' , u'SlideShowWindow' , ), 2047, (2047, (), [ (16393, 10, None, "IID('{91493453-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'FarEastLineBreakLanguage' , u'FarEastLineBreakLanguage' , ), 2048, (2048, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'FarEastLineBreakLanguage' , u'FarEastLineBreakLanguage' , ), 2048, (2048, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'WebPagePreview' , ), 2049, (2049, (), [ ], 1 , 1 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'DefaultLanguageID' , u'DefaultLanguageID' , ), 2050, (2050, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'DefaultLanguageID' , u'DefaultLanguageID' , ), 2050, (2050, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'CommandBars' , u'CommandBars' , ), 2051, (2051, (), [ (16397, 10, None, "IID('{55F88893-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'PublishObjects' , u'PublishObjects' , ), 2052, (2052, (), [ (16393, 10, None, "IID('{914934CF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'WebOptions' , u'WebOptions' , ), 2053, (2053, (), [ (16393, 10, None, "IID('{914934CE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLProject' , u'HTMLProject' , ), 2054, (2054, (), [ (16393, 10, None, "IID('{000C0356-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'ReloadAs' , u'cp' , ), 2055, (2055, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'MakeIntoTemplate' , u'IsDesignTemplate' , ), 2056, (2056, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 64 , )),
-	(( u'EnvelopeVisible' , u'EnvelopeVisible' , ), 2057, (2057, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'EnvelopeVisible' , u'EnvelopeVisible' , ), 2057, (2057, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'sblt' , u's' , ), 2058, (2058, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 292 , (3, 0, None, None) , 64 , )),
-	(( u'VBASigned' , u'VBASigned' , ), 2059, (2059, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
-	(( u'SnapToGrid' , u'SnapToGrid' , ), 2061, (2061, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
-	(( u'SnapToGrid' , u'SnapToGrid' , ), 2061, (2061, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
-	(( u'GridDistance' , u'GridDistance' , ), 2062, (2062, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
-	(( u'GridDistance' , u'GridDistance' , ), 2062, (2062, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
-	(( u'Designs' , u'Designs' , ), 2063, (2063, (), [ (16393, 10, None, "IID('{914934D6-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
-	(( u'Merge' , u'Path' , ), 2064, (2064, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 0 , )),
-	(( u'CheckIn' , u'SaveChanges' , u'Comments' , u'MakePublic' , ), 2065, (2065, (), [ 
+	(( 'Close' , ), 2039, (2039, (), [ ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'SetUndoText' , 'Text' , ), 2040, (2040, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 192 , (3, 0, None, None) , 64 , )),
+	(( 'Container' , 'Container' , ), 2041, (2041, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayComments' , 'DisplayComments' , ), 2042, (2042, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayComments' , 'DisplayComments' , ), 2042, (2042, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'FarEastLineBreakLevel' , 'FarEastLineBreakLevel' , ), 2043, (2043, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'FarEastLineBreakLevel' , 'FarEastLineBreakLevel' , ), 2043, (2043, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'NoLineBreakBefore' , 'NoLineBreakBefore' , ), 2044, (2044, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'NoLineBreakBefore' , 'NoLineBreakBefore' , ), 2044, (2044, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'NoLineBreakAfter' , 'NoLineBreakAfter' , ), 2045, (2045, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'NoLineBreakAfter' , 'NoLineBreakAfter' , ), 2045, (2045, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'UpdateLinks' , ), 2046, (2046, (), [ ], 1 , 1 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowWindow' , 'SlideShowWindow' , ), 2047, (2047, (), [ (16393, 10, None, "IID('{91493453-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'FarEastLineBreakLanguage' , 'FarEastLineBreakLanguage' , ), 2048, (2048, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'FarEastLineBreakLanguage' , 'FarEastLineBreakLanguage' , ), 2048, (2048, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'WebPagePreview' , ), 2049, (2049, (), [ ], 1 , 1 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'DefaultLanguageID' , 'DefaultLanguageID' , ), 2050, (2050, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'DefaultLanguageID' , 'DefaultLanguageID' , ), 2050, (2050, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'CommandBars' , 'CommandBars' , ), 2051, (2051, (), [ (16397, 10, None, "IID('{55F88893-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'PublishObjects' , 'PublishObjects' , ), 2052, (2052, (), [ (16393, 10, None, "IID('{914934CF-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'WebOptions' , 'WebOptions' , ), 2053, (2053, (), [ (16393, 10, None, "IID('{914934CE-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLProject' , 'HTMLProject' , ), 2054, (2054, (), [ (16393, 10, None, "IID('{000C0356-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'ReloadAs' , 'cp' , ), 2055, (2055, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'MakeIntoTemplate' , 'IsDesignTemplate' , ), 2056, (2056, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 64 , )),
+	(( 'EnvelopeVisible' , 'EnvelopeVisible' , ), 2057, (2057, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
+	(( 'EnvelopeVisible' , 'EnvelopeVisible' , ), 2057, (2057, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'sblt' , 's' , ), 2058, (2058, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 292 , (3, 0, None, None) , 64 , )),
+	(( 'VBASigned' , 'VBASigned' , ), 2059, (2059, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
+	(( 'SnapToGrid' , 'SnapToGrid' , ), 2061, (2061, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
+	(( 'SnapToGrid' , 'SnapToGrid' , ), 2061, (2061, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
+	(( 'GridDistance' , 'GridDistance' , ), 2062, (2062, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
+	(( 'GridDistance' , 'GridDistance' , ), 2062, (2062, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
+	(( 'Designs' , 'Designs' , ), 2063, (2063, (), [ (16393, 10, None, "IID('{914934D6-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
+	(( 'Merge' , 'Path' , ), 2064, (2064, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 0 , )),
+	(( 'CheckIn' , 'SaveChanges' , 'Comments' , 'MakePublic' , ), 2065, (2065, (), [ 
 			(11, 49, 'True', None) , (12, 17, None, None) , (12, 17, None, None) , ], 1 , 1 , 4 , 2 , 324 , (3, 0, None, None) , 0 , )),
-	(( u'CanCheckIn' , u'CanCheckIn' , ), 2066, (2066, (), [ (16395, 10, None, None) , ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
-	(( u'Signatures' , u'Signatures' , ), 2067, (2067, (), [ (16393, 10, None, "IID('{000C0410-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'RemovePersonalInformation' , u'RemovePersonalInformation' , ), 2068, (2068, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'RemovePersonalInformation' , u'RemovePersonalInformation' , ), 2068, (2068, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'SendForReview' , u'Recipients' , u'Subject' , u'ShowMessage' , u'IncludeAttachment' , 
+	(( 'CanCheckIn' , 'CanCheckIn' , ), 2066, (2066, (), [ (16395, 10, None, None) , ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
+	(( 'Signatures' , 'Signatures' , ), 2067, (2067, (), [ (16393, 10, None, "IID('{000C0410-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
+	(( 'RemovePersonalInformation' , 'RemovePersonalInformation' , ), 2068, (2068, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'RemovePersonalInformation' , 'RemovePersonalInformation' , ), 2068, (2068, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'SendForReview' , 'Recipients' , 'Subject' , 'ShowMessage' , 'IncludeAttachment' , 
 			), 2069, (2069, (), [ (8, 49, "u''", None) , (8, 49, "u''", None) , (11, 49, 'True', None) , (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 344 , (3, 32, None, None) , 0 , )),
-	(( u'ReplyWithChanges' , u'ShowMessage' , ), 2070, (2070, (), [ (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
-	(( u'EndReview' , ), 2071, (2071, (), [ ], 1 , 1 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
-	(( u'HasRevisionInfo' , u'HasRevisionInfo' , ), 2072, (2072, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
-	(( u'AddBaseline' , u'FileName' , ), 2073, (2073, (), [ (8, 49, "u''", None) , ], 1 , 1 , 4 , 0 , 360 , (3, 32, None, None) , 0 , )),
-	(( u'RemoveBaseline' , ), 2074, (2074, (), [ ], 1 , 1 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
-	(( u'PasswordEncryptionProvider' , u'PasswordEncryptionProvider' , ), 2075, (2075, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
-	(( u'PasswordEncryptionAlgorithm' , u'PasswordEncryptionAlgorithm' , ), 2076, (2076, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
-	(( u'PasswordEncryptionKeyLength' , u'PasswordEncryptionKeyLength' , ), 2077, (2077, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
-	(( u'PasswordEncryptionFileProperties' , u'PasswordEncryptionFileProperties' , ), 2078, (2078, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
-	(( u'SetPasswordEncryptionOptions' , u'PasswordEncryptionProvider' , u'PasswordEncryptionAlgorithm' , u'PasswordEncryptionKeyLength' , u'PasswordEncryptionFileProperties' , 
+	(( 'ReplyWithChanges' , 'ShowMessage' , ), 2070, (2070, (), [ (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
+	(( 'EndReview' , ), 2071, (2071, (), [ ], 1 , 1 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'HasRevisionInfo' , 'HasRevisionInfo' , ), 2072, (2072, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
+	(( 'AddBaseline' , 'FileName' , ), 2073, (2073, (), [ (8, 49, "u''", None) , ], 1 , 1 , 4 , 0 , 360 , (3, 32, None, None) , 0 , )),
+	(( 'RemoveBaseline' , ), 2074, (2074, (), [ ], 1 , 1 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
+	(( 'PasswordEncryptionProvider' , 'PasswordEncryptionProvider' , ), 2075, (2075, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
+	(( 'PasswordEncryptionAlgorithm' , 'PasswordEncryptionAlgorithm' , ), 2076, (2076, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
+	(( 'PasswordEncryptionKeyLength' , 'PasswordEncryptionKeyLength' , ), 2077, (2077, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
+	(( 'PasswordEncryptionFileProperties' , 'PasswordEncryptionFileProperties' , ), 2078, (2078, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
+	(( 'SetPasswordEncryptionOptions' , 'PasswordEncryptionProvider' , 'PasswordEncryptionAlgorithm' , 'PasswordEncryptionKeyLength' , 'PasswordEncryptionFileProperties' , 
 			), 2079, (2079, (), [ (8, 1, None, None) , (8, 1, None, None) , (3, 1, None, None) , (11, 1, None, None) , ], 1 , 1 , 4 , 0 , 384 , (3, 0, None, None) , 0 , )),
-	(( u'Password' , u'Password' , ), 2080, (2080, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
-	(( u'Password' , u'Password' , ), 2080, (2080, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
-	(( u'WritePassword' , u'WritePassword' , ), 2081, (2081, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
-	(( u'WritePassword' , u'WritePassword' , ), 2081, (2081, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
-	(( u'Permission' , u'Permission' , ), 2082, (2082, (), [ (16393, 10, None, "IID('{000C0376-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 404 , (3, 0, None, None) , 0 , )),
-	(( u'SharedWorkspace' , u'SharedWorkspace' , ), 2083, (2083, (), [ (16393, 10, None, "IID('{000C0385-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 408 , (3, 0, None, None) , 0 , )),
-	(( u'Sync' , u'Sync' , ), 2084, (2084, (), [ (16393, 10, None, "IID('{000C0386-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 412 , (3, 0, None, None) , 0 , )),
-	(( u'SendFaxOverInternet' , u'Recipients' , u'Subject' , u'ShowMessage' , ), 2085, (2085, (), [ 
+	(( 'Password' , 'Password' , ), 2080, (2080, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
+	(( 'Password' , 'Password' , ), 2080, (2080, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
+	(( 'WritePassword' , 'WritePassword' , ), 2081, (2081, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
+	(( 'WritePassword' , 'WritePassword' , ), 2081, (2081, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
+	(( 'Permission' , 'Permission' , ), 2082, (2082, (), [ (16393, 10, None, "IID('{000C0376-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 404 , (3, 0, None, None) , 0 , )),
+	(( 'SharedWorkspace' , 'SharedWorkspace' , ), 2083, (2083, (), [ (16393, 10, None, "IID('{000C0385-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 408 , (3, 0, None, None) , 0 , )),
+	(( 'Sync' , 'Sync' , ), 2084, (2084, (), [ (16393, 10, None, "IID('{000C0386-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 412 , (3, 0, None, None) , 0 , )),
+	(( 'SendFaxOverInternet' , 'Recipients' , 'Subject' , 'ShowMessage' , ), 2085, (2085, (), [ 
 			(8, 49, "u''", None) , (8, 49, "u''", None) , (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 416 , (3, 32, None, None) , 0 , )),
-	(( u'DocumentLibraryVersions' , u'DocumentLibraryVersions' , ), 2086, (2086, (), [ (16393, 10, None, "IID('{000C0388-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 420 , (3, 0, None, None) , 0 , )),
+	(( 'DocumentLibraryVersions' , 'DocumentLibraryVersions' , ), 2086, (2086, (), [ (16393, 10, None, "IID('{000C0388-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 420 , (3, 0, None, None) , 0 , )),
 ]
 
 _Slide_vtables_dispatch_ = 1
 _Slide_vtables_ = [
-	(( u'Application' , u'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Shapes' , u'Shapes' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493475-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'HeadersFooters' , u'HeadersFooters' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493474-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SlideShowTransition' , u'SlideShowTransition' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493471-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ColorScheme' , u'ColorScheme' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ColorScheme' , u'ColorScheme' , ), 2006, (2006, (), [ (9, 1, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , u'Background' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SlideID' , u'SlideID' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'PrintSteps' , u'PrintSteps' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Cut' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Copy' , ), 2013, (2013, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Layout' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Layout' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Duplicate' , u'Duplicate' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 2016, (2016, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Tags' , u'Tags' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'SlideIndex' , u'SlideIndex' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'SlideNumber' , u'SlideNumber' , ), 2019, (2019, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayMasterShapes' , u'DisplayMasterShapes' , ), 2020, (2020, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayMasterShapes' , u'DisplayMasterShapes' , ), 2020, (2020, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'FollowMasterBackground' , u'FollowMasterBackground' , ), 2021, (2021, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'FollowMasterBackground' , u'FollowMasterBackground' , ), 2021, (2021, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'NotesPage' , u'NotesPage' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Master' , u'Master' , ), 2023, (2023, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Hyperlinks' , u'Hyperlinks' , ), 2024, (2024, (), [ (16393, 10, None, "IID('{91493464-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Export' , u'FileName' , u'FilterName' , u'ScaleWidth' , u'ScaleHeight' , 
+	(( 'Application' , 'Application' , ), 2001, (2001, (), [ (16397, 10, None, "IID('{91493441-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2002, (2002, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Shapes' , 'Shapes' , ), 2003, (2003, (), [ (16393, 10, None, "IID('{91493475-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'HeadersFooters' , 'HeadersFooters' , ), 2004, (2004, (), [ (16393, 10, None, "IID('{91493474-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SlideShowTransition' , 'SlideShowTransition' , ), 2005, (2005, (), [ (16393, 10, None, "IID('{91493471-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ColorScheme' , 'ColorScheme' , ), 2006, (2006, (), [ (16393, 10, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ColorScheme' , 'ColorScheme' , ), 2006, (2006, (), [ (9, 1, None, "IID('{9149346F-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , 'Background' , ), 2007, (2007, (), [ (16393, 10, None, "IID('{9149347A-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2008, (2008, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 2008, (2008, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SlideID' , 'SlideID' , ), 2009, (2009, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'PrintSteps' , 'PrintSteps' , ), 2010, (2010, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Select' , ), 2011, (2011, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Cut' , ), 2012, (2012, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Copy' , ), 2013, (2013, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Layout' , ), 2014, (2014, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Layout' , ), 2014, (2014, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Duplicate' , 'Duplicate' , ), 2015, (2015, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 2016, (2016, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Tags' , 'Tags' , ), 2017, (2017, (), [ (16393, 10, None, "IID('{914934B9-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'SlideIndex' , 'SlideIndex' , ), 2018, (2018, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'SlideNumber' , 'SlideNumber' , ), 2019, (2019, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayMasterShapes' , 'DisplayMasterShapes' , ), 2020, (2020, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayMasterShapes' , 'DisplayMasterShapes' , ), 2020, (2020, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'FollowMasterBackground' , 'FollowMasterBackground' , ), 2021, (2021, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'FollowMasterBackground' , 'FollowMasterBackground' , ), 2021, (2021, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'NotesPage' , 'NotesPage' , ), 2022, (2022, (), [ (16393, 10, None, "IID('{9149346B-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Master' , 'Master' , ), 2023, (2023, (), [ (16393, 10, None, "IID('{9149346C-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Hyperlinks' , 'Hyperlinks' , ), 2024, (2024, (), [ (16393, 10, None, "IID('{91493464-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Export' , 'FileName' , 'FilterName' , 'ScaleWidth' , 'ScaleHeight' , 
 			), 2025, (2025, (), [ (8, 1, None, None) , (8, 1, None, None) , (3, 49, '0', None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Scripts' , u'Scripts' , ), 2026, (2026, (), [ (16393, 10, None, "IID('{000C0340-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Comments' , u'Comments' , ), 2028, (2028, (), [ (16393, 10, None, "IID('{914934D4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Design' , u'Design' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Design' , u'Design' , ), 2029, (2029, (), [ (9, 1, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'MoveTo' , u'toPos' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'TimeLine' , u'TimeLine' , ), 2031, (2031, (), [ (16393, 10, None, "IID('{914934DC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'ApplyTemplate' , u'FileName' , ), 2032, (2032, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Scripts' , 'Scripts' , ), 2026, (2026, (), [ (16393, 10, None, "IID('{000C0340-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Comments' , 'Comments' , ), 2028, (2028, (), [ (16393, 10, None, "IID('{914934D4-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Design' , 'Design' , ), 2029, (2029, (), [ (16393, 10, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Design' , 'Design' , ), 2029, (2029, (), [ (9, 1, None, "IID('{914934D7-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'MoveTo' , 'toPos' , ), 2030, (2030, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'TimeLine' , 'TimeLine' , ), 2031, (2031, (), [ (16393, 10, None, "IID('{914934DC-5A91-11CF-8700-00AA0060263B}')") , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'ApplyTemplate' , 'FileName' , ), 2032, (2032, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
 ]
 
 RecordMap = {

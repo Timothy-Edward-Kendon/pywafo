@@ -1,4 +1,4 @@
-from __future__ import division, print_function, absolute_import
+
 
 import numpy as np
 from numpy.testing import assert_allclose, assert_equal, run_module_suite
@@ -69,7 +69,7 @@ def test_tukeylambda_stats_mpmath():
 
     # Test with vector arguments (most of the other tests are for single
     # values).
-    lam, var_expected, kurt_expected = zip(*data)
+    lam, var_expected, kurt_expected = list(zip(*data))
     var = tukeylambda_variance(lam)
     assert_allclose(var, var_expected, **a12)
     kurt = tukeylambda_kurtosis(lam)

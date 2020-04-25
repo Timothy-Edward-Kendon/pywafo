@@ -1502,7 +1502,7 @@ class Adjustments(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1513,7 +1513,7 @@ class Adjustments(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class AnswerWizard(DispatchBaseClass):
@@ -1571,7 +1571,7 @@ class AnswerWizardFiles(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1582,7 +1582,7 @@ class AnswerWizardFiles(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809346, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Assistant(DispatchBaseClass):
@@ -1675,7 +1675,7 @@ class Assistant(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1749,7 +1749,7 @@ class BalloonCheckbox(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1766,7 +1766,7 @@ class BalloonCheckboxes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', None)
+			ret = Dispatch(ret, 'Item', None)
 		return ret
 
 	_prop_map_get_ = {
@@ -1790,7 +1790,7 @@ class BalloonCheckboxes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1813,7 +1813,7 @@ class BalloonCheckboxes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809347, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class BalloonLabel(DispatchBaseClass):
@@ -1837,7 +1837,7 @@ class BalloonLabel(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1854,7 +1854,7 @@ class BalloonLabels(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', None)
+			ret = Dispatch(ret, 'Item', None)
 		return ret
 
 	_prop_map_get_ = {
@@ -1878,7 +1878,7 @@ class BalloonLabels(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1901,7 +1901,7 @@ class BalloonLabels(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809347, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class COMAddIn(DispatchBaseClass):
@@ -1929,7 +1929,7 @@ class COMAddIn(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1946,7 +1946,7 @@ class COMAddIns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((16396, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C033A-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C033A-0000-0000-C000-000000000046}')
 		return ret
 
 	def SetAppModal(self, varfModal=defaultNamedNotOptArg):
@@ -1975,7 +1975,7 @@ class COMAddIns(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -1998,7 +1998,7 @@ class COMAddIns(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class CalloutFormat(DispatchBaseClass):
@@ -2054,7 +2054,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCallout', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddCallout', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2063,7 +2063,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(11, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, BeginX, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddConnector', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddConnector', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2071,7 +2071,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(12, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCurve', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddCurve', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2080,7 +2080,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(13, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLabel', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddLabel', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2088,7 +2088,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(14, LCID, 1, (9, 0), ((4, 1), (4, 1), (4, 1), (4, 1)),BeginX
 			, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLine', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddLine', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2098,7 +2098,7 @@ class CanvasShapes(DispatchBaseClass):
 			, LinkToFile, SaveWithDocument, Left, Top, Width
 			, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPicture', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddPicture', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2106,7 +2106,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(16, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPolyline', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddPolyline', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2115,7 +2115,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(17, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddShape', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddShape', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2125,7 +2125,7 @@ class CanvasShapes(DispatchBaseClass):
 			, Text, FontName, FontSize, FontBold, FontItalic
 			, Left, Top)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextEffect', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddTextEffect', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2134,7 +2134,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(19, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextbox', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddTextbox', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type FreeformBuilder
@@ -2142,7 +2142,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(20, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1)),EditingType
 			, X1, Y1)
 		if ret is not None:
-			ret = Dispatch(ret, u'BuildFreeform', '{000C0315-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'BuildFreeform', '{000C0315-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -2150,7 +2150,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type ShapeRange
@@ -2158,7 +2158,7 @@ class CanvasShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(21, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{000C031D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Range', '{000C031D-0000-0000-C000-000000000046}')
 		return ret
 
 	def SelectAll(self):
@@ -2185,7 +2185,7 @@ class CanvasShapes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2208,7 +2208,7 @@ class CanvasShapes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ColorFormat(DispatchBaseClass):
@@ -2235,7 +2235,7 @@ class ColorFormat(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2256,7 +2256,7 @@ class CommandBar(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874887, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),Type
 			, Id, Tag, Visible, Recursive)
 		if ret is not None:
-			ret = Dispatch(ret, u'FindControl', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'FindControl', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	# The method GetaccDefaultAction is actually a property, but must be used as a method to correctly pass the arguments
@@ -2279,7 +2279,7 @@ class CommandBar(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -2296,12 +2296,12 @@ class CommandBar(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -2332,7 +2332,7 @@ class CommandBar(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -2340,16 +2340,16 @@ class CommandBar(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -2421,7 +2421,7 @@ class CommandBarControl(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874886, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Copy', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Copy', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def Delete(self, Temporary=defaultNamedOptArg):
@@ -2451,7 +2451,7 @@ class CommandBarControl(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -2468,12 +2468,12 @@ class CommandBarControl(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -2487,7 +2487,7 @@ class CommandBarControl(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874902, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Move', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Move', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def Reserved1(self):
@@ -2532,7 +2532,7 @@ class CommandBarControl(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -2540,16 +2540,16 @@ class CommandBarControl(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -2629,7 +2629,7 @@ class CommandBarControls(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809344, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),Type
 			, Id, Parameter, Before, Temporary)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type CommandBarControl
@@ -2638,7 +2638,7 @@ class CommandBarControls(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -2661,7 +2661,7 @@ class CommandBarControls(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -2684,7 +2684,7 @@ class CommandBarControls(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809345, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class CommandBarPopup(DispatchBaseClass):
@@ -2696,7 +2696,7 @@ class CommandBarPopup(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874886, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Copy', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Copy', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def Delete(self, Temporary=defaultNamedOptArg):
@@ -2726,7 +2726,7 @@ class CommandBarPopup(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -2743,12 +2743,12 @@ class CommandBarPopup(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -2762,7 +2762,7 @@ class CommandBarPopup(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874902, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Move', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Move', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def Reserved1(self):
@@ -2807,7 +2807,7 @@ class CommandBarPopup(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -2815,16 +2815,16 @@ class CommandBarPopup(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -2945,7 +2945,7 @@ class DiagramNode(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((3, 49), (3, 49)),Pos
 			, NodeType)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddNode', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddNode', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type DiagramNode
@@ -2953,7 +2953,7 @@ class DiagramNode(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(15, LCID, 1, (9, 0), ((11, 1), (9, 1), (3, 49)),CopyChildren
 			, TargetNode, Pos)
 		if ret is not None:
-			ret = Dispatch(ret, u'CloneNode', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'CloneNode', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	def Delete(self):
@@ -2967,14 +2967,14 @@ class DiagramNode(DispatchBaseClass):
 	def NextNode(self):
 		ret = self._oleobj_.InvokeTypes(17, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'NextNode', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'NextNode', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type DiagramNode
 	def PrevNode(self):
 		ret = self._oleobj_.InvokeTypes(18, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'PrevNode', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'PrevNode', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	def ReplaceNode(self, TargetNode=defaultNamedNotOptArg):
@@ -3018,7 +3018,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((12, 49), (3, 49)),Index
 			, NodeType)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddNode', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddNode', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type DiagramNode
@@ -3026,7 +3026,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	def SelectAll(self):
@@ -3055,7 +3055,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3078,7 +3078,7 @@ class DiagramNodeChildren(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(101, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class DiagramNodes(DispatchBaseClass):
@@ -3090,7 +3090,7 @@ class DiagramNodes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0370-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0370-0000-0000-C000-000000000046}')
 		return ret
 
 	def SelectAll(self):
@@ -3115,7 +3115,7 @@ class DiagramNodes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3138,7 +3138,7 @@ class DiagramNodes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(101, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class DocumentLibraryVersion(DispatchBaseClass):
@@ -3151,13 +3151,13 @@ class DocumentLibraryVersion(DispatchBaseClass):
 	def Open(self):
 		ret = self._oleobj_.InvokeTypes(6, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Open', None)
+			ret = Dispatch(ret, 'Open', None)
 		return ret
 
 	def Restore(self):
 		ret = self._oleobj_.InvokeTypes(7, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Restore', None)
+			ret = Dispatch(ret, 'Restore', None)
 		return ret
 
 	_prop_map_get_ = {
@@ -3177,7 +3177,7 @@ class DocumentLibraryVersion(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3195,7 +3195,7 @@ class DocumentLibraryVersions(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),lIndex
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0387-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0387-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3218,7 +3218,7 @@ class DocumentLibraryVersions(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3241,7 +3241,7 @@ class DocumentLibraryVersions(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class DocumentProperties(DispatchBaseClass):
@@ -3272,7 +3272,7 @@ class DocumentProperties(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(4, 2, (3, 0), ((16387, 10),), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class DocumentProperty(DispatchBaseClass):
@@ -3332,7 +3332,7 @@ class FileDialog(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3363,7 +3363,7 @@ class FileDialogFilters(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809350, LCID, 1, (9, 0), ((8, 1), (8, 1), (12, 17)),Description
 			, Extensions, Position)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0364-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0364-0000-0000-C000-000000000046}')
 		return ret
 
 	def Clear(self):
@@ -3378,7 +3378,7 @@ class FileDialogFilters(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0364-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0364-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3400,7 +3400,7 @@ class FileDialogFilters(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3423,7 +3423,7 @@ class FileDialogFilters(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809346, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class FileDialogSelectedItems(DispatchBaseClass):
@@ -3452,7 +3452,7 @@ class FileDialogSelectedItems(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3475,7 +3475,7 @@ class FileDialogSelectedItems(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809346, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class FileSearch(DispatchBaseClass):
@@ -3557,7 +3557,7 @@ class FileTypes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3580,7 +3580,7 @@ class FileTypes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class FillFormat(DispatchBaseClass):
@@ -3675,7 +3675,7 @@ class FoundFiles(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3698,7 +3698,7 @@ class FoundFiles(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(4, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class FreeformBuilder(DispatchBaseClass):
@@ -3715,7 +3715,7 @@ class FreeformBuilder(DispatchBaseClass):
 	def ConvertToShape(self):
 		ret = self._oleobj_.InvokeTypes(11, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'ConvertToShape', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'ConvertToShape', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3735,7 +3735,7 @@ class GroupShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type ShapeRange
@@ -3743,7 +3743,7 @@ class GroupShapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{000C031D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Range', '{000C031D-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3765,7 +3765,7 @@ class GroupShapes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3788,7 +3788,7 @@ class GroupShapes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class HTMLProject(DispatchBaseClass):
@@ -3823,7 +3823,7 @@ class HTMLProject(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3864,7 +3864,7 @@ class HTMLProjectItem(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3881,7 +3881,7 @@ class HTMLProjectItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((16396, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0358-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0358-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3903,7 +3903,7 @@ class HTMLProjectItems(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -3926,7 +3926,7 @@ class HTMLProjectItems(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class IAccessible(DispatchBaseClass):
@@ -3953,7 +3953,7 @@ class IAccessible(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -3970,12 +3970,12 @@ class IAccessible(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -3999,7 +3999,7 @@ class IAccessible(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -4007,16 +4007,16 @@ class IAccessible(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -4048,7 +4048,7 @@ class ICommandBarButtonEvents(DispatchBaseClass):
 	coclass_clsid = None
 
 	def Click(self, Ctrl=defaultNamedNotOptArg, CancelDefault=defaultNamedNotOptArg):
-		return self._ApplyTypes_(1, 1, (24, 0), ((13, 1), (16395, 3)), u'Click', None,Ctrl
+		return self._ApplyTypes_(1, 1, (24, 0), ((13, 1), (16395, 3)), 'Click', None,Ctrl
 			, CancelDefault)
 
 	_prop_map_get_ = {
@@ -4157,7 +4157,7 @@ class IFind(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4189,7 +4189,7 @@ class IFoundFiles(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -4212,7 +4212,7 @@ class IFoundFiles(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610743809, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ILicAgent(DispatchBaseClass):
@@ -4728,8 +4728,8 @@ class ILicWizExternal(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(6, LCID, 1, (24, 0), ((3, 1),),BPC
 			)
 
-	def FormatDate(self, date=defaultNamedNotOptArg, pFormat=u''):
-		return self._ApplyTypes_(3, 1, (8, 32), ((7, 1), (8, 49)), u'FormatDate', None,date
+	def FormatDate(self, date=defaultNamedNotOptArg, pFormat=''):
+		return self._ApplyTypes_(3, 1, (8, 32), ((7, 1), (8, 49)), 'FormatDate', None,date
 			, pFormat)
 
 	def GetConnectedState(self):
@@ -5046,7 +5046,7 @@ class ODSOColumn(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5062,7 +5062,7 @@ class ODSOColumns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809346, LCID, 1, (9, 0), ((12, 1),),varIndex
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', None)
+			ret = Dispatch(ret, 'Item', None)
 		return ret
 
 	_prop_map_get_ = {
@@ -5080,7 +5080,7 @@ class ODSOColumns(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ODSOFilter(DispatchBaseClass):
@@ -5108,9 +5108,9 @@ class ODSOFilters(DispatchBaseClass):
 	CLSID = IID('{000C1534-0000-0000-C000-000000000046}')
 	coclass_clsid = None
 
-	def Add(self, Column=defaultNamedNotOptArg, Comparison=defaultNamedNotOptArg, Conjunction=defaultNamedNotOptArg, bstrCompareTo=u''
+	def Add(self, Column=defaultNamedNotOptArg, Comparison=defaultNamedNotOptArg, Conjunction=defaultNamedNotOptArg, bstrCompareTo=''
 			, DeferUpdate=False):
-		return self._ApplyTypes_(1610809347, 1, (24, 32), ((8, 1), (3, 1), (3, 1), (8, 49), (11, 49)), u'Add', None,Column
+		return self._ApplyTypes_(1610809347, 1, (24, 32), ((8, 1), (3, 1), (3, 1), (8, 49), (11, 49)), 'Add', None,Column
 			, Comparison, Conjunction, bstrCompareTo, DeferUpdate)
 
 	def Delete(self, Index=defaultNamedNotOptArg, DeferUpdate=False):
@@ -5121,7 +5121,7 @@ class ODSOFilters(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809346, LCID, 1, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', None)
+			ret = Dispatch(ret, 'Item', None)
 		return ret
 
 	_prop_map_get_ = {
@@ -5139,7 +5139,7 @@ class ODSOFilters(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class OfficeDataSourceObject(DispatchBaseClass):
@@ -5153,14 +5153,14 @@ class OfficeDataSourceObject(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(1610743817, LCID, 1, (3, 0), ((3, 1), (3, 49)),MsoMoveRow
 			, RowNbr)
 
-	def Open(self, bstrSrc=u'', bstrConnect=u'', bstrTable=u'', fOpenExclusive=0
+	def Open(self, bstrSrc='', bstrConnect='', bstrTable='', fOpenExclusive=0
 			, fNeverPrompt=1):
-		return self._ApplyTypes_(1610743818, 1, (24, 32), ((8, 49), (8, 49), (8, 49), (3, 49), (3, 49)), u'Open', None,bstrSrc
+		return self._ApplyTypes_(1610743818, 1, (24, 32), ((8, 49), (8, 49), (8, 49), (3, 49), (3, 49)), 'Open', None,bstrSrc
 			, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt)
 
-	def SetSortOrder(self, SortField1=defaultNamedNotOptArg, SortAscending1=True, SortField2=u'', SortAscending2=True
-			, SortField3=u'', SortAscending3=True):
-		return self._ApplyTypes_(1610743819, 1, (24, 32), ((8, 1), (11, 49), (8, 49), (11, 49), (8, 49), (11, 49)), u'SetSortOrder', None,SortField1
+	def SetSortOrder(self, SortField1=defaultNamedNotOptArg, SortAscending1=True, SortField2='', SortAscending2=True
+			, SortField3='', SortAscending3=True):
+		return self._ApplyTypes_(1610743819, 1, (24, 32), ((8, 1), (11, 49), (8, 49), (11, 49), (8, 49), (11, 49)), 'SetSortOrder', None,SortField1
 			, SortAscending1, SortField2, SortAscending2, SortField3, SortAscending3
 			)
 
@@ -5187,7 +5187,7 @@ class Permission(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(3, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),UserId
 			, Permission, ExpirationDate)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0375-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0375-0000-0000-C000-000000000046}')
 		return ret
 
 	def ApplyPolicy(self, FileName=defaultNamedNotOptArg):
@@ -5200,7 +5200,7 @@ class Permission(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0375-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0375-0000-0000-C000-000000000046}')
 		return ret
 
 	def RemoveAll(self):
@@ -5238,7 +5238,7 @@ class Permission(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5261,7 +5261,7 @@ class Permission(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class PictureFormat(DispatchBaseClass):
@@ -5323,7 +5323,7 @@ class PropertyTest(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5346,7 +5346,7 @@ class PropertyTests(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0333-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0333-0000-0000-C000-000000000046}')
 		return ret
 
 	def Remove(self, Index=defaultNamedNotOptArg):
@@ -5371,7 +5371,7 @@ class PropertyTests(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5394,7 +5394,7 @@ class PropertyTests(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(4, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ScopeFolder(DispatchBaseClass):
@@ -5420,7 +5420,7 @@ class ScopeFolder(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5438,7 +5438,7 @@ class ScopeFolders(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0368-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0368-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -5459,7 +5459,7 @@ class ScopeFolders(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5482,7 +5482,7 @@ class ScopeFolders(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(4, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Script(DispatchBaseClass):
@@ -5515,7 +5515,7 @@ class Script(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5528,9 +5528,9 @@ class Scripts(DispatchBaseClass):
 	coclass_clsid = None
 
 	# Result is of type Script
-	def Add(self, Anchor=None, Location=2, Language=2, Id=u''
-			, Extended=u'', ScriptText=u''):
-		return self._ApplyTypes_(1610809348, 1, (9, 32), ((9, 49), (3, 49), (3, 49), (8, 49), (8, 49), (8, 49)), u'Add', '{000C0341-0000-0000-C000-000000000046}',Anchor
+	def Add(self, Anchor=None, Location=2, Language=2, Id=''
+			, Extended='', ScriptText=''):
+		return self._ApplyTypes_(1610809348, 1, (9, 32), ((9, 49), (3, 49), (3, 49), (8, 49), (8, 49), (8, 49)), 'Add', '{000C0341-0000-0000-C000-000000000046}',Anchor
 			, Location, Language, Id, Extended, ScriptText
 			)
 
@@ -5542,7 +5542,7 @@ class Scripts(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0341-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0341-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -5564,7 +5564,7 @@ class Scripts(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5587,7 +5587,7 @@ class Scripts(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809345, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SearchFolders(DispatchBaseClass):
@@ -5604,7 +5604,7 @@ class SearchFolders(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0368-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0368-0000-0000-C000-000000000046}')
 		return ret
 
 	def Remove(self, Index=defaultNamedNotOptArg):
@@ -5629,7 +5629,7 @@ class SearchFolders(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5652,7 +5652,7 @@ class SearchFolders(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SearchScope(DispatchBaseClass):
@@ -5674,7 +5674,7 @@ class SearchScope(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5692,7 +5692,7 @@ class SearchScopes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0367-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0367-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -5713,7 +5713,7 @@ class SearchScopes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -5736,7 +5736,7 @@ class SearchScopes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(4, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ShadowFormat(DispatchBaseClass):
@@ -5804,7 +5804,7 @@ class Shape(DispatchBaseClass):
 	def Duplicate(self):
 		ret = self._oleobj_.InvokeTypes(12, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Duplicate', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Duplicate', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	def Flip(self, FlipCmd=defaultNamedNotOptArg):
@@ -5848,7 +5848,7 @@ class Shape(DispatchBaseClass):
 	def Ungroup(self):
 		ret = self._oleobj_.InvokeTypes(23, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Ungroup', '{000C031D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Ungroup', '{000C031D-0000-0000-C000-000000000046}')
 		return ret
 
 	def ZOrder(self, ZOrderCmd=defaultNamedNotOptArg):
@@ -5965,7 +5965,7 @@ class ShapeNodes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0318-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0318-0000-0000-C000-000000000046}')
 		return ret
 
 	def SetEditingType(self, Index=defaultNamedNotOptArg, EditingType=defaultNamedNotOptArg):
@@ -5999,7 +5999,7 @@ class ShapeNodes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6022,7 +6022,7 @@ class ShapeNodes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class ShapeRange(DispatchBaseClass):
@@ -6063,7 +6063,7 @@ class ShapeRange(DispatchBaseClass):
 	def Duplicate(self):
 		ret = self._oleobj_.InvokeTypes(14, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Duplicate', '{000C031D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Duplicate', '{000C031D-0000-0000-C000-000000000046}')
 		return ret
 
 	def Flip(self, FlipCmd=defaultNamedNotOptArg):
@@ -6074,7 +6074,7 @@ class ShapeRange(DispatchBaseClass):
 	def Group(self):
 		ret = self._oleobj_.InvokeTypes(19, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Group', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Group', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	def IncrementLeft(self, Increment=defaultNamedNotOptArg):
@@ -6094,7 +6094,7 @@ class ShapeRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	def PickUp(self):
@@ -6104,7 +6104,7 @@ class ShapeRange(DispatchBaseClass):
 	def Regroup(self):
 		ret = self._oleobj_.InvokeTypes(21, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Regroup', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Regroup', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	def RerouteConnections(self):
@@ -6129,7 +6129,7 @@ class ShapeRange(DispatchBaseClass):
 	def Ungroup(self):
 		ret = self._oleobj_.InvokeTypes(27, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Ungroup', '{000C031D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Ungroup', '{000C031D-0000-0000-C000-000000000046}')
 		return ret
 
 	def ZOrder(self, ZOrderCmd=defaultNamedNotOptArg):
@@ -6223,7 +6223,7 @@ class ShapeRange(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6246,7 +6246,7 @@ class ShapeRange(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Shapes(DispatchBaseClass):
@@ -6259,7 +6259,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(10, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCallout', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddCallout', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6267,7 +6267,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(25, LCID, 1, (9, 0), ((4, 1), (4, 1), (4, 1), (4, 1)),Left
 			, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCanvas', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddCanvas', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6276,7 +6276,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(11, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, BeginX, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddConnector', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddConnector', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6284,7 +6284,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(12, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddCurve', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddCurve', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6293,7 +6293,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(23, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddDiagram', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddDiagram', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6302,7 +6302,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(13, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLabel', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddLabel', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6310,7 +6310,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(14, LCID, 1, (9, 0), ((4, 1), (4, 1), (4, 1), (4, 1)),BeginX
 			, BeginY, EndX, EndY)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddLine', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddLine', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6320,7 +6320,7 @@ class Shapes(DispatchBaseClass):
 			, LinkToFile, SaveWithDocument, Left, Top, Width
 			, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPicture', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddPicture', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6328,7 +6328,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(16, LCID, 1, (9, 0), ((12, 1),),SafeArrayOfPoints
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddPolyline', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddPolyline', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6337,7 +6337,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(17, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Type
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddShape', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddShape', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6347,7 +6347,7 @@ class Shapes(DispatchBaseClass):
 			, Text, FontName, FontSize, FontBold, FontItalic
 			, Left, Top)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextEffect', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddTextEffect', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6356,7 +6356,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(19, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1), (4, 1), (4, 1)),Orientation
 			, Left, Top, Width, Height)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddTextbox', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddTextbox', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type FreeformBuilder
@@ -6364,7 +6364,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(20, LCID, 1, (9, 0), ((3, 1), (4, 1), (4, 1)),EditingType
 			, X1, Y1)
 		if ret is not None:
-			ret = Dispatch(ret, u'BuildFreeform', '{000C0315-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'BuildFreeform', '{000C0315-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type Shape
@@ -6372,7 +6372,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C031C-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C031C-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type ShapeRange
@@ -6380,7 +6380,7 @@ class Shapes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(21, LCID, 1, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Range', '{000C031D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Range', '{000C031D-0000-0000-C000-000000000046}')
 		return ret
 
 	def SelectAll(self):
@@ -6409,7 +6409,7 @@ class Shapes(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6432,7 +6432,7 @@ class Shapes(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(2, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SharedWorkspace(DispatchBaseClass):
@@ -6485,7 +6485,7 @@ class SharedWorkspace(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6518,7 +6518,7 @@ class SharedWorkspaceFile(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6535,7 +6535,7 @@ class SharedWorkspaceFiles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17), (12, 17)),FileName
 			, ParentFolder, OverwriteIfFileAlreadyExists, KeepInSync)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C037B-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C037B-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type SharedWorkspaceFile
@@ -6544,7 +6544,7 @@ class SharedWorkspaceFiles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C037B-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C037B-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6567,7 +6567,7 @@ class SharedWorkspaceFiles(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6590,7 +6590,7 @@ class SharedWorkspaceFiles(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SharedWorkspaceFolder(DispatchBaseClass):
@@ -6615,7 +6615,7 @@ class SharedWorkspaceFolder(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6632,7 +6632,7 @@ class SharedWorkspaceFolders(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2, LCID, 1, (9, 0), ((8, 1), (12, 17)),FolderName
 			, ParentFolder)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C037D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C037D-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type SharedWorkspaceFolder
@@ -6641,7 +6641,7 @@ class SharedWorkspaceFolders(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C037D-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C037D-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6664,7 +6664,7 @@ class SharedWorkspaceFolders(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6687,7 +6687,7 @@ class SharedWorkspaceFolders(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SharedWorkspaceLink(DispatchBaseClass):
@@ -6723,7 +6723,7 @@ class SharedWorkspaceLink(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6740,7 +6740,7 @@ class SharedWorkspaceLinks(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),URL
 			, Description, Notes)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C037F-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C037F-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type SharedWorkspaceLink
@@ -6749,7 +6749,7 @@ class SharedWorkspaceLinks(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C037F-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C037F-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6772,7 +6772,7 @@ class SharedWorkspaceLinks(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6795,7 +6795,7 @@ class SharedWorkspaceLinks(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SharedWorkspaceMember(DispatchBaseClass):
@@ -6822,7 +6822,7 @@ class SharedWorkspaceMember(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6839,7 +6839,7 @@ class SharedWorkspaceMembers(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(2, LCID, 1, (9, 0), ((8, 1), (8, 1), (8, 1), (12, 17)),Email
 			, DomainName, DisplayName, Role)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0381-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0381-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type SharedWorkspaceMember
@@ -6848,7 +6848,7 @@ class SharedWorkspaceMembers(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0381-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0381-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6871,7 +6871,7 @@ class SharedWorkspaceMembers(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6894,7 +6894,7 @@ class SharedWorkspaceMembers(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SharedWorkspaceTask(DispatchBaseClass):
@@ -6936,7 +6936,7 @@ class SharedWorkspaceTask(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -6955,7 +6955,7 @@ class SharedWorkspaceTasks(DispatchBaseClass):
 			, Status, Priority, Assignee, Description, DueDate
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0379-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0379-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type SharedWorkspaceTask
@@ -6964,7 +6964,7 @@ class SharedWorkspaceTasks(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0379-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0379-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6987,7 +6987,7 @@ class SharedWorkspaceTasks(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -7010,7 +7010,7 @@ class SharedWorkspaceTasks(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class Signature(DispatchBaseClass):
@@ -7045,7 +7045,7 @@ class SignatureSet(DispatchBaseClass):
 	def Add(self):
 		ret = self._oleobj_.InvokeTypes(1610809347, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0411-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0411-0000-0000-C000-000000000046}')
 		return ret
 
 	def Commit(self):
@@ -7057,7 +7057,7 @@ class SignatureSet(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),iSig
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0411-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0411-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -7079,7 +7079,7 @@ class SignatureSet(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -7102,7 +7102,7 @@ class SignatureSet(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809345, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class SmartDocument(DispatchBaseClass):
@@ -7165,7 +7165,7 @@ class Sync(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -7312,7 +7312,7 @@ class UserPermission(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -7449,7 +7449,7 @@ class WebPageFonts(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((3, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0913-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0913-0000-0000-C000-000000000046}')
 		return ret
 
 	_prop_map_get_ = {
@@ -7470,7 +7470,7 @@ class WebPageFonts(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -7493,7 +7493,7 @@ class WebPageFonts(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class _CommandBarActiveX(DispatchBaseClass):
@@ -7505,7 +7505,7 @@ class _CommandBarActiveX(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874886, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Copy', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Copy', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def Delete(self, Temporary=defaultNamedOptArg):
@@ -7538,7 +7538,7 @@ class _CommandBarActiveX(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -7555,12 +7555,12 @@ class _CommandBarActiveX(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -7574,7 +7574,7 @@ class _CommandBarActiveX(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874902, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Move', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Move', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	# The method QueryControlInterface is actually a property, but must be used as a method to correctly pass the arguments
@@ -7587,7 +7587,7 @@ class _CommandBarActiveX(DispatchBaseClass):
 				ret = ret.QueryInterface(global_IID_IDispatch)
 			except global_error:
 				return ret
-			ret = Dispatch(ret, u'QueryControlInterface', None)
+			ret = Dispatch(ret, 'QueryControlInterface', None)
 		return ret
 
 	def Reserved1(self):
@@ -7636,7 +7636,7 @@ class _CommandBarActiveX(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -7644,16 +7644,16 @@ class _CommandBarActiveX(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -7735,7 +7735,7 @@ class _CommandBarButton(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874886, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Copy', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Copy', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def CopyFace(self):
@@ -7768,7 +7768,7 @@ class _CommandBarButton(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -7785,12 +7785,12 @@ class _CommandBarButton(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -7804,7 +7804,7 @@ class _CommandBarButton(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874902, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Move', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Move', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def PasteFace(self):
@@ -7852,7 +7852,7 @@ class _CommandBarButton(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -7860,16 +7860,16 @@ class _CommandBarButton(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -8025,7 +8025,7 @@ class _CommandBarComboBox(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874886, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Copy', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Copy', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def Delete(self, Temporary=defaultNamedOptArg):
@@ -8055,7 +8055,7 @@ class _CommandBarComboBox(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -8072,12 +8072,12 @@ class _CommandBarComboBox(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -8097,7 +8097,7 @@ class _CommandBarComboBox(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610874902, LCID, 1, (9, 0), ((12, 17), (12, 17)),Bar
 			, Before)
 		if ret is not None:
-			ret = Dispatch(ret, u'Move', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Move', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	def RemoveItem(self, Index=defaultNamedNotOptArg):
@@ -8151,7 +8151,7 @@ class _CommandBarComboBox(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -8159,16 +8159,16 @@ class _CommandBarComboBox(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -8312,7 +8312,7 @@ class _CommandBars(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809346, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17)),Name
 			, Position, MenuBar, Temporary)
 		if ret is not None:
-			ret = Dispatch(ret, u'Add', '{000C0304-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Add', '{000C0304-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type CommandBar
@@ -8321,7 +8321,7 @@ class _CommandBars(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809366, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),TbidOrName
 			, Position, MenuBar, Temporary, TbtrProtection)
 		if ret is not None:
-			ret = Dispatch(ret, u'AddEx', '{000C0304-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'AddEx', '{000C0304-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type CommandBarControl
@@ -8329,7 +8329,7 @@ class _CommandBars(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809352, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17)),Type
 			, Id, Tag, Visible)
 		if ret is not None:
-			ret = Dispatch(ret, u'FindControl', '{000C0308-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'FindControl', '{000C0308-0000-0000-C000-000000000046}')
 		return ret
 
 	# Result is of type CommandBarControls
@@ -8337,12 +8337,12 @@ class _CommandBars(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1610809365, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17)),Type
 			, Id, Tag, Visible)
 		if ret is not None:
-			ret = Dispatch(ret, u'FindControls', '{000C0306-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'FindControls', '{000C0306-0000-0000-C000-000000000046}')
 		return ret
 
 	# The method IdsString is actually a property, but must be used as a method to correctly pass the arguments
 	def IdsString(self, ids=defaultNamedNotOptArg, pbstrName=global_Missing):
-		return self._ApplyTypes_(1610809361, 2, (3, 0), ((3, 1), (16392, 2)), u'IdsString', None,ids
+		return self._ApplyTypes_(1610809361, 2, (3, 0), ((3, 1), (16392, 2)), 'IdsString', None,ids
 			, pbstrName)
 
 	# Result is of type CommandBar
@@ -8351,7 +8351,7 @@ class _CommandBars(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),Index
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'Item', '{000C0304-0000-0000-C000-000000000046}')
+			ret = Dispatch(ret, 'Item', '{000C0304-0000-0000-C000-000000000046}')
 		return ret
 
 	def ReleaseFocus(self):
@@ -8359,7 +8359,7 @@ class _CommandBars(DispatchBaseClass):
 
 	# The method TmcGetName is actually a property, but must be used as a method to correctly pass the arguments
 	def TmcGetName(self, tmc=defaultNamedNotOptArg, pbstrName=global_Missing):
-		return self._ApplyTypes_(1610809362, 2, (3, 0), ((3, 1), (16392, 2)), u'TmcGetName', None,tmc
+		return self._ApplyTypes_(1610809362, 2, (3, 0), ((3, 1), (16392, 2)), 'TmcGetName', None,tmc
 			, pbstrName)
 
 	_prop_map_get_ = {
@@ -8401,7 +8401,7 @@ class _CommandBars(DispatchBaseClass):
 	# str(ob) and int(ob) will use __call__
 	def __unicode__(self, *args):
 		try:
-			return unicode(self.__call__(*args))
+			return str(self.__call__(*args))
 		except global_com_error:
 			return repr(self)
 	def __str__(self, *args):
@@ -8424,7 +8424,7 @@ class _CommandBars(DispatchBaseClass):
 	def __len__(self):
 		return self._ApplyTypes_(*(1610809347, 2, (3, 0), (), "Count", None))
 	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
-	def __nonzero__(self):
+	def __bool__(self):
 		return True
 
 class _CommandBarsEvents:
@@ -8514,7 +8514,7 @@ class _IMsoOleAccDispObj(DispatchBaseClass):
 
 	# The method GetaccHelpTopic is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccHelpTopic(self, pszHelpFile=global_Missing, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), u'GetaccHelpTopic', None,pszHelpFile
+		return self._ApplyTypes_(-5009, 2, (3, 0), ((16392, 2), (12, 17)), 'GetaccHelpTopic', None,pszHelpFile
 			, varChild)
 
 	# The method GetaccKeyboardShortcut is actually a property, but must be used as a method to correctly pass the arguments
@@ -8531,12 +8531,12 @@ class _IMsoOleAccDispObj(DispatchBaseClass):
 
 	# The method GetaccRole is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccRole(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), u'GetaccRole', None,varChild
+		return self._ApplyTypes_(-5006, 2, (12, 0), ((12, 17),), 'GetaccRole', None,varChild
 			)
 
 	# The method GetaccState is actually a property, but must be used as a method to correctly pass the arguments
 	def GetaccState(self, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), u'GetaccState', None,varChild
+		return self._ApplyTypes_(-5007, 2, (12, 0), ((12, 17),), 'GetaccState', None,varChild
 			)
 
 	# The method GetaccValue is actually a property, but must be used as a method to correctly pass the arguments
@@ -8560,7 +8560,7 @@ class _IMsoOleAccDispObj(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(-5002, LCID, 2, (9, 0), ((12, 1),),varChild
 			)
 		if ret is not None:
-			ret = Dispatch(ret, u'accChild', None)
+			ret = Dispatch(ret, 'accChild', None)
 		return ret
 
 	def accDoDefaultAction(self, varChild=defaultNamedOptArg):
@@ -8568,16 +8568,16 @@ class _IMsoOleAccDispObj(DispatchBaseClass):
 			)
 
 	def accHitTest(self, xLeft=defaultNamedNotOptArg, yTop=defaultNamedNotOptArg):
-		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), u'accHitTest', None,xLeft
+		return self._ApplyTypes_(-5017, 1, (12, 0), ((3, 1), (3, 1)), 'accHitTest', None,xLeft
 			, yTop)
 
 	def accLocation(self, pxLeft=global_Missing, pyTop=global_Missing, pcxWidth=global_Missing, pcyHeight=global_Missing
 			, varChild=defaultNamedOptArg):
-		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), u'accLocation', None,pxLeft
+		return self._ApplyTypes_(-5015, 1, (24, 0), ((16387, 2), (16387, 2), (16387, 2), (16387, 2), (12, 17)), 'accLocation', None,pxLeft
 			, pyTop, pcxWidth, pcyHeight, varChild)
 
 	def accNavigate(self, navDir=defaultNamedNotOptArg, varStart=defaultNamedOptArg):
-		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), u'accNavigate', None,navDir
+		return self._ApplyTypes_(-5016, 1, (12, 0), ((3, 1), (12, 17)), 'accNavigate', None,navDir
 			, varStart)
 
 	def accSelect(self, flagsSelect=defaultNamedNotOptArg, varChild=defaultNamedOptArg):
@@ -8653,2042 +8653,2042 @@ class MsoEnvelope(CoClassBaseClass): # A CoClass
 
 Adjustments_vtables_dispatch_ = 1
 Adjustments_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'Val' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 AnswerWizard_vtables_dispatch_ = 1
 AnswerWizard_vtables_ = [
-	(( u'Parent' , u'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Files' , u'Files' , ), 1610809345, (1610809345, (), [ (16393, 10, None, "IID('{000C0361-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ClearFileList' , ), 1610809346, (1610809346, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ResetFileList' , ), 1610809347, (1610809347, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Files' , 'Files' , ), 1610809345, (1610809345, (), [ (16393, 10, None, "IID('{000C0361-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ClearFileList' , ), 1610809346, (1610809346, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ResetFileList' , ), 1610809347, (1610809347, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 AnswerWizardFiles_vtables_dispatch_ = 1
 AnswerWizardFiles_vtables_ = [
-	(( u'Parent' , u'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'pbstr' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Parent' , 'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'pbstr' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pCount' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'FileName' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , u'FileName' , ), 1610809348, (1610809348, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'pCount' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'FileName' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , 'FileName' , ), 1610809348, (1610809348, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 Assistant_vtables_dispatch_ = 1
 Assistant_vtables_ = [
-	(( u'Parent' , u'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Move' , u'xLeft' , u'yTop' , ), 1610809345, (1610809345, (), [ (3, 1, None, None) , 
+	(( 'Parent' , 'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Move' , 'xLeft' , 'yTop' , ), 1610809345, (1610809345, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'pyTop' , ), 1610809346, (1610809346, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'pyTop' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'pxLeft' , ), 1610809348, (1610809348, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'pxLeft' , ), 1610809348, (1610809348, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Help' , ), 1610809350, (1610809350, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'StartWizard' , u'On' , u'Callback' , u'PrivateX' , u'Animation' , 
-			u'CustomTeaser' , u'Top' , u'Left' , u'Bottom' , u'Right' , 
-			u'plWizID' , ), 1610809351, (1610809351, (), [ (11, 1, None, None) , (8, 1, None, None) , (3, 1, None, None) , 
+	(( 'Top' , 'pyTop' , ), 1610809346, (1610809346, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'pyTop' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'pxLeft' , ), 1610809348, (1610809348, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'pxLeft' , ), 1610809348, (1610809348, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Help' , ), 1610809350, (1610809350, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'StartWizard' , 'On' , 'Callback' , 'PrivateX' , 'Animation' , 
+			'CustomTeaser' , 'Top' , 'Left' , 'Bottom' , 'Right' , 
+			'plWizID' , ), 1610809351, (1610809351, (), [ (11, 1, None, None) , (8, 1, None, None) , (3, 1, None, None) , 
 			(12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 6 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'EndWizard' , u'WizardID' , u'varfSuccess' , u'Animation' , ), 1610809352, (1610809352, (), [ 
+	(( 'EndWizard' , 'WizardID' , 'varfSuccess' , 'Animation' , ), 1610809352, (1610809352, (), [ 
 			(3, 1, None, None) , (11, 1, None, None) , (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ActivateWizard' , u'WizardID' , u'act' , u'Animation' , ), 1610809353, (1610809353, (), [ 
+	(( 'ActivateWizard' , 'WizardID' , 'act' , 'Animation' , ), 1610809353, (1610809353, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ResetTips' , ), 1610809354, (1610809354, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'NewBalloon' , u'ppibal' , ), 1610809355, (1610809355, (), [ (16393, 10, None, "IID('{000C0324-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'BalloonError' , u'pbne' , ), 1610809356, (1610809356, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'pvarfVisible' , ), 1610809357, (1610809357, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'pvarfVisible' , ), 1610809357, (1610809357, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Animation' , u'pfca' , ), 1610809359, (1610809359, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Animation' , u'pfca' , ), 1610809359, (1610809359, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Reduced' , u'pvarfReduced' , ), 1610809361, (1610809361, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Reduced' , u'pvarfReduced' , ), 1610809361, (1610809361, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'AssistWithHelp' , u'pvarfAssistWithHelp' , ), 1610809363, (1610809363, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'AssistWithHelp' , u'pvarfAssistWithHelp' , ), 1610809363, (1610809363, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'AssistWithWizards' , u'pvarfAssistWithWizards' , ), 1610809365, (1610809365, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'AssistWithWizards' , u'pvarfAssistWithWizards' , ), 1610809365, (1610809365, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'AssistWithAlerts' , u'pvarfAssistWithAlerts' , ), 1610809367, (1610809367, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'AssistWithAlerts' , u'pvarfAssistWithAlerts' , ), 1610809367, (1610809367, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'MoveWhenInTheWay' , u'pvarfMove' , ), 1610809369, (1610809369, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'MoveWhenInTheWay' , u'pvarfMove' , ), 1610809369, (1610809369, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Sounds' , u'pvarfSounds' , ), 1610809371, (1610809371, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Sounds' , u'pvarfSounds' , ), 1610809371, (1610809371, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'FeatureTips' , u'pvarfFeatures' , ), 1610809373, (1610809373, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'FeatureTips' , u'pvarfFeatures' , ), 1610809373, (1610809373, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'MouseTips' , u'pvarfMouse' , ), 1610809375, (1610809375, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'MouseTips' , u'pvarfMouse' , ), 1610809375, (1610809375, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'KeyboardShortcutTips' , u'pvarfKeyboardShortcuts' , ), 1610809377, (1610809377, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'KeyboardShortcutTips' , u'pvarfKeyboardShortcuts' , ), 1610809377, (1610809377, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'HighPriorityTips' , u'pvarfHighPriorityTips' , ), 1610809379, (1610809379, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'HighPriorityTips' , u'pvarfHighPriorityTips' , ), 1610809379, (1610809379, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'TipOfDay' , u'pvarfTipOfDay' , ), 1610809381, (1610809381, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'TipOfDay' , u'pvarfTipOfDay' , ), 1610809381, (1610809381, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'GuessHelp' , u'pvarfGuessHelp' , ), 1610809383, (1610809383, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'GuessHelp' , u'pvarfGuessHelp' , ), 1610809383, (1610809383, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'SearchWhenProgramming' , u'pvarfSearchInProgram' , ), 1610809385, (1610809385, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'SearchWhenProgramming' , u'pvarfSearchInProgram' , ), 1610809385, (1610809385, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'FileName' , u'pbstr' , ), 1610809388, (1610809388, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'FileName' , u'pbstr' , ), 1610809388, (1610809388, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1610809390, (1610809390, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'On' , u'pvarfOn' , ), 1610809391, (1610809391, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'On' , u'pvarfOn' , ), 1610809391, (1610809391, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'DoAlert' , u'bstrAlertTitle' , u'bstrAlertText' , u'alb' , u'alc' , 
-			u'ald' , u'alq' , u'varfSysAlert' , u'pibtn' , ), 1610809393, (1610809393, (), [ 
+	(( 'ResetTips' , ), 1610809354, (1610809354, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'NewBalloon' , 'ppibal' , ), 1610809355, (1610809355, (), [ (16393, 10, None, "IID('{000C0324-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'BalloonError' , 'pbne' , ), 1610809356, (1610809356, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'pvarfVisible' , ), 1610809357, (1610809357, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'pvarfVisible' , ), 1610809357, (1610809357, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Animation' , 'pfca' , ), 1610809359, (1610809359, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Animation' , 'pfca' , ), 1610809359, (1610809359, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Reduced' , 'pvarfReduced' , ), 1610809361, (1610809361, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Reduced' , 'pvarfReduced' , ), 1610809361, (1610809361, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'AssistWithHelp' , 'pvarfAssistWithHelp' , ), 1610809363, (1610809363, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'AssistWithHelp' , 'pvarfAssistWithHelp' , ), 1610809363, (1610809363, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'AssistWithWizards' , 'pvarfAssistWithWizards' , ), 1610809365, (1610809365, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'AssistWithWizards' , 'pvarfAssistWithWizards' , ), 1610809365, (1610809365, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'AssistWithAlerts' , 'pvarfAssistWithAlerts' , ), 1610809367, (1610809367, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'AssistWithAlerts' , 'pvarfAssistWithAlerts' , ), 1610809367, (1610809367, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'MoveWhenInTheWay' , 'pvarfMove' , ), 1610809369, (1610809369, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'MoveWhenInTheWay' , 'pvarfMove' , ), 1610809369, (1610809369, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Sounds' , 'pvarfSounds' , ), 1610809371, (1610809371, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Sounds' , 'pvarfSounds' , ), 1610809371, (1610809371, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'FeatureTips' , 'pvarfFeatures' , ), 1610809373, (1610809373, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'FeatureTips' , 'pvarfFeatures' , ), 1610809373, (1610809373, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'MouseTips' , 'pvarfMouse' , ), 1610809375, (1610809375, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'MouseTips' , 'pvarfMouse' , ), 1610809375, (1610809375, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'KeyboardShortcutTips' , 'pvarfKeyboardShortcuts' , ), 1610809377, (1610809377, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'KeyboardShortcutTips' , 'pvarfKeyboardShortcuts' , ), 1610809377, (1610809377, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'HighPriorityTips' , 'pvarfHighPriorityTips' , ), 1610809379, (1610809379, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'HighPriorityTips' , 'pvarfHighPriorityTips' , ), 1610809379, (1610809379, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'TipOfDay' , 'pvarfTipOfDay' , ), 1610809381, (1610809381, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'TipOfDay' , 'pvarfTipOfDay' , ), 1610809381, (1610809381, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'GuessHelp' , 'pvarfGuessHelp' , ), 1610809383, (1610809383, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'GuessHelp' , 'pvarfGuessHelp' , ), 1610809383, (1610809383, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'SearchWhenProgramming' , 'pvarfSearchInProgram' , ), 1610809385, (1610809385, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'SearchWhenProgramming' , 'pvarfSearchInProgram' , ), 1610809385, (1610809385, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'FileName' , 'pbstr' , ), 1610809388, (1610809388, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'FileName' , 'pbstr' , ), 1610809388, (1610809388, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1610809390, (1610809390, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'On' , 'pvarfOn' , ), 1610809391, (1610809391, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'On' , 'pvarfOn' , ), 1610809391, (1610809391, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'DoAlert' , 'bstrAlertTitle' , 'bstrAlertText' , 'alb' , 'alc' , 
+			'ald' , 'alq' , 'varfSysAlert' , 'pibtn' , ), 1610809393, (1610809393, (), [ 
 			(8, 1, None, None) , (8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , 
 			(3, 1, None, None) , (11, 1, None, None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
 ]
 
 Balloon_vtables_dispatch_ = 1
 Balloon_vtables_ = [
-	(( u'Parent' , u'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Checkboxes' , u'ppidisp' , ), 1610809345, (1610809345, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Labels' , u'ppidisp' , ), 1610809346, (1610809346, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'BalloonType' , u'pbty' , ), 1610809347, (1610809347, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'BalloonType' , u'pbty' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Icon' , u'picn' , ), 1610809349, (1610809349, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Icon' , u'picn' , ), 1610809349, (1610809349, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Heading' , u'pbstr' , ), 1610809351, (1610809351, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Heading' , u'pbstr' , ), 1610809351, (1610809351, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610809353, (1610809353, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610809353, (1610809353, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Mode' , u'pmd' , ), 1610809355, (1610809355, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Mode' , u'pmd' , ), 1610809355, (1610809355, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Animation' , u'pfca' , ), 1610809357, (1610809357, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Animation' , u'pfca' , ), 1610809357, (1610809357, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Button' , u'psbs' , ), 1610809359, (1610809359, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Button' , u'psbs' , ), 1610809359, (1610809359, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Callback' , u'pbstr' , ), 1610809361, (1610809361, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Callback' , u'pbstr' , ), 1610809361, (1610809361, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Private' , u'plPrivate' , ), 1610809363, (1610809363, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Private' , u'plPrivate' , ), 1610809363, (1610809363, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'SetAvoidRectangle' , u'Left' , u'Top' , u'Right' , u'Bottom' , 
+	(( 'Parent' , 'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Checkboxes' , 'ppidisp' , ), 1610809345, (1610809345, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Labels' , 'ppidisp' , ), 1610809346, (1610809346, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'BalloonType' , 'pbty' , ), 1610809347, (1610809347, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'BalloonType' , 'pbty' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Icon' , 'picn' , ), 1610809349, (1610809349, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Icon' , 'picn' , ), 1610809349, (1610809349, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Heading' , 'pbstr' , ), 1610809351, (1610809351, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Heading' , 'pbstr' , ), 1610809351, (1610809351, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610809353, (1610809353, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610809353, (1610809353, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Mode' , 'pmd' , ), 1610809355, (1610809355, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Mode' , 'pmd' , ), 1610809355, (1610809355, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Animation' , 'pfca' , ), 1610809357, (1610809357, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Animation' , 'pfca' , ), 1610809357, (1610809357, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Button' , 'psbs' , ), 1610809359, (1610809359, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Button' , 'psbs' , ), 1610809359, (1610809359, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Callback' , 'pbstr' , ), 1610809361, (1610809361, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Callback' , 'pbstr' , ), 1610809361, (1610809361, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Private' , 'plPrivate' , ), 1610809363, (1610809363, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Private' , 'plPrivate' , ), 1610809363, (1610809363, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'SetAvoidRectangle' , 'Left' , 'Top' , 'Right' , 'Bottom' , 
 			), 1610809365, (1610809365, (), [ (3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1610809366, (1610809366, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Show' , u'pibtn' , ), 1610809367, (1610809367, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Close' , ), 1610809368, (1610809368, (), [ ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1610809366, (1610809366, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Show' , 'pibtn' , ), 1610809367, (1610809367, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Close' , ), 1610809368, (1610809368, (), [ ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
 ]
 
 BalloonCheckbox_vtables_dispatch_ = 1
 BalloonCheckbox_vtables_ = [
-	(( u'Item' , u'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809346, (1610809346, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Checked' , u'pvarfChecked' , ), 1610809347, (1610809347, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Checked' , u'pvarfChecked' , ), 1610809347, (1610809347, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610809349, (1610809349, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610809349, (1610809349, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809346, (1610809346, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Checked' , 'pvarfChecked' , ), 1610809347, (1610809347, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Checked' , 'pvarfChecked' , ), 1610809347, (1610809347, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610809349, (1610809349, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610809349, (1610809349, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 BalloonCheckboxes_vtables_dispatch_ = 1
 BalloonCheckboxes_vtables_ = [
-	(( u'Name' , u'pbstrName' , ), 1610809344, (1610809344, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809345, (1610809345, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Name' , 'pbstrName' , ), 1610809344, (1610809344, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809345, (1610809345, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pccbx' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pccbx' , ), 1610809347, (1610809347, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'pccbx' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'pccbx' , ), 1610809347, (1610809347, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 1024 , )),
 ]
 
 BalloonLabel_vtables_dispatch_ = 1
 BalloonLabel_vtables_ = [
-	(( u'Item' , u'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809346, (1610809346, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610809347, (1610809347, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809346, (1610809346, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610809347, (1610809347, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 BalloonLabels_vtables_dispatch_ = 1
 BalloonLabels_vtables_ = [
-	(( u'Name' , u'pbstrName' , ), 1610809344, (1610809344, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809345, (1610809345, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Name' , 'pbstrName' , ), 1610809344, (1610809344, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809345, (1610809345, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcwz' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcwz' , ), 1610809347, (1610809347, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'pcwz' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'pcwz' , ), 1610809347, (1610809347, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 1024 , )),
 ]
 
 COMAddIn_vtables_dispatch_ = 1
 COMAddIn_vtables_ = [
-	(( u'Description' , u'RetValue' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Description' , u'RetValue' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ProgId' , u'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Guid' , u'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Connect' , u'RetValue' , ), 6, (6, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Connect' , u'RetValue' , ), 6, (6, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Object' , u'RetValue' , ), 7, (7, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Object' , u'RetValue' , ), 7, (7, (), [ (9, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'retval' , ), 8, (8, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'RetValue' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'RetValue' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ProgId' , 'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Guid' , 'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Connect' , 'RetValue' , ), 6, (6, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Connect' , 'RetValue' , ), 6, (6, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Object' , 'RetValue' , ), 7, (7, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Object' , 'RetValue' , ), 7, (7, (), [ (9, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'retval' , ), 8, (8, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
 ]
 
 COMAddIns_vtables_dispatch_ = 1
 COMAddIns_vtables_ = [
-	(( u'Item' , u'Index' , u'RetValue' , ), 0, (0, (), [ (16396, 1, None, None) , 
+	(( 'Item' , 'Index' , 'RetValue' , ), 0, (0, (), [ (16396, 1, None, None) , 
 			(16393, 10, None, "IID('{000C033A-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'RetValue' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'RetValue' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1025 , )),
-	(( u'Update' , ), 2, (2, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SetAppModal' , u'varfModal' , ), 4, (4, (), [ (11, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 1088 , )),
+	(( 'Count' , 'RetValue' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'RetValue' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1025 , )),
+	(( 'Update' , ), 2, (2, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SetAppModal' , 'varfModal' , ), 4, (4, (), [ (11, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 1088 , )),
 ]
 
 CalloutFormat_vtables_dispatch_ = 1
 CalloutFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AutomaticLength' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'CustomDrop' , u'Drop' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'CustomLength' , u'Length' , ), 12, (12, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'PresetDrop' , u'DropType' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Accent' , u'Accent' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Accent' , u'Accent' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Angle' , u'Angle' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Angle' , u'Angle' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AutoAttach' , u'AutoAttach' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AutoAttach' , u'AutoAttach' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLength' , u'AutoLength' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Border' , u'Border' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Border' , u'Border' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Drop' , u'Drop' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'DropType' , u'DropType' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Gap' , u'Gap' , ), 107, (107, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Gap' , u'Gap' , ), 107, (107, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Length' , u'Length' , ), 108, (108, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AutomaticLength' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'CustomDrop' , 'Drop' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'CustomLength' , 'Length' , ), 12, (12, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'PresetDrop' , 'DropType' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Accent' , 'Accent' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Accent' , 'Accent' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Angle' , 'Angle' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Angle' , 'Angle' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'AutoAttach' , 'AutoAttach' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'AutoAttach' , 'AutoAttach' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLength' , 'AutoLength' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Border' , 'Border' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Border' , 'Border' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Drop' , 'Drop' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'DropType' , 'DropType' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Gap' , 'Gap' , ), 107, (107, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Gap' , 'Gap' , ), 107, (107, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Length' , 'Length' , ), 108, (108, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
 ]
 
 CanvasShapes_vtables_dispatch_ = 1
 CanvasShapes_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'AddCallout' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'AddCallout' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AddConnector' , u'Type' , u'BeginX' , u'BeginY' , u'EndX' , 
-			u'EndY' , u'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddConnector' , 'Type' , 'BeginX' , 'BeginY' , 'EndX' , 
+			'EndY' , 'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AddCurve' , u'SafeArrayOfPoints' , u'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
+	(( 'AddCurve' , 'SafeArrayOfPoints' , 'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AddLabel' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLabel' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AddLine' , u'BeginX' , u'BeginY' , u'EndX' , u'EndY' , 
-			u'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLine' , 'BeginX' , 'BeginY' , 'EndX' , 'EndY' , 
+			'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AddPicture' , u'FileName' , u'LinkToFile' , u'SaveWithDocument' , u'Left' , 
-			u'Top' , u'Width' , u'Height' , u'Picture' , ), 15, (15, (), [ 
+	(( 'AddPicture' , 'FileName' , 'LinkToFile' , 'SaveWithDocument' , 'Left' , 
+			'Top' , 'Width' , 'Height' , 'Picture' , ), 15, (15, (), [ 
 			(8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AddPolyline' , u'SafeArrayOfPoints' , u'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
+	(( 'AddPolyline' , 'SafeArrayOfPoints' , 'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AddShape' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddShape' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextEffect' , u'PresetTextEffect' , u'Text' , u'FontName' , u'FontSize' , 
-			u'FontBold' , u'FontItalic' , u'Left' , u'Top' , u'TextEffect' , 
+	(( 'AddTextEffect' , 'PresetTextEffect' , 'Text' , 'FontName' , 'FontSize' , 
+			'FontBold' , 'FontItalic' , 'Left' , 'Top' , 'TextEffect' , 
 			), 18, (18, (), [ (3, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , (4, 1, None, None) , 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextbox' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddTextbox' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'BuildFreeform' , u'EditingType' , u'X1' , u'Y1' , u'FreeformBuilder' , 
+	(( 'BuildFreeform' , 'EditingType' , 'X1' , 'Y1' , 'FreeformBuilder' , 
 			), 20, (20, (), [ (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C0315-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 21, (21, (), [ (12, 1, None, None) , 
+	(( 'Range' , 'Index' , 'Range' , ), 21, (21, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , u'Background' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , 'Background' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
 ]
 
 ColorFormat_vtables_dispatch_ = 1
 ColorFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'RGB' , u'RGB' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'RGB' , u'RGB' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SchemeColor' , u'SchemeColor' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SchemeColor' , u'SchemeColor' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'TintAndShade' , u'pValue' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TintAndShade' , u'pValue' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'RGB' , 'RGB' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'RGB' , 'RGB' , ), 0, (0, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SchemeColor' , 'SchemeColor' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SchemeColor' , 'SchemeColor' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'TintAndShade' , 'pValue' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TintAndShade' , 'pValue' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 CommandBar_vtables_dispatch_ = 1
 CommandBar_vtables_ = [
-	(( u'BuiltIn' , u'pvarfBuiltIn' , ), 1610874880, (1610874880, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Context' , u'pbstrContext' , ), 1610874881, (1610874881, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Context' , u'pbstrContext' , ), 1610874881, (1610874881, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Controls' , u'ppcbcs' , ), 1610874883, (1610874883, (), [ (16393, 10, None, "IID('{000C0306-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 1610874884, (1610874884, (), [ ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Enabled' , u'pvarfEnabled' , ), 1610874885, (1610874885, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Enabled' , u'pvarfEnabled' , ), 1610874885, (1610874885, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'FindControl' , u'Type' , u'Id' , u'Tag' , u'Visible' , 
-			u'Recursive' , u'ppcbc' , ), 1610874887, (1610874887, (), [ (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'BuiltIn' , 'pvarfBuiltIn' , ), 1610874880, (1610874880, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Context' , 'pbstrContext' , ), 1610874881, (1610874881, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Context' , 'pbstrContext' , ), 1610874881, (1610874881, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Controls' , 'ppcbcs' , ), 1610874883, (1610874883, (), [ (16393, 10, None, "IID('{000C0306-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 1610874884, (1610874884, (), [ ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Enabled' , 'pvarfEnabled' , ), 1610874885, (1610874885, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Enabled' , 'pvarfEnabled' , ), 1610874885, (1610874885, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'FindControl' , 'Type' , 'Id' , 'Tag' , 'Visible' , 
+			'Recursive' , 'ppcbc' , ), 1610874887, (1610874887, (), [ (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 5 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'pdy' , ), 1610874888, (1610874888, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'pdy' , ), 1610874888, (1610874888, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Index' , u'pi' , ), 1610874890, (1610874890, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'InstanceId' , u'pid' , ), 1610874891, (1610874891, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 64 , )),
-	(( u'Left' , u'pxpLeft' , ), 1610874892, (1610874892, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'pxpLeft' , ), 1610874892, (1610874892, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1610874894, (1610874894, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1610874894, (1610874894, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'NameLocal' , u'pbstrNameLocal' , ), 1610874896, (1610874896, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'NameLocal' , u'pbstrNameLocal' , ), 1610874896, (1610874896, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610874898, (1610874898, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'Position' , u'ppos' , ), 1610874899, (1610874899, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'Position' , u'ppos' , ), 1610874899, (1610874899, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'RowIndex' , u'piRow' , ), 1610874901, (1610874901, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'RowIndex' , u'piRow' , ), 1610874901, (1610874901, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'Protection' , u'pprot' , ), 1610874903, (1610874903, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'Protection' , u'pprot' , ), 1610874903, (1610874903, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'Reset' , ), 1610874905, (1610874905, (), [ ], 1 , 1 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'ShowPopup' , u'x' , u'y' , ), 1610874906, (1610874906, (), [ (12, 17, None, None) , 
+	(( 'Height' , 'pdy' , ), 1610874888, (1610874888, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'pdy' , ), 1610874888, (1610874888, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'pi' , ), 1610874890, (1610874890, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'InstanceId' , 'pid' , ), 1610874891, (1610874891, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 64 , )),
+	(( 'Left' , 'pxpLeft' , ), 1610874892, (1610874892, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'pxpLeft' , ), 1610874892, (1610874892, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1610874894, (1610874894, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1610874894, (1610874894, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'NameLocal' , 'pbstrNameLocal' , ), 1610874896, (1610874896, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'NameLocal' , 'pbstrNameLocal' , ), 1610874896, (1610874896, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610874898, (1610874898, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'Position' , 'ppos' , ), 1610874899, (1610874899, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'Position' , 'ppos' , ), 1610874899, (1610874899, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'RowIndex' , 'piRow' , ), 1610874901, (1610874901, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'RowIndex' , 'piRow' , ), 1610874901, (1610874901, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'Protection' , 'pprot' , ), 1610874903, (1610874903, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'Protection' , 'pprot' , ), 1610874903, (1610874903, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'Reset' , ), 1610874905, (1610874905, (), [ ], 1 , 1 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'ShowPopup' , 'x' , 'y' , ), 1610874906, (1610874906, (), [ (12, 17, None, None) , 
 			(12, 17, None, None) , ], 1 , 1 , 4 , 2 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'pypTop' , ), 1610874907, (1610874907, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'pypTop' , ), 1610874907, (1610874907, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'ptype' , ), 1610874909, (1610874909, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'pvarfVisible' , ), 1610874910, (1610874910, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'pvarfVisible' , ), 1610874910, (1610874910, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'pdx' , ), 1610874912, (1610874912, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'pdx' , ), 1610874912, (1610874912, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'AdaptiveMenu' , u'pvarfAdaptiveMenu' , ), 1610874914, (1610874914, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'AdaptiveMenu' , u'pvarfAdaptiveMenu' , ), 1610874914, (1610874914, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'Id' , u'pid' , ), 1610874916, (1610874916, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 64 , )),
+	(( 'Top' , 'pypTop' , ), 1610874907, (1610874907, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'pypTop' , ), 1610874907, (1610874907, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'ptype' , ), 1610874909, (1610874909, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'pvarfVisible' , ), 1610874910, (1610874910, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'pvarfVisible' , ), 1610874910, (1610874910, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'pdx' , ), 1610874912, (1610874912, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'pdx' , ), 1610874912, (1610874912, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'AdaptiveMenu' , 'pvarfAdaptiveMenu' , ), 1610874914, (1610874914, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'AdaptiveMenu' , 'pvarfAdaptiveMenu' , ), 1610874914, (1610874914, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'Id' , 'pid' , ), 1610874916, (1610874916, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 64 , )),
 ]
 
 CommandBarControl_vtables_dispatch_ = 1
 CommandBarControl_vtables_ = [
-	(( u'BeginGroup' , u'pvarfBeginGroup' , ), 1610874880, (1610874880, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'BeginGroup' , u'pvarfBeginGroup' , ), 1610874880, (1610874880, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'BuiltIn' , u'pvarfBuiltIn' , ), 1610874882, (1610874882, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Caption' , u'pbstrCaption' , ), 1610874883, (1610874883, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Caption' , u'pbstrCaption' , ), 1610874883, (1610874883, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Control' , u'ppidisp' , ), 1610874885, (1610874885, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 64 , )),
-	(( u'Copy' , u'Bar' , u'Before' , u'ppcbc' , ), 1610874886, (1610874886, (), [ 
+	(( 'BeginGroup' , 'pvarfBeginGroup' , ), 1610874880, (1610874880, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'BeginGroup' , 'pvarfBeginGroup' , ), 1610874880, (1610874880, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'BuiltIn' , 'pvarfBuiltIn' , ), 1610874882, (1610874882, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Caption' , 'pbstrCaption' , ), 1610874883, (1610874883, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Caption' , 'pbstrCaption' , ), 1610874883, (1610874883, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Control' , 'ppidisp' , ), 1610874885, (1610874885, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 64 , )),
+	(( 'Copy' , 'Bar' , 'Before' , 'ppcbc' , ), 1610874886, (1610874886, (), [ 
 			(12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 2 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , u'Temporary' , ), 1610874887, (1610874887, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'DescriptionText' , u'pbstrText' , ), 1610874888, (1610874888, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'DescriptionText' , u'pbstrText' , ), 1610874888, (1610874888, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Enabled' , u'pvarfEnabled' , ), 1610874890, (1610874890, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'Enabled' , u'pvarfEnabled' , ), 1610874890, (1610874890, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'Execute' , ), 1610874892, (1610874892, (), [ ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'pdy' , ), 1610874893, (1610874893, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'pdy' , ), 1610874893, (1610874893, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'HelpContextId' , u'pid' , ), 1610874895, (1610874895, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'HelpContextId' , u'pid' , ), 1610874895, (1610874895, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'HelpFile' , u'pbstrFilename' , ), 1610874897, (1610874897, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'HelpFile' , u'pbstrFilename' , ), 1610874897, (1610874897, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'Id' , u'pid' , ), 1610874899, (1610874899, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'Index' , u'pi' , ), 1610874900, (1610874900, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'InstanceId' , u'pid' , ), 1610874901, (1610874901, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 64 , )),
-	(( u'Move' , u'Bar' , u'Before' , u'ppcbc' , ), 1610874902, (1610874902, (), [ 
+	(( 'Delete' , 'Temporary' , ), 1610874887, (1610874887, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'DescriptionText' , 'pbstrText' , ), 1610874888, (1610874888, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'DescriptionText' , 'pbstrText' , ), 1610874888, (1610874888, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Enabled' , 'pvarfEnabled' , ), 1610874890, (1610874890, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'Enabled' , 'pvarfEnabled' , ), 1610874890, (1610874890, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'Execute' , ), 1610874892, (1610874892, (), [ ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'pdy' , ), 1610874893, (1610874893, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'pdy' , ), 1610874893, (1610874893, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'HelpContextId' , 'pid' , ), 1610874895, (1610874895, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'HelpContextId' , 'pid' , ), 1610874895, (1610874895, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'HelpFile' , 'pbstrFilename' , ), 1610874897, (1610874897, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'HelpFile' , 'pbstrFilename' , ), 1610874897, (1610874897, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'Id' , 'pid' , ), 1610874899, (1610874899, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'pi' , ), 1610874900, (1610874900, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'InstanceId' , 'pid' , ), 1610874901, (1610874901, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 64 , )),
+	(( 'Move' , 'Bar' , 'Before' , 'ppcbc' , ), 1610874902, (1610874902, (), [ 
 			(12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 2 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'px' , ), 1610874903, (1610874903, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'OLEUsage' , u'pcou' , ), 1610874904, (1610874904, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'OLEUsage' , u'pcou' , ), 1610874904, (1610874904, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'OnAction' , u'pbstrOnAction' , ), 1610874906, (1610874906, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'OnAction' , u'pbstrOnAction' , ), 1610874906, (1610874906, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppcb' , ), 1610874908, (1610874908, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'Parameter' , u'pbstrParam' , ), 1610874909, (1610874909, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'Parameter' , u'pbstrParam' , ), 1610874909, (1610874909, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'Priority' , u'pnPri' , ), 1610874911, (1610874911, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'Priority' , u'pnPri' , ), 1610874911, (1610874911, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'Reset' , ), 1610874913, (1610874913, (), [ ], 1 , 1 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'SetFocus' , ), 1610874914, (1610874914, (), [ ], 1 , 1 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'Tag' , u'pbstrTag' , ), 1610874915, (1610874915, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'Tag' , u'pbstrTag' , ), 1610874915, (1610874915, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'TooltipText' , u'pbstrTooltip' , ), 1610874917, (1610874917, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'TooltipText' , u'pbstrTooltip' , ), 1610874917, (1610874917, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'py' , ), 1610874919, (1610874919, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'ptype' , ), 1610874920, (1610874920, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'pvarfVisible' , ), 1610874921, (1610874921, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'pvarfVisible' , ), 1610874921, (1610874921, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'pdx' , ), 1610874923, (1610874923, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'pdx' , ), 1610874923, (1610874923, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
-	(( u'IsPriorityDropped' , u'pvarfDropped' , ), 1610874925, (1610874925, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
-	(( u'Reserved1' , ), 1610874926, (1610874926, (), [ ], 1 , 1 , 4 , 0 , 304 , (3, 0, None, None) , 64 , )),
-	(( u'Reserved2' , ), 1610874927, (1610874927, (), [ ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 64 , )),
-	(( u'Reserved3' , ), 1610874928, (1610874928, (), [ ], 1 , 1 , 4 , 0 , 312 , (3, 0, None, None) , 64 , )),
-	(( u'Reserved4' , ), 1610874929, (1610874929, (), [ ], 1 , 1 , 4 , 0 , 316 , (3, 0, None, None) , 64 , )),
-	(( u'Reserved5' , ), 1610874930, (1610874930, (), [ ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 64 , )),
-	(( u'Reserved6' , ), 1610874931, (1610874931, (), [ ], 1 , 1 , 4 , 0 , 324 , (3, 0, None, None) , 64 , )),
-	(( u'Reserved7' , ), 1610874932, (1610874932, (), [ ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 64 , )),
+	(( 'Left' , 'px' , ), 1610874903, (1610874903, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'OLEUsage' , 'pcou' , ), 1610874904, (1610874904, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'OLEUsage' , 'pcou' , ), 1610874904, (1610874904, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'OnAction' , 'pbstrOnAction' , ), 1610874906, (1610874906, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'OnAction' , 'pbstrOnAction' , ), 1610874906, (1610874906, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppcb' , ), 1610874908, (1610874908, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'Parameter' , 'pbstrParam' , ), 1610874909, (1610874909, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'Parameter' , 'pbstrParam' , ), 1610874909, (1610874909, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'Priority' , 'pnPri' , ), 1610874911, (1610874911, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'Priority' , 'pnPri' , ), 1610874911, (1610874911, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'Reset' , ), 1610874913, (1610874913, (), [ ], 1 , 1 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'SetFocus' , ), 1610874914, (1610874914, (), [ ], 1 , 1 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'Tag' , 'pbstrTag' , ), 1610874915, (1610874915, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'Tag' , 'pbstrTag' , ), 1610874915, (1610874915, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'TooltipText' , 'pbstrTooltip' , ), 1610874917, (1610874917, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'TooltipText' , 'pbstrTooltip' , ), 1610874917, (1610874917, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'py' , ), 1610874919, (1610874919, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'ptype' , ), 1610874920, (1610874920, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'pvarfVisible' , ), 1610874921, (1610874921, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'pvarfVisible' , ), 1610874921, (1610874921, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'pdx' , ), 1610874923, (1610874923, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'pdx' , ), 1610874923, (1610874923, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
+	(( 'IsPriorityDropped' , 'pvarfDropped' , ), 1610874925, (1610874925, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
+	(( 'Reserved1' , ), 1610874926, (1610874926, (), [ ], 1 , 1 , 4 , 0 , 304 , (3, 0, None, None) , 64 , )),
+	(( 'Reserved2' , ), 1610874927, (1610874927, (), [ ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 64 , )),
+	(( 'Reserved3' , ), 1610874928, (1610874928, (), [ ], 1 , 1 , 4 , 0 , 312 , (3, 0, None, None) , 64 , )),
+	(( 'Reserved4' , ), 1610874929, (1610874929, (), [ ], 1 , 1 , 4 , 0 , 316 , (3, 0, None, None) , 64 , )),
+	(( 'Reserved5' , ), 1610874930, (1610874930, (), [ ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 64 , )),
+	(( 'Reserved6' , ), 1610874931, (1610874931, (), [ ], 1 , 1 , 4 , 0 , 324 , (3, 0, None, None) , 64 , )),
+	(( 'Reserved7' , ), 1610874932, (1610874932, (), [ ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 64 , )),
 ]
 
 CommandBarControls_vtables_dispatch_ = 1
 CommandBarControls_vtables_ = [
-	(( u'Add' , u'Type' , u'Id' , u'Parameter' , u'Before' , 
-			u'Temporary' , u'ppcbc' , ), 1610809344, (1610809344, (), [ (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'Add' , 'Type' , 'Id' , 'Parameter' , 'Before' , 
+			'Temporary' , 'ppcbc' , ), 1610809344, (1610809344, (), [ (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 5 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcToolbarControls' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'ppcbc' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Count' , 'pcToolbarControls' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'ppcbc' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'Parent' , u'ppcb' , ), 1610809348, (1610809348, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'Parent' , 'ppcb' , ), 1610809348, (1610809348, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 CommandBarPopup_vtables_dispatch_ = 1
 CommandBarPopup_vtables_ = [
-	(( u'CommandBar' , u'ppcb' , ), 1610940416, (1610940416, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'Controls' , u'ppcbcs' , ), 1610940417, (1610940417, (), [ (16393, 10, None, "IID('{000C0306-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'OLEMenuGroup' , u'pomg' , ), 1610940418, (1610940418, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'OLEMenuGroup' , u'pomg' , ), 1610940418, (1610940418, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'CommandBar' , 'ppcb' , ), 1610940416, (1610940416, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
+	(( 'Controls' , 'ppcbcs' , ), 1610940417, (1610940417, (), [ (16393, 10, None, "IID('{000C0306-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'OLEMenuGroup' , 'pomg' , ), 1610940418, (1610940418, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'OLEMenuGroup' , 'pomg' , ), 1610940418, (1610940418, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
 ]
 
 ConnectorFormat_vtables_dispatch_ = 1
 ConnectorFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnect' , u'ConnectedShape' , u'ConnectionSite' , ), 10, (10, (), [ (9, 1, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnect' , 'ConnectedShape' , 'ConnectionSite' , ), 10, (10, (), [ (9, 1, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'BeginDisconnect' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnect' , u'ConnectedShape' , u'ConnectionSite' , ), 12, (12, (), [ (9, 1, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , 
+	(( 'BeginDisconnect' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnect' , 'ConnectedShape' , 'ConnectionSite' , ), 12, (12, (), [ (9, 1, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'EndDisconnect' , ), 13, (13, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnected' , u'BeginConnected' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnectedShape' , u'BeginConnectedShape' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'BeginConnectionSite' , u'BeginConnectionSite' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnected' , u'EndConnected' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnectedShape' , u'EndConnectedShape' , ), 104, (104, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'EndConnectionSite' , u'EndConnectionSite' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'EndDisconnect' , ), 13, (13, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnected' , 'BeginConnected' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnectedShape' , 'BeginConnectedShape' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'BeginConnectionSite' , 'BeginConnectionSite' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnected' , 'EndConnected' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnectedShape' , 'EndConnectedShape' , ), 104, (104, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'EndConnectionSite' , 'EndConnectionSite' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
 ]
 
 DiagramNode_vtables_dispatch_ = 1
 DiagramNode_vtables_ = [
-	(( u'AddNode' , u'Pos' , u'NodeType' , u'NewNode' , ), 10, (10, (), [ 
+	(( 'AddNode' , 'Pos' , 'NodeType' , 'NewNode' , ), 10, (10, (), [ 
 			(3, 49, '2', None) , (3, 49, '1', None) , (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'MoveNode' , u'TargetNode' , u'Pos' , ), 12, (12, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , 
+	(( 'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'MoveNode' , 'TargetNode' , 'Pos' , ), 12, (12, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ReplaceNode' , u'TargetNode' , ), 13, (13, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SwapNode' , u'TargetNode' , u'SwapChildren' , ), 14, (14, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , 
+	(( 'ReplaceNode' , 'TargetNode' , ), 13, (13, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SwapNode' , 'TargetNode' , 'SwapChildren' , ), 14, (14, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , 
 			(11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'CloneNode' , u'CopyChildren' , u'TargetNode' , u'Pos' , u'Node' , 
+	(( 'CloneNode' , 'CopyChildren' , 'TargetNode' , 'Pos' , 'Node' , 
 			), 15, (15, (), [ (11, 1, None, None) , (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , (3, 49, '2', None) , (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'TransferChildren' , u'ReceivingNode' , ), 16, (16, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'NextNode' , u'NextNode' , ), 17, (17, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'PrevNode' , u'PrevNode' , ), 18, (18, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Children' , u'Children' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C036F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Shape' , u'Shape' , ), 102, (102, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Root' , u'Root' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Diagram' , u'Diagram' , ), 104, (104, (), [ (16393, 10, None, "IID('{000C036D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Layout' , u'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'TextShape' , u'Shape' , ), 106, (106, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'TransferChildren' , 'ReceivingNode' , ), 16, (16, (), [ (9, 1, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'NextNode' , 'NextNode' , ), 17, (17, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'PrevNode' , 'PrevNode' , ), 18, (18, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Children' , 'Children' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C036F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'Shape' , ), 102, (102, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Root' , 'Root' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Diagram' , 'Diagram' , ), 104, (104, (), [ (16393, 10, None, "IID('{000C036D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Layout' , 'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'TextShape' , 'Shape' , ), 106, (106, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
 ]
 
 DiagramNodeChildren_vtables_dispatch_ = 1
 DiagramNodeChildren_vtables_ = [
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'Node' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'Node' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'AddNode' , u'Index' , u'NodeType' , u'NewNode' , ), 10, (10, (), [ 
+	(( 'AddNode' , 'Index' , 'NodeType' , 'NewNode' , ), 10, (10, (), [ 
 			(12, 49, '-1', None) , (3, 49, '1', None) , (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FirstChild' , u'First' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'LastChild' , u'Last' , ), 104, (104, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SelectAll' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FirstChild' , 'First' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'LastChild' , 'Last' , ), 104, (104, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 DiagramNodes_vtables_dispatch_ = 1
 DiagramNodes_vtables_ = [
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'ppdn' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'ppdn' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SelectAll' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'iDiagramNodes' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 DocumentLibraryVersion_vtables_dispatch_ = 1
 DocumentLibraryVersion_vtables_ = [
-	(( u'Modified' , u'pvarDate' , ), 0, (0, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Index' , u'lIndex' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedBy' , u'userName' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Comments' , u'Comments' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Open' , u'ppdispOpened' , ), 6, (6, (), [ (16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Restore' , u'ppdispOpened' , ), 7, (7, (), [ (16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Modified' , 'pvarDate' , ), 0, (0, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'lIndex' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedBy' , 'userName' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Comments' , 'Comments' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Open' , 'ppdispOpened' , ), 6, (6, (), [ (16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Restore' , 'ppdispOpened' , ), 7, (7, (), [ (16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 DocumentLibraryVersions_vtables_dispatch_ = 1
 DocumentLibraryVersions_vtables_ = [
-	(( u'Item' , u'lIndex' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'lIndex' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0387-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'lCount' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'IsVersioningEnabled' , u'pvarfVersioningOn' , ), 3, (3, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'lCount' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'IsVersioningEnabled' , 'pvarfVersioningOn' , ), 3, (3, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
 ]
 
 FileDialog_vtables_dispatch_ = 1
 FileDialog_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Filters' , u'Filters' , ), 1610809345, (1610809345, (), [ (16393, 10, None, "IID('{000C0365-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'FilterIndex' , u'FilterIndex' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'FilterIndex' , u'FilterIndex' , ), 1610809346, (1610809346, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Title' , u'Title' , ), 1610809348, (1610809348, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Title' , u'Title' , ), 1610809348, (1610809348, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'ButtonName' , u'ButtonName' , ), 1610809350, (1610809350, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'ButtonName' , u'ButtonName' , ), 1610809350, (1610809350, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AllowMultiSelect' , u'pvarfAllowMultiSelect' , ), 1610809352, (1610809352, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AllowMultiSelect' , u'pvarfAllowMultiSelect' , ), 1610809352, (1610809352, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'InitialView' , u'pinitialview' , ), 1610809354, (1610809354, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'InitialView' , u'pinitialview' , ), 1610809354, (1610809354, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'InitialFileName' , u'InitialFileName' , ), 1610809356, (1610809356, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'InitialFileName' , u'InitialFileName' , ), 1610809356, (1610809356, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'SelectedItems' , u'Files' , ), 1610809358, (1610809358, (), [ (16393, 10, None, "IID('{000C0363-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'DialogType' , u'pdialogtype' , ), 1610809359, (1610809359, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Name' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Show' , u'rval' , ), 1610809361, (1610809361, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Execute' , ), 1610809362, (1610809362, (), [ ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Filters' , 'Filters' , ), 1610809345, (1610809345, (), [ (16393, 10, None, "IID('{000C0365-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'FilterIndex' , 'FilterIndex' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'FilterIndex' , 'FilterIndex' , ), 1610809346, (1610809346, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'Title' , ), 1610809348, (1610809348, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'Title' , ), 1610809348, (1610809348, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'ButtonName' , 'ButtonName' , ), 1610809350, (1610809350, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'ButtonName' , 'ButtonName' , ), 1610809350, (1610809350, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'AllowMultiSelect' , 'pvarfAllowMultiSelect' , ), 1610809352, (1610809352, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'AllowMultiSelect' , 'pvarfAllowMultiSelect' , ), 1610809352, (1610809352, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'InitialView' , 'pinitialview' , ), 1610809354, (1610809354, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'InitialView' , 'pinitialview' , ), 1610809354, (1610809354, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'InitialFileName' , 'InitialFileName' , ), 1610809356, (1610809356, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'InitialFileName' , 'InitialFileName' , ), 1610809356, (1610809356, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'SelectedItems' , 'Files' , ), 1610809358, (1610809358, (), [ (16393, 10, None, "IID('{000C0363-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'DialogType' , 'pdialogtype' , ), 1610809359, (1610809359, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Name' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Show' , 'rval' , ), 1610809361, (1610809361, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Execute' , ), 1610809362, (1610809362, (), [ ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
 ]
 
 FileDialogFilter_vtables_dispatch_ = 1
 FileDialogFilter_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Extensions' , u'Extensions' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Description' , u'Description' , ), 1610809346, (1610809346, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Extensions' , 'Extensions' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'Description' , ), 1610809346, (1610809346, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 FileDialogFilters_vtables_dispatch_ = 1
 FileDialogFilters_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 1024 , )),
-	(( u'Count' , u'pcFilters' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'pcFilters' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0364-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , u'filter' , ), 1610809348, (1610809348, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Clear' , ), 1610809349, (1610809349, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Description' , u'Extensions' , u'Position' , u'Add' , 
+	(( 'Delete' , 'filter' , ), 1610809348, (1610809348, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Clear' , ), 1610809349, (1610809349, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Description' , 'Extensions' , 'Position' , 'Add' , 
 			), 1610809350, (1610809350, (), [ (8, 1, None, None) , (8, 1, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0364-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 1 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 FileDialogSelectedItems_vtables_dispatch_ = 1
 FileDialogSelectedItems_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 1024 , )),
-	(( u'Count' , u'pcFiles' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'pcFiles' , ), 1610809346, (1610809346, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 FileSearch_vtables_dispatch_ = 1
 FileSearch_vtables_ = [
-	(( u'SearchSubFolders' , u'SearchSubFoldersRetVal' , ), 1, (1, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'SearchSubFolders' , u'SearchSubFoldersRetVal' , ), 1, (1, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'MatchTextExactly' , u'MatchTextRetVal' , ), 2, (2, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'MatchTextExactly' , u'MatchTextRetVal' , ), 2, (2, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'MatchAllWordForms' , u'MatchAllWordFormsRetVal' , ), 3, (3, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'MatchAllWordForms' , u'MatchAllWordFormsRetVal' , ), 3, (3, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FileName' , u'FileNameRetVal' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FileName' , u'FileNameRetVal' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'FileType' , u'FileTypeRetVal' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'FileType' , u'FileTypeRetVal' , ), 5, (5, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'LastModified' , u'LastModifiedRetVal' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'LastModified' , u'LastModifiedRetVal' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'TextOrProperty' , u'TextOrProperty' , ), 7, (7, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'TextOrProperty' , u'TextOrProperty' , ), 7, (7, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'LookIn' , u'LookInRetVal' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'LookIn' , u'LookInRetVal' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Execute' , u'SortBy' , u'SortOrder' , u'AlwaysAccurate' , u'pRet' , 
+	(( 'SearchSubFolders' , 'SearchSubFoldersRetVal' , ), 1, (1, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'SearchSubFolders' , 'SearchSubFoldersRetVal' , ), 1, (1, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'MatchTextExactly' , 'MatchTextRetVal' , ), 2, (2, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'MatchTextExactly' , 'MatchTextRetVal' , ), 2, (2, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'MatchAllWordForms' , 'MatchAllWordFormsRetVal' , ), 3, (3, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'MatchAllWordForms' , 'MatchAllWordFormsRetVal' , ), 3, (3, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FileName' , 'FileNameRetVal' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'FileName' , 'FileNameRetVal' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'FileType' , 'FileTypeRetVal' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'FileType' , 'FileTypeRetVal' , ), 5, (5, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'LastModified' , 'LastModifiedRetVal' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'LastModified' , 'LastModifiedRetVal' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'TextOrProperty' , 'TextOrProperty' , ), 7, (7, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'TextOrProperty' , 'TextOrProperty' , ), 7, (7, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'LookIn' , 'LookInRetVal' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'LookIn' , 'LookInRetVal' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Execute' , 'SortBy' , 'SortOrder' , 'AlwaysAccurate' , 'pRet' , 
 			), 9, (9, (), [ (3, 49, '1', None) , (3, 49, '1', None) , (11, 49, 'True', None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'NewSearch' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'FoundFiles' , u'FoundFilesRet' , ), 11, (11, (), [ (16393, 10, None, "IID('{000C0331-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PropertyTests' , u'PropTestsRet' , ), 12, (12, (), [ (16393, 10, None, "IID('{000C0334-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'SearchScopes' , u'SearchScopesRet' , ), 13, (13, (), [ (16393, 10, None, "IID('{000C0366-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'SearchFolders' , u'SearchFoldersRet' , ), 14, (14, (), [ (16393, 10, None, "IID('{000C036A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'FileTypes' , u'FileTypesRet' , ), 16, (16, (), [ (16393, 10, None, "IID('{000C036C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'RefreshScopes' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'NewSearch' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'FoundFiles' , 'FoundFilesRet' , ), 11, (11, (), [ (16393, 10, None, "IID('{000C0331-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PropertyTests' , 'PropTestsRet' , ), 12, (12, (), [ (16393, 10, None, "IID('{000C0334-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'SearchScopes' , 'SearchScopesRet' , ), 13, (13, (), [ (16393, 10, None, "IID('{000C0366-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'SearchFolders' , 'SearchFoldersRet' , ), 14, (14, (), [ (16393, 10, None, "IID('{000C036A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'FileTypes' , 'FileTypesRet' , ), 16, (16, (), [ (16393, 10, None, "IID('{000C036C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'RefreshScopes' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
 ]
 
 FileTypes_vtables_dispatch_ = 1
 FileTypes_vtables_ = [
-	(( u'Item' , u'Index' , u'MsoFileTypeRet' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'MsoFileTypeRet' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iCountRetVal' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'FileType' , ), 3, (3, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Remove' , u'Index' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'iCountRetVal' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'FileType' , ), 3, (3, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Remove' , 'Index' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
 ]
 
 FillFormat_vtables_dispatch_ = 1
 FillFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'OneColorGradient' , u'Style' , u'Variant' , u'Degree' , ), 11, (11, (), [ 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'OneColorGradient' , 'Style' , 'Variant' , 'Degree' , ), 11, (11, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Patterned' , u'Pattern' , ), 12, (12, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'PresetGradient' , u'Style' , u'Variant' , u'PresetGradientType' , ), 13, (13, (), [ 
+	(( 'Patterned' , 'Pattern' , ), 12, (12, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'PresetGradient' , 'Style' , 'Variant' , 'PresetGradientType' , ), 13, (13, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTextured' , u'PresetTexture' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Solid' , ), 15, (15, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'TwoColorGradient' , u'Style' , u'Variant' , ), 16, (16, (), [ (3, 1, None, None) , 
+	(( 'PresetTextured' , 'PresetTexture' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Solid' , ), 15, (15, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'TwoColorGradient' , 'Style' , 'Variant' , ), 16, (16, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'UserPicture' , u'PictureFile' , ), 17, (17, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'UserTextured' , u'TextureFile' , ), 18, (18, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 101, (101, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'GradientColorType' , u'GradientColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'GradientDegree' , u'GradientDegree' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'GradientStyle' , u'GradientStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'GradientVariant' , u'GradientVariant' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Pattern' , u'Pattern' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PresetGradientType' , u'PresetGradientType' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTexture' , u'PresetTexture' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'TextureName' , u'TextureName' , ), 109, (109, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'TextureType' , u'TextureType' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'UserPicture' , 'PictureFile' , ), 17, (17, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'UserTextured' , 'TextureFile' , ), 18, (18, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 101, (101, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'GradientColorType' , 'GradientColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'GradientDegree' , 'GradientDegree' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'GradientStyle' , 'GradientStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'GradientVariant' , 'GradientVariant' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Pattern' , 'Pattern' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PresetGradientType' , 'PresetGradientType' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'PresetTexture' , 'PresetTexture' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'TextureName' , 'TextureName' , ), 109, (109, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'TextureType' , 'TextureType' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
 ]
 
 FoundFiles_vtables_dispatch_ = 1
 FoundFiles_vtables_ = [
-	(( u'Item' , u'Index' , u'lcid' , u'pbstrFile' , ), 0, (0, (), [ 
+	(( 'Item' , 'Index' , 'lcid' , 'pbstrFile' , ), 0, (0, (), [ 
 			(3, 1, None, None) , (3, 5, None, None) , (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pc' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'pc' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
 ]
 
 FreeformBuilder_vtables_dispatch_ = 1
 FreeformBuilder_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'AddNodes' , u'SegmentType' , u'EditingType' , u'X1' , u'Y1' , 
-			u'X2' , u'Y2' , u'X3' , u'Y3' , ), 10, (10, (), [ 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'AddNodes' , 'SegmentType' , 'EditingType' , 'X1' , 'Y1' , 
+			'X2' , 'Y2' , 'X3' , 'Y3' , ), 10, (10, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (4, 49, '0.0', None) , 
 			(4, 49, '0.0', None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ConvertToShape' , u'Freeform' , ), 11, (11, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ConvertToShape' , 'Freeform' , ), 11, (11, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 GroupShapes_vtables_dispatch_ = 1
 GroupShapes_vtables_ = [
-	(( u'Parent' , u'ppidisp' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pnShapes' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Parent' , 'ppidisp' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'pnShapes' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 10, (10, (), [ (12, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'Range' , 'Index' , 'Range' , ), 10, (10, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 HTMLProject_vtables_dispatch_ = 1
 HTMLProject_vtables_ = [
-	(( u'State' , u'State' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'RefreshProject' , u'Refresh' , ), 1, (1, (), [ (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'RefreshDocument' , u'Refresh' , ), 2, (2, (), [ (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'HTMLProjectItems' , u'HTMLProjectItems' , ), 3, (3, (), [ (16393, 10, None, "IID('{000C0357-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Open' , u'OpenKind' , ), 5, (5, (), [ (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'State' , 'State' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'RefreshProject' , 'Refresh' , ), 1, (1, (), [ (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'RefreshDocument' , 'Refresh' , ), 2, (2, (), [ (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'HTMLProjectItems' , 'HTMLProjectItems' , ), 3, (3, (), [ (16393, 10, None, "IID('{000C0357-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Open' , 'OpenKind' , ), 5, (5, (), [ (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 HTMLProjectItem_vtables_dispatch_ = 1
 HTMLProjectItem_vtables_ = [
-	(( u'Name' , u'RetValue' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IsOpen' , u'RetValue' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'LoadFromFile' , u'FileName' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Open' , u'OpenKind' , ), 6, (6, (), [ (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SaveCopyAs' , u'FileName' , ), 7, (7, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 10, (10, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IsOpen' , 'RetValue' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'LoadFromFile' , 'FileName' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Open' , 'OpenKind' , ), 6, (6, (), [ (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SaveCopyAs' , 'FileName' , ), 7, (7, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 10, (10, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 HTMLProjectItems_vtables_dispatch_ = 1
 HTMLProjectItems_vtables_ = [
-	(( u'Item' , u'Index' , u'RetValue' , ), 0, (0, (), [ (16396, 1, None, None) , 
+	(( 'Item' , 'Index' , 'RetValue' , ), 0, (0, (), [ (16396, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0358-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'RetValue' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'RetValue' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1025 , )),
-	(( u'Parent' , u'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'RetValue' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'RetValue' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1025 , )),
+	(( 'Parent' , 'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 IAccessible_vtables_dispatch_ = 1
 IAccessible_vtables_ = [
-	(( u'accParent' , u'ppdispParent' , ), -5000, (-5000, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 1088 , )),
-	(( u'accChildCount' , u'pcountChildren' , ), -5001, (-5001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 1088 , )),
-	(( u'accChild' , u'varChild' , u'ppdispChild' , ), -5002, (-5002, (), [ (12, 1, None, None) , 
+	(( 'accParent' , 'ppdispParent' , ), -5000, (-5000, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 1088 , )),
+	(( 'accChildCount' , 'pcountChildren' , ), -5001, (-5001, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 1088 , )),
+	(( 'accChild' , 'varChild' , 'ppdispChild' , ), -5002, (-5002, (), [ (12, 1, None, None) , 
 			(16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1088 , )),
-	(( u'accName' , u'varChild' , u'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
+	(( 'accName' , 'varChild' , 'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 40 , (3, 0, None, None) , 1088 , )),
-	(( u'accName' , u'varChild' , u'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
+	(( 'accName' , 'varChild' , 'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 40 , (3, 0, None, None) , 1088 , )),
-	(( u'accValue' , u'varChild' , u'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
+	(( 'accValue' , 'varChild' , 'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 44 , (3, 0, None, None) , 1088 , )),
-	(( u'accValue' , u'varChild' , u'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
+	(( 'accValue' , 'varChild' , 'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 44 , (3, 0, None, None) , 1088 , )),
-	(( u'accDescription' , u'varChild' , u'pszDescription' , ), -5005, (-5005, (), [ (12, 17, None, None) , 
+	(( 'accDescription' , 'varChild' , 'pszDescription' , ), -5005, (-5005, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 48 , (3, 0, None, None) , 1088 , )),
-	(( u'accDescription' , u'varChild' , u'pszDescription' , ), -5005, (-5005, (), [ (12, 17, None, None) , 
+	(( 'accDescription' , 'varChild' , 'pszDescription' , ), -5005, (-5005, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 48 , (3, 0, None, None) , 1088 , )),
-	(( u'accRole' , u'varChild' , u'pvarRole' , ), -5006, (-5006, (), [ (12, 17, None, None) , 
+	(( 'accRole' , 'varChild' , 'pvarRole' , ), -5006, (-5006, (), [ (12, 17, None, None) , 
 			(16396, 10, None, None) , ], 1 , 2 , 4 , 1 , 52 , (3, 0, None, None) , 1088 , )),
-	(( u'accRole' , u'varChild' , u'pvarRole' , ), -5006, (-5006, (), [ (12, 17, None, None) , 
+	(( 'accRole' , 'varChild' , 'pvarRole' , ), -5006, (-5006, (), [ (12, 17, None, None) , 
 			(16396, 10, None, None) , ], 1 , 2 , 4 , 1 , 52 , (3, 0, None, None) , 1088 , )),
-	(( u'accState' , u'varChild' , u'pvarState' , ), -5007, (-5007, (), [ (12, 17, None, None) , 
+	(( 'accState' , 'varChild' , 'pvarState' , ), -5007, (-5007, (), [ (12, 17, None, None) , 
 			(16396, 10, None, None) , ], 1 , 2 , 4 , 1 , 56 , (3, 0, None, None) , 1088 , )),
-	(( u'accState' , u'varChild' , u'pvarState' , ), -5007, (-5007, (), [ (12, 17, None, None) , 
+	(( 'accState' , 'varChild' , 'pvarState' , ), -5007, (-5007, (), [ (12, 17, None, None) , 
 			(16396, 10, None, None) , ], 1 , 2 , 4 , 1 , 56 , (3, 0, None, None) , 1088 , )),
-	(( u'accHelp' , u'varChild' , u'pszHelp' , ), -5008, (-5008, (), [ (12, 17, None, None) , 
+	(( 'accHelp' , 'varChild' , 'pszHelp' , ), -5008, (-5008, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 60 , (3, 0, None, None) , 1088 , )),
-	(( u'accHelp' , u'varChild' , u'pszHelp' , ), -5008, (-5008, (), [ (12, 17, None, None) , 
+	(( 'accHelp' , 'varChild' , 'pszHelp' , ), -5008, (-5008, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 60 , (3, 0, None, None) , 1088 , )),
-	(( u'accHelpTopic' , u'pszHelpFile' , u'varChild' , u'pidTopic' , ), -5009, (-5009, (), [ 
+	(( 'accHelpTopic' , 'pszHelpFile' , 'varChild' , 'pidTopic' , ), -5009, (-5009, (), [ 
 			(16392, 2, None, None) , (12, 17, None, None) , (16387, 10, None, None) , ], 1 , 2 , 4 , 1 , 64 , (3, 0, None, None) , 1088 , )),
-	(( u'accHelpTopic' , u'pszHelpFile' , u'varChild' , u'pidTopic' , ), -5009, (-5009, (), [ 
+	(( 'accHelpTopic' , 'pszHelpFile' , 'varChild' , 'pidTopic' , ), -5009, (-5009, (), [ 
 			(16392, 2, None, None) , (12, 17, None, None) , (16387, 10, None, None) , ], 1 , 2 , 4 , 1 , 64 , (3, 0, None, None) , 1088 , )),
-	(( u'accKeyboardShortcut' , u'varChild' , u'pszKeyboardShortcut' , ), -5010, (-5010, (), [ (12, 17, None, None) , 
+	(( 'accKeyboardShortcut' , 'varChild' , 'pszKeyboardShortcut' , ), -5010, (-5010, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 68 , (3, 0, None, None) , 1088 , )),
-	(( u'accKeyboardShortcut' , u'varChild' , u'pszKeyboardShortcut' , ), -5010, (-5010, (), [ (12, 17, None, None) , 
+	(( 'accKeyboardShortcut' , 'varChild' , 'pszKeyboardShortcut' , ), -5010, (-5010, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 68 , (3, 0, None, None) , 1088 , )),
-	(( u'accFocus' , u'pvarChild' , ), -5011, (-5011, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 1088 , )),
-	(( u'accSelection' , u'pvarChildren' , ), -5012, (-5012, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 1088 , )),
-	(( u'accDefaultAction' , u'varChild' , u'pszDefaultAction' , ), -5013, (-5013, (), [ (12, 17, None, None) , 
+	(( 'accFocus' , 'pvarChild' , ), -5011, (-5011, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 1088 , )),
+	(( 'accSelection' , 'pvarChildren' , ), -5012, (-5012, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 1088 , )),
+	(( 'accDefaultAction' , 'varChild' , 'pszDefaultAction' , ), -5013, (-5013, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 80 , (3, 0, None, None) , 1088 , )),
-	(( u'accDefaultAction' , u'varChild' , u'pszDefaultAction' , ), -5013, (-5013, (), [ (12, 17, None, None) , 
+	(( 'accDefaultAction' , 'varChild' , 'pszDefaultAction' , ), -5013, (-5013, (), [ (12, 17, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 1 , 80 , (3, 0, None, None) , 1088 , )),
-	(( u'accSelect' , u'flagsSelect' , u'varChild' , ), -5014, (-5014, (), [ (3, 1, None, None) , 
+	(( 'accSelect' , 'flagsSelect' , 'varChild' , ), -5014, (-5014, (), [ (3, 1, None, None) , 
 			(12, 17, None, None) , ], 1 , 1 , 4 , 1 , 84 , (3, 0, None, None) , 1088 , )),
-	(( u'accLocation' , u'pxLeft' , u'pyTop' , u'pcxWidth' , u'pcyHeight' , 
-			u'varChild' , ), -5015, (-5015, (), [ (16387, 2, None, None) , (16387, 2, None, None) , (16387, 2, None, None) , 
+	(( 'accLocation' , 'pxLeft' , 'pyTop' , 'pcxWidth' , 'pcyHeight' , 
+			'varChild' , ), -5015, (-5015, (), [ (16387, 2, None, None) , (16387, 2, None, None) , (16387, 2, None, None) , 
 			(16387, 2, None, None) , (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 88 , (3, 0, None, None) , 1088 , )),
-	(( u'accNavigate' , u'navDir' , u'varStart' , u'pvarEndUpAt' , ), -5016, (-5016, (), [ 
+	(( 'accNavigate' , 'navDir' , 'varStart' , 'pvarEndUpAt' , ), -5016, (-5016, (), [ 
 			(3, 1, None, None) , (12, 17, None, None) , (16396, 10, None, None) , ], 1 , 1 , 4 , 1 , 92 , (3, 0, None, None) , 1088 , )),
-	(( u'accHitTest' , u'xLeft' , u'yTop' , u'pvarChild' , ), -5017, (-5017, (), [ 
+	(( 'accHitTest' , 'xLeft' , 'yTop' , 'pvarChild' , ), -5017, (-5017, (), [ 
 			(3, 1, None, None) , (3, 1, None, None) , (16396, 10, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 1088 , )),
-	(( u'accDoDefaultAction' , u'varChild' , ), -5018, (-5018, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 100 , (3, 0, None, None) , 1088 , )),
-	(( u'accName' , u'varChild' , u'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
+	(( 'accDoDefaultAction' , 'varChild' , ), -5018, (-5018, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 100 , (3, 0, None, None) , 1088 , )),
+	(( 'accName' , 'varChild' , 'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
 			(8, 1, None, None) , ], 1 , 4 , 4 , 1 , 104 , (3, 0, None, None) , 1088 , )),
-	(( u'accName' , u'varChild' , u'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
+	(( 'accName' , 'varChild' , 'pszName' , ), -5003, (-5003, (), [ (12, 17, None, None) , 
 			(8, 1, None, None) , ], 1 , 4 , 4 , 1 , 104 , (3, 0, None, None) , 1088 , )),
-	(( u'accValue' , u'varChild' , u'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
+	(( 'accValue' , 'varChild' , 'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
 			(8, 1, None, None) , ], 1 , 4 , 4 , 1 , 108 , (3, 0, None, None) , 1088 , )),
-	(( u'accValue' , u'varChild' , u'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
+	(( 'accValue' , 'varChild' , 'pszValue' , ), -5004, (-5004, (), [ (12, 17, None, None) , 
 			(8, 1, None, None) , ], 1 , 4 , 4 , 1 , 108 , (3, 0, None, None) , 1088 , )),
 ]
 
 ICommandBarButtonEvents_vtables_dispatch_ = 1
 ICommandBarButtonEvents_vtables_ = [
-	(( u'Click' , u'Ctrl' , u'CancelDefault' , ), 1, (1, (), [ (13, 1, None, "IID('{55F88891-7708-11D1-ACEB-006008961DA5}')") , 
+	(( 'Click' , 'Ctrl' , 'CancelDefault' , ), 1, (1, (), [ (13, 1, None, "IID('{55F88891-7708-11D1-ACEB-006008961DA5}')") , 
 			(16395, 3, None, None) , ], 1 , 1 , 4 , 0 , 28 , (24, 0, None, None) , 0 , )),
 ]
 
 ICommandBarComboBoxEvents_vtables_dispatch_ = 1
 ICommandBarComboBoxEvents_vtables_ = [
-	(( u'Change' , u'Ctrl' , ), 1, (1, (), [ (13, 1, None, "IID('{55F88897-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 1 , 4 , 0 , 28 , (24, 0, None, None) , 0 , )),
+	(( 'Change' , 'Ctrl' , ), 1, (1, (), [ (13, 1, None, "IID('{55F88897-7708-11D1-ACEB-006008961DA5}')") , ], 1 , 1 , 4 , 0 , 28 , (24, 0, None, None) , 0 , )),
 ]
 
 ICommandBarsEvents_vtables_dispatch_ = 1
 ICommandBarsEvents_vtables_ = [
-	(( u'OnUpdate' , ), 1, (1, (), [ ], 1 , 1 , 4 , 0 , 28 , (24, 0, None, None) , 0 , )),
+	(( 'OnUpdate' , ), 1, (1, (), [ ], 1 , 1 , 4 , 0 , 28 , (24, 0, None, None) , 0 , )),
 ]
 
 IFind_vtables_dispatch_ = 1
 IFind_vtables_ = [
-	(( u'SearchPath' , u'pbstr' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstr' , ), 1610743809, (1610743809, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'SubDir' , u'retval' , ), 1610743810, (1610743810, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Title' , u'pbstr' , ), 1610743811, (1610743811, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Author' , u'pbstr' , ), 1610743812, (1610743812, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Keywords' , u'pbstr' , ), 1610743813, (1610743813, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Subject' , u'pbstr' , ), 1610743814, (1610743814, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Options' , u'penmOptions' , ), 1610743815, (1610743815, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'MatchCase' , u'retval' , ), 1610743816, (1610743816, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610743817, (1610743817, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'PatternMatch' , u'retval' , ), 1610743818, (1610743818, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'DateSavedFrom' , u'pdatSavedFrom' , ), 1610743819, (1610743819, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'DateSavedTo' , u'pdatSavedTo' , ), 1610743820, (1610743820, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SavedBy' , u'pbstr' , ), 1610743821, (1610743821, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'DateCreatedFrom' , u'pdatCreatedFrom' , ), 1610743822, (1610743822, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'DateCreatedTo' , u'pdatCreatedTo' , ), 1610743823, (1610743823, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'View' , u'penmView' , ), 1610743824, (1610743824, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'SortBy' , u'penmSortBy' , ), 1610743825, (1610743825, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'ListBy' , u'penmListBy' , ), 1610743826, (1610743826, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'SelectedFile' , u'pintSelectedFile' , ), 1610743827, (1610743827, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Results' , u'pdisp' , ), 1610743828, (1610743828, (), [ (16393, 10, None, "IID('{000C0338-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Show' , u'pRows' , ), 1610743829, (1610743829, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'SearchPath' , u'pbstr' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstr' , ), 1610743809, (1610743809, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'SubDir' , u'retval' , ), 1610743810, (1610743810, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Title' , u'pbstr' , ), 1610743811, (1610743811, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Author' , u'pbstr' , ), 1610743812, (1610743812, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Keywords' , u'pbstr' , ), 1610743813, (1610743813, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Subject' , u'pbstr' , ), 1610743814, (1610743814, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Options' , u'penmOptions' , ), 1610743815, (1610743815, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'MatchCase' , u'retval' , ), 1610743816, (1610743816, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstr' , ), 1610743817, (1610743817, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'PatternMatch' , u'retval' , ), 1610743818, (1610743818, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'DateSavedFrom' , u'pdatSavedFrom' , ), 1610743819, (1610743819, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'DateSavedTo' , u'pdatSavedTo' , ), 1610743820, (1610743820, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'SavedBy' , u'pbstr' , ), 1610743821, (1610743821, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'DateCreatedFrom' , u'pdatCreatedFrom' , ), 1610743822, (1610743822, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'DateCreatedTo' , u'pdatCreatedTo' , ), 1610743823, (1610743823, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'View' , u'penmView' , ), 1610743824, (1610743824, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'SortBy' , u'penmSortBy' , ), 1610743825, (1610743825, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'ListBy' , u'penmListBy' , ), 1610743826, (1610743826, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'SelectedFile' , u'pintSelectedFile' , ), 1610743827, (1610743827, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'Execute' , ), 1610743850, (1610743850, (), [ ], 1 , 1 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'Load' , u'bstrQueryName' , ), 1610743851, (1610743851, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'Save' , u'bstrQueryName' , ), 1610743852, (1610743852, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , u'bstrQueryName' , ), 1610743853, (1610743853, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'FileType' , u'plFileType' , ), 1610743854, (1610743854, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'FileType' , u'plFileType' , ), 1610743854, (1610743854, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'SearchPath' , 'pbstr' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstr' , ), 1610743809, (1610743809, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'SubDir' , 'retval' , ), 1610743810, (1610743810, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'pbstr' , ), 1610743811, (1610743811, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Author' , 'pbstr' , ), 1610743812, (1610743812, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Keywords' , 'pbstr' , ), 1610743813, (1610743813, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Subject' , 'pbstr' , ), 1610743814, (1610743814, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Options' , 'penmOptions' , ), 1610743815, (1610743815, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'MatchCase' , 'retval' , ), 1610743816, (1610743816, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610743817, (1610743817, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'PatternMatch' , 'retval' , ), 1610743818, (1610743818, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'DateSavedFrom' , 'pdatSavedFrom' , ), 1610743819, (1610743819, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'DateSavedTo' , 'pdatSavedTo' , ), 1610743820, (1610743820, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'SavedBy' , 'pbstr' , ), 1610743821, (1610743821, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'DateCreatedFrom' , 'pdatCreatedFrom' , ), 1610743822, (1610743822, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'DateCreatedTo' , 'pdatCreatedTo' , ), 1610743823, (1610743823, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'View' , 'penmView' , ), 1610743824, (1610743824, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'SortBy' , 'penmSortBy' , ), 1610743825, (1610743825, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'ListBy' , 'penmListBy' , ), 1610743826, (1610743826, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'SelectedFile' , 'pintSelectedFile' , ), 1610743827, (1610743827, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Results' , 'pdisp' , ), 1610743828, (1610743828, (), [ (16393, 10, None, "IID('{000C0338-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Show' , 'pRows' , ), 1610743829, (1610743829, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'SearchPath' , 'pbstr' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstr' , ), 1610743809, (1610743809, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'SubDir' , 'retval' , ), 1610743810, (1610743810, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'pbstr' , ), 1610743811, (1610743811, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Author' , 'pbstr' , ), 1610743812, (1610743812, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Keywords' , 'pbstr' , ), 1610743813, (1610743813, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Subject' , 'pbstr' , ), 1610743814, (1610743814, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Options' , 'penmOptions' , ), 1610743815, (1610743815, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'MatchCase' , 'retval' , ), 1610743816, (1610743816, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstr' , ), 1610743817, (1610743817, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'PatternMatch' , 'retval' , ), 1610743818, (1610743818, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'DateSavedFrom' , 'pdatSavedFrom' , ), 1610743819, (1610743819, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'DateSavedTo' , 'pdatSavedTo' , ), 1610743820, (1610743820, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'SavedBy' , 'pbstr' , ), 1610743821, (1610743821, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'DateCreatedFrom' , 'pdatCreatedFrom' , ), 1610743822, (1610743822, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'DateCreatedTo' , 'pdatCreatedTo' , ), 1610743823, (1610743823, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'View' , 'penmView' , ), 1610743824, (1610743824, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'SortBy' , 'penmSortBy' , ), 1610743825, (1610743825, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'ListBy' , 'penmListBy' , ), 1610743826, (1610743826, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'SelectedFile' , 'pintSelectedFile' , ), 1610743827, (1610743827, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'Execute' , ), 1610743850, (1610743850, (), [ ], 1 , 1 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'Load' , 'bstrQueryName' , ), 1610743851, (1610743851, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'Save' , 'bstrQueryName' , ), 1610743852, (1610743852, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , 'bstrQueryName' , ), 1610743853, (1610743853, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'FileType' , 'plFileType' , ), 1610743854, (1610743854, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'FileType' , 'plFileType' , ), 1610743854, (1610743854, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
 ]
 
 IFoundFiles_vtables_dispatch_ = 1
 IFoundFiles_vtables_ = [
-	(( u'Item' , u'Index' , u'pbstr' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'pbstr' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pCount' , ), 1610743809, (1610743809, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1025 , )),
+	(( 'Count' , 'pCount' , ), 1610743809, (1610743809, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1025 , )),
 ]
 
 ILicAgent_vtables_dispatch_ = 1
 ILicAgent_vtables_ = [
-	(( u'Initialize' , u'dwBPC' , u'dwMode' , u'bstrLicSource' , u'pdwRetCode' , 
+	(( 'Initialize' , 'dwBPC' , 'dwMode' , 'bstrLicSource' , 'pdwRetCode' , 
 			), 1, (1, (), [ (19, 1, None, None) , (19, 1, None, None) , (8, 1, None, None) , (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'GetFirstName' , u'pbstrVal' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'SetFirstName' , u'bstrNewVal' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'GetLastName' , u'pbstrVal' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SetLastName' , u'bstrNewVal' , ), 6, (6, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'GetOrgName' , u'pbstrVal' , ), 7, (7, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SetOrgName' , u'bstrNewVal' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'GetEmail' , u'pbstrVal' , ), 9, (9, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'SetEmail' , u'bstrNewVal' , ), 10, (10, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'GetPhone' , u'pbstrVal' , ), 11, (11, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SetPhone' , u'bstrNewVal' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'GetAddress1' , u'pbstrVal' , ), 13, (13, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'SetAddress1' , u'bstrNewVal' , ), 14, (14, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'GetCity' , u'pbstrVal' , ), 15, (15, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'SetCity' , u'bstrNewVal' , ), 16, (16, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'GetState' , u'pbstrVal' , ), 17, (17, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'SetState' , u'bstrNewVal' , ), 18, (18, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'GetCountryCode' , u'pbstrVal' , ), 19, (19, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'SetCountryCode' , u'bstrNewVal' , ), 20, (20, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'GetCountryDesc' , u'pbstrVal' , ), 21, (21, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'SetCountryDesc' , u'bstrNewVal' , ), 22, (22, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'GetZip' , u'pbstrVal' , ), 23, (23, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'SetZip' , u'bstrNewVal' , ), 24, (24, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'GetIsoLanguage' , u'pdwVal' , ), 25, (25, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'SetIsoLanguage' , u'dwNewVal' , ), 26, (26, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'GetMSUpdate' , u'pbstrVal' , ), 32, (32, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'SetMSUpdate' , u'bstrNewVal' , ), 33, (33, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'GetMSOffer' , u'pbstrVal' , ), 34, (34, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'SetMSOffer' , u'bstrNewVal' , ), 35, (35, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'GetOtherOffer' , u'pbstrVal' , ), 36, (36, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'SetOtherOffer' , u'bstrNewVal' , ), 37, (37, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'GetAddress2' , u'pbstrVal' , ), 38, (38, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'SetAddress2' , u'bstrNewVal' , ), 39, (39, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'CheckSystemClock' , u'pdwRetCode' , ), 40, (40, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'GetExistingExpiryDate' , u'pDateVal' , ), 41, (41, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'GetNewExpiryDate' , u'pDateVal' , ), 42, (42, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingFirstName' , u'pbstrVal' , ), 43, (43, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingFirstName' , u'bstrNewVal' , ), 44, (44, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingLastName' , u'pbstrVal' , ), 45, (45, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingLastName' , u'bstrNewVal' , ), 46, (46, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingPhone' , u'pbstrVal' , ), 47, (47, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingPhone' , u'bstrNewVal' , ), 48, (48, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingAddress1' , u'pbstrVal' , ), 49, (49, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingAddress1' , u'bstrNewVal' , ), 50, (50, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingAddress2' , u'pbstrVal' , ), 51, (51, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingAddress2' , u'bstrNewVal' , ), 52, (52, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingCity' , u'pbstrVal' , ), 53, (53, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingCity' , u'bstrNewVal' , ), 54, (54, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingState' , u'pbstrVal' , ), 55, (55, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingState' , u'bstrNewVal' , ), 56, (56, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingCountryCode' , u'pbstrVal' , ), 57, (57, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingCountryCode' , u'bstrNewVal' , ), 58, (58, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'GetBillingZip' , u'pbstrVal' , ), 59, (59, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'SetBillingZip' , u'bstrNewVal' , ), 60, (60, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'SaveBillingInfo' , u'bSave' , u'pdwRetVal' , ), 61, (61, (), [ (3, 1, None, None) , 
+	(( 'GetFirstName' , 'pbstrVal' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'SetFirstName' , 'bstrNewVal' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'GetLastName' , 'pbstrVal' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SetLastName' , 'bstrNewVal' , ), 6, (6, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'GetOrgName' , 'pbstrVal' , ), 7, (7, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SetOrgName' , 'bstrNewVal' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'GetEmail' , 'pbstrVal' , ), 9, (9, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'SetEmail' , 'bstrNewVal' , ), 10, (10, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'GetPhone' , 'pbstrVal' , ), 11, (11, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'SetPhone' , 'bstrNewVal' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'GetAddress1' , 'pbstrVal' , ), 13, (13, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'SetAddress1' , 'bstrNewVal' , ), 14, (14, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'GetCity' , 'pbstrVal' , ), 15, (15, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'SetCity' , 'bstrNewVal' , ), 16, (16, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'GetState' , 'pbstrVal' , ), 17, (17, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'SetState' , 'bstrNewVal' , ), 18, (18, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'GetCountryCode' , 'pbstrVal' , ), 19, (19, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'SetCountryCode' , 'bstrNewVal' , ), 20, (20, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'GetCountryDesc' , 'pbstrVal' , ), 21, (21, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'SetCountryDesc' , 'bstrNewVal' , ), 22, (22, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'GetZip' , 'pbstrVal' , ), 23, (23, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'SetZip' , 'bstrNewVal' , ), 24, (24, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'GetIsoLanguage' , 'pdwVal' , ), 25, (25, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'SetIsoLanguage' , 'dwNewVal' , ), 26, (26, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'GetMSUpdate' , 'pbstrVal' , ), 32, (32, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'SetMSUpdate' , 'bstrNewVal' , ), 33, (33, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'GetMSOffer' , 'pbstrVal' , ), 34, (34, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'SetMSOffer' , 'bstrNewVal' , ), 35, (35, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'GetOtherOffer' , 'pbstrVal' , ), 36, (36, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'SetOtherOffer' , 'bstrNewVal' , ), 37, (37, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'GetAddress2' , 'pbstrVal' , ), 38, (38, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'SetAddress2' , 'bstrNewVal' , ), 39, (39, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'CheckSystemClock' , 'pdwRetCode' , ), 40, (40, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'GetExistingExpiryDate' , 'pDateVal' , ), 41, (41, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'GetNewExpiryDate' , 'pDateVal' , ), 42, (42, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingFirstName' , 'pbstrVal' , ), 43, (43, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingFirstName' , 'bstrNewVal' , ), 44, (44, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingLastName' , 'pbstrVal' , ), 45, (45, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingLastName' , 'bstrNewVal' , ), 46, (46, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingPhone' , 'pbstrVal' , ), 47, (47, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingPhone' , 'bstrNewVal' , ), 48, (48, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingAddress1' , 'pbstrVal' , ), 49, (49, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingAddress1' , 'bstrNewVal' , ), 50, (50, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingAddress2' , 'pbstrVal' , ), 51, (51, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingAddress2' , 'bstrNewVal' , ), 52, (52, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingCity' , 'pbstrVal' , ), 53, (53, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingCity' , 'bstrNewVal' , ), 54, (54, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingState' , 'pbstrVal' , ), 55, (55, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingState' , 'bstrNewVal' , ), 56, (56, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingCountryCode' , 'pbstrVal' , ), 57, (57, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingCountryCode' , 'bstrNewVal' , ), 58, (58, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'GetBillingZip' , 'pbstrVal' , ), 59, (59, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'SetBillingZip' , 'bstrNewVal' , ), 60, (60, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'SaveBillingInfo' , 'bSave' , 'pdwRetVal' , ), 61, (61, (), [ (3, 1, None, None) , 
 			(16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'IsCCRenewalCountry' , u'bstrCountryCode' , u'pbRetVal' , ), 64, (64, (), [ (8, 1, None, None) , 
+	(( 'IsCCRenewalCountry' , 'bstrCountryCode' , 'pbRetVal' , ), 64, (64, (), [ (8, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'GetVATLabel' , u'bstrCountryCode' , u'pbstrVATLabel' , ), 65, (65, (), [ (8, 1, None, None) , 
+	(( 'GetVATLabel' , 'bstrCountryCode' , 'pbstrVATLabel' , ), 65, (65, (), [ (8, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'GetCCRenewalExpiryDate' , u'pDateVal' , ), 66, (66, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'SetVATNumber' , u'bstrVATNumber' , ), 67, (67, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'SetCreditCardType' , u'bstrCCCode' , ), 68, (68, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'SetCreditCardNumber' , u'bstrCCNumber' , ), 69, (69, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'SetCreditCardExpiryYear' , u'dwCCYear' , ), 70, (70, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'SetCreditCardExpiryMonth' , u'dwCCMonth' , ), 71, (71, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardCount' , u'pdwCount' , ), 72, (72, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardCode' , u'dwIndex' , u'pbstrCode' , ), 73, (73, (), [ (19, 1, None, None) , 
+	(( 'GetCCRenewalExpiryDate' , 'pDateVal' , ), 66, (66, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'SetVATNumber' , 'bstrVATNumber' , ), 67, (67, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'SetCreditCardType' , 'bstrCCCode' , ), 68, (68, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'SetCreditCardNumber' , 'bstrCCNumber' , ), 69, (69, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'SetCreditCardExpiryYear' , 'dwCCYear' , ), 70, (70, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'SetCreditCardExpiryMonth' , 'dwCCMonth' , ), 71, (71, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'GetCreditCardCount' , 'pdwCount' , ), 72, (72, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'GetCreditCardCode' , 'dwIndex' , 'pbstrCode' , ), 73, (73, (), [ (19, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardName' , u'dwIndex' , u'pbstrName' , ), 74, (74, (), [ (19, 1, None, None) , 
+	(( 'GetCreditCardName' , 'dwIndex' , 'pbstrName' , ), 74, (74, (), [ (19, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'GetVATNumber' , u'pbstrVATNumber' , ), 75, (75, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardType' , u'pbstrCCCode' , ), 76, (76, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardNumber' , u'pbstrCCNumber' , ), 77, (77, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardExpiryYear' , u'pdwCCYear' , ), 78, (78, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
-	(( u'GetCreditCardExpiryMonth' , u'pdwCCMonth' , ), 79, (79, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
-	(( u'GetDisconnectOption' , u'pbRetVal' , ), 80, (80, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
-	(( u'SetDisconnectOption' , u'bNewVal' , ), 81, (81, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessHandshakeRequest' , u'bReviseCustInfo' , ), 82, (82, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessNewLicenseRequest' , ), 83, (83, (), [ ], 1 , 1 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessReissueLicenseRequest' , ), 84, (84, (), [ ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessRetailRenewalLicenseRequest' , ), 85, (85, (), [ ], 1 , 1 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessReviseCustInfoRequest' , ), 86, (86, (), [ ], 1 , 1 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessCCRenewalPriceRequest' , ), 87, (87, (), [ ], 1 , 1 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessCCRenewalLicenseRequest' , ), 88, (88, (), [ ], 1 , 1 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
-	(( u'GetAsyncProcessReturnCode' , u'pdwRetCode' , ), 90, (90, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
-	(( u'IsUpgradeAvailable' , u'pbUpgradeAvailable' , ), 91, (91, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
-	(( u'WantUpgrade' , u'bWantUpgrade' , ), 92, (92, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
-	(( u'AsyncProcessDroppedLicenseRequest' , ), 93, (93, (), [ ], 1 , 1 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
-	(( u'GenerateInstallationId' , u'pbstrVal' , ), 94, (94, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
-	(( u'DepositConfirmationId' , u'bstrVal' , u'pdwRetCode' , ), 95, (95, (), [ (8, 1, None, None) , 
+	(( 'GetVATNumber' , 'pbstrVATNumber' , ), 75, (75, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
+	(( 'GetCreditCardType' , 'pbstrCCCode' , ), 76, (76, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
+	(( 'GetCreditCardNumber' , 'pbstrCCNumber' , ), 77, (77, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
+	(( 'GetCreditCardExpiryYear' , 'pdwCCYear' , ), 78, (78, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
+	(( 'GetCreditCardExpiryMonth' , 'pdwCCMonth' , ), 79, (79, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
+	(( 'GetDisconnectOption' , 'pbRetVal' , ), 80, (80, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
+	(( 'SetDisconnectOption' , 'bNewVal' , ), 81, (81, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessHandshakeRequest' , 'bReviseCustInfo' , ), 82, (82, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 320 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessNewLicenseRequest' , ), 83, (83, (), [ ], 1 , 1 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessReissueLicenseRequest' , ), 84, (84, (), [ ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessRetailRenewalLicenseRequest' , ), 85, (85, (), [ ], 1 , 1 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessReviseCustInfoRequest' , ), 86, (86, (), [ ], 1 , 1 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessCCRenewalPriceRequest' , ), 87, (87, (), [ ], 1 , 1 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessCCRenewalLicenseRequest' , ), 88, (88, (), [ ], 1 , 1 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'GetAsyncProcessReturnCode' , 'pdwRetCode' , ), 90, (90, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
+	(( 'IsUpgradeAvailable' , 'pbUpgradeAvailable' , ), 91, (91, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'WantUpgrade' , 'bWantUpgrade' , ), 92, (92, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
+	(( 'AsyncProcessDroppedLicenseRequest' , ), 93, (93, (), [ ], 1 , 1 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
+	(( 'GenerateInstallationId' , 'pbstrVal' , ), 94, (94, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
+	(( 'DepositConfirmationId' , 'bstrVal' , 'pdwRetCode' , ), 95, (95, (), [ (8, 1, None, None) , 
 			(16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
-	(( u'VerifyCheckDigits' , u'bstrCIDIID' , u'pbValue' , ), 96, (96, (), [ (8, 1, None, None) , 
+	(( 'VerifyCheckDigits' , 'bstrCIDIID' , 'pbValue' , ), 96, (96, (), [ (8, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
-	(( u'GetCurrentExpiryDate' , u'pDateVal' , ), 97, (97, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
-	(( u'CancelAsyncProcessRequest' , u'bIsLicenseRequest' , ), 98, (98, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
-	(( u'GetCurrencyDescription' , u'dwCurrencyIndex' , u'pbstrVal' , ), 100, (100, (), [ (19, 1, None, None) , 
+	(( 'GetCurrentExpiryDate' , 'pDateVal' , ), 97, (97, (), [ (16391, 10, None, None) , ], 1 , 1 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
+	(( 'CancelAsyncProcessRequest' , 'bIsLicenseRequest' , ), 98, (98, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
+	(( 'GetCurrencyDescription' , 'dwCurrencyIndex' , 'pbstrVal' , ), 100, (100, (), [ (19, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 384 , (3, 0, None, None) , 0 , )),
-	(( u'GetPriceItemCount' , u'pdwCount' , ), 101, (101, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
-	(( u'GetPriceItemLabel' , u'dwIndex' , u'pbstrVal' , ), 102, (102, (), [ (19, 1, None, None) , 
+	(( 'GetPriceItemCount' , 'pdwCount' , ), 101, (101, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
+	(( 'GetPriceItemLabel' , 'dwIndex' , 'pbstrVal' , ), 102, (102, (), [ (19, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
-	(( u'GetPriceItemValue' , u'dwCurrencyIndex' , u'dwIndex' , u'pbstrVal' , ), 103, (103, (), [ 
+	(( 'GetPriceItemValue' , 'dwCurrencyIndex' , 'dwIndex' , 'pbstrVal' , ), 103, (103, (), [ 
 			(19, 1, None, None) , (19, 1, None, None) , (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
-	(( u'GetInvoiceText' , u'pNewVal' , ), 104, (104, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
-	(( u'GetBackendErrorMsg' , u'pbstrErrMsg' , ), 105, (105, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 404 , (3, 0, None, None) , 0 , )),
-	(( u'GetCurrencyOption' , u'dwCurrencyOption' , ), 106, (106, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 408 , (3, 0, None, None) , 0 , )),
-	(( u'SetCurrencyOption' , u'dwCurrencyOption' , ), 107, (107, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 412 , (3, 0, None, None) , 0 , )),
-	(( u'GetEndOfLifeHtmlText' , u'pbstrHtmlText' , ), 108, (108, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 416 , (3, 0, None, None) , 0 , )),
-	(( u'DisplaySSLCert' , u'dwRetCode' , ), 109, (109, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 420 , (3, 0, None, None) , 0 , )),
+	(( 'GetInvoiceText' , 'pNewVal' , ), 104, (104, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
+	(( 'GetBackendErrorMsg' , 'pbstrErrMsg' , ), 105, (105, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 404 , (3, 0, None, None) , 0 , )),
+	(( 'GetCurrencyOption' , 'dwCurrencyOption' , ), 106, (106, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 408 , (3, 0, None, None) , 0 , )),
+	(( 'SetCurrencyOption' , 'dwCurrencyOption' , ), 107, (107, (), [ (19, 1, None, None) , ], 1 , 1 , 4 , 0 , 412 , (3, 0, None, None) , 0 , )),
+	(( 'GetEndOfLifeHtmlText' , 'pbstrHtmlText' , ), 108, (108, (), [ (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 416 , (3, 0, None, None) , 0 , )),
+	(( 'DisplaySSLCert' , 'dwRetCode' , ), 109, (109, (), [ (16403, 10, None, None) , ], 1 , 1 , 4 , 0 , 420 , (3, 0, None, None) , 0 , )),
 ]
 
 ILicValidator_vtables_dispatch_ = 1
 ILicValidator_vtables_ = [
-	(( u'Products' , u'pVariant' , ), 1, (1, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Selection' , u'piSel' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Selection' , u'piSel' , ), 2, (2, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Products' , 'pVariant' , ), 1, (1, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Selection' , 'piSel' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Selection' , 'piSel' , ), 2, (2, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
 ]
 
 ILicWizExternal_vtables_dispatch_ = 1
 ILicWizExternal_vtables_ = [
-	(( u'PrintHtmlDocument' , u'punkHtmlDoc' , ), 1, (1, (), [ (13, 1, None, None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'InvokeDateTimeApplet' , ), 2, (2, (), [ ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'FormatDate' , u'date' , u'pFormat' , u'pDateString' , ), 3, (3, (), [ 
+	(( 'PrintHtmlDocument' , 'punkHtmlDoc' , ), 1, (1, (), [ (13, 1, None, None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'InvokeDateTimeApplet' , ), 2, (2, (), [ ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'FormatDate' , 'date' , 'pFormat' , 'pDateString' , ), 3, (3, (), [ 
 			(7, 1, None, None) , (8, 49, "u''", None) , (16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 36 , (3, 32, None, None) , 0 , )),
-	(( u'ShowHelp' , u'pvarId' , ), 4, (4, (), [ (16396, 17, None, None) , ], 1 , 1 , 4 , 1 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Terminate' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'DisableVORWReminder' , u'BPC' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SaveReceipt' , u'bstrReceipt' , u'pbstrPath' , ), 7, (7, (), [ (8, 1, None, None) , 
+	(( 'ShowHelp' , 'pvarId' , ), 4, (4, (), [ (16396, 17, None, None) , ], 1 , 1 , 4 , 1 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Terminate' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'DisableVORWReminder' , 'BPC' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SaveReceipt' , 'bstrReceipt' , 'pbstrPath' , ), 7, (7, (), [ (8, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'OpenInDefaultBrowser' , u'bstrUrl' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'MsoAlert' , u'bstrText' , u'bstrButtons' , u'bstrIcon' , u'plRet' , 
+	(( 'OpenInDefaultBrowser' , 'bstrUrl' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'MsoAlert' , 'bstrText' , 'bstrButtons' , 'bstrIcon' , 'plRet' , 
 			), 9, (9, (), [ (8, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'DepositPidKey' , u'bstrKey' , u'fMORW' , u'plRet' , ), 10, (10, (), [ 
+	(( 'DepositPidKey' , 'bstrKey' , 'fMORW' , 'plRet' , ), 10, (10, (), [ 
 			(8, 1, None, None) , (3, 1, None, None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'WriteLog' , u'bstrMessage' , ), 11, (11, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ResignDpc' , u'bstrProductCode' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ResetPID' , ), 13, (13, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'SetDialogSize' , u'dx' , u'dy' , ), 14, (14, (), [ (3, 1, None, None) , 
+	(( 'WriteLog' , 'bstrMessage' , ), 11, (11, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ResignDpc' , 'bstrProductCode' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ResetPID' , ), 13, (13, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'SetDialogSize' , 'dx' , 'dy' , ), 14, (14, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'VerifyClock' , u'lMode' , u'plRet' , ), 15, (15, (), [ (3, 1, None, None) , 
+	(( 'VerifyClock' , 'lMode' , 'plRet' , ), 15, (15, (), [ (3, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'SortSelectOptions' , u'pdispSelect' , ), 16, (16, (), [ (9, 1, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'InternetDisconnect' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'GetConnectedState' , u'pfConnected' , ), 18, (18, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Context' , u'plwctx' , ), 20, (20, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Validator' , u'ppdispValidator' , ), 21, (21, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'LicAgent' , u'ppdispLicAgent' , ), 22, (22, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'CountryInfo' , u'pbstrUrl' , ), 23, (23, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'WizardVisible' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'WizardTitle' , ), 25, (25, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'AnimationEnabled' , u'fEnabled' , ), 26, (26, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'CurrentHelpId' , ), 27, (27, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'OfficeOnTheWebUrl' , u'bstrUrl' , ), 28, (28, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'SortSelectOptions' , 'pdispSelect' , ), 16, (16, (), [ (9, 1, None, None) , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'InternetDisconnect' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'GetConnectedState' , 'pfConnected' , ), 18, (18, (), [ (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Context' , 'plwctx' , ), 20, (20, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Validator' , 'ppdispValidator' , ), 21, (21, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'LicAgent' , 'ppdispLicAgent' , ), 22, (22, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'CountryInfo' , 'pbstrUrl' , ), 23, (23, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'WizardVisible' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'WizardTitle' , ), 25, (25, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'AnimationEnabled' , 'fEnabled' , ), 26, (26, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'CurrentHelpId' , ), 27, (27, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'OfficeOnTheWebUrl' , 'bstrUrl' , ), 28, (28, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
 ]
 
 IMsoDiagram_vtables_dispatch_ = 1
 IMsoDiagram_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Nodes' , u'Nodes' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C036E-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLayout' , u'AutoLayout' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AutoLayout' , u'AutoLayout' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Reverse' , u'Reverse' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Reverse' , u'Reverse' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AutoFormat' , u'AutoFormat' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AutoFormat' , u'AutoFormat' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Convert' , u'Type' , ), 10, (10, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'FitText' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 100, (100, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Nodes' , 'Nodes' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C036E-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLayout' , 'AutoLayout' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AutoLayout' , 'AutoLayout' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Reverse' , 'Reverse' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Reverse' , 'Reverse' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'AutoFormat' , 'AutoFormat' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'AutoFormat' , 'AutoFormat' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Convert' , 'Type' , ), 10, (10, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'FitText' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 IMsoDispCagNotifySink_vtables_dispatch_ = 1
 IMsoDispCagNotifySink_vtables_ = [
-	(( u'InsertClip' , u'pClipMoniker' , u'pItemMoniker' , ), 1, (1, (), [ (13, 1, None, None) , 
+	(( 'InsertClip' , 'pClipMoniker' , 'pItemMoniker' , ), 1, (1, (), [ (13, 1, None, None) , 
 			(13, 1, None, None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'WindowIsClosing' , ), 2, (2, (), [ ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'WindowIsClosing' , ), 2, (2, (), [ ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
 ]
 
 IMsoEServicesDialog_vtables_dispatch_ = 1
 IMsoEServicesDialog_vtables_ = [
-	(( u'Close' , u'ApplyWebComponentChanges' , ), 1610743808, (1610743808, (), [ (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'AddTrustedDomain' , u'Domain' , ), 1610743809, (1610743809, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ApplicationName' , u'retval' , ), 1610743810, (1610743810, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Application' , u'ppdisp' , ), 1610743811, (1610743811, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'WebComponent' , u'ppdisp' , ), 1610743812, (1610743812, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ClipArt' , u'ppdisp' , ), 1610743813, (1610743813, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Close' , 'ApplyWebComponentChanges' , ), 1610743808, (1610743808, (), [ (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'AddTrustedDomain' , 'Domain' , ), 1610743809, (1610743809, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ApplicationName' , 'retval' , ), 1610743810, (1610743810, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppdisp' , ), 1610743811, (1610743811, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'WebComponent' , 'ppdisp' , ), 1610743812, (1610743812, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ClipArt' , 'ppdisp' , ), 1610743813, (1610743813, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 IMsoEnvelopeVB_vtables_dispatch_ = 1
 IMsoEnvelopeVB_vtables_ = [
-	(( u'Introduction' , u'pbstrIntro' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Introduction' , u'pbstrIntro' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'ppdisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppdisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'CommandBars' , u'ppdisp' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Introduction' , 'pbstrIntro' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Introduction' , 'pbstrIntro' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'ppdisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppdisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'CommandBars' , 'ppdisp' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 LanguageSettings_vtables_dispatch_ = 1
 LanguageSettings_vtables_ = [
-	(( u'LanguageID' , u'Id' , u'plid' , ), 1, (1, (), [ (3, 1, None, None) , 
+	(( 'LanguageID' , 'Id' , 'plid' , ), 1, (1, (), [ (3, 1, None, None) , 
 			(16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'LanguagePreferredForEditing' , u'lid' , u'pf' , ), 2, (2, (), [ (3, 1, None, None) , 
+	(( 'LanguagePreferredForEditing' , 'lid' , 'pf' , ), 2, (2, (), [ (3, 1, None, None) , 
 			(16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 LineFormat_vtables_dispatch_ = 1
 LineFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'BackColor' , u'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadLength' , u'BeginArrowheadLength' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadLength' , u'BeginArrowheadLength' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadStyle' , u'BeginArrowheadStyle' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadStyle' , u'BeginArrowheadStyle' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadWidth' , u'BeginArrowheadWidth' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'BeginArrowheadWidth' , u'BeginArrowheadWidth' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'DashStyle' , u'DashStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'DashStyle' , u'DashStyle' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadLength' , u'EndArrowheadLength' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadLength' , u'EndArrowheadLength' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadStyle' , u'EndArrowheadStyle' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadStyle' , u'EndArrowheadStyle' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadWidth' , u'EndArrowheadWidth' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'EndArrowheadWidth' , u'EndArrowheadWidth' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 108, (108, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 108, (108, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Pattern' , u'Pattern' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Pattern' , u'Pattern' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'Style' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'Style' , ), 110, (110, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 112, (112, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Weight' , u'Weight' , ), 113, (113, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Weight' , u'Weight' , ), 113, (113, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'InsetPen' , u'InsetPen' , ), 114, (114, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'InsetPen' , u'InsetPen' , ), 114, (114, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'BackColor' , 'BackColor' , ), 100, (100, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadLength' , 'BeginArrowheadLength' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadLength' , 'BeginArrowheadLength' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadStyle' , 'BeginArrowheadStyle' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadStyle' , 'BeginArrowheadStyle' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadWidth' , 'BeginArrowheadWidth' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'BeginArrowheadWidth' , 'BeginArrowheadWidth' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'DashStyle' , 'DashStyle' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'DashStyle' , 'DashStyle' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadLength' , 'EndArrowheadLength' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadLength' , 'EndArrowheadLength' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadStyle' , 'EndArrowheadStyle' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadStyle' , 'EndArrowheadStyle' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadWidth' , 'EndArrowheadWidth' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'EndArrowheadWidth' , 'EndArrowheadWidth' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 108, (108, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 108, (108, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Pattern' , 'Pattern' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Pattern' , 'Pattern' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'Style' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'Style' , ), 110, (110, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 112, (112, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 112, (112, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Weight' , 'Weight' , ), 113, (113, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Weight' , 'Weight' , ), 113, (113, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'InsetPen' , 'InsetPen' , ), 114, (114, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'InsetPen' , 'InsetPen' , ), 114, (114, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
 ]
 
 MsoDebugOptions_vtables_dispatch_ = 1
 MsoDebugOptions_vtables_ = [
-	(( u'FeatureReports' , u'puintFeatureReports' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 64 , )),
-	(( u'FeatureReports' , u'puintFeatureReports' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 64 , )),
-	(( u'OutputToDebugger' , u'pvarfOutputToDebugger' , ), 5, (5, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'OutputToDebugger' , u'pvarfOutputToDebugger' , ), 5, (5, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'OutputToFile' , u'pvarfOutputToFile' , ), 6, (6, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'OutputToFile' , u'pvarfOutputToFile' , ), 6, (6, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'OutputToMessageBox' , u'pvarfOutputToMessageBox' , ), 7, (7, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'OutputToMessageBox' , u'pvarfOutputToMessageBox' , ), 7, (7, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'FeatureReports' , 'puintFeatureReports' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 64 , )),
+	(( 'FeatureReports' , 'puintFeatureReports' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 64 , )),
+	(( 'OutputToDebugger' , 'pvarfOutputToDebugger' , ), 5, (5, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'OutputToDebugger' , 'pvarfOutputToDebugger' , ), 5, (5, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'OutputToFile' , 'pvarfOutputToFile' , ), 6, (6, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'OutputToFile' , 'pvarfOutputToFile' , ), 6, (6, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'OutputToMessageBox' , 'pvarfOutputToMessageBox' , ), 7, (7, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'OutputToMessageBox' , 'pvarfOutputToMessageBox' , ), 7, (7, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 NewFile_vtables_dispatch_ = 1
 NewFile_vtables_ = [
-	(( u'Add' , u'FileName' , u'Section' , u'DisplayName' , u'Action' , 
-			u'pvarf' , ), 1, (1, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'Add' , 'FileName' , 'Section' , 'DisplayName' , 'Action' , 
+			'pvarf' , ), 1, (1, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16395, 10, None, None) , ], 1 , 1 , 4 , 3 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Remove' , u'FileName' , u'Section' , u'DisplayName' , u'Action' , 
-			u'pvarf' , ), 2, (2, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'Remove' , 'FileName' , 'Section' , 'DisplayName' , 'Action' , 
+			'pvarf' , ), 2, (2, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16395, 10, None, None) , ], 1 , 1 , 4 , 3 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 ODSOColumn_vtables_dispatch_ = 1
 ODSOColumn_vtables_ = [
-	(( u'Index' , u'plIndex' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppParent' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Value' , u'pbstrValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'plIndex' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppParent' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Value' , 'pbstrValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ODSOColumns_vtables_dispatch_ = 1
 ODSOColumns_vtables_ = [
-	(( u'Count' , u'plCount' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppParentOdso' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'varIndex' , u'ppColumn' , ), 1610809346, (1610809346, (), [ (12, 1, None, None) , 
+	(( 'Count' , 'plCount' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppParentOdso' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'varIndex' , 'ppColumn' , ), 1610809346, (1610809346, (), [ (12, 1, None, None) , 
 			(16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 ODSOFilter_vtables_dispatch_ = 1
 ODSOFilter_vtables_ = [
-	(( u'Index' , u'plIndex' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppParent' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Column' , u'pbstrCol' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Column' , u'pbstrCol' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Comparison' , u'pComparison' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Comparison' , u'pComparison' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'CompareTo' , u'pbstrCompareTo' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'CompareTo' , u'pbstrCompareTo' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Conjunction' , u'pConjunction' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Conjunction' , u'pConjunction' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Index' , 'plIndex' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppParent' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Column' , 'pbstrCol' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Column' , 'pbstrCol' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Comparison' , 'pComparison' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Comparison' , 'pComparison' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'CompareTo' , 'pbstrCompareTo' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'CompareTo' , 'pbstrCompareTo' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Conjunction' , 'pConjunction' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Conjunction' , 'pConjunction' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
 ]
 
 ODSOFilters_vtables_dispatch_ = 1
 ODSOFilters_vtables_ = [
-	(( u'Count' , u'plCount' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppParentOdso' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'ppColumn' , ), 1610809346, (1610809346, (), [ (3, 1, None, None) , 
+	(( 'Count' , 'plCount' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppParentOdso' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'ppColumn' , ), 1610809346, (1610809346, (), [ (3, 1, None, None) , 
 			(16393, 10, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Column' , u'Comparison' , u'Conjunction' , u'bstrCompareTo' , 
-			u'DeferUpdate' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , 
+	(( 'Add' , 'Column' , 'Comparison' , 'Conjunction' , 'bstrCompareTo' , 
+			'DeferUpdate' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , 
 			(8, 49, "u''", None) , (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 48 , (3, 32, None, None) , 0 , )),
-	(( u'Delete' , u'Index' , u'DeferUpdate' , ), 1610809348, (1610809348, (), [ (3, 1, None, None) , 
+	(( 'Delete' , 'Index' , 'DeferUpdate' , ), 1610809348, (1610809348, (), [ (3, 1, None, None) , 
 			(11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 OfficeDataSourceObject_vtables_dispatch_ = 1
 OfficeDataSourceObject_vtables_ = [
-	(( u'ConnectString' , u'pbstrConnect' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectString' , u'pbstrConnect' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Table' , u'pbstrTable' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Table' , u'pbstrTable' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'DataSource' , u'pbstrSrc' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'DataSource' , u'pbstrSrc' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Columns' , u'ppColumns' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'RowCount' , u'pcRows' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Filters' , u'ppFilters' , ), 6, (6, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Move' , u'MsoMoveRow' , u'RowNbr' , u'rval' , ), 1610743817, (1610743817, (), [ 
+	(( 'ConnectString' , 'pbstrConnect' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectString' , 'pbstrConnect' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Table' , 'pbstrTable' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Table' , 'pbstrTable' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'DataSource' , 'pbstrSrc' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'DataSource' , 'pbstrSrc' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Columns' , 'ppColumns' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'RowCount' , 'pcRows' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Filters' , 'ppFilters' , ), 6, (6, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Move' , 'MsoMoveRow' , 'RowNbr' , 'rval' , ), 1610743817, (1610743817, (), [ 
 			(3, 1, None, None) , (3, 49, '1', None) , (16387, 10, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Open' , u'bstrSrc' , u'bstrConnect' , u'bstrTable' , u'fOpenExclusive' , 
-			u'fNeverPrompt' , ), 1610743818, (1610743818, (), [ (8, 49, "u''", None) , (8, 49, "u''", None) , (8, 49, "u''", None) , 
+	(( 'Open' , 'bstrSrc' , 'bstrConnect' , 'bstrTable' , 'fOpenExclusive' , 
+			'fNeverPrompt' , ), 1610743818, (1610743818, (), [ (8, 49, "u''", None) , (8, 49, "u''", None) , (8, 49, "u''", None) , 
 			(3, 49, '0', None) , (3, 49, '1', None) , ], 1 , 1 , 4 , 0 , 68 , (3, 32, None, None) , 0 , )),
-	(( u'SetSortOrder' , u'SortField1' , u'SortAscending1' , u'SortField2' , u'SortAscending2' , 
-			u'SortField3' , u'SortAscending3' , ), 1610743819, (1610743819, (), [ (8, 1, None, None) , (11, 49, 'True', None) , 
+	(( 'SetSortOrder' , 'SortField1' , 'SortAscending1' , 'SortField2' , 'SortAscending2' , 
+			'SortField3' , 'SortAscending3' , ), 1610743819, (1610743819, (), [ (8, 1, None, None) , (11, 49, 'True', None) , 
 			(8, 49, "u''", None) , (11, 49, 'True', None) , (8, 49, "u''", None) , (11, 49, 'True', None) , ], 1 , 1 , 4 , 0 , 72 , (3, 32, None, None) , 0 , )),
-	(( u'ApplyFilter' , ), 1610743820, (1610743820, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'ApplyFilter' , ), 1610743820, (1610743820, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 Permission_vtables_dispatch_ = 1
 Permission_vtables_ = [
-	(( u'Item' , u'Index' , u'UserPerm' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Item' , 'Index' , 'UserPerm' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0375-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'EnableTrustedBrowser' , u'Enable' , ), 2, (2, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'EnableTrustedBrowser' , u'Enable' , ), 2, (2, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'UserId' , u'Permission' , u'ExpirationDate' , u'UserPerm' , 
+	(( 'Count' , 'Count' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'EnableTrustedBrowser' , 'Enable' , ), 2, (2, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'EnableTrustedBrowser' , 'Enable' , ), 2, (2, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'UserId' , 'Permission' , 'ExpirationDate' , 'UserPerm' , 
 			), 3, (3, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0375-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 2 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ApplyPolicy' , u'FileName' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 5, (5, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'RemoveAll' , ), 6, (6, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Enabled' , u'Enabled' , ), 7, (7, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Enabled' , u'Enabled' , ), 7, (7, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'RequestPermissionURL' , u'Contact' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'RequestPermissionURL' , u'Contact' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'PolicyName' , u'PolicyName' , ), 9, (9, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'PolicyDescription' , u'PolicyDescription' , ), 10, (10, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'StoreLicenses' , u'Enabled' , ), 11, (11, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'StoreLicenses' , u'Enabled' , ), 11, (11, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'DocumentAuthor' , u'Author' , ), 12, (12, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'DocumentAuthor' , u'Author' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'PermissionFromPolicy' , u'FromPolicy' , ), 13, (13, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 1024 , )),
+	(( 'ApplyPolicy' , 'FileName' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 5, (5, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'RemoveAll' , ), 6, (6, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Enabled' , 'Enabled' , ), 7, (7, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Enabled' , 'Enabled' , ), 7, (7, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'RequestPermissionURL' , 'Contact' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'RequestPermissionURL' , 'Contact' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'PolicyName' , 'PolicyName' , ), 9, (9, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'PolicyDescription' , 'PolicyDescription' , ), 10, (10, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'StoreLicenses' , 'Enabled' , ), 11, (11, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'StoreLicenses' , 'Enabled' , ), 11, (11, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'DocumentAuthor' , 'Author' , ), 12, (12, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'DocumentAuthor' , 'Author' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'PermissionFromPolicy' , 'FromPolicy' , ), 13, (13, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 1024 , )),
 ]
 
 PictureFormat_vtables_dispatch_ = 1
 PictureFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementBrightness' , u'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementContrast' , u'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Brightness' , u'Brightness' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Brightness' , u'Brightness' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ColorType' , u'ColorType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'ColorType' , u'ColorType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Contrast' , u'Contrast' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Contrast' , u'Contrast' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'CropBottom' , u'CropBottom' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'CropBottom' , u'CropBottom' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'CropLeft' , u'CropLeft' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'CropLeft' , u'CropLeft' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'CropRight' , u'CropRight' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'CropRight' , u'CropRight' , ), 105, (105, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'CropTop' , u'CropTop' , ), 106, (106, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'CropTop' , u'CropTop' , ), 106, (106, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'TransparencyColor' , u'TransparencyColor' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'TransparencyColor' , u'TransparencyColor' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'TransparentBackground' , u'TransparentBackground' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'TransparentBackground' , u'TransparentBackground' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementBrightness' , 'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementContrast' , 'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Brightness' , 'Brightness' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Brightness' , 'Brightness' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ColorType' , 'ColorType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'ColorType' , 'ColorType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Contrast' , 'Contrast' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Contrast' , 'Contrast' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'CropBottom' , 'CropBottom' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'CropBottom' , 'CropBottom' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'CropLeft' , 'CropLeft' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'CropLeft' , 'CropLeft' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'CropRight' , 'CropRight' , ), 105, (105, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'CropRight' , 'CropRight' , ), 105, (105, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'CropTop' , 'CropTop' , ), 106, (106, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'CropTop' , 'CropTop' , ), 106, (106, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'TransparencyColor' , 'TransparencyColor' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'TransparencyColor' , 'TransparencyColor' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'TransparentBackground' , 'TransparentBackground' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'TransparentBackground' , 'TransparentBackground' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
 ]
 
 PropertyTest_vtables_dispatch_ = 1
 PropertyTest_vtables_ = [
-	(( u'Name' , u'pbstrRetVal' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Condition' , u'pConditionRetVal' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Value' , u'pvargRetVal' , ), 3, (3, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SecondValue' , u'pvargRetVal2' , ), 4, (4, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Connector' , u'pConnector' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrRetVal' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Condition' , 'pConditionRetVal' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Value' , 'pvargRetVal' , ), 3, (3, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SecondValue' , 'pvargRetVal2' , ), 4, (4, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Connector' , 'pConnector' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
 ]
 
 PropertyTests_vtables_dispatch_ = 1
 PropertyTests_vtables_ = [
-	(( u'Item' , u'Index' , u'lcid' , u'ppIDocProp' , ), 0, (0, (), [ 
+	(( 'Item' , 'Index' , 'lcid' , 'ppIDocProp' , ), 0, (0, (), [ 
 			(3, 1, None, None) , (3, 5, None, None) , (16393, 10, None, "IID('{000C0333-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pc' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Name' , u'Condition' , u'Value' , u'SecondValue' , 
-			u'Connector' , ), 5, (5, (), [ (8, 1, None, None) , (3, 1, None, None) , (12, 17, None, None) , 
+	(( 'Count' , 'pc' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Name' , 'Condition' , 'Value' , 'SecondValue' , 
+			'Connector' , ), 5, (5, (), [ (8, 1, None, None) , (3, 1, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (3, 49, '1', None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Remove' , u'Index' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
+	(( 'Remove' , 'Index' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
 ]
 
 ScopeFolder_vtables_dispatch_ = 1
 ScopeFolder_vtables_ = [
-	(( u'Name' , u'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Path' , u'pbstrPath' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ScopeFolders' , u'ScopeFoldersRet' , ), 3, (3, (), [ (16393, 10, None, "IID('{000C0369-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AddToSearchFolders' , ), 4, (4, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Path' , 'pbstrPath' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ScopeFolders' , 'ScopeFoldersRet' , ), 3, (3, (), [ (16393, 10, None, "IID('{000C0369-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AddToSearchFolders' , ), 4, (4, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ScopeFolders_vtables_dispatch_ = 1
 ScopeFolders_vtables_ = [
-	(( u'Item' , u'Index' , u'ScopeFolderRet' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'ScopeFolderRet' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0368-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iCountRetVal' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'iCountRetVal' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
 ]
 
 Script_vtables_dispatch_ = 1
 Script_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Extended' , u'Extended' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Extended' , u'Extended' , ), 1610809345, (1610809345, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Id' , u'Id' , ), 1610809347, (1610809347, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Id' , u'Id' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Language' , u'Language' , ), 1610809349, (1610809349, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Language' , u'Language' , ), 1610809349, (1610809349, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Location' , u'Location' , ), 1610809351, (1610809351, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 1610809352, (1610809352, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Shape' , u'Object' , ), 1610809353, (1610809353, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ScriptText' , u'Script' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ScriptText' , u'Script' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Extended' , 'Extended' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Extended' , 'Extended' , ), 1610809345, (1610809345, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Id' , 'Id' , ), 1610809347, (1610809347, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Id' , 'Id' , ), 1610809347, (1610809347, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Language' , 'Language' , ), 1610809349, (1610809349, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Language' , 'Language' , ), 1610809349, (1610809349, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Location' , 'Location' , ), 1610809351, (1610809351, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 1610809352, (1610809352, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'Object' , ), 1610809353, (1610809353, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ScriptText' , 'Script' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'ScriptText' , 'Script' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
 ]
 
 Scripts_vtables_dispatch_ = 1
 Scripts_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Anchor' , u'Location' , u'Language' , u'Id' , 
-			u'Extended' , u'ScriptText' , u'Add' , ), 1610809348, (1610809348, (), [ (9, 49, 'None', None) , 
+	(( 'Add' , 'Anchor' , 'Location' , 'Language' , 'Id' , 
+			'Extended' , 'ScriptText' , 'Add' , ), 1610809348, (1610809348, (), [ (9, 49, 'None', None) , 
 			(3, 49, '2', None) , (3, 49, '2', None) , (8, 49, "u''", None) , (8, 49, "u''", None) , (8, 49, "u''", None) , 
 			(16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 32, None, None) , 0 , )),
-	(( u'Delete' , ), 1610809349, (1610809349, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 1610809349, (1610809349, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SearchFolders_vtables_dispatch_ = 1
 SearchFolders_vtables_ = [
-	(( u'Item' , u'Index' , u'ScopeFolderRet' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'ScopeFolderRet' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0368-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iCountRetVal' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'ScopeFolder' , ), 3, (3, (), [ (9, 1, None, "IID('{000C0368-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Remove' , u'Index' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'iCountRetVal' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'ScopeFolder' , ), 3, (3, (), [ (9, 1, None, "IID('{000C0368-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Remove' , 'Index' , ), 4, (4, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 1024 , )),
 ]
 
 SearchScope_vtables_dispatch_ = 1
 SearchScope_vtables_ = [
-	(( u'Type' , u'MsoSearchInRetVal' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ScopeFolder' , u'ScopeFolderRet' , ), 1, (1, (), [ (16393, 10, None, "IID('{000C0368-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'MsoSearchInRetVal' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ScopeFolder' , 'ScopeFolderRet' , ), 1, (1, (), [ (16393, 10, None, "IID('{000C0368-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
 ]
 
 SearchScopes_vtables_dispatch_ = 1
 SearchScopes_vtables_ = [
-	(( u'Item' , u'Index' , u'SearchScopeRet' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'SearchScopeRet' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0367-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'iCountRetVal' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'iCountRetVal' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppunkEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
 ]
 
 ShadowFormat_vtables_dispatch_ = 1
 ShadowFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementOffsetX' , u'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementOffsetY' , u'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ForeColor' , u'ForeColor' , ), 100, (100, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Obscured' , u'Obscured' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Obscured' , u'Obscured' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetX' , u'OffsetX' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetX' , u'OffsetX' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetY' , u'OffsetY' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'OffsetY' , u'OffsetY' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Transparency' , u'Transparency' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementOffsetX' , 'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementOffsetY' , 'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ForeColor' , 'ForeColor' , ), 100, (100, (), [ (9, 1, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Obscured' , 'Obscured' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Obscured' , 'Obscured' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetX' , 'OffsetX' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetX' , 'OffsetX' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetY' , 'OffsetY' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'OffsetY' , 'OffsetY' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Transparency' , 'Transparency' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
 ]
 
 Shape_vtables_dispatch_ = 1
 Shape_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Apply' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Duplicate' , u'Duplicate' , ), 12, (12, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Flip' , u'FlipCmd' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementLeft' , u'Increment' , ), 14, (14, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotation' , u'Increment' , ), 15, (15, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementTop' , u'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'PickUp' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'RerouteConnections' , ), 18, (18, (), [ ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleHeight' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 19, (19, (), [ 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Apply' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Duplicate' , 'Duplicate' , ), 12, (12, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Flip' , 'FlipCmd' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementLeft' , 'Increment' , ), 14, (14, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotation' , 'Increment' , ), 15, (15, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementTop' , 'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'PickUp' , ), 17, (17, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'RerouteConnections' , ), 18, (18, (), [ ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ScaleHeight' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 19, (19, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleWidth' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 20, (20, (), [ 
+	(( 'ScaleWidth' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 20, (20, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , u'Replace' , ), 21, (21, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'SetShapesDefaultProperties' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Ungroup' , u'Ungroup' , ), 23, (23, (), [ (16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrder' , u'ZOrderCmd' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Adjustments' , u'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0310-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Callout' , u'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0311-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectionSiteCount' , u'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Connector' , u'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectorFormat' , u'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{000C0313-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Fill' , u'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{000C0314-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'GroupItems' , u'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{000C0316-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'HorizontalFlip' , u'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'Line' , u'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{000C0317-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'Nodes' , u'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{000C0319-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'PictureFormat' , u'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{000C031A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'Shadow' , u'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{000C031B-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'TextEffect' , u'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{000C031F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'TextFrame' , u'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{000C0320-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'ThreeD' , u'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{000C0321-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'VerticalFlip' , u'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'Vertices' , u'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrderPosition' , u'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'Script' , u'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'HasDiagram' , u'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'Diagram' , u'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{000C036D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'HasDiagramNode' , u'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'DiagramNode' , u'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'Child' , u'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'ParentGroup' , u'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasItems' , u'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{000C0371-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 64 , )),
-	(( u'Id' , u'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasCropLeft' , u'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 300 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropTop' , u'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 304 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropRight' , u'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropBottom' , u'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 312 , (3, 0, None, None) , 64 , )),
-	(( u'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 316 , (3, 0, None, None) , 64 , )),
+	(( 'Select' , 'Replace' , ), 21, (21, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'SetShapesDefaultProperties' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Ungroup' , 'Ungroup' , ), 23, (23, (), [ (16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrder' , 'ZOrderCmd' , ), 24, (24, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Adjustments' , 'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0310-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Callout' , 'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0311-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectionSiteCount' , 'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Connector' , 'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectorFormat' , 'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{000C0313-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Fill' , 'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{000C0314-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'GroupItems' , 'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{000C0316-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'HorizontalFlip' , 'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'Line' , 'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{000C0317-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'Nodes' , 'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{000C0319-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'PictureFormat' , 'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{000C031A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'Shadow' , 'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{000C031B-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'TextEffect' , 'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{000C031F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'TextFrame' , 'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{000C0320-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'ThreeD' , 'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{000C0321-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'VerticalFlip' , 'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'Vertices' , 'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrderPosition' , 'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'Script' , 'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'HasDiagram' , 'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'Diagram' , 'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{000C036D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'HasDiagramNode' , 'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'DiagramNode' , 'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'Child' , 'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
+	(( 'ParentGroup' , 'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasItems' , 'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{000C0371-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 292 , (3, 0, None, None) , 64 , )),
+	(( 'Id' , 'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasCropLeft' , 'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 300 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropTop' , 'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 304 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropRight' , 'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 308 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropBottom' , 'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 312 , (3, 0, None, None) , 64 , )),
+	(( 'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 316 , (3, 0, None, None) , 64 , )),
 ]
 
 ShapeNode_vtables_dispatch_ = 1
 ShapeNode_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'EditingType' , u'EditingType' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Points' , u'Points' , ), 101, (101, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SegmentType' , u'SegmentType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'EditingType' , 'EditingType' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Points' , 'Points' , ), 101, (101, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SegmentType' , 'SegmentType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 ShapeNodes_vtables_dispatch_ = 1
 ShapeNodes_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0318-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'Delete' , u'Index' , ), 11, (11, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Insert' , u'Index' , u'SegmentType' , u'EditingType' , u'X1' , 
-			u'Y1' , u'X2' , u'Y2' , u'X3' , u'Y3' , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'Delete' , 'Index' , ), 11, (11, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Insert' , 'Index' , 'SegmentType' , 'EditingType' , 'X1' , 
+			'Y1' , 'X2' , 'Y2' , 'X3' , 'Y3' , 
 			), 12, (12, (), [ (3, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , (4, 49, '0.0', None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'SetEditingType' , u'Index' , u'EditingType' , ), 13, (13, (), [ (3, 1, None, None) , 
+	(( 'SetEditingType' , 'Index' , 'EditingType' , ), 13, (13, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'SetPosition' , u'Index' , u'X1' , u'Y1' , ), 14, (14, (), [ 
+	(( 'SetPosition' , 'Index' , 'X1' , 'Y1' , ), 14, (14, (), [ 
 			(3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'SetSegmentType' , u'Index' , u'SegmentType' , ), 15, (15, (), [ (3, 1, None, None) , 
+	(( 'SetSegmentType' , 'Index' , 'SegmentType' , ), 15, (15, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
 ]
 
 ShapeRange_vtables_dispatch_ = 1
 ShapeRange_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'Align' , u'AlignCmd' , u'RelativeTo' , ), 10, (10, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'Align' , 'AlignCmd' , 'RelativeTo' , ), 10, (10, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Apply' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 12, (12, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Distribute' , u'DistributeCmd' , u'RelativeTo' , ), 13, (13, (), [ (3, 1, None, None) , 
+	(( 'Apply' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 12, (12, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Distribute' , 'DistributeCmd' , 'RelativeTo' , ), 13, (13, (), [ (3, 1, None, None) , 
 			(3, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Duplicate' , u'Duplicate' , ), 14, (14, (), [ (16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Flip' , u'FlipCmd' , ), 15, (15, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementLeft' , u'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotation' , u'Increment' , ), 17, (17, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementTop' , u'Increment' , ), 18, (18, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Group' , u'Group' , ), 19, (19, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'PickUp' , ), 20, (20, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Regroup' , u'Regroup' , ), 21, (21, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'RerouteConnections' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleHeight' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 23, (23, (), [ 
+	(( 'Duplicate' , 'Duplicate' , ), 14, (14, (), [ (16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Flip' , 'FlipCmd' , ), 15, (15, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementLeft' , 'Increment' , ), 16, (16, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotation' , 'Increment' , ), 17, (17, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementTop' , 'Increment' , ), 18, (18, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Group' , 'Group' , ), 19, (19, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'PickUp' , ), 20, (20, (), [ ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Regroup' , 'Regroup' , ), 21, (21, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'RerouteConnections' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'ScaleHeight' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 23, (23, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'ScaleWidth' , u'Factor' , u'RelativeToOriginalSize' , u'fScale' , ), 24, (24, (), [ 
+	(( 'ScaleWidth' , 'Factor' , 'RelativeToOriginalSize' , 'fScale' , ), 24, (24, (), [ 
 			(4, 1, None, None) , (3, 1, None, None) , (3, 49, '0', None) , ], 1 , 1 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'Select' , u'Replace' , ), 25, (25, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'SetShapesDefaultProperties' , ), 26, (26, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'Ungroup' , u'Ungroup' , ), 27, (27, (), [ (16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrder' , u'ZOrderCmd' , ), 28, (28, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Adjustments' , u'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0310-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'AutoShapeType' , u'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'BlackWhiteMode' , u'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'Callout' , u'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0311-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectionSiteCount' , u'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
-	(( u'Connector' , u'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
-	(( u'ConnectorFormat' , u'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{000C0313-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
-	(( u'Fill' , u'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{000C0314-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
-	(( u'GroupItems' , u'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{000C0316-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
-	(( u'HorizontalFlip' , u'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
-	(( u'Left' , u'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
-	(( u'Line' , u'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{000C0317-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
-	(( u'LockAspectRatio' , u'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
-	(( u'Nodes' , u'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{000C0319-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
-	(( u'Rotation' , u'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
-	(( u'PictureFormat' , u'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{000C031A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
-	(( u'Shadow' , u'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{000C031B-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
-	(( u'TextEffect' , u'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{000C031F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
-	(( u'TextFrame' , u'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{000C0320-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
-	(( u'ThreeD' , u'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{000C0321-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
-	(( u'Top' , u'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
-	(( u'Type' , u'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
-	(( u'VerticalFlip' , u'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
-	(( u'Vertices' , u'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
-	(( u'ZOrderPosition' , u'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
-	(( u'Script' , u'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
-	(( u'AlternativeText' , u'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
-	(( u'HasDiagram' , u'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
-	(( u'Diagram' , u'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{000C036D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
-	(( u'HasDiagramNode' , u'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
-	(( u'DiagramNode' , u'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
-	(( u'Child' , u'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
-	(( u'ParentGroup' , u'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasItems' , u'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{000C0371-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 320 , (3, 0, None, None) , 64 , )),
-	(( u'Id' , u'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
-	(( u'CanvasCropLeft' , u'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropTop' , u'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 332 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropRight' , u'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 336 , (3, 0, None, None) , 64 , )),
-	(( u'CanvasCropBottom' , u'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 340 , (3, 0, None, None) , 64 , )),
-	(( u'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 64 , )),
+	(( 'Select' , 'Replace' , ), 25, (25, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'SetShapesDefaultProperties' , ), 26, (26, (), [ ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Ungroup' , 'Ungroup' , ), 27, (27, (), [ (16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrder' , 'ZOrderCmd' , ), 28, (28, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Adjustments' , 'Adjustments' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C0310-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'AutoShapeType' , 'AutoShapeType' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'BlackWhiteMode' , 'BlackWhiteMode' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'Callout' , 'Callout' , ), 103, (103, (), [ (16393, 10, None, "IID('{000C0311-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectionSiteCount' , 'ConnectionSiteCount' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 152 , (3, 0, None, None) , 0 , )),
+	(( 'Connector' , 'Connector' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 156 , (3, 0, None, None) , 0 , )),
+	(( 'ConnectorFormat' , 'ConnectorFormat' , ), 106, (106, (), [ (16393, 10, None, "IID('{000C0313-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 160 , (3, 0, None, None) , 0 , )),
+	(( 'Fill' , 'Fill' , ), 107, (107, (), [ (16393, 10, None, "IID('{000C0314-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 164 , (3, 0, None, None) , 0 , )),
+	(( 'GroupItems' , 'GroupItems' , ), 108, (108, (), [ (16393, 10, None, "IID('{000C0316-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 168 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 172 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'Height' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 176 , (3, 0, None, None) , 0 , )),
+	(( 'HorizontalFlip' , 'HorizontalFlip' , ), 110, (110, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 180 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 184 , (3, 0, None, None) , 0 , )),
+	(( 'Left' , 'Left' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 188 , (3, 0, None, None) , 0 , )),
+	(( 'Line' , 'Line' , ), 112, (112, (), [ (16393, 10, None, "IID('{000C0317-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 192 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 196 , (3, 0, None, None) , 0 , )),
+	(( 'LockAspectRatio' , 'LockAspectRatio' , ), 113, (113, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 200 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 204 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 115, (115, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 208 , (3, 0, None, None) , 0 , )),
+	(( 'Nodes' , 'Nodes' , ), 116, (116, (), [ (16393, 10, None, "IID('{000C0319-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 212 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 216 , (3, 0, None, None) , 0 , )),
+	(( 'Rotation' , 'Rotation' , ), 117, (117, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 220 , (3, 0, None, None) , 0 , )),
+	(( 'PictureFormat' , 'Picture' , ), 118, (118, (), [ (16393, 10, None, "IID('{000C031A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 224 , (3, 0, None, None) , 0 , )),
+	(( 'Shadow' , 'Shadow' , ), 119, (119, (), [ (16393, 10, None, "IID('{000C031B-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 228 , (3, 0, None, None) , 0 , )),
+	(( 'TextEffect' , 'TextEffect' , ), 120, (120, (), [ (16393, 10, None, "IID('{000C031F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 232 , (3, 0, None, None) , 0 , )),
+	(( 'TextFrame' , 'TextFrame' , ), 121, (121, (), [ (16393, 10, None, "IID('{000C0320-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 236 , (3, 0, None, None) , 0 , )),
+	(( 'ThreeD' , 'ThreeD' , ), 122, (122, (), [ (16393, 10, None, "IID('{000C0321-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 240 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 244 , (3, 0, None, None) , 0 , )),
+	(( 'Top' , 'Top' , ), 123, (123, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 248 , (3, 0, None, None) , 0 , )),
+	(( 'Type' , 'Type' , ), 124, (124, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 252 , (3, 0, None, None) , 0 , )),
+	(( 'VerticalFlip' , 'VerticalFlip' , ), 125, (125, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 256 , (3, 0, None, None) , 0 , )),
+	(( 'Vertices' , 'Vertices' , ), 126, (126, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 260 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 264 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 127, (127, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 268 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 272 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'Width' , ), 128, (128, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 276 , (3, 0, None, None) , 0 , )),
+	(( 'ZOrderPosition' , 'ZOrderPosition' , ), 129, (129, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 280 , (3, 0, None, None) , 0 , )),
+	(( 'Script' , 'Script' , ), 130, (130, (), [ (16393, 10, None, "IID('{000C0341-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 284 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 288 , (3, 0, None, None) , 0 , )),
+	(( 'AlternativeText' , 'AlternativeText' , ), 131, (131, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 292 , (3, 0, None, None) , 0 , )),
+	(( 'HasDiagram' , 'pHasDiagram' , ), 132, (132, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 296 , (3, 0, None, None) , 0 , )),
+	(( 'Diagram' , 'Diagram' , ), 133, (133, (), [ (16393, 10, None, "IID('{000C036D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 300 , (3, 0, None, None) , 0 , )),
+	(( 'HasDiagramNode' , 'pHasDiagram' , ), 134, (134, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 304 , (3, 0, None, None) , 0 , )),
+	(( 'DiagramNode' , 'DiagramNode' , ), 135, (135, (), [ (16393, 10, None, "IID('{000C0370-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 308 , (3, 0, None, None) , 0 , )),
+	(( 'Child' , 'Child' , ), 136, (136, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 312 , (3, 0, None, None) , 0 , )),
+	(( 'ParentGroup' , 'Parent' , ), 137, (137, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 316 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasItems' , 'CanvasShapes' , ), 138, (138, (), [ (16393, 10, None, "IID('{000C0371-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 320 , (3, 0, None, None) , 64 , )),
+	(( 'Id' , 'pid' , ), 139, (139, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 324 , (3, 0, None, None) , 0 , )),
+	(( 'CanvasCropLeft' , 'Increment' , ), 140, (140, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 328 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropTop' , 'Increment' , ), 141, (141, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 332 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropRight' , 'Increment' , ), 142, (142, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 336 , (3, 0, None, None) , 64 , )),
+	(( 'CanvasCropBottom' , 'Increment' , ), 143, (143, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 340 , (3, 0, None, None) , 64 , )),
+	(( 'RTF' , ), 144, (144, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 64 , )),
 ]
 
 Shapes_vtables_dispatch_ = 1
 Shapes_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Count' , 'Count' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
-	(( u'AddCallout' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 1024 , )),
+	(( 'AddCallout' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Callout' , ), 10, (10, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AddConnector' , u'Type' , u'BeginX' , u'BeginY' , u'EndX' , 
-			u'EndY' , u'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddConnector' , 'Type' , 'BeginX' , 'BeginY' , 'EndX' , 
+			'EndY' , 'Connector' , ), 11, (11, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'AddCurve' , u'SafeArrayOfPoints' , u'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
+	(( 'AddCurve' , 'SafeArrayOfPoints' , 'Curve' , ), 12, (12, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'AddLabel' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLabel' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Label' , ), 13, (13, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'AddLine' , u'BeginX' , u'BeginY' , u'EndX' , u'EndY' , 
-			u'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddLine' , 'BeginX' , 'BeginY' , 'EndX' , 'EndY' , 
+			'Line' , ), 14, (14, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'AddPicture' , u'FileName' , u'LinkToFile' , u'SaveWithDocument' , u'Left' , 
-			u'Top' , u'Width' , u'Height' , u'Picture' , ), 15, (15, (), [ 
+	(( 'AddPicture' , 'FileName' , 'LinkToFile' , 'SaveWithDocument' , 'Left' , 
+			'Top' , 'Width' , 'Height' , 'Picture' , ), 15, (15, (), [ 
 			(8, 1, None, None) , (3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 49, '-1.0', None) , (4, 49, '-1.0', None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'AddPolyline' , u'SafeArrayOfPoints' , u'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
+	(( 'AddPolyline' , 'SafeArrayOfPoints' , 'Polyline' , ), 16, (16, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'AddShape' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddShape' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Shape' , ), 17, (17, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextEffect' , u'PresetTextEffect' , u'Text' , u'FontName' , u'FontSize' , 
-			u'FontBold' , u'FontItalic' , u'Left' , u'Top' , u'TextEffect' , 
+	(( 'AddTextEffect' , 'PresetTextEffect' , 'Text' , 'FontName' , 'FontSize' , 
+			'FontBold' , 'FontItalic' , 'Left' , 'Top' , 'TextEffect' , 
 			), 18, (18, (), [ (3, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , (4, 1, None, None) , 
 			(3, 1, None, None) , (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'AddTextbox' , u'Orientation' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddTextbox' , 'Orientation' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Textbox' , ), 19, (19, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'BuildFreeform' , u'EditingType' , u'X1' , u'Y1' , u'FreeformBuilder' , 
+	(( 'BuildFreeform' , 'EditingType' , 'X1' , 'Y1' , 'FreeformBuilder' , 
 			), 20, (20, (), [ (3, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C0315-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'Range' , u'Index' , u'Range' , ), 21, (21, (), [ (12, 1, None, None) , 
+	(( 'Range' , 'Index' , 'Range' , ), 21, (21, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C031D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Background' , u'Background' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Default' , u'Default' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'AddDiagram' , u'Type' , u'Left' , u'Top' , u'Width' , 
-			u'Height' , u'Diagram' , ), 23, (23, (), [ (3, 1, None, None) , (4, 1, None, None) , 
+	(( 'SelectAll' , ), 22, (22, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Background' , 'Background' , ), 100, (100, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Default' , 'Default' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'AddDiagram' , 'Type' , 'Left' , 'Top' , 'Width' , 
+			'Height' , 'Diagram' , ), 23, (23, (), [ (3, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'AddCanvas' , u'Left' , u'Top' , u'Width' , u'Height' , 
-			u'Shape' , ), 25, (25, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
+	(( 'AddCanvas' , 'Left' , 'Top' , 'Width' , 'Height' , 
+			'Shape' , ), 25, (25, (), [ (4, 1, None, None) , (4, 1, None, None) , (4, 1, None, None) , 
 			(4, 1, None, None) , (16393, 10, None, "IID('{000C031C-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 116 , (3, 0, None, None) , 64 , )),
 ]
 
 SharedWorkspace_vtables_dispatch_ = 1
 SharedWorkspace_vtables_ = [
-	(( u'Name' , u'Name' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'Name' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Members' , u'ppMembers' , ), 1, (1, (), [ (16393, 10, None, "IID('{000C0382-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Tasks' , u'ppTasks' , ), 2, (2, (), [ (16393, 10, None, "IID('{000C037A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Files' , u'ppFiles' , ), 3, (3, (), [ (16393, 10, None, "IID('{000C037C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Folders' , u'ppFolders' , ), 4, (4, (), [ (16393, 10, None, "IID('{000C037E-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Links' , u'ppLinks' , ), 5, (5, (), [ (16393, 10, None, "IID('{000C0380-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Refresh' , ), 6, (6, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'CreateNew' , u'URL' , u'Name' , ), 7, (7, (), [ (12, 17, None, None) , 
+	(( 'Name' , 'Name' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'Name' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Members' , 'ppMembers' , ), 1, (1, (), [ (16393, 10, None, "IID('{000C0382-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Tasks' , 'ppTasks' , ), 2, (2, (), [ (16393, 10, None, "IID('{000C037A-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Files' , 'ppFiles' , ), 3, (3, (), [ (16393, 10, None, "IID('{000C037C-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Folders' , 'ppFolders' , ), 4, (4, (), [ (16393, 10, None, "IID('{000C037E-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Links' , 'ppLinks' , ), 5, (5, (), [ (16393, 10, None, "IID('{000C0380-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Refresh' , ), 6, (6, (), [ ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'CreateNew' , 'URL' , 'Name' , ), 7, (7, (), [ (12, 17, None, None) , 
 			(12, 17, None, None) , ], 1 , 1 , 4 , 2 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 8, (8, (), [ ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 9, (9, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'pbstrUrl' , ), 10, (10, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Connected' , u'pfConnected' , ), 11, (11, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'LastRefreshed' , u'pvarLastRefreshed' , ), 12, (12, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'SourceURL' , u'pbstrSourceURL' , ), 13, (13, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'SourceURL' , u'pbstrSourceURL' , ), 13, (13, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'RemoveDocument' , ), 14, (14, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Disconnect' , ), 15, (15, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 8, (8, (), [ ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 9, (9, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'pbstrUrl' , ), 10, (10, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Connected' , 'pfConnected' , ), 11, (11, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'LastRefreshed' , 'pvarLastRefreshed' , ), 12, (12, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'SourceURL' , 'pbstrSourceURL' , ), 13, (13, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'SourceURL' , 'pbstrSourceURL' , ), 13, (13, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'RemoveDocument' , ), 14, (14, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Disconnect' , ), 15, (15, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceFile_vtables_dispatch_ = 1
 SharedWorkspaceFile_vtables_ = [
-	(( u'URL' , u'pbstrFilename' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'CreatedBy' , u'pbstrCreatedBy' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'CreatedDate' , u'CreatedDate' , ), 2, (2, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedBy' , u'pbstrModifiedBy' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedDate' , u'ModifiedDate' , ), 4, (4, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 6, (6, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'pbstrFilename' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'CreatedBy' , 'pbstrCreatedBy' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'CreatedDate' , 'CreatedDate' , ), 2, (2, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedBy' , 'pbstrModifiedBy' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedDate' , 'ModifiedDate' , ), 4, (4, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 6, (6, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceFiles_vtables_dispatch_ = 1
 SharedWorkspaceFiles_vtables_ = [
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C037B-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'FileName' , u'ParentFolder' , u'OverwriteIfFileAlreadyExists' , u'KeepInSync' , 
-			u'ppFile' , ), 2, (2, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'Count' , 'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'FileName' , 'ParentFolder' , 'OverwriteIfFileAlreadyExists' , 'KeepInSync' , 
+			'ppFile' , ), 2, (2, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16393, 10, None, "IID('{000C037B-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 3 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ItemCountExceeded' , u'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ItemCountExceeded' , 'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceFolder_vtables_dispatch_ = 1
 SharedWorkspaceFolder_vtables_ = [
-	(( u'FolderName' , u'FolderName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , u'DeleteEventIfFolderContainsFiles' , ), 1, (1, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'FolderName' , 'FolderName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , 'DeleteEventIfFolderContainsFiles' , ), 1, (1, (), [ (12, 17, None, None) , ], 1 , 1 , 4 , 1 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceFolders_vtables_dispatch_ = 1
 SharedWorkspaceFolders_vtables_ = [
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C037D-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'FolderName' , u'ParentFolder' , u'ppFolder' , ), 2, (2, (), [ 
+	(( 'Count' , 'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'FolderName' , 'ParentFolder' , 'ppFolder' , ), 2, (2, (), [ 
 			(8, 1, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C037D-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 1 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ItemCountExceeded' , u'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ItemCountExceeded' , 'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceLink_vtables_dispatch_ = 1
 SharedWorkspaceLink_vtables_ = [
-	(( u'URL' , u'URL' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'URL' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Description' , u'Description' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Description' , u'Description' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Notes' , u'Notes' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Notes' , u'Notes' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'CreatedBy' , u'CreatedBy' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'CreatedDate' , u'CreatedDate' , ), 4, (4, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedBy' , u'ModifiedBy' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedDate' , u'ModifiedDate' , ), 6, (6, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Save' , ), 7, (7, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 8, (8, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 9, (9, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'URL' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'URL' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'Description' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'Description' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Notes' , 'Notes' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Notes' , 'Notes' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'CreatedBy' , 'CreatedBy' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'CreatedDate' , 'CreatedDate' , ), 4, (4, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedBy' , 'ModifiedBy' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedDate' , 'ModifiedDate' , ), 6, (6, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Save' , ), 7, (7, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 8, (8, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 9, (9, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceLinks_vtables_dispatch_ = 1
 SharedWorkspaceLinks_vtables_ = [
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C037F-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'URL' , u'Description' , u'Notes' , u'ppLink' , 
+	(( 'Count' , 'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'URL' , 'Description' , 'Notes' , 'ppLink' , 
 			), 2, (2, (), [ (8, 1, None, None) , (12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C037F-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 2 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ItemCountExceeded' , u'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ItemCountExceeded' , 'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceMember_vtables_dispatch_ = 1
 SharedWorkspaceMember_vtables_ = [
-	(( u'DomainName' , u'pbstrDomainName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'pbstrName' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Email' , u'pbstrEmail' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 3, (3, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Id' , u'Id' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 64 , )),
-	(( u'Parent' , u'ppidisp' , ), 5, (5, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'DomainName' , 'pbstrDomainName' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'pbstrName' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Email' , 'pbstrEmail' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 3, (3, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Id' , 'Id' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 64 , )),
+	(( 'Parent' , 'ppidisp' , ), 5, (5, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceMembers_vtables_dispatch_ = 1
 SharedWorkspaceMembers_vtables_ = [
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0381-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Email' , u'DomainName' , u'DisplayName' , u'Role' , 
-			u'ppMember' , ), 2, (2, (), [ (8, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , 
+	(( 'Count' , 'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Email' , 'DomainName' , 'DisplayName' , 'Role' , 
+			'ppMember' , ), 2, (2, (), [ (8, 1, None, None) , (8, 1, None, None) , (8, 1, None, None) , 
 			(12, 17, None, None) , (16393, 10, None, "IID('{000C0381-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 1 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'ItemCountExceeded' , u'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'ItemCountExceeded' , 'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceTask_vtables_dispatch_ = 1
 SharedWorkspaceTask_vtables_ = [
-	(( u'Title' , u'Title' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Title' , u'Title' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'AssignedTo' , u'AssignedTo' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'AssignedTo' , u'AssignedTo' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Status' , u'Status' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Status' , u'Status' , ), 2, (2, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Priority' , u'Priority' , ), 3, (3, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Priority' , u'Priority' , ), 3, (3, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Description' , u'Description' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Description' , u'Description' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'DueDate' , u'DueDate' , ), 5, (5, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'DueDate' , u'DueDate' , ), 5, (5, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'CreatedBy' , u'CreatedBy' , ), 6, (6, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'CreatedDate' , u'CreatedDate' , ), 7, (7, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedBy' , u'ModifiedBy' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'ModifiedDate' , u'ModifiedDate' , ), 9, (9, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'Save' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 12, (12, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'Title' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Title' , 'Title' , ), 0, (0, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'AssignedTo' , 'AssignedTo' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'AssignedTo' , 'AssignedTo' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Status' , 'Status' , ), 2, (2, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Status' , 'Status' , ), 2, (2, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Priority' , 'Priority' , ), 3, (3, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Priority' , 'Priority' , ), 3, (3, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'Description' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Description' , 'Description' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'DueDate' , 'DueDate' , ), 5, (5, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'DueDate' , 'DueDate' , ), 5, (5, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'CreatedBy' , 'CreatedBy' , ), 6, (6, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'CreatedDate' , 'CreatedDate' , ), 7, (7, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedBy' , 'ModifiedBy' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'ModifiedDate' , 'ModifiedDate' , ), 9, (9, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'Save' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 11, (11, (), [ ], 1 , 1 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 12, (12, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
 ]
 
 SharedWorkspaceTasks_vtables_dispatch_ = 1
 SharedWorkspaceTasks_vtables_ = [
-	(( u'Item' , u'Index' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Item' , 'Index' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0379-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Title' , u'Status' , u'Priority' , u'Assignee' , 
-			u'Description' , u'DueDate' , u'ppTask' , ), 2, (2, (), [ (8, 1, None, None) , 
+	(( 'Count' , 'pcItems' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Title' , 'Status' , 'Priority' , 'Assignee' , 
+			'Description' , 'DueDate' , 'ppTask' , ), 2, (2, (), [ (8, 1, None, None) , 
 			(12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(16393, 10, None, "IID('{000C0379-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 5 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ItemCountExceeded' , u'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 1024 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ItemCountExceeded' , 'pf' , ), 4, (4, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 1024 , )),
 ]
 
 Signature_vtables_dispatch_ = 1
 Signature_vtables_ = [
-	(( u'Signer' , u'pbstr' , ), 1610809344, (1610809344, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Issuer' , u'pbstr' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ExpireDate' , u'pvarDate' , ), 1610809346, (1610809346, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'IsValid' , u'pfValid' , ), 1610809347, (1610809347, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'AttachCertificate' , u'pfAttach' , ), 1610809348, (1610809348, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'AttachCertificate' , u'pfAttach' , ), 1610809348, (1610809348, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Delete' , ), 1610809350, (1610809350, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809351, (1610809351, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'IsCertificateExpired' , u'pfExpired' , ), 1610809352, (1610809352, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'IsCertificateRevoked' , u'pfExpired' , ), 1610809353, (1610809353, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'SignDate' , u'pvarDate' , ), 1610809354, (1610809354, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Signer' , 'pbstr' , ), 1610809344, (1610809344, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Issuer' , 'pbstr' , ), 1610809345, (1610809345, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ExpireDate' , 'pvarDate' , ), 1610809346, (1610809346, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'IsValid' , 'pfValid' , ), 1610809347, (1610809347, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'AttachCertificate' , 'pfAttach' , ), 1610809348, (1610809348, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'AttachCertificate' , 'pfAttach' , ), 1610809348, (1610809348, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Delete' , ), 1610809350, (1610809350, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809351, (1610809351, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'IsCertificateExpired' , 'pfExpired' , ), 1610809352, (1610809352, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'IsCertificateRevoked' , 'pfExpired' , ), 1610809353, (1610809353, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'SignDate' , 'pvarDate' , ), 1610809354, (1610809354, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 SignatureSet_vtables_dispatch_ = 1
 SignatureSet_vtables_ = [
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
-	(( u'Count' , u'pcSig' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'iSig' , u'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 1024 , )),
+	(( 'Count' , 'pcSig' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'iSig' , 'ppidisp' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0411-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'ppidisp' , ), 1610809347, (1610809347, (), [ (16393, 10, None, "IID('{000C0411-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Commit' , ), 1610809348, (1610809348, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809349, (1610809349, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'ppidisp' , ), 1610809347, (1610809347, (), [ (16393, 10, None, "IID('{000C0411-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Commit' , ), 1610809348, (1610809348, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809349, (1610809349, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 SmartDocument_vtables_dispatch_ = 1
 SmartDocument_vtables_ = [
-	(( u'SolutionID' , u'pbstrID' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'SolutionID' , u'pbstrID' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'SolutionURL' , u'pbstrUrl' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'SolutionURL' , u'pbstrUrl' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'PickSolution' , u'ConsiderAllSchemas' , ), 3, (3, (), [ (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'RefreshPane' , ), 4, (4, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'SolutionID' , 'pbstrID' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'SolutionID' , 'pbstrID' , ), 1, (1, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'SolutionURL' , 'pbstrUrl' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'SolutionURL' , 'pbstrUrl' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'PickSolution' , 'ConsiderAllSchemas' , ), 3, (3, (), [ (11, 49, 'False', None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'RefreshPane' , ), 4, (4, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
 ]
 
 Sync_vtables_dispatch_ = 1
 Sync_vtables_ = [
-	(( u'Status' , u'pStatusType' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'WorkspaceLastChangedBy' , u'pbstrWorkspaceLastChangedBy' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'LastSyncTime' , u'pdatSavedTo' , ), 2, (2, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ErrorType' , u'pErrorType' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'GetUpdate' , ), 6, (6, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'PutUpdate' , ), 7, (7, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'OpenVersion' , u'SyncVersionType' , ), 8, (8, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'ResolveConflict' , u'SyncConflictResolution' , ), 9, (9, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Unsuspend' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 14, (14, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Status' , 'pStatusType' , ), 0, (0, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'WorkspaceLastChangedBy' , 'pbstrWorkspaceLastChangedBy' , ), 1, (1, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'LastSyncTime' , 'pdatSavedTo' , ), 2, (2, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ErrorType' , 'pErrorType' , ), 4, (4, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'GetUpdate' , ), 6, (6, (), [ ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'PutUpdate' , ), 7, (7, (), [ ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'OpenVersion' , 'SyncVersionType' , ), 8, (8, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'ResolveConflict' , 'SyncConflictResolution' , ), 9, (9, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Unsuspend' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 14, (14, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
 ]
 
 TextEffectFormat_vtables_dispatch_ = 1
 TextEffectFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ToggleVerticalText' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Alignment' , u'Alignment' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Alignment' , u'Alignment' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FontBold' , u'FontBold' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'FontBold' , u'FontBold' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FontItalic' , u'FontItalic' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FontItalic' , u'FontItalic' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'FontName' , u'FontName' , ), 103, (103, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'FontName' , u'FontName' , ), 103, (103, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'FontSize' , u'FontSize' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'FontSize' , u'FontSize' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'KernedPairs' , u'KernedPairs' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'KernedPairs' , u'KernedPairs' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'NormalizedHeight' , u'NormalizedHeight' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'NormalizedHeight' , u'NormalizedHeight' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'PresetShape' , u'PresetShape' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'PresetShape' , u'PresetShape' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTextEffect' , u'Preset' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PresetTextEffect' , u'Preset' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'RotatedChars' , u'RotatedChars' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'RotatedChars' , u'RotatedChars' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 110, (110, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'Text' , ), 110, (110, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'Tracking' , u'Tracking' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Tracking' , u'Tracking' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ToggleVerticalText' , ), 10, (10, (), [ ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Alignment' , 'Alignment' , ), 100, (100, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Alignment' , 'Alignment' , ), 100, (100, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FontBold' , 'FontBold' , ), 101, (101, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'FontBold' , 'FontBold' , ), 101, (101, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FontItalic' , 'FontItalic' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'FontItalic' , 'FontItalic' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'FontName' , 'FontName' , ), 103, (103, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'FontName' , 'FontName' , ), 103, (103, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'FontSize' , 'FontSize' , ), 104, (104, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'FontSize' , 'FontSize' , ), 104, (104, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'KernedPairs' , 'KernedPairs' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'KernedPairs' , 'KernedPairs' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'NormalizedHeight' , 'NormalizedHeight' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'NormalizedHeight' , 'NormalizedHeight' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'PresetShape' , 'PresetShape' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'PresetShape' , 'PresetShape' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'PresetTextEffect' , 'Preset' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PresetTextEffect' , 'Preset' , ), 108, (108, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'RotatedChars' , 'RotatedChars' , ), 109, (109, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'RotatedChars' , 'RotatedChars' , ), 109, (109, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 110, (110, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'Text' , ), 110, (110, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'Tracking' , 'Tracking' , ), 111, (111, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Tracking' , 'Tracking' , ), 111, (111, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
 ]
 
 TextFrame_vtables_dispatch_ = 1
 TextFrame_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'MarginBottom' , u'MarginBottom' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'MarginBottom' , u'MarginBottom' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'MarginLeft' , u'MarginLeft' , ), 101, (101, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'MarginLeft' , u'MarginLeft' , ), 101, (101, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'MarginRight' , u'MarginRight' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'MarginRight' , u'MarginRight' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'MarginTop' , u'MarginTop' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'MarginTop' , u'MarginTop' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Orientation' , u'Orientation' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Orientation' , u'Orientation' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'MarginBottom' , 'MarginBottom' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'MarginBottom' , 'MarginBottom' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'MarginLeft' , 'MarginLeft' , ), 101, (101, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'MarginLeft' , 'MarginLeft' , ), 101, (101, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'MarginRight' , 'MarginRight' , ), 102, (102, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'MarginRight' , 'MarginRight' , ), 102, (102, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'MarginTop' , 'MarginTop' , ), 103, (103, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'MarginTop' , 'MarginTop' , ), 103, (103, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Orientation' , 'Orientation' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Orientation' , 'Orientation' , ), 104, (104, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
 ]
 
 ThreeDFormat_vtables_dispatch_ = 1
 ThreeDFormat_vtables_ = [
-	(( u'Parent' , u'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotationX' , u'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'IncrementRotationY' , u'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ResetRotation' , ), 12, (12, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'SetThreeDFormat' , u'PresetThreeDFormat' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'SetExtrusionDirection' , u'PresetExtrusionDirection' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Depth' , u'Depth' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Depth' , u'Depth' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'ExtrusionColor' , u'ExtrusionColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'ExtrusionColorType' , u'ExtrusionColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'ExtrusionColorType' , u'ExtrusionColorType' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Perspective' , u'Perspective' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Perspective' , u'Perspective' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'PresetExtrusionDirection' , u'PresetExtrusionDirection' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingDirection' , u'PresetLightingDirection' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingDirection' , u'PresetLightingDirection' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingSoftness' , u'PresetLightingSoftness' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'PresetLightingSoftness' , u'PresetLightingSoftness' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
-	(( u'PresetMaterial' , u'PresetMaterial' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
-	(( u'PresetMaterial' , u'PresetMaterial' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'PresetThreeDFormat' , u'PresetThreeDFormat' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'RotationX' , u'RotationX' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'RotationX' , u'RotationX' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
-	(( u'RotationY' , u'RotationY' , ), 110, (110, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'RotationY' , u'RotationY' , ), 110, (110, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 111, (111, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'Visible' , u'Visible' , ), 111, (111, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotationX' , 'Increment' , ), 10, (10, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'IncrementRotationY' , 'Increment' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ResetRotation' , ), 12, (12, (), [ ], 1 , 1 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'SetThreeDFormat' , 'PresetThreeDFormat' , ), 13, (13, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'SetExtrusionDirection' , 'PresetExtrusionDirection' , ), 14, (14, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Depth' , 'Depth' , ), 100, (100, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Depth' , 'Depth' , ), 100, (100, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ExtrusionColor' , 'ExtrusionColor' , ), 101, (101, (), [ (16393, 10, None, "IID('{000C0312-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'ExtrusionColorType' , 'ExtrusionColorType' , ), 102, (102, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'ExtrusionColorType' , 'ExtrusionColorType' , ), 102, (102, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Perspective' , 'Perspective' , ), 103, (103, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Perspective' , 'Perspective' , ), 103, (103, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'PresetExtrusionDirection' , 'PresetExtrusionDirection' , ), 104, (104, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingDirection' , 'PresetLightingDirection' , ), 105, (105, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingDirection' , 'PresetLightingDirection' , ), 105, (105, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingSoftness' , 'PresetLightingSoftness' , ), 106, (106, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'PresetLightingSoftness' , 'PresetLightingSoftness' , ), 106, (106, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 104 , (3, 0, None, None) , 0 , )),
+	(( 'PresetMaterial' , 'PresetMaterial' , ), 107, (107, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 0 , )),
+	(( 'PresetMaterial' , 'PresetMaterial' , ), 107, (107, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'PresetThreeDFormat' , 'PresetThreeDFormat' , ), 108, (108, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'RotationX' , 'RotationX' , ), 109, (109, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 120 , (3, 0, None, None) , 0 , )),
+	(( 'RotationX' , 'RotationX' , ), 109, (109, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 124 , (3, 0, None, None) , 0 , )),
+	(( 'RotationY' , 'RotationY' , ), 110, (110, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'RotationY' , 'RotationY' , ), 110, (110, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 111, (111, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'Visible' , 'Visible' , ), 111, (111, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
 ]
 
 UserPermission_vtables_dispatch_ = 1
 UserPermission_vtables_ = [
-	(( u'UserId' , u'UserId' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Permission' , u'Permission' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Permission' , u'Permission' , ), 1, (1, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ExpirationDate' , u'ExpirationDate' , ), 2, (2, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'ExpirationDate' , u'ExpirationDate' , ), 2, (2, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Remove' , ), 4, (4, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'UserId' , 'UserId' , ), 0, (0, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Permission' , 'Permission' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Permission' , 'Permission' , ), 1, (1, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ExpirationDate' , 'ExpirationDate' , ), 2, (2, (), [ (16396, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'ExpirationDate' , 'ExpirationDate' , ), 2, (2, (), [ (12, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'ppidisp' , ), 3, (3, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Remove' , ), 4, (4, (), [ ], 1 , 1 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
 ]
 
 WebComponent_vtables_dispatch_ = 1
 WebComponent_vtables_ = [
-	(( u'Shape' , u'RetValue' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'RetValue' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'RetValue' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'HTML' , u'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'HTML' , u'RetValue' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'RetValue' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'RetValue' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'RetValue' , ), 5, (5, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'RetValue' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'RetValue' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'SetPlaceHolderGraphic' , u'PlaceHolderGraphic' , ), 7, (7, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Commit' , ), 8, (8, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Revert' , ), 9, (9, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'RetValue' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'RetValue' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'RetValue' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'HTML' , 'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'HTML' , 'RetValue' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'RetValue' , ), 5, (5, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'RetValue' , ), 5, (5, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'RetValue' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'RetValue' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'SetPlaceHolderGraphic' , 'PlaceHolderGraphic' , ), 7, (7, (), [ (8, 1, None, None) , ], 1 , 1 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Commit' , ), 8, (8, (), [ ], 1 , 1 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Revert' , ), 9, (9, (), [ ], 1 , 1 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
 ]
 
 WebComponentFormat_vtables_dispatch_ = 1
 WebComponentFormat_vtables_ = [
-	(( u'Application' , u'RetValue' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Parent' , u'Parent' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'RetValue' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'HTML' , u'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'HTML' , u'RetValue' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'RetValue' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'RetValue' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'RetValue' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'RetValue' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'RetValue' , ), 7, (7, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'RetValue' , ), 7, (7, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'PreviewGraphic' , u'retval' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'PreviewGraphic' , u'retval' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'LaunchPropertiesWindow' , ), 9, (9, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'RetValue' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Parent' , 'Parent' , ), 2, (2, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'RetValue' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'HTML' , 'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'HTML' , 'RetValue' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'RetValue' , ), 6, (6, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'RetValue' , ), 6, (6, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'RetValue' , ), 7, (7, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'RetValue' , ), 7, (7, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'PreviewGraphic' , 'retval' , ), 8, (8, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'PreviewGraphic' , 'retval' , ), 8, (8, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'LaunchPropertiesWindow' , ), 9, (9, (), [ ], 1 , 1 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
 ]
 
 WebComponentProperties_vtables_dispatch_ = 1
 WebComponentProperties_vtables_ = [
-	(( u'Shape' , u'RetValue' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'RetValue' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'Name' , u'RetValue' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'URL' , u'RetValue' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'HTML' , u'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'HTML' , u'RetValue' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'PreviewGraphic' , u'RetValue' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'PreviewGraphic' , u'RetValue' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'PreviewHTML' , u'RetValue' , ), 6, (6, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'PreviewHTML' , u'RetValue' , ), 6, (6, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'RetValue' , ), 7, (7, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'Width' , u'RetValue' , ), 7, (7, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'RetValue' , ), 8, (8, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'Height' , u'RetValue' , ), 8, (8, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'Tag' , u'RetValue' , ), 9, (9, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'Tag' , u'RetValue' , ), 9, (9, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
+	(( 'Shape' , 'RetValue' , ), 1, (1, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Name' , 'RetValue' , ), 2, (2, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'RetValue' , ), 3, (3, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'URL' , 'RetValue' , ), 3, (3, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'HTML' , 'RetValue' , ), 4, (4, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'HTML' , 'RetValue' , ), 4, (4, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'PreviewGraphic' , 'RetValue' , ), 5, (5, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'PreviewGraphic' , 'RetValue' , ), 5, (5, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'PreviewHTML' , 'RetValue' , ), 6, (6, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'PreviewHTML' , 'RetValue' , ), 6, (6, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 68 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'RetValue' , ), 7, (7, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
+	(( 'Width' , 'RetValue' , ), 7, (7, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'RetValue' , ), 8, (8, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'Height' , 'RetValue' , ), 8, (8, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'Tag' , 'RetValue' , ), 9, (9, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( 'Tag' , 'RetValue' , ), 9, (9, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 92 , (3, 0, None, None) , 0 , )),
 ]
 
 WebComponentWindowExternal_vtables_dispatch_ = 1
 WebComponentWindowExternal_vtables_ = [
-	(( u'InterfaceVersion' , u'RetValue' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'ApplicationName' , u'RetValue' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
-	(( u'ApplicationVersion' , u'RetValue' , ), 3, (3, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Application' , u'RetValue' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'CloseWindow' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'WebComponent' , u'RetValue' , ), 6, (6, (), [ (16393, 10, None, "IID('{000CD100-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'InterfaceVersion' , 'RetValue' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'ApplicationName' , 'RetValue' , ), 2, (2, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'ApplicationVersion' , 'RetValue' , ), 3, (3, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'RetValue' , ), 4, (4, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'CloseWindow' , ), 5, (5, (), [ ], 1 , 1 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'WebComponent' , 'RetValue' , ), 6, (6, (), [ (16393, 10, None, "IID('{000CD100-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
 ]
 
 WebPageFont_vtables_dispatch_ = 1
 WebPageFont_vtables_ = [
-	(( u'ProportionalFont' , u'pstr' , ), 10, (10, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ProportionalFont' , u'pstr' , ), 10, (10, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'ProportionalFontSize' , u'pf' , ), 11, (11, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'ProportionalFontSize' , u'pf' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'FixedWidthFont' , u'pstr' , ), 12, (12, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'FixedWidthFont' , u'pstr' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'FixedWidthFontSize' , u'pf' , ), 13, (13, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'FixedWidthFontSize' , u'pf' , ), 13, (13, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'ProportionalFont' , 'pstr' , ), 10, (10, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ProportionalFont' , 'pstr' , ), 10, (10, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'ProportionalFontSize' , 'pf' , ), 11, (11, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 0 , )),
+	(( 'ProportionalFontSize' , 'pf' , ), 11, (11, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'FixedWidthFont' , 'pstr' , ), 12, (12, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'FixedWidthFont' , 'pstr' , ), 12, (12, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'FixedWidthFontSize' , 'pf' , ), 13, (13, (), [ (16388, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'FixedWidthFontSize' , 'pf' , ), 13, (13, (), [ (4, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
 ]
 
 WebPageFonts_vtables_dispatch_ = 1
 WebPageFonts_vtables_ = [
-	(( u'Count' , u'Count' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
+	(( 'Count' , 'Count' , ), 1, (1, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'Item' , 'Index' , 'Item' , ), 0, (0, (), [ (3, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0913-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
+	(( '_NewEnum' , '_NewEnum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 44 , (3, 0, None, None) , 1024 , )),
 ]
 
 _CommandBarActiveX_vtables_dispatch_ = 1
 _CommandBarActiveX_vtables_ = [
-	(( u'ControlCLSID' , u'pbstrClsid' , ), 1610940416, (1610940416, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'ControlCLSID' , u'pbstrClsid' , ), 1610940416, (1610940416, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'QueryControlInterface' , u'bstrIid' , u'ppUnk' , ), 1610940418, (1610940418, (), [ (8, 1, None, None) , 
+	(( 'ControlCLSID' , 'pbstrClsid' , ), 1610940416, (1610940416, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
+	(( 'ControlCLSID' , 'pbstrClsid' , ), 1610940416, (1610940416, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'QueryControlInterface' , 'bstrIid' , 'ppUnk' , ), 1610940418, (1610940418, (), [ (8, 1, None, None) , 
 			(16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'SetInnerObjectFactory' , u'pUnk' , ), 1610940419, (1610940419, (), [ (13, 1, None, None) , ], 1 , 1 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
-	(( u'EnsureControl' , ), 1610940420, (1610940420, (), [ ], 1 , 1 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
-	(( u'InitWith' , ), 1610940421, (1610940421, (), [ (13, 1, None, None) , ], 1 , 4 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'SetInnerObjectFactory' , 'pUnk' , ), 1610940419, (1610940419, (), [ (13, 1, None, None) , ], 1 , 1 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'EnsureControl' , ), 1610940420, (1610940420, (), [ ], 1 , 1 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
+	(( 'InitWith' , ), 1610940421, (1610940421, (), [ (13, 1, None, None) , ], 1 , 4 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
 ]
 
 _CommandBarButton_vtables_dispatch_ = 1
 _CommandBarButton_vtables_ = [
-	(( u'BuiltInFace' , u'pvarfBuiltIn' , ), 1610940416, (1610940416, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'BuiltInFace' , u'pvarfBuiltIn' , ), 1610940416, (1610940416, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'CopyFace' , ), 1610940418, (1610940418, (), [ ], 1 , 1 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'FaceId' , u'pid' , ), 1610940419, (1610940419, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
-	(( u'FaceId' , u'pid' , ), 1610940419, (1610940419, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
-	(( u'PasteFace' , ), 1610940421, (1610940421, (), [ ], 1 , 1 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
-	(( u'ShortcutText' , u'pbstrText' , ), 1610940422, (1610940422, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
-	(( u'ShortcutText' , u'pbstrText' , ), 1610940422, (1610940422, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
-	(( u'State' , u'pstate' , ), 1610940424, (1610940424, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
-	(( u'State' , u'pstate' , ), 1610940424, (1610940424, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'pstyle' , ), 1610940426, (1610940426, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'pstyle' , ), 1610940426, (1610940426, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
-	(( u'HyperlinkType' , u'phlType' , ), 1610940428, (1610940428, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
-	(( u'HyperlinkType' , u'phlType' , ), 1610940428, (1610940428, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 384 , (3, 0, None, None) , 0 , )),
-	(( u'Picture' , u'ppdispPicture' , ), 1610940430, (1610940430, (), [ (16393, 10, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
-	(( u'Picture' , u'ppdispPicture' , ), 1610940430, (1610940430, (), [ (9, 1, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 4 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
-	(( u'Mask' , u'ppipictdispMask' , ), 1610940432, (1610940432, (), [ (16393, 10, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 2 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
-	(( u'Mask' , u'ppipictdispMask' , ), 1610940432, (1610940432, (), [ (9, 1, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 4 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
+	(( 'BuiltInFace' , 'pvarfBuiltIn' , ), 1610940416, (1610940416, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 332 , (3, 0, None, None) , 0 , )),
+	(( 'BuiltInFace' , 'pvarfBuiltIn' , ), 1610940416, (1610940416, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'CopyFace' , ), 1610940418, (1610940418, (), [ ], 1 , 1 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'FaceId' , 'pid' , ), 1610940419, (1610940419, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'FaceId' , 'pid' , ), 1610940419, (1610940419, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
+	(( 'PasteFace' , ), 1610940421, (1610940421, (), [ ], 1 , 1 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'ShortcutText' , 'pbstrText' , ), 1610940422, (1610940422, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
+	(( 'ShortcutText' , 'pbstrText' , ), 1610940422, (1610940422, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
+	(( 'State' , 'pstate' , ), 1610940424, (1610940424, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
+	(( 'State' , 'pstate' , ), 1610940424, (1610940424, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'pstyle' , ), 1610940426, (1610940426, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'pstyle' , ), 1610940426, (1610940426, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
+	(( 'HyperlinkType' , 'phlType' , ), 1610940428, (1610940428, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
+	(( 'HyperlinkType' , 'phlType' , ), 1610940428, (1610940428, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 384 , (3, 0, None, None) , 0 , )),
+	(( 'Picture' , 'ppdispPicture' , ), 1610940430, (1610940430, (), [ (16393, 10, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
+	(( 'Picture' , 'ppdispPicture' , ), 1610940430, (1610940430, (), [ (9, 1, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 4 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
+	(( 'Mask' , 'ppipictdispMask' , ), 1610940432, (1610940432, (), [ (16393, 10, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 2 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
+	(( 'Mask' , 'ppipictdispMask' , ), 1610940432, (1610940432, (), [ (9, 1, None, "IID('{7BF80981-BF32-101A-8BBB-00AA00300CAB}')") , ], 1 , 4 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
 ]
 
 _CommandBarComboBox_vtables_dispatch_ = 1
 _CommandBarComboBox_vtables_ = [
-	(( u'AddItem' , u'Text' , u'Index' , ), 1610940416, (1610940416, (), [ (8, 1, None, None) , 
+	(( 'AddItem' , 'Text' , 'Index' , ), 1610940416, (1610940416, (), [ (8, 1, None, None) , 
 			(12, 17, None, None) , ], 1 , 1 , 4 , 1 , 332 , (3, 0, None, None) , 0 , )),
-	(( u'Clear' , ), 1610940417, (1610940417, (), [ ], 1 , 1 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
-	(( u'DropDownLines' , u'pcLines' , ), 1610940418, (1610940418, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
-	(( u'DropDownLines' , u'pcLines' , ), 1610940418, (1610940418, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
-	(( u'DropDownWidth' , u'pdx' , ), 1610940420, (1610940420, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
-	(( u'DropDownWidth' , u'pdx' , ), 1610940420, (1610940420, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
-	(( u'List' , u'Index' , u'pbstrItem' , ), 1610940422, (1610940422, (), [ (3, 1, None, None) , 
+	(( 'Clear' , ), 1610940417, (1610940417, (), [ ], 1 , 1 , 4 , 0 , 336 , (3, 0, None, None) , 0 , )),
+	(( 'DropDownLines' , 'pcLines' , ), 1610940418, (1610940418, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 340 , (3, 0, None, None) , 0 , )),
+	(( 'DropDownLines' , 'pcLines' , ), 1610940418, (1610940418, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 344 , (3, 0, None, None) , 0 , )),
+	(( 'DropDownWidth' , 'pdx' , ), 1610940420, (1610940420, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 348 , (3, 0, None, None) , 0 , )),
+	(( 'DropDownWidth' , 'pdx' , ), 1610940420, (1610940420, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 352 , (3, 0, None, None) , 0 , )),
+	(( 'List' , 'Index' , 'pbstrItem' , ), 1610940422, (1610940422, (), [ (3, 1, None, None) , 
 			(16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 356 , (3, 0, None, None) , 0 , )),
-	(( u'List' , u'Index' , u'pbstrItem' , ), 1610940422, (1610940422, (), [ (3, 1, None, None) , 
+	(( 'List' , 'Index' , 'pbstrItem' , ), 1610940422, (1610940422, (), [ (3, 1, None, None) , 
 			(8, 1, None, None) , ], 1 , 4 , 4 , 0 , 360 , (3, 0, None, None) , 0 , )),
-	(( u'ListCount' , u'pcItems' , ), 1610940424, (1610940424, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
-	(( u'ListHeaderCount' , u'pcItems' , ), 1610940425, (1610940425, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
-	(( u'ListHeaderCount' , u'pcItems' , ), 1610940425, (1610940425, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
-	(( u'ListIndex' , u'pi' , ), 1610940427, (1610940427, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
-	(( u'ListIndex' , u'pi' , ), 1610940427, (1610940427, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
-	(( u'RemoveItem' , u'Index' , ), 1610940429, (1610940429, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 384 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'pstyle' , ), 1610940430, (1610940430, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
-	(( u'Style' , u'pstyle' , ), 1610940430, (1610940430, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstrText' , ), 1610940432, (1610940432, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
-	(( u'Text' , u'pbstrText' , ), 1610940432, (1610940432, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
+	(( 'ListCount' , 'pcItems' , ), 1610940424, (1610940424, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 364 , (3, 0, None, None) , 0 , )),
+	(( 'ListHeaderCount' , 'pcItems' , ), 1610940425, (1610940425, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 368 , (3, 0, None, None) , 0 , )),
+	(( 'ListHeaderCount' , 'pcItems' , ), 1610940425, (1610940425, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 372 , (3, 0, None, None) , 0 , )),
+	(( 'ListIndex' , 'pi' , ), 1610940427, (1610940427, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 376 , (3, 0, None, None) , 0 , )),
+	(( 'ListIndex' , 'pi' , ), 1610940427, (1610940427, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 380 , (3, 0, None, None) , 0 , )),
+	(( 'RemoveItem' , 'Index' , ), 1610940429, (1610940429, (), [ (3, 1, None, None) , ], 1 , 1 , 4 , 0 , 384 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'pstyle' , ), 1610940430, (1610940430, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 388 , (3, 0, None, None) , 0 , )),
+	(( 'Style' , 'pstyle' , ), 1610940430, (1610940430, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 392 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstrText' , ), 1610940432, (1610940432, (), [ (16392, 10, None, None) , ], 1 , 2 , 4 , 0 , 396 , (3, 0, None, None) , 0 , )),
+	(( 'Text' , 'pbstrText' , ), 1610940432, (1610940432, (), [ (8, 1, None, None) , ], 1 , 4 , 4 , 0 , 400 , (3, 0, None, None) , 0 , )),
 ]
 
 _CommandBars_vtables_dispatch_ = 1
 _CommandBars_vtables_ = [
-	(( u'ActionControl' , u'ppcbc' , ), 1610809344, (1610809344, (), [ (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
-	(( u'ActiveMenuBar' , u'ppcb' , ), 1610809345, (1610809345, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
-	(( u'Add' , u'Name' , u'Position' , u'MenuBar' , u'Temporary' , 
-			u'ppcb' , ), 1610809346, (1610809346, (), [ (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'ActionControl' , 'ppcbc' , ), 1610809344, (1610809344, (), [ (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 36 , (3, 0, None, None) , 0 , )),
+	(( 'ActiveMenuBar' , 'ppcb' , ), 1610809345, (1610809345, (), [ (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 40 , (3, 0, None, None) , 0 , )),
+	(( 'Add' , 'Name' , 'Position' , 'MenuBar' , 'Temporary' , 
+			'ppcb' , ), 1610809346, (1610809346, (), [ (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 4 , 44 , (3, 0, None, None) , 0 , )),
-	(( u'Count' , u'pcToolbars' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayTooltips' , u'pvarfDisplayTooltips' , ), 1610809348, (1610809348, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayTooltips' , u'pvarfDisplayTooltips' , ), 1610809348, (1610809348, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayKeysInTooltips' , u'pvarfDisplayKeys' , ), 1610809350, (1610809350, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayKeysInTooltips' , u'pvarfDisplayKeys' , ), 1610809350, (1610809350, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
-	(( u'FindControl' , u'Type' , u'Id' , u'Tag' , u'Visible' , 
-			u'ppcbc' , ), 1610809352, (1610809352, (), [ (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'Count' , 'pcToolbars' , ), 1610809347, (1610809347, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 48 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayTooltips' , 'pvarfDisplayTooltips' , ), 1610809348, (1610809348, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 52 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayTooltips' , 'pvarfDisplayTooltips' , ), 1610809348, (1610809348, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 56 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayKeysInTooltips' , 'pvarfDisplayKeys' , ), 1610809350, (1610809350, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 60 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayKeysInTooltips' , 'pvarfDisplayKeys' , ), 1610809350, (1610809350, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 64 , (3, 0, None, None) , 0 , )),
+	(( 'FindControl' , 'Type' , 'Id' , 'Tag' , 'Visible' , 
+			'ppcbc' , ), 1610809352, (1610809352, (), [ (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16393, 10, None, "IID('{000C0308-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 4 , 68 , (3, 0, None, None) , 0 , )),
-	(( u'Item' , u'Index' , u'ppcb' , ), 0, (0, (), [ (12, 1, None, None) , 
+	(( 'Item' , 'Index' , 'ppcb' , ), 0, (0, (), [ (12, 1, None, None) , 
 			(16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 2 , 4 , 0 , 72 , (3, 0, None, None) , 0 , )),
-	(( u'LargeButtons' , u'pvarfLargeButtons' , ), 1610809354, (1610809354, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
-	(( u'LargeButtons' , u'pvarfLargeButtons' , ), 1610809354, (1610809354, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
-	(( u'MenuAnimationStyle' , u'pma' , ), 1610809356, (1610809356, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
-	(( u'MenuAnimationStyle' , u'pma' , ), 1610809356, (1610809356, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
-	(( u'_NewEnum' , u'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 1024 , )),
-	(( u'Parent' , u'ppidisp' , ), 1610809359, (1610809359, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
-	(( u'ReleaseFocus' , ), 1610809360, (1610809360, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
-	(( u'IdsString' , u'ids' , u'pbstrName' , u'pcch' , ), 1610809361, (1610809361, (), [ 
+	(( 'LargeButtons' , 'pvarfLargeButtons' , ), 1610809354, (1610809354, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 76 , (3, 0, None, None) , 0 , )),
+	(( 'LargeButtons' , 'pvarfLargeButtons' , ), 1610809354, (1610809354, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 80 , (3, 0, None, None) , 0 , )),
+	(( 'MenuAnimationStyle' , 'pma' , ), 1610809356, (1610809356, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 84 , (3, 0, None, None) , 0 , )),
+	(( 'MenuAnimationStyle' , 'pma' , ), 1610809356, (1610809356, (), [ (3, 1, None, None) , ], 1 , 4 , 4 , 0 , 88 , (3, 0, None, None) , 0 , )),
+	(( '_NewEnum' , 'ppienum' , ), -4, (-4, (), [ (16397, 10, None, None) , ], 1 , 2 , 4 , 0 , 92 , (3, 0, None, None) , 1024 , )),
+	(( 'Parent' , 'ppidisp' , ), 1610809359, (1610809359, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 96 , (3, 0, None, None) , 0 , )),
+	(( 'ReleaseFocus' , ), 1610809360, (1610809360, (), [ ], 1 , 1 , 4 , 0 , 100 , (3, 0, None, None) , 0 , )),
+	(( 'IdsString' , 'ids' , 'pbstrName' , 'pcch' , ), 1610809361, (1610809361, (), [ 
 			(3, 1, None, None) , (16392, 2, None, None) , (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 104 , (3, 0, None, None) , 64 , )),
-	(( u'TmcGetName' , u'tmc' , u'pbstrName' , u'pcch' , ), 1610809362, (1610809362, (), [ 
+	(( 'TmcGetName' , 'tmc' , 'pbstrName' , 'pcch' , ), 1610809362, (1610809362, (), [ 
 			(3, 1, None, None) , (16392, 2, None, None) , (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 108 , (3, 0, None, None) , 64 , )),
-	(( u'AdaptiveMenus' , u'pvarfAdaptiveMenus' , ), 1610809363, (1610809363, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'AdaptiveMenus' , u'pvarfAdaptiveMenus' , ), 1610809363, (1610809363, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
-	(( u'FindControls' , u'Type' , u'Id' , u'Tag' , u'Visible' , 
-			u'ppcbcs' , ), 1610809365, (1610809365, (), [ (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'AdaptiveMenus' , 'pvarfAdaptiveMenus' , ), 1610809363, (1610809363, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'AdaptiveMenus' , 'pvarfAdaptiveMenus' , ), 1610809363, (1610809363, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'FindControls' , 'Type' , 'Id' , 'Tag' , 'Visible' , 
+			'ppcbcs' , ), 1610809365, (1610809365, (), [ (12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (16393, 10, None, "IID('{000C0306-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 4 , 120 , (3, 0, None, None) , 0 , )),
-	(( u'AddEx' , u'TbidOrName' , u'Position' , u'MenuBar' , u'Temporary' , 
-			u'TbtrProtection' , u'ppcb' , ), 1610809366, (1610809366, (), [ (12, 17, None, None) , (12, 17, None, None) , 
+	(( 'AddEx' , 'TbidOrName' , 'Position' , 'MenuBar' , 'Temporary' , 
+			'TbtrProtection' , 'ppcb' , ), 1610809366, (1610809366, (), [ (12, 17, None, None) , (12, 17, None, None) , 
 			(12, 17, None, None) , (12, 17, None, None) , (12, 17, None, None) , (16393, 10, None, "IID('{000C0304-0000-0000-C000-000000000046}')") , ], 1 , 1 , 4 , 5 , 124 , (3, 0, None, None) , 64 , )),
-	(( u'DisplayFonts' , u'pvarfDisplayFonts' , ), 1610809367, (1610809367, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
-	(( u'DisplayFonts' , u'pvarfDisplayFonts' , ), 1610809367, (1610809367, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
-	(( u'DisableCustomize' , u'pvarfDisableCustomize' , ), 1610809369, (1610809369, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
-	(( u'DisableCustomize' , u'pvarfDisableCustomize' , ), 1610809369, (1610809369, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
-	(( u'DisableAskAQuestionDropdown' , u'pvarfDisableAskAQuestionDropdown' , ), 1610809371, (1610809371, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
-	(( u'DisableAskAQuestionDropdown' , u'pvarfDisableAskAQuestionDropdown' , ), 1610809371, (1610809371, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayFonts' , 'pvarfDisplayFonts' , ), 1610809367, (1610809367, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 128 , (3, 0, None, None) , 0 , )),
+	(( 'DisplayFonts' , 'pvarfDisplayFonts' , ), 1610809367, (1610809367, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 132 , (3, 0, None, None) , 0 , )),
+	(( 'DisableCustomize' , 'pvarfDisableCustomize' , ), 1610809369, (1610809369, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 136 , (3, 0, None, None) , 0 , )),
+	(( 'DisableCustomize' , 'pvarfDisableCustomize' , ), 1610809369, (1610809369, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 140 , (3, 0, None, None) , 0 , )),
+	(( 'DisableAskAQuestionDropdown' , 'pvarfDisableAskAQuestionDropdown' , ), 1610809371, (1610809371, (), [ (16395, 10, None, None) , ], 1 , 2 , 4 , 0 , 144 , (3, 0, None, None) , 0 , )),
+	(( 'DisableAskAQuestionDropdown' , 'pvarfDisableAskAQuestionDropdown' , ), 1610809371, (1610809371, (), [ (11, 1, None, None) , ], 1 , 4 , 4 , 0 , 148 , (3, 0, None, None) , 0 , )),
 ]
 
 _IMsoDispObj_vtables_dispatch_ = 1
 _IMsoDispObj_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 1610743808, (1610743808, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 1610743809, (1610743809, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 1610743808, (1610743808, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 28 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 1610743809, (1610743809, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 32 , (3, 0, None, None) , 0 , )),
 ]
 
 _IMsoOleAccDispObj_vtables_dispatch_ = 1
 _IMsoOleAccDispObj_vtables_ = [
-	(( u'Application' , u'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
-	(( u'Creator' , u'plCreator' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
+	(( 'Application' , 'ppidisp' , ), 1610809344, (1610809344, (), [ (16393, 10, None, None) , ], 1 , 2 , 4 , 0 , 112 , (3, 0, None, None) , 0 , )),
+	(( 'Creator' , 'plCreator' , ), 1610809345, (1610809345, (), [ (16387, 10, None, None) , ], 1 , 2 , 4 , 0 , 116 , (3, 0, None, None) , 0 , )),
 ]
 
 RecordMap = {

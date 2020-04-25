@@ -2,7 +2,7 @@
 #
 # Further updates and enhancements by many SciPy developers.
 #
-from __future__ import division, print_function, absolute_import
+
 
 import math
 import warnings
@@ -13,7 +13,7 @@ from numpy import (isscalar, r_, log, sum, around, unique, asarray,
      floor, array, poly1d, compress, not_equal, pi, exp, ravel, angle)
 from numpy.testing.decorators import setastest
 
-from scipy.lib.six import string_types
+from scipy._lib.six import string_types
 from ._numpy_compat import count_nonzero
 from scipy import optimize
 from scipy import special
@@ -833,7 +833,7 @@ def boxcox_normmax(x, brack=(-2.0, 2.0), method='pearsonr'):
     methods = {'pearsonr': _pearsonr,
                'mle': _mle,
                'all': _all}
-    if method not in methods.keys():
+    if method not in list(methods.keys()):
         raise ValueError("Method %s not recognized." % method)
 
     optimfunc = methods[method]
@@ -1543,7 +1543,7 @@ def levene(*args, **kwds):
     # Handle keyword arguments.
     center = 'median'
     proportiontocut = 0.05
-    for kw, value in kwds.items():
+    for kw, value in list(kwds.items()):
         if kw not in ['center', 'proportiontocut']:
             raise TypeError("levene() got an unexpected keyword "
                             "argument '%s'" % kw)
@@ -1724,7 +1724,7 @@ def fligner(*args, **kwds):
     # Handle keyword arguments.
     center = 'median'
     proportiontocut = 0.05
-    for kw, value in kwds.items():
+    for kw, value in list(kwds.items()):
         if kw not in ['center', 'proportiontocut']:
             raise TypeError("fligner() got an unexpected keyword "
                             "argument '%s'" % kw)
@@ -1954,7 +1954,7 @@ def wilcoxon(x, y=None, zero_method="wilcox", correction=False):
     if y is None:
         d = x
     else:
-        x, y = map(asarray, (x, y))
+        x, y = list(map(asarray, (x, y)))
         if len(x) != len(y):
             raise ValueError('Unequal N in wilcoxon.  Aborting.')
         d = x-y
@@ -2132,7 +2132,7 @@ def median_test(*args, **kwds):
     lambda_ = kwds.pop('lambda_', None)
 
     if len(kwds) > 0:
-        bad_kwd = kwds.keys()[0]
+        bad_kwd = list(kwds.keys())[0]
         raise TypeError("median_test() got an unexpected keyword "
                         "argument %r" % bad_kwd)
 

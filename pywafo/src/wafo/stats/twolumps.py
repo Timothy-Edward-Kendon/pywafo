@@ -50,7 +50,7 @@ curve to it.
 License is GNU LGPL v3, see https://launchpad.net/twolumps
 """
 import inspect
-from itertools import izip
+
 
 import numpy
 from wafo import stats
@@ -163,7 +163,7 @@ class ScipyDistribution(object):
         # pick the one with the smallest rss
         fits.sort()
         self.parms = fits[0][1]
-        print self.parms
+        print(self.parms)
     
         return self.set_distro(list(self.parms))
 
@@ -191,7 +191,7 @@ class ScipyDistribution(object):
         evar = numpy.var(expected)
 
         rss = 0.0
-        for expect, obs in izip(expected, data):
+        for expect, obs in zip(expected, data):
             rss += (obs-expect) ** 2.0
 
         self.rss = rss
@@ -258,7 +258,7 @@ class QuickFit(object):
         """ Fit all of the distros we have """
         fitted = []
         for distro in self.distributions:
-            print 'fitting distro', distro.name
+            print('fitting distro', distro.name)
             try:
                 distro.fit(data)
             except:
@@ -266,7 +266,7 @@ class QuickFit(object):
             fitted.append(distro)
         self.distributions = fitted
             
-        print 'finished fitting'
+        print('finished fitting')
 
     def stats(self, data):
         """ Return stats on the fits """
@@ -341,7 +341,7 @@ def read_data(infile, field):
     import csv
 
     reader = csv.reader(infile)
-    header = reader.next()
+    header = next(reader)
     field = header.index(field)
     data = []
     for row in reader:
@@ -376,7 +376,7 @@ if __name__ == '__main__':
     
     if opts.list:
         for name, distro in get_continuous_distros():
-            print name
+            print(name)
         sys.exit()
     opts.distro = ['weibull_min', 'norm']
     if not opts.distro:
@@ -394,10 +394,10 @@ if __name__ == '__main__':
     data.sort()
 
     quickfit.fit(data)
-    print 'doing stats'
+    print('doing stats')
     quickfit.stats(data)
 
-    print 'doing plot'
+    print('doing plot')
     quickfit.plot(data, topn=opts.topn)
     pl.show()
     

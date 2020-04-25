@@ -5,7 +5,7 @@ Created on 3. juni 2011
 '''
 import numpy as np
 from numpy import exp, expm1, inf, nan, pi, hstack, where, atleast_1d, cos, sin
-from dispersion_relation import w2k, k2w  # @UnusedImport
+from .dispersion_relation import w2k, k2w  # @UnusedImport
 
 __all__ = ['w2k', 'k2w', 'sensor_typeid', 'sensor_type', 'TransferFunction']
 
@@ -593,11 +593,11 @@ class TransferFunction(object):
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 
 def main():
-    sensor_type(range(21))
+    sensor_type(list(range(21)))
 if __name__ == '__main__':
     test_docstrings()

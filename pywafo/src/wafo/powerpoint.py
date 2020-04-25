@@ -33,8 +33,8 @@ Created on 15. des. 2009
 import os
 import warnings
 import win32com.client
-import MSO
-import MSPPT
+from . import MSO
+from . import MSPPT
 from PIL import Image  # @UnresolvedImport
 
 g = globals()
@@ -171,7 +171,7 @@ class Powerpoint(object):
     def _add_text_from_dict(self, page, id, txt_dict,  # @ReservedAssignment
                             level, maxlevel=None):
         if maxlevel is None or level <= maxlevel:
-            for name, subdict in txt_dict.iteritems():
+            for name, subdict in txt_dict.items():
                 tr = page.Shapes(id).TextFrame.TextRange.InsertAfter(name)
                 unused_temp = page.Shapes(
                     id).TextFrame.TextRange.InsertAfter('\r')

@@ -7,7 +7,7 @@ Distributions
 Author:  Per A. Brodtkorb 2008
 '''
 
-from __future__ import division, absolute_import
+
 import warnings
 
 from ..plotbackend import plotbackend
@@ -240,10 +240,10 @@ class Profile(object):
         self.xlabel = ''
         self.ylabel = 'Profile log'
         (self.i_fixed, self.N, self.alpha, self.pmin, self.pmax, self.x,
-         self.logSF, self.link) = map(
+         self.logSF, self.link) = list(map(
             kwds.get,
             ['i', 'N', 'alpha', 'pmin', 'pmax', 'x', 'logSF', 'link'],
-            [i0, 100, 0.05, None, None, None, None, None])
+            [i0, 100, 0.05, None, None, None, None, None]))
 
         self.title = '%g%s CI' % (100 * (1.0 - self.alpha), '%')
         if fit_dist.method.startswith('ml'):
@@ -346,7 +346,7 @@ class Profile(object):
 
         for size, step in ((-1, -1), (pvec.size, 1)):
             phatfree = phatfree0.copy()
-            for ix in xrange(k1, size, step):
+            for ix in range(k1, size, step):
                 Lmax, phatfree = self._profile_optimum(phatfree, pvec[ix])
                 self.data[ix] = Lmax
                 if self.data[ix] < self.alpha_cross_level:
@@ -750,7 +750,7 @@ class FitDistribution(rv_frozen):
         args = list(args)
         Nargs = len(args)
         fixedn = []
-        index = range(Nargs)
+        index = list(range(Nargs))
         names = ['f%d' % n for n in range(Nargs - 2)] + ['floc', 'fscale']
         x0 = args[:]
         for n, key in zip(index[::-1], names[::-1]):
@@ -807,7 +807,7 @@ class FitDistribution(rv_frozen):
             optimizer = kwds.get('optimizer', optimize.fmin)
             # convert string to function in scipy.optimize
             if (not callable(optimizer) and
-                    isinstance(optimizer, (str, unicode))):
+                    isinstance(optimizer, str)):
                 if not optimizer.startswith('fmin_'):
                     optimizer = "fmin_" + optimizer
                 if optimizer == 'fmin_':

@@ -1,7 +1,7 @@
 """ Test functions for stats module
 
 """
-from __future__ import division, print_function, absolute_import
+
 
 import warnings
 import re
@@ -15,7 +15,7 @@ from nose import SkipTest
 import numpy
 import numpy as np
 from numpy import typecodes, array
-from scipy.lib._version import NumpyVersion
+from scipy._lib._version import NumpyVersion
 from scipy import special
 import wafo.stats as stats
 from wafo.stats._distn_infrastructure import argsreduce

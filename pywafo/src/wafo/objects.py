@@ -12,7 +12,7 @@
 # !/usr/bin/env python
 
 
-from __future__ import division
+
 from .transform.core import TrData
 from .transform.estimation import TransformEstimator
 from .stats import distributions
@@ -37,7 +37,7 @@ from numpy.fft import fft  # @UnusedImport
 from numpy.random import randn
 import matplotlib
 from matplotlib.mlab import psd, detrend_mean
-from plotbackend import plotbackend
+from .plotbackend import plotbackend
 
 floatinfo = finfo(float)
 matplotlib.interactive(True)
@@ -318,7 +318,7 @@ class LevelCrossings(PlotData):
         ff = [f[0], ]
         tt = [t[0], ]
 
-        for i in xrange(1, n):
+        for i in range(1, n):
             if f[i] > ff[-1]:
                 ff.append(f[i])
                 tt.append(t[i])
@@ -741,7 +741,7 @@ class CyclePairs(PlotData):
         n = extremes.shape[1]
         extr = zeros((4, n))
         extr[:, 0] = extremes[:, 0]
-        for i in xrange(1, n):
+        for i in range(1, n):
             if extremes[0, i] == extr[0, ii]:
                 extr[1:4, ii] = extr[1:4, ii] + extremes[1:4, i]
             else:
@@ -799,7 +799,7 @@ class TurningPoints(PlotData):
 
         if not any(self.args):
             n = len(self.data)
-            self.args = range(0, n)
+            self.args = list(range(0, n))
         else:
             self.args = ravel(self.args)
         self.data = ravel(self.data)
@@ -1000,7 +1000,7 @@ class TimeSeries(PlotData):
 
         if not any(self.args):
             n = len(self.data)
-            self.args = range(0, n)
+            self.args = list(range(0, n))
 
     def sampling_period(self):
         '''
@@ -1756,10 +1756,10 @@ class TimeSeries(PlotData):
         if vh is None:
             if pdef[0] in ('m', 'M'):
                 vh = 0
-                print('   The minimum rfc height, h,  is set to: %g' % vh)
+                print(('   The minimum rfc height, h,  is set to: %g' % vh))
             else:
                 vh = x.mean()
-                print('   The level l is set to: %g' % vh)
+                print(('   The level l is set to: %g' % vh))
 
         if index is None:
             if pdef in ('m2m', 'm2M', 'M2m', 'M2M'):
@@ -2202,10 +2202,10 @@ class TimeSeries(PlotData):
         plot = plotbackend.plot
         subplot = plotbackend.subplot
         figs = []
-        for unused_iz in xrange(nfig):
+        for unused_iz in range(nfig):
             figs.append(plotbackend.figure())
             plotbackend.title('Surface elevation from mean water level (MWL).')
-            for ix in xrange(nsub):
+            for ix in range(nsub):
                 if nsub > 1:
                     subplot(nsub, 1, ix)
                 h_scale = array([tn[ind[0]], tn[ind[-1]]])
@@ -2336,12 +2336,12 @@ def main():
     d2.children = [d1]
 
     d2.plot()
-    print 'Done'
+    print('Done')
 
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 if __name__ == '__main__':

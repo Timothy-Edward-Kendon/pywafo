@@ -61,12 +61,11 @@ def f2py_call_str():
                 break
     
     try:
-        print 'found f2py in:', f2py_path
+        print('found f2py in:', f2py_path)
         return f2py_call
     # raise exception if f2py is not found, f2py_path variable will not exist
     except NameError:
-        raise UserWarning, \
-        'Couldn\'t locate f2py. Should be part of NumPy installation.'
+        raise UserWarning('Couldn\'t locate f2py. Should be part of NumPy installation.')
 #        # this might vary among specific cases: f2py, f2py2.7, f2py3.2, ...
 #        # TODO: more robust approach, find out what f2py is in the users path
 #    if os.name == 'posix':
@@ -84,9 +83,9 @@ def f2py_call_str():
 
 def compile_all():
     f2py_call = f2py_call_str()    
-    print '='*75
-    print 'compiling rind2007'
-    print '='*75
+    print('='*75)
+    print('compiling rind2007')
+    print('='*75)
  
     files = ['intmodule',  'jacobmod', 'swapmod', 'fimod','rindmod','rind71mod']
     compile1_format = 'gfortran -fPIC -c %s.f'

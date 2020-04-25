@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import division
+
 import numpy as np
 import scipy.signal
 # import scipy.sparse.linalg  # @UnusedImport
@@ -7,10 +7,10 @@ import scipy.sparse as sparse
 from numpy.ma.core import ones, zeros, prod, sin
 from numpy import diff, pi, inf  # @UnresolvedImport
 from numpy.lib.shape_base import vstack
-from numpy.lib.function_base import linspace
-from scipy.interpolate import PiecewisePolynomial
+from numpy import linspace
+from scipy.interpolate import PPoly
 
-import polynomial as pl
+from . import polynomial as pl
 
 
 __all__ = [
@@ -81,7 +81,7 @@ def savitzky_golay(y, window_size, order, deriv=0):
         raise TypeError("window_size size must be a positive odd number")
     if window_size < order + 2:
         raise TypeError("window_size is too small for the polynomials order")
-    order_range = range(order + 1)
+    order_range = list(range(order + 1))
     half_window = (window_size - 1) // 2
     # precompute coefficients
     b = np.mat([[k ** i for i in order_range]
@@ -325,7 +325,7 @@ class PPform(object):
         dx = xx - self.breaks.take(indxs)
         if True:
             v = pp[0, indxs]
-            for i in xrange(1, self.order):
+            for i in range(1, self.order):
                 v = dx * v + pp[i, indxs]
             values = v
         else:
@@ -333,7 +333,7 @@ class PPform(object):
             # values = np.diag(dot(V,pp[:,indxs]))
             dot = np.dot
             values = np.array([dot(V[k, :], pp[:, indxs[k]])
-                              for k in xrange(len(xx))])
+                              for k in range(len(xx))])
 
         res[mask] = values
         res.shape = saveshape
@@ -418,7 +418,7 @@ class PPform(object):
 
             vv = xs * cof[0, index]
             k = self.order
-            for i in xrange(1, k):
+            for i in range(1, k):
                 vv = xs * (vv + cof[i, index])
 
             cof[-1] = np.hstack((0, vv)).cumsum()
@@ -962,15 +962,15 @@ class StinemanInterp(object):
         return yi
 
 
-class StinemanInterp2(PiecewisePolynomial):
+class StinemanInterp2(PPoly):
 
     def __init__(self, x, y, yp=None, method='parabola', monotone=False):
         if yp is None:
             yp = slopes(x, y, method, monotone=monotone)
-        super(StinemanInterp2, self).__init__(x, zip(y, yp))
+        super(StinemanInterp2, self).__init__(x, list(zip(y, yp)))
 
 
-class CubicHermiteSpline(PiecewisePolynomial):
+class CubicHermiteSpline(PPoly):
 
     '''
     Piecewise Cubic Hermite Interpolation using Catmull-Rom
@@ -980,10 +980,10 @@ class CubicHermiteSpline(PiecewisePolynomial):
     def __init__(self, x, y, yp=None, method='Catmull-Rom'):
         if yp is None:
             yp = slopes(x, y, method, monotone=False)
-        super(CubicHermiteSpline, self).__init__(x, zip(y, yp), orders=3)
+        super(CubicHermiteSpline, self).__init__(x, list(zip(y, yp)), orders=3)
 
 
-class Pchip(PiecewisePolynomial):
+class Pchip(PPoly):
 
     """PCHIP 1-d monotonic cubic interpolation
 
@@ -1057,7 +1057,7 @@ class Pchip(PiecewisePolynomial):
     def __init__(self, x, y, yp=None, method='secant'):
         if yp is None:
             yp = slopes(x, y, method=method, monotone=True)
-        super(Pchip, self).__init__(x, zip(y, yp), orders=3)
+        super(Pchip, self).__init__(x, list(zip(y, yp)), orders=3)
 
 
 def test_smoothing_spline():
@@ -1227,7 +1227,7 @@ def test_pp():
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

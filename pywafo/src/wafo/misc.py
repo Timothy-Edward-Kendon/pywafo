@@ -1,7 +1,7 @@
 '''
 Misc
 '''
-from __future__ import division
+
 
 import sys
 import fractions
@@ -17,12 +17,12 @@ from scipy.special import gammaln, gamma, psi
 from scipy.integrate import trapz, simps
 import warnings
 from time import strftime, gmtime
-from plotbackend import plotbackend
+from .plotbackend import plotbackend
 from collections import OrderedDict
 
 
 try:
-    import c_library as clib  # @UnresolvedImport
+    from . import c_library as clib  # @UnresolvedImport
 except:
     clib = None
 floatinfo = finfo(float)
@@ -434,7 +434,7 @@ class Bunch(object):
         self.__dict__.update(kwargs)
 
     def keys(self):
-        return self.__dict__.keys()
+        return list(self.__dict__.keys())
 
     def update(self, ** kwargs):
         self.__dict__.update(kwargs)
@@ -481,7 +481,7 @@ def parse_kwargs(options, **kwargs):
     See also sub_dict_select
     '''
 
-    newopts = sub_dict_select(kwargs, options.keys())
+    newopts = sub_dict_select(kwargs, list(options.keys()))
     if len(newopts) > 0:
         options.update(newopts)
     return options
@@ -946,7 +946,7 @@ def findrfc(tp, h=0.0, method='clib'):
     if clib is None or method not in ('clib'):
         ind = zeros(n, dtype=np.int)
         NC = np.int(NC)
-        for i in xrange(NC):
+        for i in range(NC):
             Tmi = Tstart + 2 * i
             Tpl = Tstart + 2 * i + 2
             xminus = y[2 * i]
@@ -1439,7 +1439,7 @@ def findtc(x_in, v=None, kind=None):
 
     first_is_down_crossing = (x[v_ind[0]] > x[v_ind[0] + 1])
     if first_is_down_crossing:
-        for i in xrange(n_tc):
+        for i in range(n_tc):
             # trough
             j = 2 * i
             ind[j] = x[v_ind[j] + 1:v_ind[j + 1] + 1].argmin()
@@ -1451,7 +1451,7 @@ def findtc(x_in, v=None, kind=None):
             ind[n_c - 2] = x[v_ind[n_c - 2] + 1:v_ind[n_c - 1]].argmin()
 
     else:  # the first is a up-crossing
-        for i in xrange(n_tc):
+        for i in range(n_tc):
             # crest
             j = 2 * i
             ind[j] = x[v_ind[j] + 1:v_ind[j + 1] + 1].argmax()
@@ -1549,18 +1549,18 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
     if findNaN and indmiss.any():
         ind, = nonzero(indmiss)
         if verbose:
-            print('Found %d missing points' % ind.size)
+            print(('Found %d missing points' % ind.size))
         xn[indmiss] = 0.  # %set NaN's to zero
 
     if dcrit is None:
         dcrit = 1.5 * xn.std()
         if verbose:
-            print('dcrit is set to %g' % dcrit)
+            print(('dcrit is set to %g' % dcrit))
 
     if ddcrit is None:
         ddcrit = 1.5 * xn.std()
         if verbose:
-            print('ddcrit is set to %g' % ddcrit)
+            print(('ddcrit is set to %g' % ddcrit))
 
     dxn = diff(xn)
     ddxn = diff(dxn)
@@ -1572,7 +1572,7 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
             tmp = tmp + 1
             ind = hstack((ind, tmp))
         if verbose:
-            print('Found %d spurious spikes' % tmp.size)
+            print(('Found %d spurious spikes' % tmp.size))
 
     if findDspikes:  # ,% finding spurious double (two point) spikes
         tmp, = nonzero((dxn[:-2] > dcrit) * (dxn[2::] < -dcrit) |
@@ -1581,18 +1581,18 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
             tmp = tmp + 1
             ind = hstack((ind, tmp, tmp + 1))  # %removing both points
         if verbose:
-            print('Found %d spurious two point (double) spikes' % tmp.size)
+            print(('Found %d spurious two point (double) spikes' % tmp.size))
 
     if findjumpsDx:  # ,% finding spurious jumps  in Dx
         tmp, = nonzero(dxn > dcrit)
         if verbose:
-            print('Found %d spurious positive jumps of Dx' % tmp.size)
+            print(('Found %d spurious positive jumps of Dx' % tmp.size))
         if tmp.size > 0:
             ind = hstack((ind, tmp + 1))  # removing the point after the jump
 
         tmp, = nonzero(dxn < -dcrit)
         if verbose:
-            print('Found %d spurious negative jumps of Dx' % tmp.size)
+            print(('Found %d spurious negative jumps of Dx' % tmp.size))
         if tmp.size > 0:
             ind = hstack((ind, tmp))  # removing the point before the jump
 
@@ -1603,7 +1603,7 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
             ind = hstack((ind, tmp))  # removing the jump
 
         if verbose:
-            print('Found %d spurious positive jumps of D^2x' % tmp.size)
+            print(('Found %d spurious positive jumps of D^2x' % tmp.size))
 
         tmp, = nonzero(ddxn < -ddcrit)
         if tmp.size > 0:
@@ -1611,7 +1611,7 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
             ind = hstack((ind, tmp))  # removing the jump
 
         if verbose:
-            print('Found %d spurious negative jumps of D^2x' % tmp.size)
+            print(('Found %d spurious negative jumps of D^2x' % tmp.size))
 
     if zcrit >= 0.0:
         # finding consecutive values less than zcrit apart.
@@ -1631,10 +1631,10 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
 
         if verbose:
             if zcrit == 0.:
-                print('Found %d consecutive equal values' % indz.size)
+                print(('Found %d consecutive equal values' % indz.size))
             else:
-                print('Found %d consecutive values less than %g apart.' %
-                      (indz.size, zcrit))
+                print(('Found %d consecutive values less than %g apart.' %
+                      (indz.size, zcrit)))
     indg = ones(xn.size, dtype=bool)
 
     if ind.size > 1:
@@ -1643,7 +1643,7 @@ def findoutliers(x, zcrit=0.0, dcrit=None, ddcrit=None, verbose=False):
     indg, = nonzero(indg)
 
     if verbose:
-        print('Found the total of %d spurious points' % ind.size)
+        print(('Found the total of %d spurious points' % ind.size))
 
     return ind, indg
 
@@ -1685,7 +1685,7 @@ def common_shape(*args, ** kwds):
     --------
     broadcast, broadcast_arrays
     '''
-    args = map(asarray, args)
+    args = list(map(asarray, args))
     shapes = [x.shape for x in args]
     shape = kwds.get('shape')
     if shape is not None:
@@ -1889,7 +1889,7 @@ def getshipchar(value=None, property="max_deadweight",  # @ReservedAssignment
     merchant fleet", Bolt Beranek and Newman Technical Memorandum No. 458.
     '''
     if value is None:
-        names = kwds.keys()
+        names = list(kwds.keys())
         if len(names) != 1:
             raise ValueError('Only on keyword')
         property = names[0]  # @ReservedAssignment
@@ -3350,14 +3350,14 @@ def profile_main1():
     import pstats
     prof = cProfile.Profile()
     prof = prof.runctx("real_main()", globals(), locals())
-    print "<pre>"
+    print("<pre>")
     stats = pstats.Stats(prof)
     stats.sort_stats("time")  # Or cumulative
     stats.print_stats(80)  # 80 = how many to print
     # The rest is optional.
     # stats.print_callees()
     # stats.print_callers()
-    print "</pre>"
+    print("</pre>")
 
 
 main = profile_main1
@@ -3366,7 +3366,7 @@ main = profile_main1
 def test_docstrings():
     # np.set_printoptions(precision=6)
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

@@ -1,7 +1,7 @@
 import warnings
-from graphutil import cltext  # @UnresolvedImport
+from .graphutil import cltext  # @UnresolvedImport
 
-from plotbackend import plotbackend
+from .plotbackend import plotbackend
 from time import gmtime, strftime
 import numpy as np
 from scipy.integrate.quadrature import cumtrapz  # @UnresolvedImport
@@ -603,7 +603,7 @@ def test_plotdata():
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

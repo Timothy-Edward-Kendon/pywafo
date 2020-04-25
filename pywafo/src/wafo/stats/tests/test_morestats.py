@@ -2,7 +2,7 @@
 #
 # Further enhancements and tests added by numerous SciPy developers.
 #
-from __future__ import division, print_function, absolute_import
+
 
 import warnings
 
@@ -854,7 +854,7 @@ class TestCircFuncs(TestCase):
 
 def test_accuracy_wilcoxon():
     freq = [1, 4, 16, 15, 8, 4, 5, 1, 2]
-    nums = range(-4, 5)
+    nums = list(range(-4, 5))
     x = np.concatenate([[u] * v for u, v in zip(nums, freq)])
     y = np.zeros(x.size)
 

@@ -2,9 +2,9 @@
 # Author:  Travis Oliphant  2002-2011 with contributions from
 #          SciPy Developers 2004-2011
 #
-from __future__ import division, print_function, absolute_import
 
-from scipy.lib.six import string_types, exec_
+
+from scipy._lib.six import string_types, exec_
 
 import sys
 import keyword
@@ -1014,7 +1014,7 @@ class rv_generic(object):
         """
         args, loc, scale, moments = self._parse_args_stats(*args, **kwds)
         # scale = 1 by construction for discrete RVs
-        loc, scale = map(asarray, (loc, scale))
+        loc, scale = list(map(asarray, (loc, scale)))
         args = tuple(map(asarray, args))
         cond = self._argcheck(*args) & (scale > 0) & (loc == loc)
         output = []
@@ -1697,7 +1697,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        x, loc, scale = map(asarray, (x, loc, scale))
+        x, loc, scale = list(map(asarray, (x, loc, scale)))
         args = tuple(map(asarray, args))
         x = asarray((x-loc)*1.0/scale)
         cond0 = self._argcheck(*args) & (scale > 0)
@@ -1738,7 +1738,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        x, loc, scale = map(asarray, (x, loc, scale))
+        x, loc, scale = list(map(asarray, (x, loc, scale)))
         args = tuple(map(asarray, args))
         x = asarray((x-loc)*1.0/scale)
         cond0 = self._argcheck(*args) & (scale > 0)
@@ -1778,7 +1778,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        x, loc, scale = map(asarray, (x, loc, scale))
+        x, loc, scale = list(map(asarray, (x, loc, scale)))
         args = tuple(map(asarray, args))
         x = (x-loc)*1.0/scale
         cond0 = self._argcheck(*args) & (scale > 0)
@@ -1818,7 +1818,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        x, loc, scale = map(asarray, (x, loc, scale))
+        x, loc, scale = list(map(asarray, (x, loc, scale)))
         args = tuple(map(asarray, args))
         x = (x-loc)*1.0/scale
         cond0 = self._argcheck(*args) & (scale > 0)
@@ -1859,7 +1859,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        x, loc, scale = map(asarray, (x, loc, scale))
+        x, loc, scale = list(map(asarray, (x, loc, scale)))
         args = tuple(map(asarray, args))
         x = (x-loc)*1.0/scale
         cond0 = self._argcheck(*args) & (scale > 0)
@@ -1902,7 +1902,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        x, loc, scale = map(asarray, (x, loc, scale))
+        x, loc, scale = list(map(asarray, (x, loc, scale)))
         args = tuple(map(asarray, args))
         x = (x-loc)*1.0/scale
         cond0 = self._argcheck(*args) & (scale > 0)
@@ -1943,7 +1943,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        q, loc, scale = map(asarray, (q, loc, scale))
+        q, loc, scale = list(map(asarray, (q, loc, scale)))
         args = tuple(map(asarray, args))
         cond0 = self._argcheck(*args) & (scale > 0) & (loc == loc)
         cond1 = (0 < q) & (q < 1)
@@ -1988,7 +1988,7 @@ class rv_continuous(rv_generic):
 
         """
         args, loc, scale = self._parse_args(*args, **kwds)
-        q, loc, scale = map(asarray, (q, loc, scale))
+        q, loc, scale = list(map(asarray, (q, loc, scale)))
         args = tuple(map(asarray, args))
         cond0 = self._argcheck(*args) & (scale > 0) & (loc == loc)
         cond1 = (0 < q) & (q < 1)
@@ -2123,7 +2123,7 @@ class rv_continuous(rv_generic):
         LL = self.nnlf(theta, data)
         H = zeros((np, np))   #%% Hessian matrix
         theta = tuple(theta)
-        for ix in xrange(np):
+        for ix in range(np):
             sparam = list(theta)
             sparam[ix] = theta[ix] + delta
             fp = self.nnlf(sparam, data)
@@ -2254,7 +2254,7 @@ class rv_continuous(rv_generic):
         LL = self.nlogps(theta, data)
         H = zeros((np, np))   # Hessian matrix
         theta = tuple(theta)
-        for ix in xrange(np):
+        for ix in range(np):
             sparam = list(theta)
             sparam[ix] = theta[ix] + delta
             fp = self.nlogps(sparam, data)
@@ -3024,10 +3024,10 @@ class rv_discrete(rv_generic):
             self.pk = take(ravel(self.pk), indx, 0)
             self.a = self.xk[0]
             self.b = self.xk[-1]
-            self.P = dict(zip(self.xk, self.pk))
+            self.P = dict(list(zip(self.xk, self.pk)))
             self.qvals = np.cumsum(self.pk, axis=0)
-            self.F = dict(zip(self.xk, self.qvals))
-            decreasing_keys = sorted(self.F.keys(), reverse=True)
+            self.F = dict(list(zip(self.xk, self.qvals)))
+            decreasing_keys = sorted(list(self.F.keys()), reverse=True)
             self.Finv = dict((self.F[k], k) for k in decreasing_keys)
             self._ppf = instancemethod(vectorize(_drv_ppf, otypes='d'),
                                        self, rv_discrete)
@@ -3168,7 +3168,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        k, loc = map(asarray, (k, loc))
+        k, loc = list(map(asarray, (k, loc)))
         args = tuple(map(asarray, args))
         k = asarray((k-loc))
         cond0 = self._argcheck(*args)
@@ -3204,7 +3204,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        k, loc = map(asarray, (k, loc))
+        k, loc = list(map(asarray, (k, loc)))
         args = tuple(map(asarray, args))
         k = asarray((k-loc))
         cond0 = self._argcheck(*args)
@@ -3241,7 +3241,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        k, loc = map(asarray, (k, loc))
+        k, loc = list(map(asarray, (k, loc)))
         args = tuple(map(asarray, args))
         k = asarray((k-loc))
         cond0 = self._argcheck(*args)
@@ -3280,7 +3280,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        k, loc = map(asarray, (k, loc))
+        k, loc = list(map(asarray, (k, loc)))
         args = tuple(map(asarray, args))
         k = asarray((k-loc))
         cond0 = self._argcheck(*args)
@@ -3320,7 +3320,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        k, loc = map(asarray, (k, loc))
+        k, loc = list(map(asarray, (k, loc)))
         args = tuple(map(asarray, args))
         k = asarray(k-loc)
         cond0 = self._argcheck(*args)
@@ -3361,7 +3361,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        k, loc = map(asarray, (k, loc))
+        k, loc = list(map(asarray, (k, loc)))
         args = tuple(map(asarray, args))
         k = asarray(k-loc)
         cond0 = self._argcheck(*args)
@@ -3402,7 +3402,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        q, loc = map(asarray, (q, loc))
+        q, loc = list(map(asarray, (q, loc)))
         args = tuple(map(asarray, args))
         cond0 = self._argcheck(*args) & (loc == loc)
         cond1 = (q > 0) & (q < 1)
@@ -3442,7 +3442,7 @@ class rv_discrete(rv_generic):
 
         """
         args, loc, _ = self._parse_args(*args, **kwds)
-        q, loc = map(asarray, (q, loc))
+        q, loc = list(map(asarray, (q, loc)))
         args = tuple(map(asarray, args))
         cond0 = self._argcheck(*args) & (loc == loc)
         cond1 = (q > 0) & (q < 1)

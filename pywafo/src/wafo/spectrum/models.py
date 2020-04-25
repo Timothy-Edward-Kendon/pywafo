@@ -36,7 +36,7 @@ Spreading - Directional spreading function.
 # Licence:     <your licence>
 
 #!/usr/bin/env python
-from __future__ import division
+
 
 import warnings
 from scipy.interpolate import interp1d
@@ -1026,12 +1026,12 @@ class Torsethaugen(ModelSpectrum):
             if (3.6 * sqrt(Hm0) <= Tp & Tp <= 5 * sqrt(Hm0)):
                 print('     Jonswap range')
 
-            print('Hm0 = %g' % Hm0)
-            print('Ns, Ms = %g, %g  Nw, Mw = %g, %g' % (Ns, Ms, Nw, Mw))
-            print('gammas = %g gammaw = ' % (gammas, gammaw))
-            print('Rps = %g Rpw = %g' % (Rps, Rpw))
-            print('Hps = %g Hpw = %g' % (Hps, Hpw))
-            print('Tps = %g Tpw = %g' % (Tps, Tpw))
+            print(('Hm0 = %g' % Hm0))
+            print(('Ns, Ms = %g, %g  Nw, Mw = %g, %g' % (Ns, Ms, Nw, Mw)))
+            print(('gammas = %g gammaw = ' % (gammas, gammaw)))
+            print(('Rps = %g Rpw = %g' % (Rps, Rpw)))
+            print(('Hps = %g Hpw = %g' % (Hps, Hpw)))
+            print(('Tps = %g Tpw = %g' % (Tps, Tpw)))
 
         # G0s=Ms/((Ns/Ms)**(-(Ns-1)/Ms)*gamma((Ns-1)/Ms )) #normalizing factor
         # Wind part
@@ -2097,7 +2097,7 @@ def _test_spreading():
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

@@ -20,13 +20,13 @@ def test_k2w_finite_water_depth():
 
 
 def test_w2k_infinite_water_depth():
-    vals = w2k(range(4))[0]
+    vals = w2k(list(range(4)))[0]
     true_vals = np.array([0.,  0.1019368,  0.4077472,  0.91743119])
     assert((np.abs(vals - true_vals) < 1e-7).all())
 
 
 def test_w2k_finite_water_depth():
-    vals = w2k(range(4), h=20)[0]
+    vals = w2k(list(range(4)), h=20)[0]
     true_vals = np.array([0.,  0.10503601,  0.40774726,  0.91743119])
     assert((np.abs(vals - true_vals) < 1e-7).all())
 

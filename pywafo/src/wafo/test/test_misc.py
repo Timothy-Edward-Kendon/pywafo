@@ -320,7 +320,7 @@ def test_common_shape():
 def test_argsreduce():
     A = linspace(0, 19, 20).reshape((4, 5))
     B = 2
-    C = range(5)
+    C = list(range(5))
     cond = np.ones(A.shape)
     [_A1, B1, _C1] = argsreduce(cond, A, B, C)
     assert_equal(B1.shape, (20,))
@@ -337,7 +337,7 @@ def test_argsreduce():
 
 
 def test_stirlerr():
-    assert_array_almost_equal(stirlerr(range(5)),
+    assert_array_almost_equal(stirlerr(list(range(5))),
                               np.array([np.inf, 0.08106147, 0.0413407,
                                         0.02767793, 0.02079067]))
 
@@ -357,7 +357,7 @@ def test_getshipchar():
                    service_speed=10,
                    service_speedSTD=0)
 
-    for name, val in true_sc.iteritems():
+    for name, val in true_sc.items():
         assert_almost_equal(val, sc[name])
 
 
@@ -459,7 +459,7 @@ def test_tranproc():
     tr = wtm.TrHermite()
     x = linspace(-5, 5, 501)
     g = tr(x)
-    y0, y1 = tranproc(x, g, range(5), ones(5))
+    y0, y1 = tranproc(x, g, list(range(5)), ones(5))
     assert_array_almost_equal(
         y0,
         np.array([0.02659612, 1.00115284, 1.92872532,

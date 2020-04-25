@@ -1,7 +1,7 @@
 #
 # Author: Joris Vankerschaver 2013
 #
-from __future__ import division, print_function, absolute_import
+
 
 import numpy as np
 import scipy.linalg

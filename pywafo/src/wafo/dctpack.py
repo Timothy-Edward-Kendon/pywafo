@@ -216,7 +216,7 @@ def dctn(x, type=2, axis=None, norm='ortho'):  # @ReservedAssignment
     else:
         y = np.asfarray(y)
         for dim in range(ndim):
-            y = y.transpose(np.roll(range(y.ndim), -1))
+            y = y.transpose(np.roll(list(range(y.ndim)), -1))
             #y = shiftdim(y,1)
             if axis is not None and dim != axis:
                 continue
@@ -250,7 +250,7 @@ def idctn(x, type=2, axis=None, norm='ortho'):  # @ReservedAssignment
     else:
         y = np.asfarray(y)
         for dim in range(ndim):
-            y = y.transpose(np.roll(range(y.ndim), -1))
+            y = y.transpose(np.roll(list(range(y.ndim)), -1))
             #y = shiftdim(y,1)
             if axis is not None and dim != axis:
                 continue
@@ -610,14 +610,14 @@ def shiftdim(x, n=None):
     if n is None:
         return x.reshape(no_leading_ones(x.shape))
     elif n >= 0:
-        return x.transpose(np.roll(range(x.ndim), -n))
+        return x.transpose(np.roll(list(range(x.ndim)), -n))
     else:
         return x.reshape((1,) * -n + x.shape)
 
 
 def test_dctn():
     a = np.arange(12)  # .reshape((3,-1))
-    print('a = ', a)
+    print(('a = ', a))
     print(' ')
     y = dct(a)
     x = idct(y)
@@ -653,7 +653,7 @@ def test_dctn():
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

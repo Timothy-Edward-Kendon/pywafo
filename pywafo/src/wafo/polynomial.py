@@ -18,7 +18,7 @@
 # -------------------------------------------------------------------------
 # !/usr/bin/env python
 
-from plotbackend import plotbackend as plt
+from .plotbackend import plotbackend as plt
 import numpy as np
 from numpy.fft import fft, ifft
 from numpy import (zeros, ones, zeros_like, array, asarray, newaxis, arange,
@@ -26,7 +26,8 @@ from numpy import (zeros, ones, zeros_like, array, asarray, newaxis, arange,
                    where, extract, linalg, sign, concatenate, floor, isreal,
                    conj, remainder, linspace, sum)
 from numpy.lib.polynomial import *  # @UnusedWildImport
-from scipy.misc.common import pade  # @UnresolvedImport
+from scipy.interpolate import pade  # @UnresolvedImport
+from functools import reduce
 __all__ = np.lib.polynomial.__all__
 __all__ = __all__ + ['pade', 'padefit', 'polyreloc', 'polyrescl', 'polytrim',
                      'poly2hstr', 'poly2str', 'polyshift', 'polyishift',
@@ -958,7 +959,7 @@ def cheb2poly(ck, a=-1, b=1):
     y2 = 2. * y
 
     # Clenshaw recurence
-    for ix in xrange(n - 1):
+    for ix in range(n - 1):
         tmp = b_Nmi
         b_Nmi = polymul(y2, b_Nmi)  # polynomial multiplication
         nb = len(b_Nmip1)
@@ -1314,7 +1315,7 @@ def _chebval(x, ck, kind=1):
     b_Nmip1 = b_Nmi.copy()    # b_(N-i+1)
     x2 = 2 * x
     # Clenshaw reccurence
-    for ix in xrange(n - 1):
+    for ix in range(n - 1):
         tmp = b_Nmi
         b_Nmi = x2 * b_Nmi - b_Nmip1 + ck[ix]
         b_Nmip1 = tmp
@@ -1431,7 +1432,7 @@ def chebder(ck, a=-1, b=1):
     cder = zeros(n, dtype=asarray(ck).dtype)
     cder[0] = 2 * n * ck[0]
     cder[1] = 2 * (n - 1) * ck[1]
-    for j in xrange(2, n):
+    for j in range(2, n):
         cder[j] = cder[j - 2] + 2 * (n - j) * ck[j]
 
     return cder * 2. / (b - a)  # Normalize to the interval b-a.
@@ -1517,7 +1518,7 @@ class Cheb1d(object):
 
     def __init__(self, ck, a=-1, b=1, kind=1):
         if isinstance(ck, Cheb1d):
-            for key in ck.__dict__.keys():
+            for key in list(ck.__dict__.keys()):
                 self.__dict__[key] = ck.__dict__[key]
             return
         cki = trim_zeros(atleast_1d(ck), 'b')
@@ -1824,17 +1825,17 @@ def padefitlsq(fun, m, k, a=-1, b=1, trace=False, x=None, end_points=True):
     mad = 0
 
     u = zeros((npt, ncof))
-    for ix in xrange(MAXIT):
+    for ix in range(MAXIT):
         # Set up design matrix for least squares fit.
         pow1 = wt
         bb = pow1 * (fs + abs(mad) * sign(ee))
 
-        for jx in xrange(m + 1):
+        for jx in range(m + 1):
             u[:, jx] = pow1
             pow1 = pow1 * x
 
         pow1 = -bb
-        for jx in xrange(m + 1, ncof):
+        for jx in range(m + 1, ncof):
             pow1 = pow1 * x
             u[:, jx] = pow1
 
@@ -1857,7 +1858,7 @@ def padefitlsq(fun, m, k, a=-1, b=1, trace=False, x=None, end_points=True):
             c2 = cof[ncof:m:-1].tolist() + [1, ]
 
         if trace:
-            print('Iteration=%d,  max error=%g' % (ix, devmax))
+            print(('Iteration=%d,  max error=%g' % (ix, devmax)))
             plt.plot(x, fs, x, ee + fs)
     return poly1d(c1), poly1d(c2)
 
@@ -1913,7 +1914,7 @@ def main():
     py = polyishift(px, 0, 5)
     t1 = polyval(px, [0, 2.5, 5])  # % This is the same as the line below
     t2 = polyval(py, [-1, 0, 1])
-    print(t1, t2)
+    print((t1, t2))
 
 
 def test_polydeg():
@@ -1936,7 +1937,7 @@ def test_polydeg():
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

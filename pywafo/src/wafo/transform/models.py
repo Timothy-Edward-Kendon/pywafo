@@ -6,13 +6,13 @@ TrOchi
 TrLinear
 '''
 # !/usr/bin/env python
-from __future__ import division
+
 from scipy.optimize import brentq
 from numpy import (sqrt, atleast_1d, abs, imag, sign, where, cos, arccos, ceil,  # @UnresolvedImport
                    expm1, log1p, pi)  # @UnresolvedImport
 import numpy as np
 import warnings
-from core import TrCommon, TrData
+from .core import TrCommon, TrData
 __all__ = ['TrHermite', 'TrLinear', 'TrOchi']
 
 _example = '''

@@ -9,7 +9,7 @@
 # Licence:     LGPL
 #-------------------------------------------------------------------------
 #!/usr/bin/env python
-from __future__ import division
+
 import copy
 import numpy as np
 import scipy
@@ -27,7 +27,7 @@ from wafo.plotbackend import plotbackend as plt
 try:
     from wafo import fig
 except ImportError:
-    print 'fig import only supported on Windows'
+    print('fig import only supported on Windows')
 
 _TINY = np.finfo(float).machar.tiny
 
@@ -2598,16 +2598,16 @@ def accum(accmap, a, func=None, size=None, fill_value=0, dtype=None):
 
     # Create an array of python lists of values.
     vals = np.empty(size, dtype='O')
-    for s in product(*[range(k) for k in size]):
+    for s in product(*[list(range(k)) for k in size]):
         vals[s] = []
-    for s in product(*[range(k) for k in a.shape]):
+    for s in product(*[list(range(k)) for k in a.shape]):
         indx = tuple(accmap[s])
         val = a[s]
         vals[indx].append(val)
 
     # Create the output array.
     out = np.empty(size, dtype=dtype)
-    for s in product(*[range(k) for k in size]):
+    for s in product(*[list(range(k)) for k in size]):
         if vals[s] == []:
             out[s] = fill_value
         else:
@@ -2793,7 +2793,7 @@ def _compute_qth_weighted_percentile(a, q, axis, out, method, weights,
     if axis is None:
         sorted_ = a.ravel()
     else:
-        taxes = range(a.ndim)
+        taxes = list(range(a.ndim))
         taxes[-1], taxes[axis] = taxes[axis], taxes[-1]
         sorted_ = np.transpose(a, taxes).reshape(-1, shape0[axis])
 
@@ -3153,10 +3153,10 @@ def gridcount(data, X, y=1):
         # fact1 = fact1(ones(n,1),:);
         bt0 = [0, 0]
         X1 = X.ravel()
-        for ir in xrange(2 ** (d - 1)):
+        for ir in range(2 ** (d - 1)):
             bt0[0] = np.reshape(bitget(ir, np.arange(d)), (d, -1))
             bt0[1] = 1 - bt0[0]
-            for ix in xrange(2):
+            for ix in range(2):
                 one = np.mod(ix, 2)
                 two = np.mod(ix + 1, 2)
                 # Convert to linear index
@@ -3169,7 +3169,7 @@ def gridcount(data, X, y=1):
 
         c = np.reshape(c / w, csiz, order='F')
 
-        T = range(d)
+        T = list(range(d))
         T[1], T[0] = T[0], T[1]
         # make sure c is stored in the same way as meshgrid
         c = c.transpose(*T)
@@ -3618,7 +3618,7 @@ def InitialGuess(y, I):
     for k in range(d):
         z[int((siz[k] + 0.5) / 10) + 1::, ...] = 0
         z = z.reshape(np.roll(siz, -k))
-        z = z.transpose(np.roll(range(z.ndim), -1))
+        z = z.transpose(np.roll(list(range(z.ndim)), -1))
         #z = shiftdim(z,1);
     # end
     z = idctn(z)
@@ -3896,8 +3896,8 @@ def kreg_demo1(hs=None, fast=False, fun='hisj'):
 
     plt.show()
 
-    print(kreg.tkde.tkde.inv_hs)
-    print(kreg.tkde.tkde.hs)
+    print((kreg.tkde.tkde.inv_hs))
+    print((kreg.tkde.tkde.hs))
 
 _REALMIN = np.finfo(float).machar.xmin
 _REALMAX = np.finfo(float).machar.xmax
@@ -3964,7 +3964,7 @@ def kreg_demo3(x, y, fun1, hs=None, fun='hisj', plotlog=False):
     xmin, xmax = x.min(), x.max()
     ni = max(2 * int((xmax - xmin) / hopt) + 3, 5)
     print(ni)
-    print(xmin, xmax)
+    print((xmin, xmax))
     sml = hopt * 0.1
     xi = np.linspace(xmin - sml, xmax + sml, ni)
     xiii = np.linspace(xmin - sml, xmax + sml, 4 * ni + 1)
@@ -4086,8 +4086,8 @@ def kreg_demo3(x, y, fun1, hs=None, fun='hisj', plotlog=False):
                      linestyle=':', label='%d CI2' % (int(100 * (1 - alpha))))
     plt.plot(xiii, fun1(xiii), 'r', label='True model')
     plt.scatter(xi, yi, label='data')
-    print('maxp = %g' % (np.nanmax(f.data)))
-    print('hs = %g' % (kreg.tkde.tkde.hs))
+    print(('maxp = %g' % (np.nanmax(f.data))))
+    print(('hs = %g' % (kreg.tkde.tkde.hs)))
     plt.legend()
     h = plt.gca()
     if plotlog:
@@ -4182,7 +4182,7 @@ def check_kreg_demo3():
                 unused = kreg_demo3(x, y, fun1, hs=hi, fun=fun, plotlog=False)
 
             #kreg_demo2(n=n,symmetric=True,fun='hste', plotlog=False)
-        fig.tile(range(k0, k))
+        fig.tile(list(range(k0, k)))
     plt.ioff()
     plt.show()
 
@@ -4218,7 +4218,7 @@ def check_kreg_demo4():
             plt.plot(x, fun1(x), 'r')
 
             #kreg_demo2(n=n,symmetric=True,fun='hste', plotlog=False)
-    fig.tile(range(0, k))
+    fig.tile(list(range(0, k)))
     plt.ioff()
     plt.show()
 
@@ -4246,7 +4246,7 @@ def check_regression_bin():
         ax.set_yticklabels(ax.get_yticks() * 100.0)
         ax.grid(True)
 
-    fig.tile(range(0, k))
+    fig.tile(list(range(0, k)))
     plt.ioff()
     plt.show()
 
@@ -4275,7 +4275,7 @@ def check_bkregression():
         ax.set_yticklabels(ax.get_yticks() * 100.0)
         ax.grid(True)
 
-    fig.tile(range(0, k))
+    fig.tile(list(range(0, k)))
     plt.ioff()
     plt.show()
 
@@ -4485,12 +4485,12 @@ def kde_gauss_demo(n=50):
         plt.plot(x, dist.pdf(x, 0, 1), 'k:')
         plt.axis([x.min(), x.max(), 0, fmax])
     plt.show()
-    print(fmax / f2.data.max())
+    print((fmax / f2.data.max()))
     format_ = ''.join(('%g, ') * d)
     format_ = 'hs0=%s hs1=%s hs2=%s' % (format_, format_, format_)
-    print(format_ % tuple(kde0.hs.tolist() +
-                        kde1.tkde.hs.tolist() + kde2.hs.tolist()))
-    print('inc0 = %d, inc1 = %d, inc2 = %d' % (kde0.inc, kde1.inc, kde2.inc))
+    print((format_ % tuple(kde0.hs.tolist() +
+                        kde1.tkde.hs.tolist() + kde2.hs.tolist())))
+    print(('inc0 = %d, inc1 = %d, inc2 = %d' % (kde0.inc, kde1.inc, kde2.inc)))
 
 
 def test_docstrings():

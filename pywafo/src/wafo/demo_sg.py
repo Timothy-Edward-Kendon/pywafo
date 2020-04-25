@@ -1,6 +1,6 @@
 # @UnresolvedImport
 from pylab import subplot, plot, title, savefig, figure, arange, sin, random
-from sg_filter import calc_coeff, smooth
+from .sg_filter import calc_coeff, smooth
 
 
 figure(figsize=(7, 12))

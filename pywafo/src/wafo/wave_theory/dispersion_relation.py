@@ -202,7 +202,7 @@ def w2k(w, theta=0.0, h=inf, g=9.81, count_limit=100):
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 

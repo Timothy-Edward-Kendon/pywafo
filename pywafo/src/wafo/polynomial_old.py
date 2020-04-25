@@ -1049,12 +1049,12 @@ class Cheb1d(object):
     b = None
     def __init__(self,ck,a=-1,b=1):
         if isinstance(ck, poly1d):
-            for key in ck.__dict__.keys():
+            for key in list(ck.__dict__.keys()):
                 self.__dict__[key] = ck.__dict__[key]
             return
         cki = np.trim_zeros(np.atleast_1d(ck),'b')
         if len(cki.shape) > 1:
-            raise ValueError, "Polynomial must be 1d only."
+            raise ValueError("Polynomial must be 1d only.")
         self.__dict__['coeffs'] = cki
         self.__dict__['order'] = len(cki) - 1
         self.__dict__['a'] = a
@@ -1110,7 +1110,7 @@ class Cheb1d(object):
         return np.any(self.coeffs != other.coeffs) or (self.a!=other.a) or (self.b !=other.b)
 
     def __setattr__(self, key, val):
-        raise ValueError, "Attributes cannot be changed this way."
+        raise ValueError("Attributes cannot be changed this way.")
 
     def __getattr__(self, key):
         if key in ['c','coef','coefficients']:
@@ -1136,7 +1136,7 @@ class Cheb1d(object):
     def __setitem__(self, key, val):
         ind = self.order - key
         if key < 0:
-            raise ValueError, "Does not support negative powers."
+            raise ValueError("Does not support negative powers.")
         if key > self.order:
             zr = NX.zeros(key-self.order, self.coeffs.dtype)
             self.__dict__['coeffs'] = NX.concatenate((self.coeffs,zr))
@@ -1199,7 +1199,7 @@ def test_doctstrings():
         py = polyishift(px,0,5);
         t1 = polyval(px,[0, 2.5, 5])  #% This is the same as the line below
         t2 = polyval(py,[-1, 0, 1 ])
-        print(t1,t2)
+        print((t1,t2))
     else:
         import doctest
         doctest.testmod()

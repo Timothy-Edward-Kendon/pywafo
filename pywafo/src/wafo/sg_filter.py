@@ -728,7 +728,7 @@ class HampelFilter(object):
     def __call__(self, y, x=None):
         Y = np.atleast_1d(y).ravel()
         if x is None:
-            x = range(len(Y))
+            x = list(range(len(Y)))
         X = np.atleast_1d(x).ravel()
 
         dx = self.dx
@@ -897,7 +897,7 @@ def test_tide_filter():
         y4.append(tmp[0])
         y5.append(tmp[1])
     y0 = medfilt(y4, 41)
-    print(filt.P)
+    print((filt.P))
     # plot
     import matplotlib.pyplot as plt
     plt.plot(t, y, 'r.-', linewidth=2, label='raw data')
@@ -926,7 +926,7 @@ def test_smooth():
 
 def test_docstrings():
     import doctest
-    print('Testing docstrings in %s' % __file__)
+    print(('Testing docstrings in %s' % __file__))
     doctest.testmod(optionflags=doctest.NORMALIZE_WHITESPACE)
 
 if __name__ == '__main__':

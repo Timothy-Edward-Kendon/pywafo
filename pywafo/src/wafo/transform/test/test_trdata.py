@@ -10,7 +10,7 @@ def test_trdata():
     x = sigma*u+mean; y = u
     g = TrData(y,x)
     assert(g.mean==1.0)
-    print(g.sigma)
+    print((g.sigma))
     #assert(g.sigma==5.0)
     
     g = TrData(y,x,mean=1,sigma=5)

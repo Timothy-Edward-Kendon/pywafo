@@ -1,4 +1,4 @@
-from __future__ import division
+
 from wafo.misc import meshgrid, gravity, cart2polar, polar2cart
 from wafo.objects import TimeSeries, mat2timeseries
 import warnings
@@ -1052,7 +1052,7 @@ class SpecData1D(PlotData):
         maxS = max(S.data)
         # Fs = 2*freq(end)+eps  # sampling frequency
 
-        for ix in xrange(max_sim):
+        for ix in range(max_sim):
             x2, x1 = self.sim_nl(ns=np, cases=cases, dt=None, iseed=iseed,
                                  method=method, fnlimit=fn_limit,
                                  output='timeseries')
@@ -1112,8 +1112,8 @@ class SpecData1D(PlotData):
                 # figtile
             # end
 
-            print('Iteration : %d, Hw12 : %g  Hw12/maxS : %g' %
-                  (ix, maxHw12, (maxHw12 / maxS)))
+            print(('Iteration : %d, Hw12 : %g  Hw12/maxS : %g' %
+                  (ix, maxHw12, (maxHw12 / maxS))))
             if (maxHw12 < maxS * tolerance) and (Hw1[-1] < Hw2[-1]):
                 break
             # end
@@ -1200,7 +1200,7 @@ class SpecData1D(PlotData):
         # transform reference level into Gaussian level
         u = g.dat2gauss(utc)
         if verbose:
-            print('The level u for Gaussian process = %g' % u)
+            print(('The level u for Gaussian process = %g' % u))
 
         unused_t0, tn, Nt = paramt
         t = linspace(0, tn / A, Nt)  # normalized times
@@ -1368,7 +1368,7 @@ class SpecData1D(PlotData):
         rind = Rind(**opts)
         # h11 = fwaitbar(0,[],sprintf('Please wait ...(start at: %s)',
         #        datestr(now)))
-        for pt in xrange(Nstart, Ntime):
+        for pt in range(Nstart, Ntime):
             Nt = pt - Nd + 1
             Ntd = Nt + Nd
             Ntdc = Ntd + Nc
@@ -1607,7 +1607,7 @@ class SpecData1D(PlotData):
         # transform reference level into Gaussian level
         u = g.dat2gauss(utc)
         if verbose:
-            print('The level u for Gaussian process = %g' % u)
+            print(('The level u for Gaussian process = %g' % u))
 
         t0, tn, Nt = paramt
         t = linspace(0, tn / A, Nt)  # normalized times
@@ -2892,8 +2892,8 @@ class SpecData1D(PlotData):
         f_limit_up = df * nmax
         f_limit_lo = df * nmin
         if verbose:
-            print('2nd order frequency Limits = %g,%g' %
-                  (f_limit_lo, f_limit_up))
+            print(('2nd order frequency Limits = %g,%g' %
+                  (f_limit_lo, f_limit_up)))
 
 # if nargout>3,
 # #compute the sum and frequency effects separately
@@ -3193,7 +3193,7 @@ class SpecData1D(PlotData):
                 g, _tmp = ts.trdata(method, **opt)
                 test1.append(g.dist2gauss())
             if verbose:
-                print('finished %d of %d ' % (ix + 1, rep))
+                print(('finished %d of %d ' % (ix + 1, rep)))
 
         if rep > 1:
             xs = acf.sim(ns=ns, cases=np.remainder(cases, rep))
@@ -3542,7 +3542,7 @@ class SpecData1D(PlotData):
 
         fact_dict = dict(alpha=0, eps2=1, eps4=3, qp=3, Qp=3)
         fun = lambda fact: fact_dict.get(fact, fact)
-        fact = atleast_1d(map(fun, list(factors)))
+        fact = atleast_1d(list(map(fun, list(factors))))
 
         # fact = atleast_1d(fact)
         alpha = m[2] / sqrt(m[0] * m[4])
